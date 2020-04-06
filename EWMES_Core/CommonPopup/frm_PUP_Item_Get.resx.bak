@@ -1,0 +1,2625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;lbl_Title.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_Edit.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lbl_Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelControl4.Name" xml:space="preserve">
+    <value>labelControl4</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item04.Name" xml:space="preserve">
+    <value>ledt_Item04</value>
+  </data>
+  <data name="&gt;&gt;pnl_Excel.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gridColumn7.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="gview_Data01.Appearance.GroupPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Silver</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.Buttons.Remove.Hint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_Item01.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Close.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item03.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_Add.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_Item03.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gview_Data01.Appearance.HeaderPanel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbl_Ledit02.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="col_NAME.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Save.Name" xml:space="preserve">
+    <value>btn_Save</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Check.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btn_Close.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbl_Ledit01.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item03.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="col_UNIT.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="grp_Title.TabIndex" type="System.Int32, mscorlib">
+    <value>510</value>
+  </data>
+  <assembly alias="DevExpress.Data.v17.2" name="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="grd_Data01.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="gridColumn5.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="gridColumn7.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_M_CD.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item06.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_Item03.Size" type="System.Drawing.Size, System.Drawing">
+    <value>741, 20</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item02.Name" xml:space="preserve">
+    <value>ledt_Item02</value>
+  </data>
+  <data name="col_CODE.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDown.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDown.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="grp_Title.Text" xml:space="preserve">
+    <value>코드를 선택하세요.</value>
+  </data>
+  <data name="&gt;&gt;gridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item03.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="gridColumn7.Width" type="System.Int32, mscorlib">
+    <value>161</value>
+  </data>
+  <data name="lbl_Ledit02.TabIndex" type="System.Int32, mscorlib">
+    <value>495</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDownHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;ledt_Item01.Name" xml:space="preserve">
+    <value>ledt_Item01</value>
+  </data>
+  <data name="gridColumn6.Caption" xml:space="preserve">
+    <value>소분류</value>
+  </data>
+  <data name="&gt;&gt;pnl_Edit.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnl_right02.Name" xml:space="preserve">
+    <value>pnl_right02</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v17.2" name="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="ledt_Item01.Properties.Buttons9" type="DevExpress.Utils.ToolTipAnchor, DevExpress.Utils.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="gridColumn3.Width" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="ledt_Item01.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ledt_ORD_FG.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_Edit.Name" xml:space="preserve">
+    <value>btn_Edit</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnl_Excel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item05.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbl_Ledit02.Name" xml:space="preserve">
+    <value>lbl_Ledit02</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item04.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item01.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="txt_Item01.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.Parent" xml:space="preserve">
+    <value>pnl_Print</value>
+  </data>
+  <data name="txt_Item03.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="ledt_Item06.EditValue" xml:space="preserve">
+    <value>&lt;Null&gt;</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item06.Name" xml:space="preserve">
+    <value>ledt_Item06</value>
+  </data>
+  <data name="&gt;&gt;btn_Close.Parent" xml:space="preserve">
+    <value>pnl_Close</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnl_Delete.Name" xml:space="preserve">
+    <value>pnl_Delete</value>
+  </data>
+  <data name="ledt_Item06.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txt_Item01.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_Cancel.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="txt_Item01.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txt_Item01.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item04.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="&gt;&gt;col_SPEC.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_Item01.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="gview_Data01.Appearance.GroupPanel.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelControl1.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radio01.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="lbl_Ledit01.Text" xml:space="preserve">
+    <value>조달구분</value>
+  </data>
+  <data name="ledt_ITEMGRP_CD.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>소분류</value>
+  </data>
+  <data name="ledt_Item05.Properties.Buttons7" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.Buttons.CancelEdit.Hint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn2.Width" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn4.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="col_NAME.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="pnl_Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 2</value>
+  </data>
+  <data name="grp_Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 81</value>
+  </data>
+  <data name="pnl_Top01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 43</value>
+  </data>
+  <data name="&gt;&gt;grd_Data01.Name" xml:space="preserve">
+    <value>grd_Data01</value>
+  </data>
+  <data name="ledt_Item01.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;pnl_Save.Name" xml:space="preserve">
+    <value>pnl_Save</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDownHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="gview_Data01.Appearance.HeaderPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt, style=Bold</value>
+  </data>
+  <data name="labelControl2.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="&gt;&gt;pnl_Add.Name" xml:space="preserve">
+    <value>pnl_Add</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frm_PUP_Item_Get</value>
+  </data>
+  <data name="&gt;&gt;grp_Title.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txt_Item02.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="gview_Data01.Appearance.EvenRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDownHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radio01.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Edit.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDownHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Search.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ledt_Item03.TabIndex" type="System.Int32, mscorlib">
+    <value>498</value>
+  </data>
+  <data name="col_SPEC.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;pnl_Edit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn3.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="labelControl1.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item02.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 27</value>
+  </data>
+  <data name="txt_Item02.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="labelControl1.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item02.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="col_SPEC.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="labelControl1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="txt_Item01.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pnl_right01.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item06.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pnl_Check.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item03.Name" xml:space="preserve">
+    <value>ledt_Item03</value>
+  </data>
+  <data name="txt_Item01.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_ORD_FG.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item05.Properties.Buttons8" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Edit.Name" xml:space="preserve">
+    <value>pnl_Edit</value>
+  </data>
+  <data name="txt_Item01.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn6.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="lbl_Ledit01.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v17.2" name="DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="txt_Item02.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.2">
+    <value>None</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.Buttons.Edit.Hint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_Item01.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="lbl_Title.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item05.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;grp_Title.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="col_CODE.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnl_Close.Name" xml:space="preserve">
+    <value>pnl_Close</value>
+  </data>
+  <data name="&gt;&gt;btn_Save.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item01.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="ledt_Item02.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="ledt_Item01.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_Save.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_ACCT_FG.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="col_CODE.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item04.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_Item01.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txt_Item03.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDown.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;txt_Item03.Name" xml:space="preserve">
+    <value>txt_Item03</value>
+  </data>
+  <data name="&gt;&gt;col_NAME.Name" xml:space="preserve">
+    <value>col_NAME</value>
+  </data>
+  <data name="col_CODE.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Delete.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="ledt_Item02.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="btn_Excel.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.Buttons8" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;grp_Title.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ledt_Item05.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item03.Properties.Buttons6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDownHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="txt_Item02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item02.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_S_CD.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_Ledit02.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;txt_Item03.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="gridColumn2.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn2.Caption" xml:space="preserve">
+    <value>조달구분</value>
+  </data>
+  <data name="editorButtonImageOptions3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmZJREFUOE+N
+        kl1Ik2EUxy2ilKygvIiIIumiBCHoLkEoKRhGoAVdlF30YRcbXVhUkpBYOSMQPyLpy0TsY87vuYmFom5j
+        s9xq0613W25KhlOZH3u3vbrc/j3PyxNrWLQf/DnnPOf8Dy/v8yT95ppy9PjldkfN4brP1h0PDEuZNSaP
+        pMHSe0PjPMdG/k2p2nF2r9zolry0wMuvYCEMLAo/cV31Ddvv6oR6y+wFNroWqcKas7tc7zZNLeFv2GYC
+        2FwyECntcRYySzwXX1uasmo/isOhVWCSj8DtX4WHyLccFc9p/8Qzs4ZZ4jlaa7QNuhcgRICR2TAM3hUY
+        Z8IwkmjwhuENRdHn8iGjQut38eFdzBYjq1rvc/BRTASi6PII6J4QoCKisYPUU/wqnOSrMiu0kHTNHWG2
+        GNmVWqfxh4BxsqSBC+KFPYhXX4OoJ3pqC4rntH+grC/UNy3sY7YYl5rMz49V6eEOAq4AUG7icW/Ej/tE
+        tKai/ZzKwQ/MEk9xh/3UVmnr4rtRH0bJRfwp8wLQxi0itbAZafJPIL9pA7PFU6ZxyLZcVfCSKh26XH7o
+        ppehGvdDphzDtitvkXarV1yQr+RayaWsY7Z47qi583nV2u79RR2TGTc7Q+lF7XM58vfdOx+ZQFU8zIux
+        oJ1rDEeRzGxrUXF8qnc+mN5p96XRWvc9kJ1SMoSTzR5IB3ygeUGLrZG8kPWiIRE03HxucnE/Dj2xIrdl
+        EjQ/3WhuI+9uIxv5Py2W2TNJMjX2PBzGwbox0FymtNaxdmL02OdykwreYNPtfqSUGUDyCGslTueX6Ty6
+        hCr/8ZDiF2AWxGjPMXcYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="txt_Item02.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item05.EditValue" xml:space="preserve">
+    <value>&lt;Null&gt;</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.Buttons.Append.Hint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item02.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Glyph</value>
+  </data>
+  <data name="gridColumn6.Width" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Name" xml:space="preserve">
+    <value>labelControl5</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item01.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v17.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;pnl_Print.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gview_Data01.Appearance.Row.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item06.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 51</value>
+  </data>
+  <data name="ledt_Item03.Properties.AppearanceDropDownHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="txt_Item03.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gview_Data01.Appearance.EvenRow.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 14</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDownHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="gridColumn2.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_right02.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pnl_Check.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn3.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="editorButtonImageOptions1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmZJREFUOE+N
+        kl1Ik2EUxy2ilKygvIiIIumiBCHoLkEoKRhGoAVdlF30YRcbXVhUkpBYOSMQPyLpy0TsY87vuYmFom5j
+        s9xq0613W25KhlOZH3u3vbrc/j3PyxNrWLQf/DnnPOf8Dy/v8yT95ppy9PjldkfN4brP1h0PDEuZNSaP
+        pMHSe0PjPMdG/k2p2nF2r9zolry0wMuvYCEMLAo/cV31Ddvv6oR6y+wFNroWqcKas7tc7zZNLeFv2GYC
+        2FwyECntcRYySzwXX1uasmo/isOhVWCSj8DtX4WHyLccFc9p/8Qzs4ZZ4jlaa7QNuhcgRICR2TAM3hUY
+        Z8IwkmjwhuENRdHn8iGjQut38eFdzBYjq1rvc/BRTASi6PII6J4QoCKisYPUU/wqnOSrMiu0kHTNHWG2
+        GNmVWqfxh4BxsqSBC+KFPYhXX4OoJ3pqC4rntH+grC/UNy3sY7YYl5rMz49V6eEOAq4AUG7icW/Ej/tE
+        tKai/ZzKwQ/MEk9xh/3UVmnr4rtRH0bJRfwp8wLQxi0itbAZafJPIL9pA7PFU6ZxyLZcVfCSKh26XH7o
+        ppehGvdDphzDtitvkXarV1yQr+RayaWsY7Z47qi583nV2u79RR2TGTc7Q+lF7XM58vfdOx+ZQFU8zIux
+        oJ1rDEeRzGxrUXF8qnc+mN5p96XRWvc9kJ1SMoSTzR5IB3ygeUGLrZG8kPWiIRE03HxucnE/Dj2xIrdl
+        EjQ/3WhuI+9uIxv5Py2W2TNJMjX2PBzGwbox0FymtNaxdmL02OdykwreYNPtfqSUGUDyCGslTueX6Ty6
+        hCr/8ZDiF2AWxGjPMXcYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons8" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>EWMES_Core.DXfrmWMES_BasePUP_Get, EWMES_Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="gridColumn5.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radio01.EditValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDownHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="col_UNIT.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radio01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 22</value>
+  </data>
+  <data name="btn_Check.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item01.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn7.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="col_SPEC.Caption" xml:space="preserve">
+    <value>규격</value>
+  </data>
+  <data name="txt_Item02.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gridColumn1.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDown.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="gview_Data01.Appearance.Row.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_L_CD.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.AppearanceDropDownHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="labelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 58</value>
+  </data>
+  <data name="gridColumn4.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>품목 코드 조회 도움</value>
+  </data>
+  <data name="gridColumn6.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDownHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Top01.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.Buttons.EndEdit.Hint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn2.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="gview_Data01.Appearance.EvenRow.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Vertical</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item05.Properties.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item06.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;col_SPEC.Name" xml:space="preserve">
+    <value>col_SPEC</value>
+  </data>
+  <data name="gridColumn6.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_Check.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="editorButtonImageOptions6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmZJREFUOE+N
+        kl1Ik2EUxy2ilKygvIiIIumiBCHoLkEoKRhGoAVdlF30YRcbXVhUkpBYOSMQPyLpy0TsY87vuYmFom5j
+        s9xq0613W25KhlOZH3u3vbrc/j3PyxNrWLQf/DnnPOf8Dy/v8yT95ppy9PjldkfN4brP1h0PDEuZNSaP
+        pMHSe0PjPMdG/k2p2nF2r9zolry0wMuvYCEMLAo/cV31Ddvv6oR6y+wFNroWqcKas7tc7zZNLeFv2GYC
+        2FwyECntcRYySzwXX1uasmo/isOhVWCSj8DtX4WHyLccFc9p/8Qzs4ZZ4jlaa7QNuhcgRICR2TAM3hUY
+        Z8IwkmjwhuENRdHn8iGjQut38eFdzBYjq1rvc/BRTASi6PII6J4QoCKisYPUU/wqnOSrMiu0kHTNHWG2
+        GNmVWqfxh4BxsqSBC+KFPYhXX4OoJ3pqC4rntH+grC/UNy3sY7YYl5rMz49V6eEOAq4AUG7icW/Ej/tE
+        tKai/ZzKwQ/MEk9xh/3UVmnr4rtRH0bJRfwp8wLQxi0itbAZafJPIL9pA7PFU6ZxyLZcVfCSKh26XH7o
+        ppehGvdDphzDtitvkXarV1yQr+RayaWsY7Z47qi583nV2u79RR2TGTc7Q+lF7XM58vfdOx+ZQFU8zIux
+        oJ1rDEeRzGxrUXF8qnc+mN5p96XRWvc9kJ1SMoSTzR5IB3ygeUGLrZG8kPWiIRE03HxucnE/Dj2xIrdl
+        EjQ/3WhuI+9uIxv5Py2W2TNJMjX2PBzGwbox0FymtNaxdmL02OdykwreYNPtfqSUGUDyCGslTueX6Ty6
+        hCr/8ZDiF2AWxGjPMXcYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item03.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="radio01.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="col_UNIT.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="&gt;&gt;btn_Delete.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_Title.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="txt_Item03.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="labelControl5.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Close.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_ACCT_FG.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item06.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="lbl_Ledit02.Text" xml:space="preserve">
+    <value>계정구분</value>
+  </data>
+  <data name="gridColumn3.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="editorButtonImageOptions5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmZJREFUOE+N
+        kl1Ik2EUxy2ilKygvIiIIumiBCHoLkEoKRhGoAVdlF30YRcbXVhUkpBYOSMQPyLpy0TsY87vuYmFom5j
+        s9xq0613W25KhlOZH3u3vbrc/j3PyxNrWLQf/DnnPOf8Dy/v8yT95ppy9PjldkfN4brP1h0PDEuZNSaP
+        pMHSe0PjPMdG/k2p2nF2r9zolry0wMuvYCEMLAo/cV31Ddvv6oR6y+wFNroWqcKas7tc7zZNLeFv2GYC
+        2FwyECntcRYySzwXX1uasmo/isOhVWCSj8DtX4WHyLccFc9p/8Qzs4ZZ4jlaa7QNuhcgRICR2TAM3hUY
+        Z8IwkmjwhuENRdHn8iGjQut38eFdzBYjq1rvc/BRTASi6PII6J4QoCKisYPUU/wqnOSrMiu0kHTNHWG2
+        GNmVWqfxh4BxsqSBC+KFPYhXX4OoJ3pqC4rntH+grC/UNy3sY7YYl5rMz49V6eEOAq4AUG7icW/Ej/tE
+        tKai/ZzKwQ/MEk9xh/3UVmnr4rtRH0bJRfwp8wLQxi0itbAZafJPIL9pA7PFU6ZxyLZcVfCSKh26XH7o
+        ppehGvdDphzDtitvkXarV1yQr+RayaWsY7Z47qi583nV2u79RR2TGTc7Q+lF7XM58vfdOx+ZQFU8zIux
+        oJ1rDEeRzGxrUXF8qnc+mN5p96XRWvc9kJ1SMoSTzR5IB3ygeUGLrZG8kPWiIRE03HxucnE/Dj2xIrdl
+        EjQ/3WhuI+9uIxv5Py2W2TNJMjX2PBzGwbox0FymtNaxdmL02OdykwreYNPtfqSUGUDyCGslTueX6Ty6
+        hCr/8ZDiF2AWxGjPMXcYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;txt_Item02.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDown.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDown.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_Ledit01.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ledt_M_CD.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grd_Data01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 124</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="col_SPEC.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item04.EditValue" xml:space="preserve">
+    <value>&lt;Null&gt;</value>
+  </data>
+  <data name="gview_Data01.NewItemRowText" xml:space="preserve">
+    <value>테스트</value>
+  </data>
+  <data name="editorButtonImageOptions4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmZJREFUOE+N
+        kl1Ik2EUxy2ilKygvIiIIumiBCHoLkEoKRhGoAVdlF30YRcbXVhUkpBYOSMQPyLpy0TsY87vuYmFom5j
+        s9xq0613W25KhlOZH3u3vbrc/j3PyxNrWLQf/DnnPOf8Dy/v8yT95ppy9PjldkfN4brP1h0PDEuZNSaP
+        pMHSe0PjPMdG/k2p2nF2r9zolry0wMuvYCEMLAo/cV31Ddvv6oR6y+wFNroWqcKas7tc7zZNLeFv2GYC
+        2FwyECntcRYySzwXX1uasmo/isOhVWCSj8DtX4WHyLccFc9p/8Qzs4ZZ4jlaa7QNuhcgRICR2TAM3hUY
+        Z8IwkmjwhuENRdHn8iGjQut38eFdzBYjq1rvc/BRTASi6PII6J4QoCKisYPUU/wqnOSrMiu0kHTNHWG2
+        GNmVWqfxh4BxsqSBC+KFPYhXX4OoJ3pqC4rntH+grC/UNy3sY7YYl5rMz49V6eEOAq4AUG7icW/Ej/tE
+        tKai/ZzKwQ/MEk9xh/3UVmnr4rtRH0bJRfwp8wLQxi0itbAZafJPIL9pA7PFU6ZxyLZcVfCSKh26XH7o
+        ppehGvdDphzDtitvkXarV1yQr+RayaWsY7Z47qi583nV2u79RR2TGTc7Q+lF7XM58vfdOx+ZQFU8zIux
+        oJ1rDEeRzGxrUXF8qnc+mN5p96XRWvc9kJ1SMoSTzR5IB3ygeUGLrZG8kPWiIRE03HxucnE/Dj2xIrdl
+        EjQ/3WhuI+9uIxv5Py2W2TNJMjX2PBzGwbox0FymtNaxdmL02OdykwreYNPtfqSUGUDyCGslTueX6Ty6
+        hCr/8ZDiF2AWxGjPMXcYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radio01.Properties.Items2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radio01.Properties.Items3" xml:space="preserve">
+    <value>품명</value>
+  </data>
+  <data name="ledt_Item05.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="radio01.Properties.Items1" xml:space="preserve">
+    <value>품번</value>
+  </data>
+  <data name="&gt;&gt;pnl_Search.Name" xml:space="preserve">
+    <value>pnl_Search</value>
+  </data>
+  <data name="gridColumn7.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btn_Search.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_Save.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item03.Properties.AppearanceDropDownHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txt_Item03.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item02.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item03.Properties.Buttons2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="gridColumn5.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn3.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="col_NAME.Caption" xml:space="preserve">
+    <value>품명</value>
+  </data>
+  <data name="&gt;&gt;btn_Cancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDownHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="&gt;&gt;txt_Item02.Name" xml:space="preserve">
+    <value>txt_Item02</value>
+  </data>
+  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ledt_ITEMGRP_CD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl2.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="labelControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>499</value>
+  </data>
+  <data name="grp_Title.AppearanceCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item06.Properties.Buttons7" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txt_Item01.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="&gt;&gt;ledt_L_CD.Name" xml:space="preserve">
+    <value>ledt_L_CD</value>
+  </data>
+  <data name="txt_Item03.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.2">
+    <value>None</value>
+  </data>
+  <data name="col_NAME.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="&gt;&gt;ledt_ITEMGRP_CD.Name" xml:space="preserve">
+    <value>ledt_ITEMGRP_CD</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v17.2">
+    <value>None</value>
+  </data>
+  <data name="pnl_Top01.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="&gt;&gt;btn_Cancel.Name" xml:space="preserve">
+    <value>btn_Cancel</value>
+  </data>
+  <data name="gview_Data01.Appearance.HeaderPanel.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;pnl_Save.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gview_Data01.Appearance.EvenRow.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gview_Data01.Appearance.GroupPanel.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="col_NAME.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item06.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="pnl_Search.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ledt_M_CD.Name" xml:space="preserve">
+    <value>ledt_M_CD</value>
+  </data>
+  <data name="ledt_Item06.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_Item03.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gridColumn7.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn6.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="gridColumn4.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item06.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <data name="&gt;&gt;lbl_Ledit01.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="col_UNIT.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>품목군</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>849, 616</value>
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radio01.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="grd_Data01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 492</value>
+  </data>
+  <data name="lbl_Title.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="&gt;&gt;pnl_Cancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gview_Data01.ChildGridLevelName" xml:space="preserve">
+    <value>테스트</value>
+  </data>
+  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item06.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn4.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="gridColumn3.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txt_Item02.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Add.Name" xml:space="preserve">
+    <value>btn_Add</value>
+  </data>
+  <data name="radio01.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="col_UNIT.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txt_Item02.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="grp_Title.AppearanceCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btn_Close.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item05.Properties.Buttons6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Delete.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gview_Data01.GroupPanelText" xml:space="preserve">
+    <value>해당열에서 그룹판넬로 열헤더를 드래그하십시오.</value>
+  </data>
+  <data name="txt_Item02.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Glyph</value>
+  </data>
+  <data name="&gt;&gt;btn_Search.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons8" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="grp_Title.AppearanceCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="col_UNIT.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn7.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Search.Name" xml:space="preserve">
+    <value>btn_Search</value>
+  </data>
+  <data name="&gt;&gt;ledt_ORD_FG.Name" xml:space="preserve">
+    <value>ledt_ORD_FG</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.Name" xml:space="preserve">
+    <value>btn_Print</value>
+  </data>
+  <data name="&gt;&gt;lbl_Ledit02.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_Ledit02.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDownHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item04.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <data name="gridColumn3.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="btn_Add.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <data name="txt_Item02.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ledt_S_CD.Name" xml:space="preserve">
+    <value>ledt_S_CD</value>
+  </data>
+  <data name="labelControl2.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="labelControl5.Text" xml:space="preserve">
+    <value>중분류</value>
+  </data>
+  <data name="&gt;&gt;btn_Delete.Parent" xml:space="preserve">
+    <value>pnl_Delete</value>
+  </data>
+  <data name="gridColumn3.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="labelControl5.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="gridColumn4.Caption" xml:space="preserve">
+    <value>대분류</value>
+  </data>
+  <data name="labelControl2.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;ledt_ACCT_FG.Name" xml:space="preserve">
+    <value>ledt_ACCT_FG</value>
+  </data>
+  <data name="txt_Item03.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txt_Item02.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_Edit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnl_Close.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="&gt;&gt;pnl_Excel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelControl4.Text" xml:space="preserve">
+    <value>대분류</value>
+  </data>
+  <data name="ledt_Item06.TabIndex" type="System.Int32, mscorlib">
+    <value>504</value>
+  </data>
+  <data name="col_NAME.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn5.Width" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="grp_Title.AppearanceCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="col_CODE.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn2.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="ledt_Item04.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_Search.Parent" xml:space="preserve">
+    <value>pnl_Search</value>
+  </data>
+  <data name="gridColumn2.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons7" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Search.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="labelControl2.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="ledt_Item05.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_Item03.TabIndex" type="System.Int32, mscorlib">
+    <value>439</value>
+  </data>
+  <data name="&gt;&gt;lbl_Title.Parent" xml:space="preserve">
+    <value>pnl_right02</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDownHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item01.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_Excel.Name" xml:space="preserve">
+    <value>btn_Excel</value>
+  </data>
+  <data name="lbl_Ledit01.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelControl5.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn1.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item04.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDown.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="col_SPEC.Width" type="System.Int32, mscorlib">
+    <value>173</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Glyph</value>
+  </data>
+  <data name="gridColumn4.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbl_Ledit02.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="gridColumn7.Caption" xml:space="preserve">
+    <value>품목군</value>
+  </data>
+  <data name="lbl_Title.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="col_UNIT.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;col_NAME.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item02.EditValue" xml:space="preserve">
+    <value>&lt;Null&gt;</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>pnl_right01</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>642, 34</value>
+  </data>
+  <data name="txt_Item02.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn5.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="col_CODE.Width" type="System.Int32, mscorlib">
+    <value>158</value>
+  </data>
+  <data name="col_NAME.Width" type="System.Int32, mscorlib">
+    <value>173</value>
+  </data>
+  <data name="ledt_Item06.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;pnl_Top01.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_Excel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDownHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn1.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDown.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;btn_Search.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_Item02.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_Edit.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="grd_Data01.TabIndex" type="System.Int32, mscorlib">
+    <value>511</value>
+  </data>
+  <data name="grp_Title.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbl_Ledit01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 34</value>
+  </data>
+  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="ledt_Item04.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Glyph</value>
+  </data>
+  <data name="&gt;&gt;ledt_ACCT_FG.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="lbl_Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 18</value>
+  </data>
+  <data name="&gt;&gt;pnl_right01.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gridColumn6.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
+    <value>gridColumn3</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons8" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.Buttons2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="radio01.TabIndex" type="System.Int32, mscorlib">
+    <value>436</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="ledt_Item01.EditValue" xml:space="preserve">
+    <value>&lt;Null&gt;</value>
+  </data>
+  <data name="txt_Item02.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelControl4.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnl_Add.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="col_CODE.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_Item01.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 27</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons8" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="col_UNIT.Caption" xml:space="preserve">
+    <value>단위</value>
+  </data>
+  <data name="ledt_Item03.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="grp_Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 43</value>
+  </data>
+  <data name="gview_Data01.Appearance.Row.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn1.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;radio01.Name" xml:space="preserve">
+    <value>radio01</value>
+  </data>
+  <data name="ledt_ITEMGRP_CD.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gridColumn2.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_Item01.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="ledt_Item02.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="btn_Close.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="labelControl4.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;pnl_Top01.Name" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="ledt_Item03.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txt_Item01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 28</value>
+  </data>
+  <data name="&gt;&gt;pnl_Check.Name" xml:space="preserve">
+    <value>pnl_Check</value>
+  </data>
+  <data name="&gt;&gt;pnl_Search.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_Item02.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item02.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
+    <value>gridColumn1</value>
+  </data>
+  <data name="txt_Item02.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="ledt_Item03.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Glyph</value>
+  </data>
+  <data name="gview_Data01.Appearance.HeaderPanel.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;btn_Delete.Name" xml:space="preserve">
+    <value>btn_Delete</value>
+  </data>
+  <data name="lbl_Title.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="gview_Data01.Appearance.HeaderPanel.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_Item03.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pnl_Print.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnl_Top01.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_Cancel.Parent" xml:space="preserve">
+    <value>pnl_Cancel</value>
+  </data>
+  <data name="gridColumn5.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="col_UNIT.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="radio01.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Add.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_Item02.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="col_NAME.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnl_Top01.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="gridColumn2.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;pnl_Close.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ledt_Item01.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item04.Properties.Buttons1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnl_Top01.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_Title.Name" xml:space="preserve">
+    <value>lbl_Title</value>
+  </data>
+  <data name="col_NAME.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txt_Item01.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;btn_Close.Name" xml:space="preserve">
+    <value>btn_Close</value>
+  </data>
+  <data name="ledt_L_CD.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="ledt_ORD_FG.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;col_UNIT.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Name" xml:space="preserve">
+    <value>gridColumn7</value>
+  </data>
+  <data name="btn_Search.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDown.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gview_Data01.Appearance.Row.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDownHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;pnl_Add.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl4.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDownHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;pnl_right02.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_Item02.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txt_Item02.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item02.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn1.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item05.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
+  <data name="lbl_Ledit01.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item06.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="&gt;&gt;gview_Data01.Name" xml:space="preserve">
+    <value>gview_Data01</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDownHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txt_Item01.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txt_Item03.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="gview_Data01.Appearance.GroupPanel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txt_Item01.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;gridColumn5.Name" xml:space="preserve">
+    <value>gridColumn5</value>
+  </data>
+  <data name="gridColumn6.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="lbl_Ledit02.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txt_Item02.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl4.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="ledt_Item04.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDown.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="col_SPEC.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="txt_Item01.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons7" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Cancel.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="gridColumn3.Caption" xml:space="preserve">
+    <value>품목군</value>
+  </data>
+  <data name="ledt_S_CD.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;grd_Data01.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item03.Properties.AppearanceDropDownHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDown.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;txt_Item01.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="lbl_Ledit02.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 34</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
+    <value>gridColumn2</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item06.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelControl5.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="pnl_right02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 39</value>
+  </data>
+  <data name="ledt_Item02.TabIndex" type="System.Int32, mscorlib">
+    <value>496</value>
+  </data>
+  <data name="lbl_Ledit01.TabIndex" type="System.Int32, mscorlib">
+    <value>493</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDownHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Cancel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pnl_Cancel.Name" xml:space="preserve">
+    <value>pnl_Cancel</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="lbl_Ledit01.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item03.Properties.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item02.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;btn_Check.Parent" xml:space="preserve">
+    <value>pnl_Check</value>
+  </data>
+  <data name="txt_Item03.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn4.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="txt_Item03.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item03.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item04.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_Edit.Parent" xml:space="preserve">
+    <value>pnl_Edit</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="col_NAME.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDownHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDownHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pnl_Print.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="ledt_Item05.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="&gt;&gt;grp_Title.Name" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDownHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item03.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;ledt_Item06.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="col_UNIT.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ledt_Item03.Properties.Buttons1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="txt_Item03.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btn_Edit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="lbl_Ledit01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 15</value>
+  </data>
+  <data name="gridColumn4.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txt_Item01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="ledt_Item05.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 51</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item05.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="gridColumn5.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="gridColumn6.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item05.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn5.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Save.Parent" xml:space="preserve">
+    <value>pnl_Save</value>
+  </data>
+  <data name="&gt;&gt;pnl_Save.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="gridColumn6.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn_Cancel.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn_Print.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Name" xml:space="preserve">
+    <value>gridColumn6</value>
+  </data>
+  <data name="lbl_Ledit02.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="col_SPEC.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gridColumn1.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item04.Properties.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item01.TabIndex" type="System.Int32, mscorlib">
+    <value>494</value>
+  </data>
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>계정구분</value>
+  </data>
+  <data name="radio01.Properties.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>ControlText</value>
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDownHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ledt_L_CD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;col_UNIT.Name" xml:space="preserve">
+    <value>col_UNIT</value>
+  </data>
+  <data name="ledt_Item05.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="&gt;&gt;pnl_right01.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="txt_Item02.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;col_CODE.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item02.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="ledt_Item05.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDownHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_Check.Name" xml:space="preserve">
+    <value>btn_Check</value>
+  </data>
+  <data name="ledt_Item02.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item04.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gview_Data01.Appearance.GroupPanel.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;ledt_M_CD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item03.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radio01.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="grp_Title.AppearanceCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="labelControl5.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item01.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="ledt_Item01.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="editorButtonImageOptions2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmZJREFUOE+N
+        kl1Ik2EUxy2ilKygvIiIIumiBCHoLkEoKRhGoAVdlF30YRcbXVhUkpBYOSMQPyLpy0TsY87vuYmFom5j
+        s9xq0613W25KhlOZH3u3vbrc/j3PyxNrWLQf/DnnPOf8Dy/v8yT95ppy9PjldkfN4brP1h0PDEuZNSaP
+        pMHSe0PjPMdG/k2p2nF2r9zolry0wMuvYCEMLAo/cV31Ddvv6oR6y+wFNroWqcKas7tc7zZNLeFv2GYC
+        2FwyECntcRYySzwXX1uasmo/isOhVWCSj8DtX4WHyLccFc9p/8Qzs4ZZ4jlaa7QNuhcgRICR2TAM3hUY
+        Z8IwkmjwhuENRdHn8iGjQut38eFdzBYjq1rvc/BRTASi6PII6J4QoCKisYPUU/wqnOSrMiu0kHTNHWG2
+        GNmVWqfxh4BxsqSBC+KFPYhXX4OoJ3pqC4rntH+grC/UNy3sY7YYl5rMz49V6eEOAq4AUG7icW/Ej/tE
+        tKai/ZzKwQ/MEk9xh/3UVmnr4rtRH0bJRfwp8wLQxi0itbAZafJPIL9pA7PFU6ZxyLZcVfCSKh26XH7o
+        ppehGvdDphzDtitvkXarV1yQr+RayaWsY7Z47qi583nV2u79RR2TGTc7Q+lF7XM58vfdOx+ZQFU8zIux
+        oJ1rDEeRzGxrUXF8qnc+mN5p96XRWvc9kJ1SMoSTzR5IB3ygeUGLrZG8kPWiIRE03HxucnE/Dj2xIrdl
+        EjQ/3WhuI+9uIxv5Py2W2TNJMjX2PBzGwbox0FymtNaxdmL02OdykwreYNPtfqSUGUDyCGslTueX6Ty6
+        hCr/8ZDiF2AWxGjPMXcYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pnl_right01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>736, 2</value>
+  </data>
+  <data name="lbl_Ledit02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 15</value>
+  </data>
+  <data name="grd_Data01.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="txt_Item03.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 84</value>
+  </data>
+  <data name="lbl_Ledit02.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="col_CODE.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="&gt;&gt;gview_Data01.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.Buttons9" type="DevExpress.Utils.ToolTipAnchor, DevExpress.Utils.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="ledt_Item06.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_Item03.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item05.Properties.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Glyph</value>
+  </data>
+  <data name="ledt_Item04.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lbl_Ledit01.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="&gt;&gt;btn_Check.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gridColumn4.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="txt_Item01.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn5.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="ledt_S_CD.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btn_Print.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txt_Item03.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;col_CODE.Name" xml:space="preserve">
+    <value>col_CODE</value>
+  </data>
+  <data name="ledt_Item06.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pnl_Top01.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="ledt_ITEMGRP_CD.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item04.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="gview_Data01.Appearance.EvenRow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="radio01.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txt_Item02.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 52</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDown.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="lbl_Title.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item04.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 51</value>
+  </data>
+  <data name="ledt_Item06.Properties.Buttons6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item03.Properties.Buttons9" type="DevExpress.Utils.ToolTipAnchor, DevExpress.Utils.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;pnl_Cancel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item03.Properties.AppearanceDropDownHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;pnl_right02.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDown.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;gridColumn4.Name" xml:space="preserve">
+    <value>gridColumn4</value>
+  </data>
+  <data name="ledt_Item03.Properties.Buttons7" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Check.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_Excel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="txt_Item02.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_ACCT_FG.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="ledt_Item01.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txt_Item01.TabIndex" type="System.Int32, mscorlib">
+    <value>437</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item06.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>497</value>
+  </data>
+  <data name="&gt;&gt;grd_Data01.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="col_NAME.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnl_Save.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item05.Properties.Buttons1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_Print.Name" xml:space="preserve">
+    <value>pnl_Print</value>
+  </data>
+  <data name="grd_Data01.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_Item01.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labelControl4.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDownHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="ledt_Item02.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item02.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="pnl_Top01.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txt_Item01.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item04.TabIndex" type="System.Int32, mscorlib">
+    <value>502</value>
+  </data>
+  <data name="col_CODE.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item03.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="&gt;&gt;txt_Item01.Name" xml:space="preserve">
+    <value>txt_Item01</value>
+  </data>
+  <data name="txt_Item02.TabIndex" type="System.Int32, mscorlib">
+    <value>438</value>
+  </data>
+  <data name="&gt;&gt;pnl_Add.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item05.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelControl5.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="ledt_Item06.Properties.AppearanceDropDown.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item04.Properties.Buttons9" type="DevExpress.Utils.ToolTipAnchor, DevExpress.Utils.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="btn_Delete.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item01.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gview_Data01.Appearance.EvenRow.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ledt_Item03.EditValue" xml:space="preserve">
+    <value>&lt;Null&gt;</value>
+  </data>
+  <data name="labelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>501</value>
+  </data>
+  <data name="ledt_Item03.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 27</value>
+  </data>
+  <data name="txt_Item01.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="ledt_Item04.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item04.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ledt_Item01.Properties.Buttons2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item05.TabIndex" type="System.Int32, mscorlib">
+    <value>500</value>
+  </data>
+  <data name="&gt;&gt;lbl_Ledit01.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
+  <data name="gview_Data01.Appearance.EvenRow.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="gridColumn5.Caption" xml:space="preserve">
+    <value>중분류</value>
+  </data>
+  <data name="labelControl1.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>642, 58</value>
+  </data>
+  <data name="radio01.Properties.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ledt_ORD_FG.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 58</value>
+  </data>
+  <data name="ledt_Item03.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;btn_Add.Parent" xml:space="preserve">
+    <value>pnl_Add</value>
+  </data>
+  <data name="txt_Item03.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnl_Delete.Parent" xml:space="preserve">
+    <value>pnl_Top01</value>
+  </data>
+  <data name="ledt_Item02.Properties.AppearanceDropDownHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="col_CODE.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;pnl_Delete.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btn_Save.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="col_SPEC.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="labelControl2.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ledt_Item01.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ledt_Item06.Properties.Buttons9" type="DevExpress.Utils.ToolTipAnchor, DevExpress.Utils.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="ledt_Item05.Properties.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="col_SPEC.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gridColumn5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pnl_Excel.Name" xml:space="preserve">
+    <value>pnl_Excel</value>
+  </data>
+  <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item01.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="col_SPEC.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons9" type="DevExpress.Utils.ToolTipAnchor, DevExpress.Utils.v17.2">
+    <value>Default</value>
+  </data>
+  <data name="gridColumn7.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;grd_Data01.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_Item02.Properties.Buttons7" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lbl_Ledit02.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="ledt_Item01.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn_Delete.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="col_CODE.Caption" xml:space="preserve">
+    <value>품번</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ledt_M_CD.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="col_UNIT.Width" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="txt_Item02.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="col_SPEC.AppearanceCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 10.25pt</value>
+  </data>
+  <data name="txt_Item02.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btn_Add.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radio01.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_Excel.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="radio01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 57</value>
+  </data>
+  <data name="&gt;&gt;lbl_Ledit01.Name" xml:space="preserve">
+    <value>lbl_Ledit01</value>
+  </data>
+  <data name="ledt_Item01.Properties.AppearanceDropDownHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDownHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 9pt</value>
+  </data>
+  <data name="radio01.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>240, 241, 242</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item02.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ledt_L_CD.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item04.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ledt_Item04.Properties.AppearanceDropDown.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ledt_Item05.Properties.AppearanceDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lbl_Ledit01.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>503</value>
+  </data>
+  <data name="&gt;&gt;btn_Excel.Parent" xml:space="preserve">
+    <value>pnl_Excel</value>
+  </data>
+  <data name="&gt;&gt;radio01.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;ledt_S_CD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn1.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="ledt_Item03.Properties.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item04.Parent" xml:space="preserve">
+    <value>grp_Title</value>
+  </data>
+  <data name="&gt;&gt;ledt_Item05.Name" xml:space="preserve">
+    <value>ledt_Item05</value>
+  </data>
+  <data name="ledt_Item02.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnl_right01.Name" xml:space="preserve">
+    <value>pnl_right01</value>
+  </data>
+  <data name="txt_Item03.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_Item03.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelControl4.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;radio01.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gview_Data01.Appearance.Row.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ledt_Item03.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh</value>
+  </metadata>
+</root>
