@@ -115,11 +115,11 @@
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
             this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.pnl_Top01.Size = new System.Drawing.Size(939, 43);
+            this.pnl_Top01.Size = new System.Drawing.Size(459, 43);
             // 
             // pnl_right02
             // 
-            this.pnl_right02.Size = new System.Drawing.Size(669, 39);
+            this.pnl_right02.Size = new System.Drawing.Size(189, 39);
             // 
             // grp_Top01
             // 
@@ -139,7 +139,7 @@
             this.grp_Top01.LookAndFeel.SkinName = "Whiteprint";
             this.grp_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grp_Top01.Name = "grp_Top01";
-            this.grp_Top01.Size = new System.Drawing.Size(939, 100);
+            this.grp_Top01.Size = new System.Drawing.Size(459, 100);
             this.grp_Top01.TabIndex = 508;
             this.grp_Top01.Text = "등록";
             this.grp_Top01.DoubleClick += new System.EventHandler(this.btn_Save_Click);
@@ -147,7 +147,7 @@
             // txt_Code
             // 
             this.txt_Code.EditValue = "";
-            this.txt_Code.Location = new System.Drawing.Point(77, 37);
+            this.txt_Code.Location = new System.Drawing.Point(90, 37);
             this.txt_Code.Name = "txt_Code";
             this.txt_Code.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.txt_Code.Properties.Appearance.Options.UseBackColor = true;
@@ -163,16 +163,16 @@
             this.lbl_Title01.Appearance.Options.UseTextOptions = true;
             this.lbl_Title01.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lbl_Title01.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl_Title01.Location = new System.Drawing.Point(6, 40);
+            this.lbl_Title01.Location = new System.Drawing.Point(4, 40);
             this.lbl_Title01.Name = "lbl_Title01";
-            this.lbl_Title01.Size = new System.Drawing.Size(64, 14);
+            this.lbl_Title01.Size = new System.Drawing.Size(80, 14);
             this.lbl_Title01.TabIndex = 515;
             this.lbl_Title01.Text = "등록코드";
             // 
             // txt_Name
             // 
             this.txt_Name.EditValue = "";
-            this.txt_Name.Location = new System.Drawing.Point(77, 64);
+            this.txt_Name.Location = new System.Drawing.Point(90, 63);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.txt_Name.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
@@ -190,9 +190,9 @@
             this.lbl_Title02.Appearance.Options.UseTextOptions = true;
             this.lbl_Title02.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lbl_Title02.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl_Title02.Location = new System.Drawing.Point(6, 66);
+            this.lbl_Title02.Location = new System.Drawing.Point(4, 66);
             this.lbl_Title02.Name = "lbl_Title02";
-            this.lbl_Title02.Size = new System.Drawing.Size(64, 14);
+            this.lbl_Title02.Size = new System.Drawing.Size(80, 14);
             this.lbl_Title02.TabIndex = 513;
             this.lbl_Title02.Text = "등록명";
             // 
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(939, 143);
+            this.ClientSize = new System.Drawing.Size(459, 143);
             this.Controls.Add(this.grp_Top01);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("Code_Set.IconOptions.Icon")));
             this.LookAndFeel.SkinName = "Whiteprint";

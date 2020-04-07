@@ -63,7 +63,7 @@
             this.dt_END.Location = new System.Drawing.Point(252, 0);
             this.dt_END.Margin = new System.Windows.Forms.Padding(0);
             this.dt_END.Name = "dt_END";
-            this.dt_END.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
+            this.dt_END.Properties.Appearance.BackColor = System.Drawing.Color.LightYellow;
             this.dt_END.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.dt_END.Properties.Appearance.Options.UseBackColor = true;
             this.dt_END.Properties.Appearance.Options.UseFont = true;
@@ -113,13 +113,14 @@
             this.dt_END.Properties.AppearanceFocused.Options.UseFont = true;
             this.dt_END.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke;
             this.dt_END.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dt_END.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dt_END.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dt_END.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dt_END.Size = new System.Drawing.Size(100, 22);
+            this.dt_END.Size = new System.Drawing.Size(100, 24);
             this.dt_END.TabIndex = 1;
             this.dt_END.EditValueChanged += new System.EventHandler(this.dt_END_EditValueChanged);
             this.dt_END.Enter += new System.EventHandler(this.dt_Enter);
@@ -136,7 +137,8 @@
             // 
             // sbtn_MINUS_DAY
             // 
-            this.sbtn_MINUS_DAY.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtn_MINUS_DAY.ImageOptions.Image")));
+            this.sbtn_MINUS_DAY.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sbtn_MINUS_DAY.ImageOptions.SvgImage")));
+            this.sbtn_MINUS_DAY.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.sbtn_MINUS_DAY.Location = new System.Drawing.Point(0, 0);
             this.sbtn_MINUS_DAY.Margin = new System.Windows.Forms.Padding(0);
             this.sbtn_MINUS_DAY.Name = "sbtn_MINUS_DAY";
@@ -147,8 +149,9 @@
             // sbtn_ADD_DAY
             // 
             this.sbtn_ADD_DAY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sbtn_ADD_DAY.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtn_ADD_DAY.ImageOptions.Image")));
             this.sbtn_ADD_DAY.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.sbtn_ADD_DAY.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sbtn_ADD_DAY.ImageOptions.SvgImage")));
+            this.sbtn_ADD_DAY.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.sbtn_ADD_DAY.Location = new System.Drawing.Point(50, 0);
             this.sbtn_ADD_DAY.Margin = new System.Windows.Forms.Padding(0);
             this.sbtn_ADD_DAY.Name = "sbtn_ADD_DAY";
@@ -187,8 +190,9 @@
             // sbtn_ADD_MONTH
             // 
             this.sbtn_ADD_MONTH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sbtn_ADD_MONTH.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtn_ADD_MONTH.ImageOptions.Image")));
             this.sbtn_ADD_MONTH.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.sbtn_ADD_MONTH.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sbtn_ADD_MONTH.ImageOptions.SvgImage")));
+            this.sbtn_ADD_MONTH.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.sbtn_ADD_MONTH.Location = new System.Drawing.Point(118, 0);
             this.sbtn_ADD_MONTH.Margin = new System.Windows.Forms.Padding(0);
             this.sbtn_ADD_MONTH.Name = "sbtn_ADD_MONTH";
@@ -198,7 +202,8 @@
             // 
             // sbtn_MINUS_MONTH
             // 
-            this.sbtn_MINUS_MONTH.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtn_MINUS_MONTH.ImageOptions.Image")));
+            this.sbtn_MINUS_MONTH.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sbtn_MINUS_MONTH.ImageOptions.SvgImage")));
+            this.sbtn_MINUS_MONTH.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.sbtn_MINUS_MONTH.Location = new System.Drawing.Point(68, 0);
             this.sbtn_MINUS_MONTH.Margin = new System.Windows.Forms.Padding(0);
             this.sbtn_MINUS_MONTH.Name = "sbtn_MINUS_MONTH";
@@ -246,7 +251,7 @@
             this.dt_START.Location = new System.Drawing.Point(138, 0);
             this.dt_START.Margin = new System.Windows.Forms.Padding(0);
             this.dt_START.Name = "dt_START";
-            this.dt_START.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
+            this.dt_START.Properties.Appearance.BackColor = System.Drawing.Color.LightYellow;
             this.dt_START.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.dt_START.Properties.Appearance.Options.UseBackColor = true;
             this.dt_START.Properties.Appearance.Options.UseFont = true;
@@ -296,13 +301,14 @@
             this.dt_START.Properties.AppearanceFocused.Options.UseFont = true;
             this.dt_START.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.WhiteSmoke;
             this.dt_START.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dt_START.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dt_START.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dt_START.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dt_START.Size = new System.Drawing.Size(100, 22);
+            this.dt_START.Size = new System.Drawing.Size(100, 24);
             this.dt_START.TabIndex = 0;
             this.dt_START.Enter += new System.EventHandler(this.dt_Enter);
             // 

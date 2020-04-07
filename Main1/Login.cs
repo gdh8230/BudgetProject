@@ -91,6 +91,7 @@ namespace Main1
             catch (Exception ex)
             {
                 MsgBox.MsgErr(ex.Message, "");
+                Application.Exit();
                 return;
             }
         }
