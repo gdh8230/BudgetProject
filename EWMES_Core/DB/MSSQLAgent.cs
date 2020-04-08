@@ -678,6 +678,8 @@ namespace DH_Core.DB
         {
             try
             {
+                if (!DBConnectState())
+                    CONN.Open();
                 TA = CONN.BeginTransaction();
                 CMD.Transaction = TA;
             }
@@ -696,8 +698,9 @@ namespace DH_Core.DB
                 TA.Rollback();
                 TA = null;
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
             }
         }
 
@@ -711,8 +714,9 @@ namespace DH_Core.DB
                 TA.Commit();
                 TA = null;
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e.ToString());
             }
         }
         public SqlCommand getSqlCommand()

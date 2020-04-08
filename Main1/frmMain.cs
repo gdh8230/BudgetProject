@@ -318,7 +318,14 @@ namespace Main
         {
             try
             {
-                this.Text = "DS글로벌" + " 예산관리시스템 [ " + ((DevExpress.XtraTabbedMdi.XtraTabbedMdiManager)(sender)).SelectedPage.Text + " ]";
+                if (xtraTabbedMdiManager1.Pages.Count > 0)
+                {
+                    this.Text = "DS글로벌" + " 예산관리시스템 [ " + ((DevExpress.XtraTabbedMdi.XtraTabbedMdiManager)(sender)).SelectedPage.Text + " ]";
+                }
+                else
+                {
+                    this.Text = "DS글로벌" + " 예산관리시스템 []";
+                }
             }
             catch
             { }

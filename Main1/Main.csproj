@@ -130,6 +130,18 @@
       <Project>{2377f907-1e07-4792-96e3-14c46d8d5735}</Project>
       <Name>DH_Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EXEC\EXEC.csproj">
+      <Project>{a307069c-c556-4b0a-a429-6e8a2ccd808e}</Project>
+      <Name>EXEC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STAT\STAT.csproj">
+      <Project>{021cf965-d2dc-4d1f-abfb-9ee8691f06e6}</Project>
+      <Name>STAT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STD\STD.csproj">
+      <Project>{367fcc48-76d1-4a61-9166-8417d6937cee}</Project>
+      <Name>STD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SYST\SYST.csproj">
       <Project>{e214d150-2ef7-4118-95d1-dd26c0e0a061}</Project>
       <Name>SYST</Name>

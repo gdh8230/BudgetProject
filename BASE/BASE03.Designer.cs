@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BASE03));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ledt_get_PJT_STAT = new DevExpress.XtraEditors.LookUpEdit();
@@ -154,6 +154,7 @@
             this.btn_Close.ImageOptions.ImageIndex = 14;
             this.btn_Close.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Close.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Close.ImageOptions.SvgImage")));
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // btn_Excel
             // 
@@ -224,7 +225,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(24, 58);
+            this.labelControl1.Location = new System.Drawing.Point(24, 57);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(48, 15);
             this.labelControl1.TabIndex = 0;
@@ -251,7 +252,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(214, 58);
+            this.labelControl2.Location = new System.Drawing.Point(214, 57);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 15);
             this.labelControl2.TabIndex = 3;
@@ -261,7 +262,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(397, 58);
+            this.labelControl3.Location = new System.Drawing.Point(397, 57);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(60, 15);
             this.labelControl3.TabIndex = 5;
@@ -359,7 +360,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(24, 31);
+            this.labelControl4.Location = new System.Drawing.Point(24, 30);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 15);
             this.labelControl4.TabIndex = 6;
@@ -418,7 +419,8 @@
             this.ledt_DEPT.Properties.NullText = "";
             this.ledt_DEPT.Size = new System.Drawing.Size(228, 22);
             this.ledt_DEPT.TabIndex = 22;
-            this.ledt_DEPT.Leave += new System.EventHandler(this.Edit_Leave);
+            this.ledt_DEPT.Tag = "DEPT";
+            this.ledt_DEPT.Leave += new System.EventHandler(this.loolupEdit_Leave);
             // 
             // dt_APRV
             // 
@@ -431,10 +433,10 @@
             this.dt_APRV.Properties.Appearance.Options.UseFont = true;
             this.dt_APRV.Properties.Appearance.Options.UseTextOptions = true;
             this.dt_APRV.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
-            editorButtonImageOptions3.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dt_APRV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dt_APRV.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt_APRV.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
@@ -444,8 +446,8 @@
             this.dt_APRV.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dt_APRV.Size = new System.Drawing.Size(228, 22);
             this.dt_APRV.TabIndex = 21;
-            this.dt_APRV.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.dt_APRV.Leave += new System.EventHandler(this.Edit_Leave);
+            this.dt_APRV.Tag = "APRV_DT";
+            this.dt_APRV.Leave += new System.EventHandler(this.dateEdit_Leave);
             // 
             // ledt_set_PJT_STAT
             // 
@@ -460,8 +462,8 @@
             this.ledt_set_PJT_STAT.Properties.NullText = "";
             this.ledt_set_PJT_STAT.Size = new System.Drawing.Size(100, 22);
             this.ledt_set_PJT_STAT.TabIndex = 20;
-            this.ledt_set_PJT_STAT.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.ledt_set_PJT_STAT.Leave += new System.EventHandler(this.Edit_Leave);
+            this.ledt_set_PJT_STAT.Tag = "PJT_STAT";
+            this.ledt_set_PJT_STAT.Leave += new System.EventHandler(this.loolupEdit_Leave);
             // 
             // txt_EMP
             // 
@@ -473,8 +475,8 @@
             this.txt_EMP.Properties.Appearance.Options.UseFont = true;
             this.txt_EMP.Size = new System.Drawing.Size(228, 22);
             this.txt_EMP.TabIndex = 18;
-            this.txt_EMP.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.txt_EMP.Leave += new System.EventHandler(this.Edit_Leave);
+            this.txt_EMP.Tag = "EMP";
+            this.txt_EMP.Leave += new System.EventHandler(this.textEdit_Leave);
             // 
             // dedt_EDATE
             // 
@@ -485,10 +487,10 @@
             this.dedt_EDATE.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.dedt_EDATE.Properties.Appearance.Options.UseBackColor = true;
             this.dedt_EDATE.Properties.Appearance.Options.UseFont = true;
-            editorButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions4.SvgImage")));
-            editorButtonImageOptions4.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dedt_EDATE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dedt_EDATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dedt_EDATE.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
@@ -498,8 +500,8 @@
             this.dedt_EDATE.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dedt_EDATE.Size = new System.Drawing.Size(100, 22);
             this.dedt_EDATE.TabIndex = 17;
-            this.dedt_EDATE.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.dedt_EDATE.Leave += new System.EventHandler(this.Edit_Leave);
+            this.dedt_EDATE.Tag = "PJT_EDT";
+            this.dedt_EDATE.Leave += new System.EventHandler(this.dateEdit_Leave);
             // 
             // labelControl10
             // 
@@ -520,10 +522,10 @@
             this.dedt_SDATE.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.dedt_SDATE.Properties.Appearance.Options.UseBackColor = true;
             this.dedt_SDATE.Properties.Appearance.Options.UseFont = true;
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
+            editorButtonImageOptions3.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dedt_SDATE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dedt_SDATE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dedt_SDATE.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
@@ -533,8 +535,8 @@
             this.dedt_SDATE.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dedt_SDATE.Size = new System.Drawing.Size(100, 22);
             this.dedt_SDATE.TabIndex = 15;
-            this.dedt_SDATE.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.dedt_SDATE.Leave += new System.EventHandler(this.Edit_Leave);
+            this.dedt_SDATE.Tag = "PJT_SDT";
+            this.dedt_SDATE.Leave += new System.EventHandler(this.dateEdit_Leave);
             // 
             // label1
             // 
@@ -606,8 +608,7 @@
             this.txt_PJT_NM.Size = new System.Drawing.Size(228, 22);
             this.txt_PJT_NM.TabIndex = 4;
             this.txt_PJT_NM.Tag = "PJT_NM";
-            this.txt_PJT_NM.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.txt_PJT_NM.Leave += new System.EventHandler(this.txt_PJT_NM_Leave);
+            this.txt_PJT_NM.Leave += new System.EventHandler(this.textEdit_Leave);
             // 
             // groupControl2
             // 
@@ -646,8 +647,8 @@
             this.txt_CLIENT.Properties.Appearance.Options.UseFont = true;
             this.txt_CLIENT.Size = new System.Drawing.Size(228, 22);
             this.txt_CLIENT.TabIndex = 12;
-            this.txt_CLIENT.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.txt_CLIENT.Leave += new System.EventHandler(this.Edit_Leave);
+            this.txt_CLIENT.Tag = "CLIENT";
+            this.txt_CLIENT.Leave += new System.EventHandler(this.textEdit_Leave);
             // 
             // labelControl12
             // 
@@ -674,8 +675,8 @@
             this.txt_PJT_MONEY.Properties.NullText = "0";
             this.txt_PJT_MONEY.Size = new System.Drawing.Size(228, 22);
             this.txt_PJT_MONEY.TabIndex = 10;
-            this.txt_PJT_MONEY.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.txt_PJT_MONEY.Leave += new System.EventHandler(this.Edit_Leave);
+            this.txt_PJT_MONEY.Tag = "PJT_MONEY";
+            this.txt_PJT_MONEY.Leave += new System.EventHandler(this.textEdit_Leave);
             // 
             // labelControl11
             // 
@@ -697,14 +698,14 @@
             this.txt_PJT_PLACE.Properties.Appearance.Options.UseFont = true;
             this.txt_PJT_PLACE.Size = new System.Drawing.Size(228, 22);
             this.txt_PJT_PLACE.TabIndex = 8;
-            this.txt_PJT_PLACE.EditValueChanged += new System.EventHandler(this.EditValueChanged);
-            this.txt_PJT_PLACE.Leave += new System.EventHandler(this.Edit_Leave);
+            this.txt_PJT_PLACE.Tag = "PJT_PLACE";
+            this.txt_PJT_PLACE.Leave += new System.EventHandler(this.textEdit_Leave);
             // 
             // jnkcDatePicker1
             // 
             this.jnkcDatePicker1.AutoSize = true;
             this.jnkcDatePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.jnkcDatePicker1.Location = new System.Drawing.Point(78, 28);
+            this.jnkcDatePicker1.Location = new System.Drawing.Point(78, 27);
             this.jnkcDatePicker1.Name = "jnkcDatePicker1";
             this.jnkcDatePicker1.Size = new System.Drawing.Size(354, 22);
             this.jnkcDatePicker1.TabIndex = 20;

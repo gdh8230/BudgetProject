@@ -13,11 +13,11 @@ using DH_Core;
 using DH_Core.CommonPopup;
 using DH_Core.DB;
 
-namespace BASE
+namespace STD
 {
-    public partial class BASE03 : frmSub_Baseform_Search_STD
+    public partial class STD01 : frmSub_Baseform_Search_STD
     {
-        public BASE03()
+        public STD01()
         {
             InitializeComponent();
         }
@@ -67,13 +67,6 @@ namespace BASE
 
             DataSet ds;
 
-            //부서 lookup
-            ds = df_select(3, null, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(ledt_DEPT, ds.Tables[0], "NAME", "CODE");
-                ledt_DEPT.ItemIndex = 0;
-            }
             //프로젝트 상태 lookup
             ds = df_select(1, null, out error_msg);
             if (ds != null && ds.Tables[0].Rows.Count > 0)
@@ -81,10 +74,6 @@ namespace BASE
                 modUTIL.DevLookUpEditorSet(ledt_get_PJT_STAT, ds.Tables[0], "NAME", "CODE");
                 ledt_get_PJT_STAT.ItemIndex = 0;
                 DataSet ds2 = new DataSet();
-                ds2 = ds.Copy();
-                ds2.Tables[0].Rows[0].Delete();
-                modUTIL.DevLookUpEditorSet(ledt_set_PJT_STAT, ds2.Tables[0], "NAME", "CODE");
-                ledt_set_PJT_STAT.ItemIndex = 0;
             }
 
             getData();
@@ -130,11 +119,7 @@ namespace BASE
                         string query = "SELECT PJT_CD, PJT_NM, dbo.f_get_STR2DATE(APRV_DT, '-') AS APRV_DT, dbo.f_get_STR2DATE(PJT_SDT, '-') AS PJT_SDT, dbo.f_get_STR2DATE(PJT_EDT, '-') AS PJT_EDT, DEPT, PJT_STAT, EMP, CLIENT, PJT_MONEY, PJT_PLACE" +
                                         " FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE '%' + @PJD_CD + '%' AND PJT_NM LIKE '%' + @PJT_NM + '%' " +
                                         "AND PJT_STAT LIKE @PJT_STAT AND PJT_SDT >= @PJT_SDT AND PJT_EDT <= @PJT_EDT  ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJD_CD", txt_PJT_CD.Text));
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_NM", txt_PJT_NM2.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@PJT_STAT", ledt_get_PJT_STAT.EditValue.ToString()));
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_SDT", jnkcDatePicker1.GetStartDate.ToString()));
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_EDT", jnkcDatePicker1.GetEndDate.ToString()));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -245,87 +230,6 @@ namespace BASE
                 MsgBox.MsgInformation("저장 완료", "확인");
                 btn_Search_Click(null, null);
                 return;
-            }
-        }
-
-        private void btn_Add_Click(object sender, EventArgs e)
-        {
-            Code_Set frm = new Code_Set(env, "프로젝트");
-            if(frm.ShowDialog() == DialogResult.OK)
-            {
-                EditorReset();
-
-                DataRow DR;
-                gridView1.AddNewRow();
-                DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-
-                DR["PJT_CD"] = frm.CODE;
-                DR["PJT_NM"] = frm.NAME;
-                txt_PJT_NM.EditValue = frm.NAME;
-                DT_GRD01.Tables[0].Rows.Add(DR);
-                gridControl1.DataSource = null;
-                gridControl1.DataSource = DT_GRD01.Tables[0];
-                gridView1.FocusedRowHandle = gridView1.RowCount - 1;
-            }
-
-        }
-
-        private void EditorReset()
-        {
-            txt_PJT_NM.EditValue = null;
-            dt_APRV.EditValue = null;
-            dedt_SDATE.EditValue = null;
-            dedt_EDATE.EditValue = null;
-            ledt_DEPT.EditValue = null;
-            ledt_set_PJT_STAT.EditValue = null;
-            txt_EMP.EditValue = null;
-            txt_CLIENT.EditValue = null;
-            txt_PJT_MONEY.EditValue = null;
-            txt_PJT_PLACE.EditValue = null;
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            select_row = gridView1.GetFocusedDataRow();
-            if (select_row != null)
-            {
-                txt_PJT_NM.EditValue = select_row["PJT_NM"];
-                dt_APRV.EditValue = select_row["APRV_DT"];
-                dedt_SDATE.EditValue = select_row["PJT_SDT"];
-                dedt_EDATE.EditValue = select_row["PJT_EDT"];
-                ledt_DEPT.EditValue = select_row["DEPT"];
-                ledt_set_PJT_STAT.EditValue = select_row["PJT_STAT"];
-                txt_EMP.EditValue = select_row["EMP"];
-                txt_CLIENT.EditValue = select_row["CLIENT"];
-                txt_PJT_MONEY.EditValue = select_row["PJT_MONEY"];
-                txt_PJT_PLACE.EditValue = select_row["PJT_PLACE"];
-            }
-        }
-
-        private void textEdit_Leave(object sender, EventArgs e)
-        {
-            TextEdit textEdit = sender as TextEdit;
-            if (!select_row[textEdit.Tag.ToString()].Equals(textEdit.EditValue))
-            {
-                select_row[textEdit.Tag.ToString()] = textEdit.EditValue;
-            }
-
-        }
-
-        private void loolupEdit_Leave(object sender, EventArgs e)
-        {
-            LookUpEdit lookupEdit = sender as LookUpEdit;
-            if (!select_row[lookupEdit.Tag.ToString()].Equals(lookupEdit.EditValue))
-            {
-                select_row[lookupEdit.Tag.ToString()] = lookupEdit.EditValue;
-            }
-        }
-        private void dateEdit_Leave(object sender, EventArgs e)
-        {
-            DateEdit dateEdit = sender as DateEdit;
-            if (!select_row[dateEdit.Tag.ToString()].Equals(dateEdit.EditValue))
-            {
-                select_row[dateEdit.Tag.ToString()] = DateTime.Parse(dateEdit.EditValue.ToString()).ToString("yyyy-MM-dd");
             }
         }
 
