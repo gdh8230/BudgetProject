@@ -89,7 +89,7 @@ namespace Main1
                 frm.ShowDialog();
             }
             catch (Exception ex)
-            {
+             {
                 MsgBox.MsgErr(ex.Message, "");
                 Application.Exit();
                 return;

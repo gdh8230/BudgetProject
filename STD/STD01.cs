@@ -58,7 +58,7 @@ namespace STD
                 }
             }
         }
-        private void USER_Load(object sender, EventArgs e)
+        private void Form_Load(object sender, EventArgs e)
         {
             AutoritySet();
 
@@ -67,19 +67,46 @@ namespace STD
 
             DataSet ds;
 
-            //프로젝트 상태 lookup
-            ds = df_select(1, null, out error_msg);
+            //관리구분 lookup
+            ds = df_select(3, null, out error_msg);
             if (ds != null && ds.Tables[0].Rows.Count > 0)
             {
-                modUTIL.DevLookUpEditorSet(ledt_get_PJT_STAT, ds.Tables[0], "NAME", "CODE");
-                ledt_get_PJT_STAT.ItemIndex = 0;
-                DataSet ds2 = new DataSet();
+                modUTIL.DevLookUpEditorSet(ledt_ADMIN_ITEM, ds.Tables[0], "NAME", "CODE");
+                ledt_ADMIN_ITEM.ItemIndex = 0;
             }
 
-            getData();
+            gridView2.OptionsView.ShowGroupPanel = false;
+
+            getACCOUNT();
         }
 
         private void getData()
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                DT_GRD02 = null;
+                gridControl2.DataSource = null;
+                DataRow dr = gridView1.GetFocusedDataRow();
+                gParam = new string[] { dr["ACT_CD"].ToString() };
+                DT_GRD02 = df_select(1, gParam, out error_msg);
+                if (DT_GRD02 == null)
+                {
+                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    this.Cursor = Cursors.Default;
+                    return;
+                }
+
+                gridControl2.DataSource = DT_GRD02.Tables[0];
+                //DT_GRD02 = DT_GRD01.Copy();
+                this.Cursor = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MsgBox.MsgErr("" + ex, "");
+            }
+        }
+        private void getACCOUNT()
         {
             try
             {
@@ -95,7 +122,7 @@ namespace STD
                 }
 
                 gridControl1.DataSource = DT_GRD01.Tables[0];
-                DT_GRD02 = DT_GRD01.Copy();
+                //DT_GRD02 = DT_GRD01.Copy();
                 this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
@@ -114,24 +141,27 @@ namespace STD
             error_msg = "";
             switch (Index)
             {
-                case 0: //프로젝트 조회
+                case 0: //회계계정 조회
                     {
-                        string query = "SELECT PJT_CD, PJT_NM, dbo.f_get_STR2DATE(APRV_DT, '-') AS APRV_DT, dbo.f_get_STR2DATE(PJT_SDT, '-') AS PJT_SDT, dbo.f_get_STR2DATE(PJT_EDT, '-') AS PJT_EDT, DEPT, PJT_STAT, EMP, CLIENT, PJT_MONEY, PJT_PLACE" +
-                                        " FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE '%' + @PJD_CD + '%' AND PJT_NM LIKE '%' + @PJT_NM + '%' " +
-                                        "AND PJT_STAT LIKE @PJT_STAT AND PJT_SDT >= @PJT_SDT AND PJT_EDT <= @PJT_EDT  ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_STAT", ledt_get_PJT_STAT.EditValue.ToString()));
+                        string query = "SELECT ACT_CD, ACT_NM FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND CTRL_YN = 'Y' ";
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", txt_act_cd.Text));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_NM", txt_act_nm.Text));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
-                case 1: //프로젝트상태 코드
+                case 1: //전기 예산 신청 내역
                     {
-                        string query = "SELECT '%' CODE, '전체' NAME UNION ALL  SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '프로젝트상태'";
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
+                        gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", dt_YEAR.EditValue));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", "0"));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_ITEM", ledt_ADMIN_ITEM.EditValue.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
+                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
                 case 3: //부서조회
                     {
-                        string query = "SELECT DEPT AS CODE, DEPT_NAME AS NAME FROM TS_DEPT WITH(NOLOCK)";
+                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '관리구분'";
                         gConst.DbConn.AddParameter(new SqlParameter("@COMP", env.Company));
                         gConst.DbConn.AddParameter(new SqlParameter("@FACT", env.Factory));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
@@ -214,8 +244,9 @@ namespace STD
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            getData();
+            getACCOUNT();
         }
+
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -245,6 +276,24 @@ namespace STD
                 {
                     btn_Save_Click(null, null);
                 }
+            }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gridView1.DataSource == null) return;
+            getData();
+        }
+
+        private void gridView2_CustomColumnGroup(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnSortEventArgs e)
+        {
+            if (e.Column == gridColumn4)
+            {
+                DateTime value1 = (DateTime)e.Value1;
+                DateTime value2 = (DateTime)e.Value2;
+                //if (GetSeason(value1) == GetSeason(value2)) e.Result = 0;
+                //else e.Result = 1;
+                e.Handled = true;
             }
         }
     }
