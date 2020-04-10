@@ -1,6 +1,6 @@
 ﻿namespace STD
 {
-    partial class STD01
+    partial class STD02
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STD01));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STD02));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ledt_ADMIN_GBN = new DevExpress.XtraEditors.LookUpEdit();
@@ -68,6 +68,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_act_cd = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.btn_COPY = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -118,6 +119,7 @@
             // 
             this.grp_Search_Condition.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.grp_Search_Condition.AppearanceCaption.Options.UseFont = true;
+            this.grp_Search_Condition.Controls.Add(this.btn_COPY);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.Controls.Add(this.labelControl3);
             this.grp_Search_Condition.Controls.Add(this.txt_act_nm);
@@ -220,6 +222,7 @@
             this.ledt_ADMIN_GBN.Properties.NullText = "";
             this.ledt_ADMIN_GBN.Size = new System.Drawing.Size(120, 20);
             this.ledt_ADMIN_GBN.TabIndex = 1;
+            this.ledt_ADMIN_GBN.EditValueChanged += new System.EventHandler(this.dt_YEAR_EditValueChanged);
             // 
             // groupControl1
             // 
@@ -322,7 +325,7 @@
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(378, 426);
             this.groupControl3.TabIndex = 5;
-            this.groupControl3.Text = "전기 신청내역";
+            this.groupControl3.Text = "당기 신청내역";
             // 
             // gridControl2
             // 
@@ -435,7 +438,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(367, 426);
             this.groupControl2.TabIndex = 6;
-            this.groupControl2.Text = "당기 신청내역";
+            this.groupControl2.Text = "당기 편성내역";
             // 
             // gridControl3
             // 
@@ -549,10 +552,10 @@
             this.dt_YEAR.Properties.Appearance.Options.UseFont = true;
             this.dt_YEAR.Properties.Appearance.Options.UseTextOptions = true;
             this.dt_YEAR.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
-            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dt_YEAR.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dt_YEAR.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt_YEAR.Properties.DisplayFormat.FormatString = "yyyy";
@@ -609,9 +612,19 @@
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 15);
             this.labelControl4.TabIndex = 23;
-            this.labelControl4.Text = "신청년도";
+            this.labelControl4.Text = "편성년도";
             // 
-            // STD01
+            // btn_COPY
+            // 
+            this.btn_COPY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_COPY.Location = new System.Drawing.Point(907, 27);
+            this.btn_COPY.Name = "btn_COPY";
+            this.btn_COPY.Size = new System.Drawing.Size(100, 23);
+            this.btn_COPY.TabIndex = 24;
+            this.btn_COPY.Text = "신청내역복사";
+            this.btn_COPY.Click += new System.EventHandler(this.btn_COPY_Click);
+            // 
+            // STD02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -621,8 +634,8 @@
             this.Controls.Add(this.groupControl1);
             this.LookAndFeel.SkinName = "Whiteprint";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Name = "STD01";
-            this.Text = "예산신청";
+            this.Name = "STD02";
+            this.Text = "예산편성";
             this.Load += new System.EventHandler(this.Form_Load);
             this.Controls.SetChildIndex(this.pnl_Top01, 0);
             this.Controls.SetChildIndex(this.grp_Search_Condition, 0);
@@ -712,5 +725,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraEditors.SimpleButton btn_COPY;
     }
 }

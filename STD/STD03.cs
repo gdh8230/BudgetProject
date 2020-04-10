@@ -16,9 +16,9 @@ using DH_Core.DB;
 
 namespace STD
 {
-    public partial class STD01 : frmSub_Baseform_Search_STD
+    public partial class STD03 : frmSub_Baseform_Search_STD
     {
-        public STD01()
+        public STD03()
         {
             InitializeComponent();
         }
@@ -76,7 +76,13 @@ namespace STD
                 ledt_ADMIN_GBN.ItemIndex = 0;
             }
 
-            gridView2.OptionsView.ShowGroupPanel = false;
+            //조정구분 lookup
+            ds = df_select(4, null, out error_msg);
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                modUTIL.DevLookUpEditorSet(rledt_Gbn, ds.Tables[0], "CODE", "NAME" , "CODE", "NAME");
+                ledt_ADMIN_GBN.ItemIndex = 0;
+            }
 
             getACCOUNT();
         }
@@ -88,10 +94,10 @@ namespace STD
                 this.Cursor = Cursors.WaitCursor;
 
                 DataRow dr = gridView1.GetFocusedDataRow();
-                //전기 신청 내역
+                //당기 신청 내역
                 DT_GRD02 = null;
                 gridControl2.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), (((DateTime)dt_YEAR.EditValue).Year - 1).ToString() };
+                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "0" };
                 DT_GRD02 = df_select(1, gParam, out error_msg);
                 if (DT_GRD02 == null)
                 {
@@ -102,10 +108,10 @@ namespace STD
 
                 gridControl2.DataSource = DT_GRD02.Tables[0];
 
-                //당기 신청 내역
+                //당기 편성 내역
                 DT_GRD03 = null;
                 gridControl3.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString()};
+                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "1" };
                 DT_GRD03 = df_select(1, gParam, out error_msg);
                 if (DT_GRD03 == null)
                 {
@@ -149,7 +155,6 @@ namespace STD
         }
         #endregion
 
-
         #region DB CRUD(데이터베이스 처리)
         private DataSet df_select(int Index, object[] Param, out string error_msg)
         {
@@ -169,10 +174,10 @@ namespace STD
                 case 1: //예산 신청 내역
                     {
                         gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", "0"));
                         gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
@@ -208,12 +213,12 @@ namespace STD
                     gConst.DbConn.ProcedureName = "dbo.USP_STD_SET_BUDGET";
                     gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, "I");
                     gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, Param[0]);
-                    gConst.DbConn.AddParameter("ACT_GBN", MSSQLAgent.DBFieldType.String, "0"); //신청
+                    gConst.DbConn.AddParameter("ACT_GBN", MSSQLAgent.DBFieldType.String, "1"); //편성
                     gConst.DbConn.AddParameter("YEAR", MSSQLAgent.DBFieldType.String, Param[1]);
                     gConst.DbConn.AddParameter("MONTH", MSSQLAgent.DBFieldType.String, dr["MONTH"].ToString());
                     gConst.DbConn.AddParameter("ADMIN_GBN", MSSQLAgent.DBFieldType.String, ledt_ADMIN_GBN.EditValue.ToString());
                     gConst.DbConn.AddParameter("QUARTER", MSSQLAgent.DBFieldType.String, dr["QUARTER"].ToString());
-                    gConst.DbConn.AddParameter("REQ_MONEY", MSSQLAgent.DBFieldType.String, dr["MONEY"].ToString());
+                    gConst.DbConn.AddParameter("DROWUP_MONEY", MSSQLAgent.DBFieldType.String, Convert.ToDecimal(dr["MONEY"].ToString()));
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
                 }
                 else
@@ -256,7 +261,6 @@ namespace STD
             getACCOUNT();
         }
 
-
         private void btn_Save_Click(object sender, EventArgs e)
         {
             DataSet ds_new;
@@ -296,18 +300,6 @@ namespace STD
             getData();
         }
 
-        private void gridView2_CustomColumnGroup(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnSortEventArgs e)
-        {
-            if (e.Column == gridColumn4)
-            {
-                DateTime value1 = (DateTime)e.Value1;
-                DateTime value2 = (DateTime)e.Value2;
-                //if (GetSeason(value1) == GetSeason(value2)) e.Result = 0;
-                //else e.Result = 1;
-                e.Handled = true;
-            }
-        }
-
         private void gridControl3_ProcessGridKey(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -319,7 +311,12 @@ namespace STD
 
         private void dt_YEAR_EditValueChanged(object sender, EventArgs e)
         {
+            getACCOUNT();
+        }
 
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            gridView5.AddNewRow();
         }
     }
 }

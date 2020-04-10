@@ -16,9 +16,9 @@ using DH_Core.DB;
 
 namespace STD
 {
-    public partial class STD01 : frmSub_Baseform_Search_STD
+    public partial class STD02 : frmSub_Baseform_Search_STD
     {
-        public STD01()
+        public STD02()
         {
             InitializeComponent();
         }
@@ -88,10 +88,10 @@ namespace STD
                 this.Cursor = Cursors.WaitCursor;
 
                 DataRow dr = gridView1.GetFocusedDataRow();
-                //전기 신청 내역
+                //당기 신청 내역
                 DT_GRD02 = null;
                 gridControl2.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), (((DateTime)dt_YEAR.EditValue).Year - 1).ToString() };
+                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "0" };
                 DT_GRD02 = df_select(1, gParam, out error_msg);
                 if (DT_GRD02 == null)
                 {
@@ -102,10 +102,10 @@ namespace STD
 
                 gridControl2.DataSource = DT_GRD02.Tables[0];
 
-                //당기 신청 내역
+                //당기 편성 내역
                 DT_GRD03 = null;
                 gridControl3.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString()};
+                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "1" };
                 DT_GRD03 = df_select(1, gParam, out error_msg);
                 if (DT_GRD03 == null)
                 {
@@ -169,10 +169,10 @@ namespace STD
                 case 1: //예산 신청 내역
                     {
                         gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", "0"));
                         gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
@@ -208,12 +208,12 @@ namespace STD
                     gConst.DbConn.ProcedureName = "dbo.USP_STD_SET_BUDGET";
                     gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, "I");
                     gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, Param[0]);
-                    gConst.DbConn.AddParameter("ACT_GBN", MSSQLAgent.DBFieldType.String, "0"); //신청
+                    gConst.DbConn.AddParameter("ACT_GBN", MSSQLAgent.DBFieldType.String, "1"); //편성
                     gConst.DbConn.AddParameter("YEAR", MSSQLAgent.DBFieldType.String, Param[1]);
                     gConst.DbConn.AddParameter("MONTH", MSSQLAgent.DBFieldType.String, dr["MONTH"].ToString());
                     gConst.DbConn.AddParameter("ADMIN_GBN", MSSQLAgent.DBFieldType.String, ledt_ADMIN_GBN.EditValue.ToString());
                     gConst.DbConn.AddParameter("QUARTER", MSSQLAgent.DBFieldType.String, dr["QUARTER"].ToString());
-                    gConst.DbConn.AddParameter("REQ_MONEY", MSSQLAgent.DBFieldType.String, dr["MONEY"].ToString());
+                    gConst.DbConn.AddParameter("DROWUP_MONEY", MSSQLAgent.DBFieldType.String, Convert.ToDecimal(dr["MONEY"].ToString()));
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
                 }
                 else
@@ -319,7 +319,17 @@ namespace STD
 
         private void dt_YEAR_EditValueChanged(object sender, EventArgs e)
         {
+            getACCOUNT();
+        }
 
+        private void btn_COPY_Click(object sender, EventArgs e)
+        {
+            DT_GRD03 = DT_GRD02.Copy();
+            for(int i = 0; i<DT_GRD03.Tables[0].Rows.Count; i++)
+            {
+                DT_GRD03.Tables[0].Rows[i].SetAdded();
+            }
+            gridControl3.DataSource = DT_GRD03.Tables[0];
         }
     }
 }

@@ -202,5 +202,21 @@ namespace Main1
         {
             Application.Exit();
         }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btn_Login.PerformClick();
+            }
+        }
+
+        private void txt_PWD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btn_Login.PerformClick();
+            }
+        }
     }
 }

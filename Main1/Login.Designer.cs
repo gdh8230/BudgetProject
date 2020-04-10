@@ -92,6 +92,7 @@
             this.txt_PWD.UseSelectable = true;
             this.txt_PWD.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PWD.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_PWD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PWD_KeyPress);
             // 
             // metroLabel1
             // 
@@ -142,15 +143,16 @@
             this.bedt_ID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.bedt_ID.Size = new System.Drawing.Size(151, 26);
-            this.bedt_ID.TabIndex = 23;
+            this.bedt_ID.TabIndex = 0;
             this.bedt_ID.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_ID_ButtonClick);
+            this.bedt_ID.Leave += new System.EventHandler(this.txt_ID_Leave);
             // 
             // btn_Login
             // 
             this.btn_Login.Location = new System.Drawing.Point(497, 240);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 92);
-            this.btn_Login.TabIndex = 24;
+            this.btn_Login.TabIndex = 2;
             this.btn_Login.Text = "접속";
             this.btn_Login.Click += new System.EventHandler(this.btn_LOGIN_Click);
             // 
@@ -159,7 +161,7 @@
             this.btn_Config.Location = new System.Drawing.Point(415, 338);
             this.btn_Config.Name = "btn_Config";
             this.btn_Config.Size = new System.Drawing.Size(75, 27);
-            this.btn_Config.TabIndex = 25;
+            this.btn_Config.TabIndex = 3;
             this.btn_Config.Text = "환경설정";
             this.btn_Config.Click += new System.EventHandler(this.btn_CONFIG_Click);
             // 
@@ -168,7 +170,7 @@
             this.btn_Exit.Location = new System.Drawing.Point(497, 338);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(75, 27);
-            this.btn_Exit.TabIndex = 26;
+            this.btn_Exit.TabIndex = 4;
             this.btn_Exit.Text = "종료";
             this.btn_Exit.Click += new System.EventHandler(this.btn_EXIT_Click);
             // 
@@ -190,6 +192,7 @@
             this.Text = "예산관리시스템";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.bedt_ID.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
