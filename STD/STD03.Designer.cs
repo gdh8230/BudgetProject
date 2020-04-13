@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STD03));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ledt_ADMIN_GBN = new DevExpress.XtraEditors.LookUpEdit();
@@ -77,6 +77,7 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rdedt_Month = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rledt_Gbn = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -140,6 +141,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdedt_Month)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdedt_Month.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rledt_Gbn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
@@ -715,7 +718,8 @@
             this.repositoryItemTextEdit5,
             this.repositoryItemCheckEdit5,
             this.rdedt_Month,
-            this.rledt_Gbn});
+            this.rledt_Gbn,
+            this.repositoryItemDateEdit1});
             this.gridControl5.Size = new System.Drawing.Size(503, 541);
             this.gridControl5.TabIndex = 1;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -750,12 +754,12 @@
             this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn12.Caption = "조정대상년월";
             this.gridColumn12.ColumnEdit = this.rdedt_Month;
-            this.gridColumn12.FieldName = "ACT_NM";
+            this.gridColumn12.FieldName = "ADJ_MONTH";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.FixedWidth = true;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 1;
-            this.gridColumn12.Width = 80;
+            this.gridColumn12.Width = 100;
             // 
             // rdedt_Month
             // 
@@ -765,21 +769,43 @@
             this.rdedt_Month.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.False;
             this.rdedt_Month.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rdedt_Month.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            this.rdedt_Month.DisplayFormat.FormatString = "yyyy-MM";
+            this.rdedt_Month.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.rdedt_Month.EditFormat.FormatString = "yyyy-MM";
+            this.rdedt_Month.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.rdedt_Month.Mask.EditMask = "([0-9][0-9][0-9][0-9])-(0?[1-9]|1[012])";
+            this.rdedt_Month.Mask.IgnoreMaskBlank = false;
+            this.rdedt_Month.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.rdedt_Month.Mask.ShowPlaceHolders = false;
+            this.rdedt_Month.Mask.UseMaskAsDisplayFormat = true;
+            this.rdedt_Month.MaxLength = 7;
             this.rdedt_Month.Name = "rdedt_Month";
-            this.rdedt_Month.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.MonthView;
+            this.rdedt_Month.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
+            this.rdedt_Month.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
+            this.rdedt_Month.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
             // 
             // gridColumn13
             // 
             this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn13.Caption = "조정일자";
-            this.gridColumn13.FieldName = "ACT_CD";
+            this.gridColumn13.ColumnEdit = this.repositoryItemDateEdit1;
+            this.gridColumn13.FieldName = "ADJ_DT";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.FixedWidth = true;
-            this.gridColumn13.OptionsColumn.ReadOnly = true;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 0;
-            this.gridColumn13.Width = 80;
+            this.gridColumn13.Width = 100;
+            // 
+            // repositoryItemDateEdit1
+            // 
+            this.repositoryItemDateEdit1.AutoHeight = false;
+            this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
             // 
             // gridColumn14
             // 
@@ -789,6 +815,7 @@
             this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn14.Caption = "구분";
             this.gridColumn14.ColumnEdit = this.rledt_Gbn;
+            this.gridColumn14.FieldName = "ADJ_GBN";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.FixedWidth = true;
             this.gridColumn14.Visible = true;
@@ -810,6 +837,8 @@
             this.gridColumn15.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn15.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.gridColumn15.Caption = "금액";
+            this.gridColumn15.DisplayFormat.FormatString = "{0:#,###}";
+            this.gridColumn15.FieldName = "ADJ_MONEY";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.FixedWidth = true;
             this.gridColumn15.Visible = true;
@@ -821,10 +850,11 @@
             this.gridColumn16.AppearanceCell.BackColor = System.Drawing.Color.LightYellow;
             this.gridColumn16.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn16.Caption = "조정내용";
+            this.gridColumn16.FieldName = "ADJ_NOTE";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 4;
-            this.gridColumn16.Width = 163;
+            this.gridColumn16.Width = 123;
             // 
             // repositoryItemTextEdit5
             // 
@@ -850,10 +880,10 @@
             this.dt_YEAR.Properties.Appearance.Options.UseFont = true;
             this.dt_YEAR.Properties.Appearance.Options.UseTextOptions = true;
             this.dt_YEAR.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
-            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dt_YEAR.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dt_YEAR.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt_YEAR.Properties.DisplayFormat.FormatString = "yyyy";
@@ -981,6 +1011,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdedt_Month.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdedt_Month)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rledt_Gbn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).EndInit();
@@ -1048,5 +1080,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit rdedt_Month;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rledt_Gbn;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
     }
 }

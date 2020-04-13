@@ -1,24 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Base;
 using DH_Core;
-using DH_Core.CommonPopup;
 using DH_Core.DB;
 
-namespace STD
+namespace EXEC
 {
-    public partial class STD03 : frmSub_Baseform_Search_STD
+    public partial class EXEC01 : frmSub_Baseform_Search_STD
     {
-        public STD03()
+        public EXEC01()
         {
             InitializeComponent();
         }
@@ -70,20 +61,23 @@ namespace STD
 
             DataSet ds;
 
-            //관리구분 lookup
-            ds = df_select(3, null, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(ledt_ADMIN_GBN, ds.Tables[0], "NAME", "CODE");
-                ledt_ADMIN_GBN.ItemIndex = 0;
-            }
+            
 
-            //조정구분 lookup
-            ds = df_select(4, null, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(rledt_Gbn, ds.Tables[0], "CODE", "NAME" , "CODE", "NAME");
-            }
+
+            ////관리구분 lookup
+            //ds = df_select(3, null, out error_msg);
+            //if (ds != null && ds.Tables[0].Rows.Count > 0)
+            //{
+            //    modUTIL.DevLookUpEditorSet(ledt_ADMIN_GBN, ds.Tables[0], "NAME", "CODE");
+            //    ledt_ADMIN_GBN.ItemIndex = 0;
+            //}
+
+            ////조정구분 lookup
+            //ds = df_select(4, null, out error_msg);
+            //if (ds != null && ds.Tables[0].Rows.Count > 0)
+            //{
+            //    modUTIL.DevLookUpEditorSet(rledt_Gbn, ds.Tables[0], "CODE", "NAME" , "CODE", "NAME");
+            //}
 
             getACCOUNT();
         }
@@ -94,48 +88,20 @@ namespace STD
             {
                 this.Cursor = Cursors.WaitCursor;
 
-                DataRow dr = gridView1.GetFocusedDataRow();
-                //당기 신청 내역
-                DT_GRD02 = null;
-                gridControl2.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "0" };
-                DT_GRD02 = df_select(1, gParam, out error_msg);
-                if (DT_GRD02 == null)
-                {
-                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
+                //DataRow dr = gridView1.GetFocusedDataRow();
+                ////당기 신청 내역
+                //DT_GRD02 = null;
+                //gridControl2.DataSource = null;
+                //gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString(), "0" };
+                //DT_GRD02 = df_select(1, gParam, out error_msg);
+                //if (DT_GRD02 == null)
+                //{
+                //    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                //    this.Cursor = Cursors.Default;
+                //    return;
+                //}
 
-                gridControl2.DataSource = DT_GRD02.Tables[0];
-
-                //당기 편성 내역
-                DT_GRD03 = null;
-                gridControl3.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "1" };
-                DT_GRD03 = df_select(1, gParam, out error_msg);
-                if (DT_GRD03 == null)
-                {
-                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
-
-                gridControl3.DataSource = DT_GRD03.Tables[0];
-                //DT_GRD02 = DT_GRD01.Copy();
-
-                //조정 내역
-                DT_GRD05 = null;
-                gridControl5.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "0" };
-                DT_GRD05 = df_select(5, gParam, out error_msg);
-                if (DT_GRD05 == null)
-                {
-                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
-                gridControl5.DataSource = DT_GRD05.Tables[0];
+                //gridControl2.DataSource = DT_GRD02.Tables[0];
 
                 this.Cursor = Cursors.Default;
             }
@@ -180,16 +146,13 @@ namespace STD
             {
                 case 0: //회계계정 조회
                     {
-                        string query = "SELECT ACT_CD, ACT_NM FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND CTRL_YN = 'Y' ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", txt_act_cd.Text));
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_NM", txt_act_nm.Text));
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
+                        //string query = "SELECT ACT_CD, ACT_NM FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND CTRL_YN = 'Y' ";
+                        //dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
                 case 1: //예산 신청 내역
                     {
                         gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
@@ -199,7 +162,6 @@ namespace STD
                 case 2: //예산 신청 내역
                     {
                         gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
@@ -221,7 +183,6 @@ namespace STD
                 case 5: //예산 조정 내역
                     {
                         gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_ADJ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
                         //gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
@@ -311,7 +272,7 @@ namespace STD
                 ds_new = DT_GRD05.GetChanges();
                 foreach (DataRow dr in ds_new.Tables[0].Rows)
                 {
-                    gParam = new string[] { dr_grid1["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString() };
+                    gParam = new string[] { dr_grid1["ACT_CD"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString() };
                     df_Transaction(20, gParam, dr, out gOut_MSG);
                 }
                 MsgBox.MsgInformation("저장 완료", "확인");
@@ -350,18 +311,19 @@ namespace STD
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DataRow DR;
-            gridView5.AddNewRow();
-            DR = gridView5.GetDataRow(gridView5.FocusedRowHandle);
+            //DataRow DR;
+            //gridView5.AddNewRow();
+            //DR = gridView5.GetDataRow(gridView5.FocusedRowHandle);
 
-            DR["ADJ_DT"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM-dd");
-            DR["ACT_CD"] = select_row["ACT_CD"];
-            DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
-            //DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
-            DT_GRD05.Tables[0].Rows.Add(DR);
-            gridControl5.DataSource = null;
-            gridControl5.DataSource = DT_GRD05.Tables[0];
-            gridView5.FocusedRowHandle = gridView1.RowCount - 1;
+            //DR["ADJ_DT"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM-dd");
+            //DR["ACT_CD"] = select_row["ACT_CD"];
+            //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
+            ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
+            //DT_GRD05.Tables[0].Rows.Add(DR);
+            //gridControl5.DataSource = null;
+            //gridControl5.DataSource = DT_GRD05.Tables[0];
+            //gridView5.FocusedRowHandle = gridView1.RowCount - 1;
         }
+
     }
 }
