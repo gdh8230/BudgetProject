@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using DH_Core;
 using DH_Core.DB;
+using DevExpress.Spreadsheet;
+using DevExpress.XtraCharts;
 
 namespace EXEC
 {
@@ -61,9 +63,12 @@ namespace EXEC
 
             DataSet ds;
 
-            
+            Workbook workbook = new Workbook();
+
+            //workbook.LoadDocument("C:\\Users\\HJchoi_devP\\Downloads\\지출결의서_20200303 - 복사본(0).xlsx", DocumentFormat.Xlsx);
 
 
+            spreadsheetControl1.LoadDocument("C:\\Users\\HJchoi_devP\\Downloads\\지출결의서_20200303 - 복사본(0).xlsx", DocumentFormat.Xlsx);
             ////관리구분 lookup
             //ds = df_select(3, null, out error_msg);
             //if (ds != null && ds.Tables[0].Rows.Count > 0)
@@ -266,6 +271,9 @@ namespace EXEC
         private void btn_Save_Click(object sender, EventArgs e)
         {
             DataSet ds_new;
+
+            Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
+
             DataRow dr_grid1 = gridView1.GetFocusedDataRow();
             if (DT_GRD05.HasChanges())
             {
