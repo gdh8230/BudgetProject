@@ -31,6 +31,8 @@ namespace STD
         static DataSet DT_GRD02 = new DataSet();    //FOR GRID1
         static DataSet DT_GRD03 = new DataSet();    //FOR GIRD2
         static DataSet DT_GRD04 = new DataSet();    //FOR GRID2
+        static DataSet DT_GRD05 = new DataSet();    //FOR GRID2
+        static DataSet DT_GRD06 = new DataSet();    //FOR GRID2
         static DataRow select_row;
         string error_msg = "";
         #endregion
@@ -122,6 +124,20 @@ namespace STD
 
                 gridControl3.DataSource = DT_GRD03.Tables[0];
                 //DT_GRD02 = DT_GRD01.Copy();
+
+                //조정 내역
+                DT_GRD05 = null;
+                gridControl5.DataSource = null;
+                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "0" };
+                DT_GRD05 = df_select(5, gParam, out error_msg);
+                if (DT_GRD05 == null)
+                {
+                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    this.Cursor = Cursors.Default;
+                    return;
+                }
+
+
                 this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
@@ -181,12 +197,32 @@ namespace STD
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
+                case 2: //예산 신청 내역
+                    {
+                        gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
+                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
+                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
+                    }
+                    break;
                 case 3: //부서조회
                     {
                         string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '관리구분'";
                         gConst.DbConn.AddParameter(new SqlParameter("@COMP", env.Company));
                         gConst.DbConn.AddParameter(new SqlParameter("@FACT", env.Factory));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
+                    }
+                    break;
+                case 5: //예산 조정 내역
+                    {
+                        gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_ADJ";
+                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
+                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
                 default: break;
