@@ -8,22 +8,24 @@ using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 
 namespace DH_Core.CommonPopup
 {
-    public partial class frm_PUP_GET_PJT_CD : frmSub_Baseform_System_NullPanel
+    public partial class frm_PUP_GET_CODE : frmSub_Baseform_System_NullPanel
     {
-        public frm_PUP_GET_PJT_CD(_Environment env, string code, string name)
+        public frm_PUP_GET_CODE(_Environment env, string title)
         {
             InitializeComponent();
             this.env = env;
-            txtPjtCd.EditValue = code;
-            txtPjtName.EditValue = name;
+
+            this.Text = title + " 정보";
+            this.title = title;
             getData();
         }
 
         #region Attributes (속성정의 집합)
         _Environment env;
 
-        public string PJT_CD { get; set; }
-        public string PJT_NAME { get; set; }
+        public string CODE { get; set; }
+        public string NAME { get; set; }
+        string title;
         #endregion
 
         #region Functions 
@@ -39,29 +41,29 @@ namespace DH_Core.CommonPopup
         {
             this.Cursor = Cursors.WaitCursor;
             string error_msg = string.Empty;
-            gcPjt.DataSource = null;
-            gcPjt.DataSource = df_select(0,null,out error_msg);
+            gridControl1.DataSource = null;
+            gridControl1.DataSource = df_select(null,out error_msg);
             this.Cursor = Cursors.Default;
         }
         private void selectItem(DataRow dr)
         {
-            this.PJT_CD = dr["PJT_CD"].ToString();
-            this.PJT_NAME = dr["PJT_NM"].ToString();
+            this.CODE = dr["CODE"].ToString();
+            this.NAME = dr["NAME"].ToString();
             this.DialogResult = DialogResult.OK;
         }
         public int getDataCount()
         {
-            if (this.gcPjt.DataSource == null)
+            if (this.gridControl1.DataSource == null)
                 return 0;
-            return ((DataTable)this.gcPjt.DataSource).Rows.Count;
+            return ((DataTable)this.gridControl1.DataSource).Rows.Count;
         }
         public void postItem(int idx)
         {
-            DataRow dr = ((DataTable)this.gcPjt.DataSource).Rows[idx];
+            DataRow dr = ((DataTable)this.gridControl1.DataSource).Rows[idx];
             if (dr != null)
             {
-                this.PJT_CD = dr["PJT_CD"].ToString();
-                this.PJT_NAME = dr["PJT_NAME"].ToString();
+                this.CODE = dr["CODE"].ToString();
+                this.NAME = dr["NAME"].ToString();
             }
         }
         #endregion
@@ -69,7 +71,7 @@ namespace DH_Core.CommonPopup
         #region Events
         private void Form_Load(object sender, EventArgs e)
         {
-            gvPjt.Focus();
+            gridView1.Focus();
         }
         private void btn_Search_Click(object sender, EventArgs e)
         {
@@ -80,17 +82,17 @@ namespace DH_Core.CommonPopup
 
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                if (sender == txtPjtCd)
+                if (sender == txt_code)
                     getData();
-                else if (sender == txtPjtName)
+                else if (sender == txt_name)
                 {
                     getData();
                 }
-                else if (sender == gvPjt)
+                else if (sender == gridView1)
                 {
-                    if (gcPjt.DataSource == null || gvPjt.RowCount == 0)
+                    if (gridControl1.DataSource == null || gridView1.RowCount == 0)
                         return;
-                    DataRow dr = gvPjt.GetFocusedDataRow();
+                    DataRow dr = gridView1.GetFocusedDataRow();
                     if (dr == null)
                         return;
                     selectItem(dr);
@@ -99,34 +101,44 @@ namespace DH_Core.CommonPopup
         }
         private void gridView_DoubleClick(object sender, EventArgs e)
         {
-            Point pt = gvPjt.GridControl.PointToClient(Control.MousePosition);
-            GridHitInfo info = gvPjt.CalcHitInfo(pt);
+            Point pt = gridView1.GridControl.PointToClient(Control.MousePosition);
+            GridHitInfo info = gridView1.CalcHitInfo(pt);
             if (info.InRow || info.InRowCell)
             {
-                DataRow dr = gvPjt.GetFocusedDataRow();
+                DataRow dr = gridView1.GetFocusedDataRow();
                 selectItem(dr);
             }
         }
         #endregion
         #region DB CRUD(데이터베이스 처리)
-        private DataTable df_select(int Index, object[] Param, out string error_msg)
+        private DataTable df_select(object[] Param, out string error_msg)
         {
             DataTable dt = null;
             gConst.DbConn.DBClose();
             string query = string.Empty;
             error_msg = "";
-            switch (Index)
+            switch (title)
             {
-                case 0: //PJT 조회 
+                case "프로젝트":
                     {
-                        query = "SELECT PJT_CD, PJT_NM FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE @PJT_CD+'%' AND PJT_NM LIKE @PJT_NAME+'%'";
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_CD", txtPjtCd.Text.Trim()));
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_NAME", txtPjtName.Text.Trim()));
-                        dt = gConst.DbConn.GetDataTableQuery(query, out error_msg);
+                        query = "SELECT PJT_CD AS CODE, PJT_NM AS NAME FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE @CODE+'%' AND PJT_NM LIKE @NAME+'%'";
+                    }
+                    break;
+                case "부서":
+                    {
+                        query = "SELECT DEPT AS CODE, DEPT_NAME AS NAME FROM TS_DEPT WITH(NOLOCK) WHERE DEPT LIKE @CODE+'%' AND DEPT_NAME LIKE @NAME+'%'";
+                    }
+                    break;
+                case "계정":
+                    {
+                        query = "SELECT ACT_CD AS CODE, ACT_NM AS NAME FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE @CODE+'%' AND ACT_NM LIKE @NAME+'%'";
                     }
                     break;
                 default: break;
             }
+            gConst.DbConn.AddParameter(new SqlParameter("@CODE", txt_code.Text.Trim()));
+            gConst.DbConn.AddParameter(new SqlParameter("@NAME", txt_name.Text.Trim()));
+            dt = gConst.DbConn.GetDataTableQuery(query, out error_msg);
             gConst.DbConn.DBClose();
             return dt;
         }
@@ -134,7 +146,7 @@ namespace DH_Core.CommonPopup
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DataRow dr = gvPjt.GetFocusedDataRow();
+            DataRow dr = gridView1.GetFocusedDataRow();
             selectItem(dr);
         }
     }

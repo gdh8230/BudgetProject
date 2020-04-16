@@ -1,6 +1,6 @@
 ﻿namespace DH_Core.CommonPopup
 {
-    partial class frm_PUP_GET_PJT_CD
+    partial class frm_PUP_GET_DEPT_CD
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PUP_GET_PJT_CD));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PUP_GET_DEPT_CD));
             this.txtPjtName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.gcPjt = new DevExpress.XtraGrid.GridControl();
@@ -62,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Top01)).BeginInit();
             this.pnl_Top01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_right02)).BeginInit();
+            this.pnl_right02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPjtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPjt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPjt)).BeginInit();
@@ -81,6 +81,10 @@
             this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grp_Search_Condition.Size = new System.Drawing.Size(335, 83);
             // 
+            // pnl_Close
+            // 
+            this.pnl_Close.Visible = false;
+            // 
             // pnl_Excel
             // 
             this.pnl_Excel.Visible = false;
@@ -97,55 +101,58 @@
             // 
             this.pnl_Delete.Visible = false;
             // 
+            // pnl_Add
+            // 
+            this.pnl_Add.Visible = false;
+            // 
             // btn_Close
             // 
             this.btn_Close.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.ImageOptions.Image")));
             this.btn_Close.ImageOptions.ImageIndex = 14;
             this.btn_Close.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Close.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Close.ImageOptions.SvgImage")));
+            this.btn_Close.LookAndFeel.SkinName = "Whiteprint";
             // 
             // btn_Excel
             // 
             this.btn_Excel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Excel.ImageOptions.Image")));
             this.btn_Excel.ImageOptions.ImageIndex = 18;
             this.btn_Excel.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Excel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Excel.ImageOptions.SvgImage")));
+            this.btn_Excel.LookAndFeel.SkinName = "Whiteprint";
             // 
             // btn_Print
             // 
             this.btn_Print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Print.ImageOptions.Image")));
             this.btn_Print.ImageOptions.ImageIndex = 22;
             this.btn_Print.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Print.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Print.ImageOptions.SvgImage")));
+            this.btn_Print.LookAndFeel.SkinName = "Whiteprint";
             // 
             // btn_Save
             // 
             this.btn_Save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Save.ImageOptions.Image")));
             this.btn_Save.ImageOptions.ImageIndex = 17;
             this.btn_Save.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Save.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Save.ImageOptions.SvgImage")));
+            this.btn_Save.LookAndFeel.SkinName = "Whiteprint";
             // 
             // btn_Delete
             // 
             this.btn_Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.ImageOptions.Image")));
             this.btn_Delete.ImageOptions.ImageIndex = 16;
             this.btn_Delete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Delete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Delete.ImageOptions.SvgImage")));
+            this.btn_Delete.LookAndFeel.SkinName = "Whiteprint";
             // 
             // btn_Add
             // 
             this.btn_Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.ImageOptions.Image")));
             this.btn_Add.ImageOptions.ImageIndex = 20;
             this.btn_Add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Add.ImageOptions.SvgImage")));
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            this.btn_Add.LookAndFeel.SkinName = "Whiteprint";
             // 
             // btn_Search
             // 
             this.btn_Search.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.ImageOptions.Image")));
             this.btn_Search.ImageOptions.ImageIndex = 19;
             this.btn_Search.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Search.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Search.ImageOptions.SvgImage")));
+            this.btn_Search.LookAndFeel.SkinName = "Whiteprint";
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // pnl_Top01
@@ -158,7 +165,7 @@
             // 
             // pnl_right02
             // 
-            this.pnl_right02.Size = new System.Drawing.Size(65, 39);
+            this.pnl_right02.Size = new System.Drawing.Size(0, 39);
             // 
             // txtPjtName
             // 
@@ -254,7 +261,7 @@
             // col_item_name
             // 
             this.col_item_name.Caption = "프로젝트";
-            this.col_item_name.FieldName = "PJT_NM";
+            this.col_item_name.FieldName = "PJT_NAME";
             this.col_item_name.Name = "col_item_name";
             this.col_item_name.OptionsColumn.FixedWidth = true;
             this.col_item_name.Visible = true;
@@ -331,7 +338,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.ClientSize = new System.Drawing.Size(335, 461);
             this.Controls.Add(this.gcPjt);
-            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frm_PUP_GET_PJT_CD.IconOptions.Icon")));
             this.LookAndFeel.SkinName = "Whiteprint";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
@@ -363,6 +369,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Top01)).EndInit();
             this.pnl_Top01.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnl_right02)).EndInit();
+            this.pnl_right02.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtPjtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPjt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPjt)).EndInit();

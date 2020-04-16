@@ -8,14 +8,14 @@ using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 
 namespace DH_Core.CommonPopup
 {
-    public partial class frm_PUP_GET_PJT_CD : frmSub_Baseform_System_NullPanel
+    public partial class frm_PUP_GET_DEPT_CD : frmSub_Baseform_System_NullPanel
     {
-        public frm_PUP_GET_PJT_CD(_Environment env, string code, string name)
+        public frm_PUP_GET_DEPT_CD(_Environment env, string pjtCd, string pjtName)
         {
             InitializeComponent();
             this.env = env;
-            txtPjtCd.EditValue = code;
-            txtPjtName.EditValue = name;
+            txtPjtCd.EditValue = pjtCd;
+            txtPjtName.EditValue = pjtName;
             getData();
         }
 
@@ -46,7 +46,7 @@ namespace DH_Core.CommonPopup
         private void selectItem(DataRow dr)
         {
             this.PJT_CD = dr["PJT_CD"].ToString();
-            this.PJT_NAME = dr["PJT_NM"].ToString();
+            this.PJT_NAME = dr["PJT_NAME"].ToString();
             this.DialogResult = DialogResult.OK;
         }
         public int getDataCount()
@@ -119,7 +119,7 @@ namespace DH_Core.CommonPopup
             {
                 case 0: //PJT 조회 
                     {
-                        query = "SELECT PJT_CD, PJT_NM FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE @PJT_CD+'%' AND PJT_NM LIKE @PJT_NAME+'%'";
+                        query = "SELECT PRJ_CODE AS PJT_CD, PRJ_NAME AS PJT_NAME FROM SUNGJIN_ERP.DBO.TMPROJECT WITH(NOLOCK) WHERE ISNULL(PRJ_CODE,'%') LIKE @PJT_CD+'%' AND ISNULL(PRJ_NAME,'%') LIKE @PJT_NAME+'%'";
                         gConst.DbConn.AddParameter(new SqlParameter("@PJT_CD", txtPjtCd.Text.Trim()));
                         gConst.DbConn.AddParameter(new SqlParameter("@PJT_NAME", txtPjtName.Text.Trim()));
                         dt = gConst.DbConn.GetDataTableQuery(query, out error_msg);
@@ -131,11 +131,5 @@ namespace DH_Core.CommonPopup
             return dt;
         }
         #endregion
-
-        private void btn_Add_Click(object sender, EventArgs e)
-        {
-            DataRow dr = gvPjt.GetFocusedDataRow();
-            selectItem(dr);
-        }
     }
 }

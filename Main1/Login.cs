@@ -17,6 +17,7 @@ namespace Main1
         _Environment env;
         MSSQLAgent DBCon = new MSSQLAgent();
         private string dept = null;
+        private string deptname = null;
         private void Login_Load(object sender, EventArgs e)
         {
             env = new _Environment();
@@ -83,6 +84,7 @@ namespace Main1
                 env.EmpCode = bedt_ID.EditValue.ToString();
                 env.EmpName = txt_NAME.Text;
                 env.Dept = dept;
+                env.DeptName = deptname;
                 env.Save();
                 this.Hide();
                 frmMain frm = new frmMain();
@@ -121,6 +123,7 @@ namespace Main1
                 {
                     txt_NAME.Text = dt.Rows[0]["UNAM"].ToString();
                     dept = dt.Rows[0]["DEPT"].ToString();
+                    deptname = dt.Rows[0]["DEPT_NAME"].ToString();
                 }
                 else
                 {
@@ -165,12 +168,16 @@ namespace Main1
                     break;
                 case 4://사용자명을 조회
                     {
-                        dt = gConst.DbConn.GetDataTableQuery(" SELECT    UNAM, DEPT " +
-                                                                " FROM      TS_USER WITH(NOLOCK)  " +
-                                                                " WHERE     COMP = '" + env.Company + "' " +
-                                                                " AND       USR = '" + Param[0] + "' " +
-                                                                " AND       STAT <> 'D' " +
-                                                                " AND       USEYN = 1 "
+                        dt = gConst.DbConn.GetDataTableQuery(" SELECT    UNAM, A.DEPT, B.DEPT_NAME " +
+                                                                " FROM      TS_USER A WITH(NOLOCK) " +
+                                                                " JOIN      TS_DEPT B WITH(NOLOCK)" +
+                                                                " ON        A.DEPT = B.DEPT" +
+                                                                " AND       A.COMP = B.COMP" +
+                                                                " AND       A.FACT = B.FACT" +
+                                                                " WHERE     A.COMP = '" + env.Company + "' " +
+                                                                " AND       A.USR = '" + Param[0] + "' " +
+                                                                " AND       A.STAT <> 'D' " +
+                                                                " AND       A.USEYN = 1 "
                                                                 , out error_msg);
                     }
                     break;

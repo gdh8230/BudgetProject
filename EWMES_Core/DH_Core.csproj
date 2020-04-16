@@ -142,6 +142,12 @@
     <Compile Include="BaseForm\frmSub_Baseform_System_NullPanel.Designer.cs">
       <DependentUpon>frmSub_Baseform_System_NullPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommonPopup\frm_PUP_GET_CODE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonPopup\frm_PUP_GET_CODE.Designer.cs">
+      <DependentUpon>frm_PUP_GET_CODE.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonPopup\frm_PUP_GET_DEPT_EMP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     </Compile>
     <Compile Include="CommonPopup\frm_PUP_CMD_CODE_Set.Designer.cs">
       <DependentUpon>frm_PUP_CMD_CODE_Set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPopup\frm_PUP_GET_DEPT_CD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonPopup\frm_PUP_GET_DEPT_CD.Designer.cs">
+      <DependentUpon>frm_PUP_GET_DEPT_CD.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonPopup\frm_PUP_GET_PJT_CD.cs">
       <SubType>Form</SubType>
@@ -284,11 +296,17 @@
     <EmbeddedResource Include="BaseForm\frmSub_Baseform_System_NullPanel.resx">
       <DependentUpon>frmSub_Baseform_System_NullPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CommonPopup\frm_PUP_GET_CODE.resx">
+      <DependentUpon>frm_PUP_GET_CODE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommonPopup\frm_PUP_GET_DEPT_EMP.resx">
       <DependentUpon>frm_PUP_GET_DEPT_EMP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonPopup\frm_PUP_CMD_CODE_Set.resx">
       <DependentUpon>frm_PUP_CMD_CODE_Set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonPopup\frm_PUP_GET_DEPT_CD.resx">
+      <DependentUpon>frm_PUP_GET_DEPT_CD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonPopup\frm_PUP_GET_PJT_CD.resx">
       <DependentUpon>frm_PUP_GET_PJT_CD.cs</DependentUpon>

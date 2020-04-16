@@ -6,6 +6,8 @@ using DH_Core;
 using DH_Core.DB;
 using DevExpress.Spreadsheet;
 using DevExpress.XtraCharts;
+using DH_Core.CommonPopup;
+using DevExpress.XtraEditors;
 
 namespace EXEC
 {
@@ -27,6 +29,7 @@ namespace EXEC
         static DataSet DT_GRD05 = new DataSet();    //FOR GRID2
         static DataSet DT_GRD06 = new DataSet();    //FOR GRID2
         static DataRow select_row;
+        string ADMIN_NO = null;
         string error_msg = "";
         #endregion
 
@@ -58,71 +61,48 @@ namespace EXEC
         {
             AutoritySet();
 
-               env = new _Environment();
+            env = new _Environment();
             string error_msg = string.Empty;
+
+            //로그인 사용자
+            txt_DEPT.Tag = env.Dept;
+            txt_DEPT.Text = env.DeptName;
+            txt_PLAN_USER.Tag = env.EmpCode;
+            txt_PLAN_USER.Text = env.EmpName;
+
 
             DataSet ds;
 
-            Workbook workbook = new Workbook();
+            spreadsheetControl1.LoadDocument("지출결의서_양식.xlsx", DocumentFormat.Xlsx);
+            //사업구분 lookup
+            ds = df_select(0, null, out error_msg);
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN, ds.Tables[0], "NAME", "CODE");
+                ledt_BUSSINESS_GBN.ItemIndex = 0;
+            }
 
-            //workbook.LoadDocument("C:\\Users\\HJchoi_devP\\Downloads\\지출결의서_20200303 - 복사본(0).xlsx", DocumentFormat.Xlsx);
+            //환종 lookup
+            ds = df_select(1, null, out error_msg);
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                modUTIL.DevLookUpEditorSet(rledt_EXCH, ds.Tables[0], "CODE", "NAME", "CODE", "NAME");
+            }
 
-
-            spreadsheetControl1.LoadDocument("C:\\Users\\HJchoi_devP\\Downloads\\지출결의서_20200303 - 복사본(0).xlsx", DocumentFormat.Xlsx);
-            ////관리구분 lookup
-            //ds = df_select(3, null, out error_msg);
-            //if (ds != null && ds.Tables[0].Rows.Count > 0)
-            //{
-            //    modUTIL.DevLookUpEditorSet(ledt_ADMIN_GBN, ds.Tables[0], "NAME", "CODE");
-            //    ledt_ADMIN_GBN.ItemIndex = 0;
-            //}
-
-            ////조정구분 lookup
-            //ds = df_select(4, null, out error_msg);
-            //if (ds != null && ds.Tables[0].Rows.Count > 0)
-            //{
-            //    modUTIL.DevLookUpEditorSet(rledt_Gbn, ds.Tables[0], "CODE", "NAME" , "CODE", "NAME");
-            //}
-
-            getACCOUNT();
+            getGridData();
         }
 
-        private void getData()
+        private void getGridData()
         {
             try
             {
                 this.Cursor = Cursors.WaitCursor;
 
-                //DataRow dr = gridView1.GetFocusedDataRow();
-                ////당기 신청 내역
-                //DT_GRD02 = null;
-                //gridControl2.DataSource = null;
-                //gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString(), "0" };
-                //DT_GRD02 = df_select(1, gParam, out error_msg);
-                //if (DT_GRD02 == null)
-                //{
-                //    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                //    this.Cursor = Cursors.Default;
-                //    return;
-                //}
-
-                //gridControl2.DataSource = DT_GRD02.Tables[0];
-
-                this.Cursor = Cursors.Default;
-            }
-            catch (Exception ex)
-            {
-                MsgBox.MsgErr("" + ex, "");
-            }
-        }
-        private void getACCOUNT()
-        {
-            try
-            {
-                this.Cursor = Cursors.WaitCursor;
                 DT_GRD01 = null;
                 gridControl1.DataSource = null;
-                DT_GRD01 = df_select(0, null, out error_msg);
+                //지출결의서 디테일 조회
+                gParam = new string[] { ADMIN_NO };
+                DT_GRD01 = df_select(3, gParam, out error_msg);
                 if (DT_GRD01 == null)
                 {
                     MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
@@ -131,7 +111,7 @@ namespace EXEC
                 }
 
                 gridControl1.DataSource = DT_GRD01.Tables[0];
-                //DT_GRD02 = DT_GRD01.Copy();
+
                 this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
@@ -139,6 +119,7 @@ namespace EXEC
                 MsgBox.MsgErr("" + ex, "");
             }
         }
+
         #endregion
 
         #region DB CRUD(데이터베이스 처리)
@@ -149,49 +130,39 @@ namespace EXEC
             error_msg = "";
             switch (Index)
             {
-                case 0: //회계계정 조회
+                case 0: //사업구분 lookup 조회
                     {
-                        //string query = "SELECT ACT_CD, ACT_NM FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND CTRL_YN = 'Y' ";
-                        //dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
-                    }
-                    break;
-                case 1: //예산 신청 내역
-                    {
-                        gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
-                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
-                    }
-                    break;
-                case 2: //예산 신청 내역
-                    {
-                        gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
-                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
-                    }
-                    break;
-                case 3: //부서조회
-                    {
-                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '관리구분'";
+                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '사업구분'";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
-                case 4: //조정구분
+                case 1: //환종 lookup 조회
                     {
-                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '조정구분'";
+                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '환종'";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
-                case 5: //예산 조정 내역
+                case 2: //지출결의서 헤더
                     {
-                        gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_ADJ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
-                        //gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", Param[2]));
+                        gConst.DbConn.ProcedureName = "USP_EXEC_GET_SPND_RSLT_H";
+                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_NO", Param[0]));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
+                    }
+                    break;
+                case 3: //지출결의서 디테일
+                    {
+                        gConst.DbConn.ProcedureName = "USP_EXEC_GET_SPND_RSLT_D";
+                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_NO", Param[0]));
+                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
+                    }
+                    break;
+                case 4: //지출결의서 디테일
+                    {
+                        string query = "SELECT EXCH_RATE FROM TB_EXCHANGE WITH(NOLOCK) WHERE YEAR = @YEAR AND MONTH = @MONTH AND EXCH_CD = @EXCH_CD";
+                        gConst.DbConn.AddParameter(new SqlParameter("@EXCH_CD", Param[0]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@MONTH", Param[2]));
+                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
                 default: break;
@@ -265,7 +236,7 @@ namespace EXEC
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            getACCOUNT();
+            getGridData();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -275,9 +246,9 @@ namespace EXEC
             Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
 
             DataRow dr_grid1 = gridView1.GetFocusedDataRow();
-            if (DT_GRD05.HasChanges())
+            if (DT_GRD01.HasChanges())
             {
-                ds_new = DT_GRD05.GetChanges();
+                ds_new = DT_GRD01.GetChanges();
                 foreach (DataRow dr in ds_new.Tables[0].Rows)
                 {
                     gParam = new string[] { dr_grid1["ACT_CD"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString() };
@@ -304,34 +275,91 @@ namespace EXEC
             }
         }
 
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            
-            if (gridView1.DataSource == null) return;
-            select_row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-            getData();
-        }
-
-        private void dt_YEAR_EditValueChanged(object sender, EventArgs e)
-        {
-            getACCOUNT();
-        }
-
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            //DataRow DR;
-            //gridView5.AddNewRow();
-            //DR = gridView5.GetDataRow(gridView5.FocusedRowHandle);
 
-            //DR["ADJ_DT"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM-dd");
+            DataRow DR;
+            gridView1.AddNewRow();
+            DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+
+            DR["SEQ"] = gridView1.RowCount;
             //DR["ACT_CD"] = select_row["ACT_CD"];
             //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
             ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
-            //DT_GRD05.Tables[0].Rows.Add(DR);
-            //gridControl5.DataSource = null;
-            //gridControl5.DataSource = DT_GRD05.Tables[0];
-            //gridView5.FocusedRowHandle = gridView1.RowCount - 1;
+            DT_GRD01.Tables[0].Rows.Add(DR);
+            gridControl1.DataSource = null;
+            gridControl1.DataSource = DT_GRD01.Tables[0];
+            gridView1.FocusedRowHandle = gridView1.RowCount - 1;
         }
 
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
+
+            //sheet.InsertCells(sheet.Cells["AW3"], InsertCellsMode.ShiftCellsDown);
+            sheet.Cells["AW3"].Value = DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyy-MM-dd");
+            sheet.Cells["BJ3"].Value = DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyy-MM-dd");
+            sheet.Cells["AW4"].Value = txt_DEPT.Text;
+            sheet.Cells["BJ4"].Value = txt_PLAN_USER.Text;
+            sheet.Cells["AW5"].Value = ledt_BUSSINESS_GBN.Text;
+            sheet.Cells["BJ5"].Value = bedt_PJT.Text;
+            sheet.Cells["AW6"].Value = txt_PLAN_TITLE.Text;
+            sheet.Cells["AQ12"].Value = txt_PLAN_CONTENT.Text;
+        }
+
+        private void rledt_EXCH_EditValueChanged(object sender, EventArgs e)
+        {
+            LookUpEdit lookupEdit = sender as LookUpEdit;
+
+            DataRow DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            gParam = new string[] { lookupEdit.EditValue.ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM")};
+            DataSet ds = df_select(4, gParam, out error_msg );
+            if(ds != null)
+            {
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    DR["EXCH_RATE"] = ds.Tables[0].Rows[0]["EXCH_RATE"];
+                }
+                else
+                {
+                    DR["EXCH_RATE"] = 0;
+                }
+            }
+        }
+
+        private void bedt_PJT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_PUP_GET_PJT_CD frm = new frm_PUP_GET_PJT_CD(env, null, null);
+
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                bedt_PJT.Tag = frm.PJT_CD;
+                bedt_PJT.Text = frm.PJT_NAME;
+            }
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if(e.Column.FieldName == "EXCH_RATE" || e.Column.FieldName == "PRICE" || e.Column.FieldName == "AMOUNT")
+            {
+                DataRow dr = gridView1.GetDataRow(e.RowHandle);
+                if (dr["EXCH_RATE"].ToString() != "" && dr["PRICE"].ToString() != "" && dr["AMOUNT"].ToString() != "")
+                {
+                    dr["TOTAL"] = double.Parse(dr["EXCH_RATE"].ToString()) * double.Parse(dr["PRICE"].ToString()) * double.Parse(dr["AMOUNT"].ToString());
+                }
+            }
+
+        }
+
+        private void rtedt_ACT_DoubleClick(object sender, EventArgs e)
+        {
+            DataRow DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "계정");
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                DR["ACT_CD"] = frm.CODE;
+                DR["ACT_NM"] = frm.NAME;
+            }
+        }
     }
 }

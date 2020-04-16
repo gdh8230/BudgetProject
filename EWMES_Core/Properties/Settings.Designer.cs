@@ -97,6 +97,18 @@ namespace DH_Core.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DEPT_NAME {
+            get {
+                return ((string)(this["DEPT_NAME"]));
+            }
+            set {
+                this["DEPT_NAME"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("112.222.167.220,3433")]
         public string SERVER_IP {
             get {

@@ -21,6 +21,7 @@ namespace DH_Core
         string _empname;
         string _empcode;
         string _dept;
+        string _deptname;
         string _Factory;
         string _Company;
         string _FactoryName;
@@ -189,6 +190,20 @@ namespace DH_Core
             }
 
         }
+
+        public string DeptName
+        {
+            get { return _deptname; }
+            set
+            {
+                if (value != this._deptname)
+                {
+                    _deptname = value;
+                    NotifyPropertyChanged("Dept_Name");
+                }
+            }
+
+        }
         public string Factory
         {
             get { return _Factory; }
@@ -254,6 +269,7 @@ namespace DH_Core
             EmpCode = Properties.Settings.Default.EMP_Code;
             EmpName = Properties.Settings.Default.EMP_Name;
             Dept = Properties.Settings.Default.DEPT;
+            DeptName = Properties.Settings.Default.DEPT_NAME;
             Company = Properties.Settings.Default.COMP;
             Factory = Properties.Settings.Default.FACT;
             MyIP = Properties.Settings.Default.MyIP;
@@ -270,6 +286,7 @@ namespace DH_Core
             EmpCode = Properties.Settings.Default.EMP_Code;
             EmpName = Properties.Settings.Default.EMP_Name;
             Dept = Properties.Settings.Default.DEPT;
+            DeptName = Properties.Settings.Default.DEPT_NAME;
             Company = Properties.Settings.Default.COMP;
             Factory = Properties.Settings.Default.FACT;
             MyIP = Properties.Settings.Default.MyIP;
@@ -291,6 +308,7 @@ namespace DH_Core
             Properties.Settings.Default.EMP_Code = _empcode;
             Properties.Settings.Default.EMP_Name = _empname;
             Properties.Settings.Default.DEPT = _dept;
+            Properties.Settings.Default.DEPT_NAME = _deptname;
             Properties.Settings.Default.COMP = _Company;
             Properties.Settings.Default.FACT = _Factory;
             Properties.Settings.Default.MyIP = _MyIP;

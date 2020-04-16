@@ -1,6 +1,6 @@
 ﻿namespace DH_Core.CommonPopup
 {
-    partial class frm_PUP_GET_PJT_CD
+    partial class frm_PUP_GET_CODE
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PUP_GET_PJT_CD));
-            this.txtPjtName = new DevExpress.XtraEditors.TextEdit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PUP_GET_CODE));
+            this.txt_name = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.gcPjt = new DevExpress.XtraGrid.GridControl();
-            this.gvPjt = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_item = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_item_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_use_yn = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,7 +42,7 @@
             this.col_fg_sqc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_fg_oqc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPjtCd = new DevExpress.XtraEditors.TextEdit();
+            this.txt_code = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -62,20 +62,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Top01)).BeginInit();
             this.pnl_Top01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_right02)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPjtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcPjt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPjt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPjtCd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_code.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_Search_Condition
             // 
             this.grp_Search_Condition.AppearanceCaption.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
             this.grp_Search_Condition.AppearanceCaption.Options.UseFont = true;
-            this.grp_Search_Condition.Controls.Add(this.txtPjtCd);
+            this.grp_Search_Condition.Controls.Add(this.txt_code);
             this.grp_Search_Condition.Controls.Add(this.labelControl1);
-            this.grp_Search_Condition.Controls.Add(this.txtPjtName);
+            this.grp_Search_Condition.Controls.Add(this.txt_name);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.LookAndFeel.SkinName = "Whiteprint";
             this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -160,91 +160,91 @@
             // 
             this.pnl_right02.Size = new System.Drawing.Size(65, 39);
             // 
-            // txtPjtName
+            // txt_name
             // 
-            this.txtPjtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPjtName.Location = new System.Drawing.Point(70, 53);
-            this.txtPjtName.Name = "txtPjtName";
-            this.txtPjtName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtPjtName.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.txtPjtName.Properties.Appearance.Options.UseBackColor = true;
-            this.txtPjtName.Properties.Appearance.Options.UseFont = true;
-            this.txtPjtName.Size = new System.Drawing.Size(253, 22);
-            this.txtPjtName.TabIndex = 1;
-            this.txtPjtName.Tag = "1";
-            this.txtPjtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
+            this.txt_name.Location = new System.Drawing.Point(70, 53);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_name.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.txt_name.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_name.Properties.Appearance.Options.UseFont = true;
+            this.txt_name.Size = new System.Drawing.Size(253, 22);
+            this.txt_name.TabIndex = 1;
+            this.txt_name.Tag = "1";
+            this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(16, 57);
+            this.labelControl4.Location = new System.Drawing.Point(20, 56);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 15);
+            this.labelControl4.Size = new System.Drawing.Size(44, 15);
             this.labelControl4.TabIndex = 554;
-            this.labelControl4.Text = "프로젝트";
+            this.labelControl4.Text = "코 드 명";
             // 
-            // gcPjt
+            // gridControl1
             // 
-            this.gcPjt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPjt.EmbeddedNavigator.Buttons.Append.Visible = false;
-            this.gcPjt.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-            this.gcPjt.EmbeddedNavigator.Buttons.Edit.Visible = false;
-            this.gcPjt.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-            this.gcPjt.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.gcPjt.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gcPjt.Location = new System.Drawing.Point(0, 126);
-            this.gcPjt.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
-            this.gcPjt.LookAndFeel.SkinName = "Office 2010 Black";
-            this.gcPjt.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.gcPjt.MainView = this.gvPjt;
-            this.gcPjt.Name = "gcPjt";
-            this.gcPjt.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gridControl1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridControl1.Location = new System.Drawing.Point(0, 126);
+            this.gridControl1.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
+            this.gridControl1.LookAndFeel.SkinName = "Office 2010 Black";
+            this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gcPjt.Size = new System.Drawing.Size(335, 335);
-            this.gcPjt.TabIndex = 0;
-            this.gcPjt.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvPjt});
+            this.gridControl1.Size = new System.Drawing.Size(335, 335);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // gvPjt
+            // gridView1
             // 
-            this.gvPjt.ActiveFilterEnabled = false;
-            this.gvPjt.Appearance.HeaderPanel.Font = new System.Drawing.Font("맑은 고딕", 10.25F, System.Drawing.FontStyle.Bold);
-            this.gvPjt.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvPjt.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gvPjt.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gvPjt.Appearance.Row.Font = new System.Drawing.Font("맑은 고딕", 10.25F);
-            this.gvPjt.Appearance.Row.Options.UseFont = true;
-            this.gvPjt.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridView1.ActiveFilterEnabled = false;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("맑은 고딕", 10.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("맑은 고딕", 10.25F);
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_item,
             this.col_item_name,
             this.col_use_yn,
             this.col_fg_iqc,
             this.col_fg_sqc,
             this.col_fg_oqc});
-            this.gvPjt.GridControl = this.gcPjt;
-            this.gvPjt.Name = "gvPjt";
-            this.gvPjt.OptionsBehavior.Editable = false;
-            this.gvPjt.OptionsBehavior.ReadOnly = true;
-            this.gvPjt.OptionsFilter.AllowColumnMRUFilterList = false;
-            this.gvPjt.OptionsFilter.AllowFilterEditor = false;
-            this.gvPjt.OptionsFilter.AllowFilterIncrementalSearch = false;
-            this.gvPjt.OptionsFilter.AllowMultiSelectInCheckedFilterPopup = false;
-            this.gvPjt.OptionsFilter.ShowAllTableValuesInCheckedFilterPopup = false;
-            this.gvPjt.OptionsMenu.ShowAutoFilterRowItem = false;
-            this.gvPjt.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
-            this.gvPjt.OptionsView.ShowGroupPanel = false;
-            this.gvPjt.OptionsView.ShowIndicator = false;
-            this.gvPjt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
-            this.gvPjt.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.gridView1.OptionsFilter.AllowFilterEditor = false;
+            this.gridView1.OptionsFilter.AllowFilterIncrementalSearch = false;
+            this.gridView1.OptionsFilter.AllowMultiSelectInCheckedFilterPopup = false;
+            this.gridView1.OptionsFilter.ShowAllTableValuesInCheckedFilterPopup = false;
+            this.gridView1.OptionsMenu.ShowAutoFilterRowItem = false;
+            this.gridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.OptionsView.ShowIndicator = false;
+            this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // col_item
             // 
             this.col_item.AppearanceCell.Options.UseTextOptions = true;
             this.col_item.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.col_item.Caption = "코드";
-            this.col_item.FieldName = "PJT_CD";
+            this.col_item.FieldName = "CODE";
             this.col_item.Name = "col_item";
             this.col_item.OptionsColumn.FixedWidth = true;
             this.col_item.Visible = true;
@@ -253,8 +253,8 @@
             // 
             // col_item_name
             // 
-            this.col_item_name.Caption = "프로젝트";
-            this.col_item_name.FieldName = "PJT_NM";
+            this.col_item_name.Caption = "코 드 명";
+            this.col_item_name.FieldName = "NAME";
             this.col_item_name.Name = "col_item_name";
             this.col_item_name.OptionsColumn.FixedWidth = true;
             this.col_item_name.Visible = true;
@@ -311,38 +311,38 @@
             this.labelControl1.TabIndex = 556;
             this.labelControl1.Text = "코      드";
             // 
-            // txtPjtCd
+            // txt_code
             // 
-            this.txtPjtCd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_code.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPjtCd.Location = new System.Drawing.Point(70, 28);
-            this.txtPjtCd.Name = "txtPjtCd";
-            this.txtPjtCd.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtPjtCd.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.txtPjtCd.Properties.Appearance.Options.UseBackColor = true;
-            this.txtPjtCd.Properties.Appearance.Options.UseFont = true;
-            this.txtPjtCd.Size = new System.Drawing.Size(253, 22);
-            this.txtPjtCd.TabIndex = 0;
-            this.txtPjtCd.Tag = "1";
-            this.txtPjtCd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
+            this.txt_code.Location = new System.Drawing.Point(70, 28);
+            this.txt_code.Name = "txt_code";
+            this.txt_code.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_code.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.txt_code.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_code.Properties.Appearance.Options.UseFont = true;
+            this.txt_code.Size = new System.Drawing.Size(253, 22);
+            this.txt_code.TabIndex = 0;
+            this.txt_code.Tag = "1";
+            this.txt_code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
             // 
-            // frm_PUP_GET_PJT_CD
+            // frm_PUP_GET_CODE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.ClientSize = new System.Drawing.Size(335, 461);
-            this.Controls.Add(this.gcPjt);
-            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frm_PUP_GET_PJT_CD.IconOptions.Icon")));
+            this.Controls.Add(this.gridControl1);
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frm_PUP_GET_CODE.IconOptions.Icon")));
             this.LookAndFeel.SkinName = "Whiteprint";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(450, 500);
-            this.Name = "frm_PUP_GET_PJT_CD";
+            this.Name = "frm_PUP_GET_CODE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "프로젝트 정보";
+            this.Text = "";
             this.Load += new System.EventHandler(this.Form_Load);
             this.Controls.SetChildIndex(this.pnl_Top01, 0);
             this.Controls.SetChildIndex(this.grp_Search_Condition, 0);
-            this.Controls.SetChildIndex(this.gcPjt, 0);
+            this.Controls.SetChildIndex(this.gridControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).EndInit();
             this.grp_Search_Condition.ResumeLayout(false);
             this.grp_Search_Condition.PerformLayout();
@@ -363,21 +363,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Top01)).EndInit();
             this.pnl_Top01.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnl_right02)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPjtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcPjt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPjt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPjtCd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_code.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit txtPjtName;
+        private DevExpress.XtraEditors.TextEdit txt_name;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraGrid.GridControl gcPjt;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvPjt;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn col_item;
         private DevExpress.XtraGrid.Columns.GridColumn col_item_name;
         private DevExpress.XtraGrid.Columns.GridColumn col_use_yn;
@@ -385,7 +385,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn col_fg_iqc;
         private DevExpress.XtraGrid.Columns.GridColumn col_fg_sqc;
         private DevExpress.XtraGrid.Columns.GridColumn col_fg_oqc;
-        private DevExpress.XtraEditors.TextEdit txtPjtCd;
+        private DevExpress.XtraEditors.TextEdit txt_code;
         private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
