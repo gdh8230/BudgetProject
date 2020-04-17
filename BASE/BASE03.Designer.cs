@@ -59,7 +59,6 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.ledt_DEPT = new DevExpress.XtraEditors.LookUpEdit();
@@ -83,7 +82,6 @@
             this.txt_PJT_MONEY = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.txt_PJT_PLACE = new DevExpress.XtraEditors.TextEdit();
-            this.jnkcDatePicker1 = new DH_Core.jnkcDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -137,15 +135,13 @@
             // 
             this.grp_Search_Condition.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.grp_Search_Condition.AppearanceCaption.Options.UseFont = true;
-            this.grp_Search_Condition.Controls.Add(this.jnkcDatePicker1);
-            this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.Controls.Add(this.labelControl3);
             this.grp_Search_Condition.Controls.Add(this.txt_PJT_NM2);
             this.grp_Search_Condition.Controls.Add(this.labelControl2);
             this.grp_Search_Condition.Controls.Add(this.txt_PJT_CD);
             this.grp_Search_Condition.Controls.Add(this.ledt_get_PJT_STAT);
             this.grp_Search_Condition.Controls.Add(this.labelControl1);
-            this.grp_Search_Condition.Size = new System.Drawing.Size(1019, 85);
+            this.grp_Search_Condition.Size = new System.Drawing.Size(1019, 58);
             // 
             // btn_Close
             // 
@@ -225,7 +221,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(24, 57);
+            this.labelControl1.Location = new System.Drawing.Point(24, 29);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(48, 15);
             this.labelControl1.TabIndex = 0;
@@ -233,7 +229,7 @@
             // 
             // ledt_get_PJT_STAT
             // 
-            this.ledt_get_PJT_STAT.Location = new System.Drawing.Point(78, 56);
+            this.ledt_get_PJT_STAT.Location = new System.Drawing.Point(78, 28);
             this.ledt_get_PJT_STAT.Name = "ledt_get_PJT_STAT";
             this.ledt_get_PJT_STAT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -243,7 +239,7 @@
             // 
             // txt_PJT_CD
             // 
-            this.txt_PJT_CD.Location = new System.Drawing.Point(268, 56);
+            this.txt_PJT_CD.Location = new System.Drawing.Point(268, 28);
             this.txt_PJT_CD.Name = "txt_PJT_CD";
             this.txt_PJT_CD.Size = new System.Drawing.Size(120, 20);
             this.txt_PJT_CD.TabIndex = 2;
@@ -252,7 +248,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(214, 57);
+            this.labelControl2.Location = new System.Drawing.Point(214, 29);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 15);
             this.labelControl2.TabIndex = 3;
@@ -262,7 +258,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(397, 57);
+            this.labelControl3.Location = new System.Drawing.Point(397, 29);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(60, 15);
             this.labelControl3.TabIndex = 5;
@@ -270,7 +266,7 @@
             // 
             // txt_PJT_NM2
             // 
-            this.txt_PJT_NM2.Location = new System.Drawing.Point(463, 56);
+            this.txt_PJT_NM2.Location = new System.Drawing.Point(463, 28);
             this.txt_PJT_NM2.Name = "txt_PJT_NM2";
             this.txt_PJT_NM2.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.txt_PJT_NM2.Properties.Appearance.Options.UseFont = true;
@@ -281,9 +277,9 @@
             // 
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl1.Location = new System.Drawing.Point(0, 128);
+            this.groupControl1.Location = new System.Drawing.Point(0, 101);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(269, 399);
+            this.groupControl1.Size = new System.Drawing.Size(269, 426);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "프로젝트목록";
             // 
@@ -296,7 +292,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(265, 375);
+            this.gridControl1.Size = new System.Drawing.Size(265, 402);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -356,27 +352,17 @@
             this.repositoryItemCheckEdit1.ValueChecked = "Y";
             this.repositoryItemCheckEdit1.ValueUnchecked = "N";
             // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(24, 30);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 15);
-            this.labelControl4.TabIndex = 6;
-            this.labelControl4.Text = "기      간";
-            // 
             // splitContainerControl2
             // 
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.Horizontal = false;
-            this.splitContainerControl2.Location = new System.Drawing.Point(269, 128);
+            this.splitContainerControl2.Location = new System.Drawing.Point(269, 101);
             this.splitContainerControl2.Name = "splitContainerControl2";
             this.splitContainerControl2.Panel1.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(750, 399);
+            this.splitContainerControl2.Size = new System.Drawing.Size(750, 426);
             this.splitContainerControl2.SplitterPosition = 267;
             this.splitContainerControl2.TabIndex = 508;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -623,7 +609,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(750, 127);
+            this.groupControl2.Size = new System.Drawing.Size(750, 154);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "대상업체 정보";
             // 
@@ -700,15 +686,6 @@
             this.txt_PJT_PLACE.TabIndex = 8;
             this.txt_PJT_PLACE.Tag = "PJT_PLACE";
             this.txt_PJT_PLACE.Leave += new System.EventHandler(this.textEdit_Leave);
-            // 
-            // jnkcDatePicker1
-            // 
-            this.jnkcDatePicker1.AutoSize = true;
-            this.jnkcDatePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.jnkcDatePicker1.Location = new System.Drawing.Point(78, 27);
-            this.jnkcDatePicker1.Name = "jnkcDatePicker1";
-            this.jnkcDatePicker1.Size = new System.Drawing.Size(354, 22);
-            this.jnkcDatePicker1.TabIndex = 20;
             // 
             // BASE03
             // 
@@ -790,7 +767,6 @@
         private DevExpress.XtraEditors.LookUpEdit ledt_get_PJT_STAT;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
         protected DevExpress.XtraEditors.GroupControl groupControl3;
         protected DevExpress.XtraEditors.GroupControl groupControl2;
@@ -817,7 +793,6 @@
         private DevExpress.XtraEditors.TextEdit txt_PJT_MONEY;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit txt_PJT_PLACE;
-        private DH_Core.jnkcDatePicker jnkcDatePicker1;
         private DevExpress.XtraEditors.LookUpEdit ledt_set_PJT_STAT;
         private DevExpress.XtraEditors.DateEdit dt_APRV;
         private DevExpress.XtraEditors.LookUpEdit ledt_DEPT;

@@ -283,6 +283,8 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.dt_PLAN = new DevExpress.XtraEditors.DateEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -375,8 +377,6 @@
             this.txt_COMP_NAME = new DevExpress.XtraEditors.TextEdit();
             this.spreadsheetBarController1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetBarController(this.components);
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -736,6 +736,7 @@
             this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn11.Caption = "예산금액(부서)";
+            this.gridColumn11.FieldName = "BUDGET_MONEY_DEPT";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 9;
@@ -748,10 +749,35 @@
             this.gridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.gridColumn12.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn12.Caption = "잔액(부서)";
+            this.gridColumn12.FieldName = "REMAIN_MONEY_DEPT";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 10;
             this.gridColumn12.Width = 107;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gridColumn14.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn14.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.gridColumn14.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn14.Caption = "예산금액(프로젝트)";
+            this.gridColumn14.FieldName = "BUDGET_MONEY_PJT";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 11;
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gridColumn15.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn15.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.gridColumn15.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn15.Caption = "잔액(프로젝트)";
+            this.gridColumn15.FieldName = "REMAIN_MONEY_PJT";
+            this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.Visible = true;
+            this.gridColumn15.VisibleIndex = 12;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -790,7 +816,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(56, 29);
+            this.labelControl4.Location = new System.Drawing.Point(56, 28);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 15);
             this.labelControl4.TabIndex = 23;
@@ -800,7 +826,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(235, 29);
+            this.labelControl5.Location = new System.Drawing.Point(235, 28);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(48, 15);
             this.labelControl5.TabIndex = 25;
@@ -818,7 +844,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(436, 29);
+            this.labelControl6.Location = new System.Drawing.Point(436, 28);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(44, 15);
             this.labelControl6.TabIndex = 27;
@@ -846,7 +872,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(235, 57);
+            this.labelControl7.Location = new System.Drawing.Point(235, 56);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(48, 15);
             this.labelControl7.TabIndex = 28;
@@ -868,7 +894,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(432, 55);
+            this.labelControl8.Location = new System.Drawing.Point(432, 56);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(48, 15);
             this.labelControl8.TabIndex = 31;
@@ -878,7 +904,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(44, 57);
+            this.labelControl9.Location = new System.Drawing.Point(44, 56);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(60, 15);
             this.labelControl9.TabIndex = 33;
@@ -914,7 +940,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(56, 85);
+            this.labelControl10.Location = new System.Drawing.Point(56, 84);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(48, 15);
             this.labelControl10.TabIndex = 35;
@@ -931,7 +957,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(12, 111);
+            this.labelControl1.Location = new System.Drawing.Point(12, 110);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(92, 15);
             this.labelControl1.TabIndex = 36;
@@ -977,7 +1003,7 @@
             this.commonBar1.Control = this.spreadsheetControl1;
             this.commonBar1.DockCol = 0;
             this.commonBar1.DockRow = 0;
-            this.commonBar1.FloatLocation = new System.Drawing.Point(1126, 106);
+            this.commonBar1.FloatLocation = new System.Drawing.Point(1250, 383);
             this.commonBar1.FloatSize = new System.Drawing.Size(318, 32);
             this.commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem1),
@@ -3072,28 +3098,6 @@
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 9;
             this.gridColumn13.Width = 97;
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gridColumn14.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn14.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.gridColumn14.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn14.Caption = "예산금액(프로젝트)";
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 11;
-            // 
-            // gridColumn15
-            // 
-            this.gridColumn15.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gridColumn15.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn15.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.gridColumn15.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn15.Caption = "잔액(프로젝트)";
-            this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 12;
             // 
             // EXEC01
             // 

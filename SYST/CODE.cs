@@ -120,8 +120,8 @@ namespace SYST
                     break;
                 case 1: //코드 전체 조회
                     {
-                        //string query = "SELECT C_ID, CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '"+ Param[0] +"'" ;
-                        string query = "SELECT C_ID, CODE, NAME FROM TS_CODE WITH(NOLOCK)";
+                        string query = "SELECT C_ID, CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '" + Param[0] + "'";
+                        //string query = "SELECT C_ID, CODE, NAME FROM TS_CODE WITH(NOLOCK)";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;

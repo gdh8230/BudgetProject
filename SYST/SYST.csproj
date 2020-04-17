@@ -57,12 +57,6 @@
     <Compile Include="DEPT.Designer.cs">
       <DependentUpon>DEPT.cs</DependentUpon>
     </Compile>
-    <Compile Include="ACCOUNT_CODE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ACCOUNT_CODE.Designer.cs">
-      <DependentUpon>ACCOUNT_CODE.cs</DependentUpon>
-    </Compile>
     <Compile Include="CODE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,9 +90,6 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="DEPT.resx">
       <DependentUpon>DEPT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ACCOUNT_CODE.resx">
-      <DependentUpon>ACCOUNT_CODE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CODE.resx">
       <DependentUpon>CODE.cs</DependentUpon>

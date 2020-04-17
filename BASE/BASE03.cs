@@ -129,12 +129,10 @@ namespace BASE
                     {
                         string query = "SELECT PJT_CD, PJT_NM, dbo.f_get_STR2DATE(APRV_DT, '-') AS APRV_DT, dbo.f_get_STR2DATE(PJT_SDT, '-') AS PJT_SDT, dbo.f_get_STR2DATE(PJT_EDT, '-') AS PJT_EDT, DEPT, PJT_STAT, EMP, CLIENT, PJT_MONEY, PJT_PLACE" +
                                         " FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE '%' + @PJD_CD + '%' AND PJT_NM LIKE '%' + @PJT_NM + '%' " +
-                                        "AND PJT_STAT LIKE @PJT_STAT AND PJT_SDT >= @PJT_SDT AND PJT_EDT <= @PJT_EDT  ";
+                                        "AND PJT_STAT LIKE @PJT_STAT";
                         gConst.DbConn.AddParameter(new SqlParameter("@PJD_CD", txt_PJT_CD.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@PJT_NM", txt_PJT_NM2.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@PJT_STAT", ledt_get_PJT_STAT.EditValue.ToString()));
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_SDT", jnkcDatePicker1.GetStartDate.ToString()));
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_EDT", jnkcDatePicker1.GetEndDate.ToString()));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -217,7 +215,7 @@ namespace BASE
             catch(Exception ee)
             {
                 Console.WriteLine(ee.ToString());
-                MsgBox.MsgErr("초기화에 실패했습니다." + error_msg, "에러");
+                MsgBox.MsgErr(ee.ToString() + error_msg, "에러");
                 gConst.DbConn.Rollback();
             }
 

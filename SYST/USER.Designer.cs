@@ -251,7 +251,6 @@
             this.gridColumn6});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
@@ -267,6 +266,7 @@
             this.gridColumn1.Caption = "사원번호";
             this.gridColumn1.FieldName = "EMP_CD";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
             this.gridColumn1.Width = 100;
@@ -280,6 +280,7 @@
             this.gridColumn2.Caption = "사원명";
             this.gridColumn2.FieldName = "EMP_NM";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
             this.gridColumn2.Width = 150;
@@ -314,6 +315,7 @@
             this.gridColumn5.Caption = "부서코드";
             this.gridColumn5.FieldName = "DEPT";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 0;
             this.gridColumn5.Width = 100;
@@ -323,6 +325,7 @@
             this.gridColumn6.Caption = "부서명";
             this.gridColumn6.FieldName = "DEPT_NAME";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 1;
             this.gridColumn6.Width = 150;

@@ -542,8 +542,14 @@ namespace SYST
                                        "AND A.COMP = B.COMP               " +
                                        "AND A.FACT = B.FACT               " +
                                        "AND A.USEYN = 1              " +
+                                       "WHERE A.DEPT LIKE @DEPT " +
+                                       "AND A.USR LIKE @USR + '%' " +
+                                       "AND A.UNAM LIKE '%' + @UNAM + '%' " +
                                        "GROUP BY        A.USR, A.UNAM, DEPT_NAME " +
                                        "ORDER BY A.USR ASC";
+                        gConst.DbConn.AddParameter(new SqlParameter("@DEPT", Param[0]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@USR", Param[1]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@UNAM", Param[2]));
                         DT = gConst.DbConn.GetDataSetQuery(Query, out Errchk);
                         #endregion
                     }

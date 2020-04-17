@@ -76,6 +76,22 @@ namespace BASE
             }
 
 
+            //대계정 lookup
+            DataSet ds;
+            ds = df_select(1, null, out error_msg);
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                modUTIL.DevLookUpEditorSet(ledt_act_sort, ds.Tables[0], "NAME", "CODE");
+                ledt_act_sort.ItemIndex = 0;
+            }
+
+            ds = df_select(4, null, out error_msg);
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                modUTIL.DevLookUpEditorSet(rledt_CLASS, ds.Tables[0], "CODE", "NAME", "CODE", "NAME");
+            }
+
+
             ////계정분류 lookup
             //dt = df_select( 3, null, out error_msg);
             //if(dt != null && dt.Rows.Count > 0)
@@ -123,7 +139,7 @@ namespace BASE
             {
                 case 0: //회계 계정 조회
                     {
-                        string query = "SELECT ACT_CD, ACT_NM, ACT_GRP_NM, BUDGET_NM, CTRL_YN FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND ISNULL(CTRL_YN,'N') LIKE @CTRL_YN  ";
+                        string query = "SELECT ACT_CD, ACT_NM, ACT_GRP_NM, BUDGET_NM, CTRL_YN, CLASS FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND ISNULL(CTRL_YN,'N') LIKE @CTRL_YN  ";
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", txt_act_cd.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_NM", txt_act_nm.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@CTRL_YN", ledt_CTRL_YN.EditValue.ToString()));
@@ -132,7 +148,7 @@ namespace BASE
                     break;
                 case 1: //사원구분 조회
                     {
-                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = 'EMP_TP' ";
+                        string query = "SELECT '%' CODE, '전체' NAME UNION ALL SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '대계정' ";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -150,6 +166,12 @@ namespace BASE
                         string query = "SELECT '%' CODE, '전체' NAME UNION ALL  SELECT DEPT AS CODE, DEPT_NAME AS NAME FROM TS_DEPT";
                         gConst.DbConn.AddParameter(new SqlParameter("@COMP", env.Company));
                         gConst.DbConn.AddParameter(new SqlParameter("@FACT", env.Factory));
+                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
+                    }
+                    break;
+                case 4: //사원구분 조회
+                    {
+                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '대계정' ";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;

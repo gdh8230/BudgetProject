@@ -96,7 +96,7 @@ namespace SYST
             {
                 case 0: //부서조회
                     {
-                        string query = "SELECT DEPT, DEPT_NAME FROM TS_DEPT WITH(NOLOCK) WHERE DEPT LIKE '"+ Param[0] +"' AND DEPT_NAME LIKE '"+ Param[1] + "' AND COMP = @COMP AND FACT = @FACT";
+                        string query = "SELECT DEPT, DEPT_NAME, SECT_CD, SECT_NAME FROM TS_DEPT WITH(NOLOCK) WHERE DEPT LIKE '"+ Param[0] +"' AND DEPT_NAME LIKE '"+ Param[1] + "' AND COMP = @COMP AND FACT = @FACT";
                         gConst.DbConn.AddParameter(new SqlParameter("@COMP", env.Company));
                         gConst.DbConn.AddParameter(new SqlParameter("@FACT", env.Factory));
                         dt = gConst.DbConn.GetDataTableQuery(query, out error_msg);

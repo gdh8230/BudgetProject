@@ -76,6 +76,14 @@ namespace STD
                 ledt_ADMIN_GBN.ItemIndex = 0;
             }
 
+            //대계정 lookup
+            ds = df_select(2, null, out error_msg);
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                modUTIL.DevLookUpEditorSet(ledt_CLASS, ds.Tables[0], "NAME", "CODE");
+                ledt_CLASS.ItemIndex = 0;
+            }
+
             gridView2.OptionsView.ShowGroupPanel = false;
 
             getACCOUNT();
@@ -85,13 +93,18 @@ namespace STD
         {
             try
             {
+                if (bedt_CODE.Tag == null || bedt_CODE.Tag.Equals(""))
+                {
+                    return;
+                }
+
                 this.Cursor = Cursors.WaitCursor;
 
                 DataRow dr = gridView1.GetFocusedDataRow();
                 //전기 신청 내역
                 DT_GRD02 = null;
                 gridControl2.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), (((DateTime)dt_YEAR.EditValue).Year - 1).ToString() };
+                gParam = new string[] { dr["CODE"].ToString(), (((DateTime)dt_YEAR.EditValue).Year - 1).ToString() };
                 DT_GRD02 = df_select(1, gParam, out error_msg);
                 if (DT_GRD02 == null)
                 {
@@ -105,7 +118,7 @@ namespace STD
                 //당기 신청 내역
                 DT_GRD03 = null;
                 gridControl3.DataSource = null;
-                gParam = new string[] { dr["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString()};
+                gParam = new string[] { dr["CODE"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString()};
                 DT_GRD03 = df_select(1, gParam, out error_msg);
                 if (DT_GRD03 == null)
                 {
@@ -158,11 +171,10 @@ namespace STD
             error_msg = "";
             switch (Index)
             {
-                case 0: //회계계정 조회
+                case 0: //대계정 조회
                     {
-                        string query = "SELECT ACT_CD, ACT_NM FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND CTRL_YN = 'Y' ";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", txt_act_cd.Text));
-                        gConst.DbConn.AddParameter(new SqlParameter("@ACT_NM", txt_act_nm.Text));
+                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '대계정' AND CODE LIKE @CODE ";
+                        gConst.DbConn.AddParameter(new SqlParameter("@CODE", ledt_CLASS.EditValue));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -171,9 +183,16 @@ namespace STD
                         gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_GBN", "0"));
                         gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_CD", bedt_CODE.Tag.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
+                    }
+                    break;
+                case 2: //대계정 조회
+                    {
+                        string query = "SELECT '%' CODE, '전체' NAME UNION ALL SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '대계정'";
+                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
                 case 3: //부서조회
@@ -212,6 +231,7 @@ namespace STD
                     gConst.DbConn.AddParameter("YEAR", MSSQLAgent.DBFieldType.String, Param[1]);
                     gConst.DbConn.AddParameter("MONTH", MSSQLAgent.DBFieldType.String, dr["MONTH"].ToString());
                     gConst.DbConn.AddParameter("ADMIN_GBN", MSSQLAgent.DBFieldType.String, ledt_ADMIN_GBN.EditValue.ToString());
+                    gConst.DbConn.AddParameter("ADMIN_CD", MSSQLAgent.DBFieldType.String, bedt_CODE.Tag.ToString());
                     gConst.DbConn.AddParameter("QUARTER", MSSQLAgent.DBFieldType.String, dr["QUARTER"].ToString());
                     gConst.DbConn.AddParameter("REQ_MONEY", MSSQLAgent.DBFieldType.String, dr["MONEY"].ToString());
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
@@ -225,6 +245,7 @@ namespace STD
                     gConst.DbConn.AddParameter("YEAR", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("MONTH", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("ADMIN_GBN", MSSQLAgent.DBFieldType.String, null);
+                    gConst.DbConn.AddParameter("ADMIN_CD", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("QUARTER", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("REQ_MONEY", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, null);
@@ -253,6 +274,12 @@ namespace STD
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            if (bedt_CODE.Tag == null || bedt_CODE.Tag.Equals(""))
+            {
+                MsgBox.MsgInformation(labelControl8.Tag.ToString() + "를 선택해주세요.", "확인");
+                return;
+            }
+
             getACCOUNT();
         }
 
@@ -266,7 +293,7 @@ namespace STD
                 ds_new = DT_GRD03.GetChanges();
                 foreach (DataRow dr in ds_new.Tables[0].Rows)
                 {
-                    gParam = new string[] { dr_grid1["ACT_CD"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString() };
+                    gParam = new string[] { dr_grid1["CODE"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString() };
                     df_Transaction(20, gParam, dr, out gOut_MSG);
                 }
                 MsgBox.MsgInformation("저장 완료", "확인");
@@ -277,6 +304,7 @@ namespace STD
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
+            if (DT_GRD01 == null) return; 
             if (DT_GRD01.HasChanges())
             {
                 if (!MsgBox.MsgQuestion("변경사항이 있습니다. 저장하신 후 진행하시겠습니까?", "알림"))
@@ -320,6 +348,32 @@ namespace STD
         private void dt_YEAR_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ledt_ADMIN_GBN_EditValueChanged(object sender, EventArgs e)
+        {
+            if (ledt_ADMIN_GBN.EditValue.Equals("0"))
+            {
+                labelControl8.Text = "부      서";
+                labelControl8.Tag = "부서";
+            }
+            else if (ledt_ADMIN_GBN.Equals("1"))
+            {
+                labelControl8.Text = "프로젝트";
+                labelControl8.Tag = "프로젝트";
+            }
+
+        }
+
+        private void bedt_CODE_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DataRow DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, labelControl8.Tag.ToString());
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                bedt_CODE.Tag = frm.CODE;
+                bedt_CODE.Text = frm.NAME;
+            }
         }
     }
 }

@@ -156,13 +156,24 @@ namespace EXEC
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
-                case 4: //지출결의서 디테일
+                case 4: //환율 정보
                     {
                         string query = "SELECT EXCH_RATE FROM TB_EXCHANGE WITH(NOLOCK) WHERE YEAR = @YEAR AND MONTH = @MONTH AND EXCH_CD = @EXCH_CD";
                         gConst.DbConn.AddParameter(new SqlParameter("@EXCH_CD", Param[0]));
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
                         gConst.DbConn.AddParameter(new SqlParameter("@MONTH", Param[2]));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
+                    }
+                    break;
+                case 5: //예산
+                    {
+                        gConst.DbConn.ProcedureName = "USP_EXEC_GET_BUDGET";
+                        gConst.DbConn.AddParameter(new SqlParameter("@DEPT", Param[0]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_CD", Param[1]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@CLASS", Param[2]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[3]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@MONTH", Param[4]));
+                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
                 default: break;
@@ -340,12 +351,31 @@ namespace EXEC
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if(e.Column.FieldName == "EXCH_RATE" || e.Column.FieldName == "PRICE" || e.Column.FieldName == "AMOUNT")
+            DataRow dr = gridView1.GetDataRow(e.RowHandle);
+            if (e.Column.FieldName == "EXCH_RATE" || e.Column.FieldName == "PRICE" || e.Column.FieldName == "AMOUNT")
             {
-                DataRow dr = gridView1.GetDataRow(e.RowHandle);
                 if (dr["EXCH_RATE"].ToString() != "" && dr["PRICE"].ToString() != "" && dr["AMOUNT"].ToString() != "")
                 {
                     dr["TOTAL"] = double.Parse(dr["EXCH_RATE"].ToString()) * double.Parse(dr["PRICE"].ToString()) * double.Parse(dr["AMOUNT"].ToString());
+                }
+            }
+            if (e.Column.FieldName == "EXCH_RATE" || e.Column.FieldName == "PRICE" || e.Column.FieldName == "AMOUNT" || e.Column.FieldName == "ACT_CD")
+            {
+                if (dr["EXCH_RATE"].ToString() != "" && dr["PRICE"].ToString() != "" && dr["AMOUNT"].ToString() != "" && dr["ACT_CD"].ToString() != "")
+                {
+                    DataSet ds;
+                    gParam = new string[] { txt_DEPT.Tag.ToString(), bedt_PJT.Tag == null ? "" : bedt_PJT.Tag.ToString(), dr["CLASS"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM") };
+                    ds = df_select(5, gParam, out gOut_MSG);
+                    if (ds != null)
+                    {
+                        dr["BUDGET_MONEY_DEPT"] = ds.Tables[0].Rows[0][0];
+                        dr["REMAIN_MONEY_DEPT"] = double.Parse(ds.Tables[0].Rows[0][0].ToString()) - double.Parse(ds.Tables[0].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
+                        if (ds.Tables.Count > 1)
+                        {
+                            dr["BUDGET_MONEY_PJT"] = ds.Tables[1].Rows[0][0];
+                            dr["REMAIN_MONEY_PJT"] = double.Parse(ds.Tables[1].Rows[0][0].ToString()) - double.Parse(ds.Tables[1].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
+                        }
+                    }
                 }
             }
 
@@ -359,6 +389,7 @@ namespace EXEC
             {
                 DR["ACT_CD"] = frm.CODE;
                 DR["ACT_NM"] = frm.NAME;
+                DR["CLASS"] = frm.CLASS;
             }
         }
     }
