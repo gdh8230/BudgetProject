@@ -118,7 +118,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // DXfrmWMES_BasePUP_Set
             // 
@@ -129,7 +129,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "DXfrmWMES_BasePUP_Set";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DXfrmWMES_BasePUP_Get";

@@ -39,7 +39,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "DXfrmMDI_Baseform";
             this.Text = "DXfrmMDI_Baseform";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.DXfrmMDI_Baseform_Paint);

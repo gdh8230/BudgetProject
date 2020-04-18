@@ -134,7 +134,7 @@
             this.pnl_Top01.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Top01.Location = new System.Drawing.Point(0, 0);
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Name = "pnl_Top01";
             this.pnl_Top01.Size = new System.Drawing.Size(924, 43);
             this.pnl_Top01.TabIndex = 4;
@@ -304,7 +304,7 @@
             this.ClientSize = new System.Drawing.Size(924, 621);
             this.Controls.Add(this.pnl_Top01);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "DXfrmWMES_Baseform";
             this.Text = "DXfrmWMES_Baseform";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DXfrmWMES_Baseform_FormClosing);

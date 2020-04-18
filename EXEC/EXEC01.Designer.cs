@@ -260,6 +260,11 @@
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem173 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem174 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem175 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -285,6 +290,7 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.dt_PLAN = new DevExpress.XtraEditors.DateEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -346,8 +352,10 @@
             this.commandBarGalleryDropDown24 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit17 = new DevExpress.XtraEditors.TextEdit();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
@@ -357,26 +365,27 @@
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit16 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_DCMNT3_NM = new DevExpress.XtraEditors.TextEdit();
             this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_DCMNT2_NM = new DevExpress.XtraEditors.TextEdit();
             this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_DCMNT1_NM = new DevExpress.XtraEditors.TextEdit();
+            this.txt_COMP_MNG_PHONE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_COMP_MNG = new DevExpress.XtraEditors.TextEdit();
+            this.txt_ACCT_HOLDER = new DevExpress.XtraEditors.TextEdit();
+            this.txt_COMP_BANK = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.dt_PAY = new DevExpress.XtraEditors.DateEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txt = new DevExpress.XtraEditors.TextEdit();
+            this.txt_COMP_ACCT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_COMP_NAME = new DevExpress.XtraEditors.TextEdit();
             this.spreadsheetBarController1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetBarController(this.components);
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bedt_USER = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -442,27 +451,27 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DCMNT3_NM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DCMNT2_NM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DCMNT1_NM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_MNG_PHONE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_MNG.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ACCT_HOLDER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_BANK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_PAY.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_PAY.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_ACCT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spreadsheetBarController1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedt_USER.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_Search_Condition
@@ -485,7 +494,7 @@
             this.grp_Search_Condition.Controls.Add(this.txt_DEPT);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.Controls.Add(this.dt_PLAN);
-            this.grp_Search_Condition.Size = new System.Drawing.Size(1159, 144);
+            this.grp_Search_Condition.Size = new System.Drawing.Size(1715, 144);
             this.grp_Search_Condition.Text = "지출결의서 헤더";
             // 
             // btn_Close
@@ -548,12 +557,12 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.pnl_Top01.Size = new System.Drawing.Size(1159, 43);
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
+            this.pnl_Top01.Size = new System.Drawing.Size(1715, 43);
             // 
             // pnl_right02
             // 
-            this.pnl_right02.Size = new System.Drawing.Size(889, 39);
+            this.pnl_right02.Size = new System.Drawing.Size(1445, 39);
             // 
             // simpleButton1
             // 
@@ -571,7 +580,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(864, 475);
+            this.groupControl1.Size = new System.Drawing.Size(1028, 475);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "결의 내역";
             // 
@@ -585,7 +594,7 @@
             this.rtedt_ACT,
             this.repositoryItemCheckEdit1,
             this.rledt_EXCH});
-            this.gridControl1.Size = new System.Drawing.Size(860, 451);
+            this.gridControl1.Size = new System.Drawing.Size(1024, 451);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -610,9 +619,11 @@
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn14,
-            this.gridColumn15});
+            this.gridColumn15,
+            this.gridColumn16});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
@@ -627,8 +638,8 @@
             this.gridColumn3.FieldName = "ITEM_NM";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 129;
+            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.Width = 102;
             // 
             // gridColumn5
             // 
@@ -640,7 +651,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 0;
-            this.gridColumn5.Width = 46;
+            this.gridColumn5.Width = 36;
             // 
             // gridColumn1
             // 
@@ -649,8 +660,8 @@
             this.gridColumn1.FieldName = "EXCH_CD";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 97;
+            this.gridColumn1.VisibleIndex = 4;
+            this.gridColumn1.Width = 77;
             // 
             // rledt_EXCH
             // 
@@ -667,8 +678,8 @@
             this.gridColumn2.FieldName = "EXCH_RATE";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 97;
+            this.gridColumn2.VisibleIndex = 5;
+            this.gridColumn2.Width = 77;
             // 
             // gridColumn4
             // 
@@ -676,8 +687,8 @@
             this.gridColumn4.FieldName = "PRICE";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 97;
+            this.gridColumn4.VisibleIndex = 6;
+            this.gridColumn4.Width = 77;
             // 
             // gridColumn6
             // 
@@ -685,8 +696,8 @@
             this.gridColumn6.FieldName = "AMOUNT";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 97;
+            this.gridColumn6.VisibleIndex = 7;
+            this.gridColumn6.Width = 77;
             // 
             // gridColumn7
             // 
@@ -694,8 +705,8 @@
             this.gridColumn7.FieldName = "UNIT";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 97;
+            this.gridColumn7.VisibleIndex = 8;
+            this.gridColumn7.Width = 77;
             // 
             // gridColumn8
             // 
@@ -703,8 +714,8 @@
             this.gridColumn8.FieldName = "TOTAL";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 97;
+            this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.Width = 77;
             // 
             // gridColumn9
             // 
@@ -713,8 +724,8 @@
             this.gridColumn9.FieldName = "ACT_NM";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
-            this.gridColumn9.Width = 97;
+            this.gridColumn9.VisibleIndex = 2;
+            this.gridColumn9.Width = 77;
             // 
             // rtedt_ACT
             // 
@@ -738,9 +749,10 @@
             this.gridColumn11.Caption = "예산금액(부서)";
             this.gridColumn11.FieldName = "BUDGET_MONEY_DEPT";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 9;
-            this.gridColumn11.Width = 97;
+            this.gridColumn11.VisibleIndex = 10;
+            this.gridColumn11.Width = 80;
             // 
             // gridColumn12
             // 
@@ -751,9 +763,10 @@
             this.gridColumn12.Caption = "잔액(부서)";
             this.gridColumn12.FieldName = "REMAIN_MONEY_DEPT";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 10;
-            this.gridColumn12.Width = 107;
+            this.gridColumn12.VisibleIndex = 11;
+            this.gridColumn12.Width = 78;
             // 
             // gridColumn14
             // 
@@ -764,8 +777,10 @@
             this.gridColumn14.Caption = "예산금액(프로젝트)";
             this.gridColumn14.FieldName = "BUDGET_MONEY_PJT";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.ReadOnly = true;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 11;
+            this.gridColumn14.VisibleIndex = 12;
+            this.gridColumn14.Width = 80;
             // 
             // gridColumn15
             // 
@@ -776,8 +791,20 @@
             this.gridColumn15.Caption = "잔액(프로젝트)";
             this.gridColumn15.FieldName = "REMAIN_MONEY_PJT";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.ReadOnly = true;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 12;
+            this.gridColumn15.VisibleIndex = 13;
+            this.gridColumn15.Width = 80;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "대계정";
+            this.gridColumn16.ColumnEdit = this.rtedt_ACT;
+            this.gridColumn16.FieldName = "CLASS_NM";
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 1;
+            this.gridColumn16.Width = 59;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -788,7 +815,7 @@
             // 
             // dt_PLAN
             // 
-            this.dt_PLAN.EditValue = new System.DateTime(2020, 4, 8, 11, 33, 36, 0);
+            this.dt_PLAN.EditValue = new System.DateTime(2020, 4, 18, 0, 0, 0, 0);
             this.dt_PLAN.Location = new System.Drawing.Point(110, 26);
             this.dt_PLAN.Name = "dt_PLAN";
             this.dt_PLAN.Properties.Appearance.BackColor = System.Drawing.Color.LightYellow;
@@ -805,7 +832,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt_PLAN.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
             this.dt_PLAN.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dt_PLAN.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dt_PLAN.Properties.EditFormat.FormatString = "yyyyMMdd";
             this.dt_PLAN.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dt_PLAN.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dt_PLAN.Size = new System.Drawing.Size(100, 22);
@@ -816,7 +843,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(56, 28);
+            this.labelControl4.Location = new System.Drawing.Point(56, 27);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 15);
             this.labelControl4.TabIndex = 23;
@@ -826,7 +853,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(235, 28);
+            this.labelControl5.Location = new System.Drawing.Point(235, 27);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(48, 15);
             this.labelControl5.TabIndex = 25;
@@ -844,7 +871,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(436, 28);
+            this.labelControl6.Location = new System.Drawing.Point(436, 27);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(44, 15);
             this.labelControl6.TabIndex = 27;
@@ -872,7 +899,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(235, 56);
+            this.labelControl7.Location = new System.Drawing.Point(235, 55);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(48, 15);
             this.labelControl7.TabIndex = 28;
@@ -894,7 +921,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(432, 56);
+            this.labelControl8.Location = new System.Drawing.Point(432, 55);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(48, 15);
             this.labelControl8.TabIndex = 31;
@@ -904,7 +931,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(44, 56);
+            this.labelControl9.Location = new System.Drawing.Point(44, 55);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(60, 15);
             this.labelControl9.TabIndex = 33;
@@ -912,7 +939,7 @@
             // 
             // dt_BILL
             // 
-            this.dt_BILL.EditValue = new System.DateTime(2020, 4, 8, 11, 33, 36, 0);
+            this.dt_BILL.EditValue = new System.DateTime(2020, 4, 18, 0, 0, 0, 0);
             this.dt_BILL.Location = new System.Drawing.Point(110, 54);
             this.dt_BILL.Name = "dt_BILL";
             this.dt_BILL.Properties.Appearance.BackColor = System.Drawing.Color.LightYellow;
@@ -929,7 +956,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt_BILL.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
             this.dt_BILL.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dt_BILL.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dt_BILL.Properties.EditFormat.FormatString = "yyyyMMdd";
             this.dt_BILL.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dt_BILL.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dt_BILL.Size = new System.Drawing.Size(100, 22);
@@ -940,7 +967,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(56, 84);
+            this.labelControl10.Location = new System.Drawing.Point(56, 83);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(48, 15);
             this.labelControl10.TabIndex = 35;
@@ -957,7 +984,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(12, 110);
+            this.labelControl1.Location = new System.Drawing.Point(12, 109);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(92, 15);
             this.labelControl1.TabIndex = 36;
@@ -1003,7 +1030,7 @@
             this.commonBar1.Control = this.spreadsheetControl1;
             this.commonBar1.DockCol = 0;
             this.commonBar1.DockRow = 0;
-            this.commonBar1.FloatLocation = new System.Drawing.Point(1250, 383);
+            this.commonBar1.FloatLocation = new System.Drawing.Point(1061, 168);
             this.commonBar1.FloatSize = new System.Drawing.Size(318, 32);
             this.commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem1),
@@ -1017,16 +1044,15 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem9),
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem10),
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem11)});
-            this.commonBar1.Offset = 181;
+            this.commonBar1.Offset = 151;
             // 
             // spreadsheetControl1
             // 
             this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetControl1.Location = new System.Drawing.Point(868, 187);
+            this.spreadsheetControl1.Location = new System.Drawing.Point(1032, 187);
             this.spreadsheetControl1.MenuManager = this.barManager1;
             this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.ReadOnly = true;
-            this.spreadsheetControl1.Size = new System.Drawing.Size(291, 479);
+            this.spreadsheetControl1.Size = new System.Drawing.Size(683, 479);
             this.spreadsheetControl1.TabIndex = 10;
             this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
@@ -1102,7 +1128,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1159, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1715, 0);
             // 
             // barDockControlBottom
             // 
@@ -1110,7 +1136,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 666);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1159, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1715, 0);
             // 
             // barDockControlLeft
             // 
@@ -1124,7 +1150,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1159, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1715, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 666);
             // 
@@ -2723,42 +2749,69 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 187);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(868, 479);
+            this.panelControl1.Size = new System.Drawing.Size(1032, 479);
             this.panelControl1.TabIndex = 9;
             // 
             // groupControl2
             // 
             this.groupControl2.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.groupControl2.Appearance.Options.UseFont = true;
+            this.groupControl2.Controls.Add(this.bedt_USER);
+            this.groupControl2.Controls.Add(this.simpleButton4);
+            this.groupControl2.Controls.Add(this.simpleButton3);
+            this.groupControl2.Controls.Add(this.simpleButton2);
             this.groupControl2.Controls.Add(this.labelControl19);
-            this.groupControl2.Controls.Add(this.textEdit17);
             this.groupControl2.Controls.Add(this.tablePanel1);
             this.groupControl2.Controls.Add(this.textEdit15);
             this.groupControl2.Controls.Add(this.labelControl15);
-            this.groupControl2.Controls.Add(this.textEdit16);
+            this.groupControl2.Controls.Add(this.txt_DCMNT3_NM);
             this.groupControl2.Controls.Add(this.textEdit13);
             this.groupControl2.Controls.Add(this.labelControl14);
-            this.groupControl2.Controls.Add(this.textEdit14);
+            this.groupControl2.Controls.Add(this.txt_DCMNT2_NM);
             this.groupControl2.Controls.Add(this.textEdit12);
             this.groupControl2.Controls.Add(this.labelControl13);
-            this.groupControl2.Controls.Add(this.textEdit11);
-            this.groupControl2.Controls.Add(this.textEdit10);
+            this.groupControl2.Controls.Add(this.txt_DCMNT1_NM);
+            this.groupControl2.Controls.Add(this.txt_COMP_MNG_PHONE);
             this.groupControl2.Controls.Add(this.labelControl12);
-            this.groupControl2.Controls.Add(this.textEdit9);
-            this.groupControl2.Controls.Add(this.textEdit8);
-            this.groupControl2.Controls.Add(this.textEdit7);
+            this.groupControl2.Controls.Add(this.txt_COMP_MNG);
+            this.groupControl2.Controls.Add(this.txt_ACCT_HOLDER);
+            this.groupControl2.Controls.Add(this.txt_COMP_BANK);
             this.groupControl2.Controls.Add(this.labelControl11);
-            this.groupControl2.Controls.Add(this.dateEdit2);
+            this.groupControl2.Controls.Add(this.dt_PAY);
             this.groupControl2.Controls.Add(this.labelControl3);
-            this.groupControl2.Controls.Add(this.txt);
+            this.groupControl2.Controls.Add(this.txt_COMP_ACCT);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.txt_COMP_NAME);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl2.Location = new System.Drawing.Point(2, 302);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(864, 175);
+            this.groupControl2.Size = new System.Drawing.Size(1028, 175);
             this.groupControl2.TabIndex = 9;
             this.groupControl2.Text = "지출결의서";
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Location = new System.Drawing.Point(484, 134);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(59, 23);
+            this.simpleButton4.TabIndex = 51;
+            this.simpleButton4.Text = "첨부";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(484, 106);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(59, 23);
+            this.simpleButton3.TabIndex = 50;
+            this.simpleButton3.Text = "첨부";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(484, 79);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(59, 23);
+            this.simpleButton2.TabIndex = 49;
+            this.simpleButton2.Text = "첨부";
             // 
             // labelControl19
             // 
@@ -2769,13 +2822,6 @@
             this.labelControl19.Size = new System.Drawing.Size(44, 15);
             this.labelControl19.TabIndex = 48;
             this.labelControl19.Text = "사 용 자";
-            // 
-            // textEdit17
-            // 
-            this.textEdit17.Location = new System.Drawing.Point(607, 81);
-            this.textEdit17.Name = "textEdit17";
-            this.textEdit17.Size = new System.Drawing.Size(190, 20);
-            this.textEdit17.TabIndex = 47;
             // 
             // tablePanel1
             // 
@@ -2891,7 +2937,7 @@
             // 
             this.textEdit15.Location = new System.Drawing.Point(298, 133);
             this.textEdit15.Name = "textEdit15";
-            this.textEdit15.Size = new System.Drawing.Size(245, 20);
+            this.textEdit15.Size = new System.Drawing.Size(180, 20);
             this.textEdit15.TabIndex = 45;
             // 
             // labelControl15
@@ -2904,18 +2950,18 @@
             this.labelControl15.TabIndex = 44;
             this.labelControl15.Text = "첨부문서3";
             // 
-            // textEdit16
+            // txt_DCMNT3_NM
             // 
-            this.textEdit16.Location = new System.Drawing.Point(110, 133);
-            this.textEdit16.Name = "textEdit16";
-            this.textEdit16.Size = new System.Drawing.Size(182, 20);
-            this.textEdit16.TabIndex = 43;
+            this.txt_DCMNT3_NM.Location = new System.Drawing.Point(110, 133);
+            this.txt_DCMNT3_NM.Name = "txt_DCMNT3_NM";
+            this.txt_DCMNT3_NM.Size = new System.Drawing.Size(182, 20);
+            this.txt_DCMNT3_NM.TabIndex = 43;
             // 
             // textEdit13
             // 
             this.textEdit13.Location = new System.Drawing.Point(298, 107);
             this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(245, 20);
+            this.textEdit13.Size = new System.Drawing.Size(180, 20);
             this.textEdit13.TabIndex = 42;
             // 
             // labelControl14
@@ -2928,18 +2974,18 @@
             this.labelControl14.TabIndex = 41;
             this.labelControl14.Text = "첨부문서2";
             // 
-            // textEdit14
+            // txt_DCMNT2_NM
             // 
-            this.textEdit14.Location = new System.Drawing.Point(110, 107);
-            this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Size = new System.Drawing.Size(182, 20);
-            this.textEdit14.TabIndex = 40;
+            this.txt_DCMNT2_NM.Location = new System.Drawing.Point(110, 107);
+            this.txt_DCMNT2_NM.Name = "txt_DCMNT2_NM";
+            this.txt_DCMNT2_NM.Size = new System.Drawing.Size(182, 20);
+            this.txt_DCMNT2_NM.TabIndex = 40;
             // 
             // textEdit12
             // 
             this.textEdit12.Location = new System.Drawing.Point(298, 81);
             this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Size = new System.Drawing.Size(245, 20);
+            this.textEdit12.Size = new System.Drawing.Size(180, 20);
             this.textEdit12.TabIndex = 39;
             // 
             // labelControl13
@@ -2952,20 +2998,20 @@
             this.labelControl13.TabIndex = 38;
             this.labelControl13.Text = "첨부문서1";
             // 
-            // textEdit11
+            // txt_DCMNT1_NM
             // 
-            this.textEdit11.Location = new System.Drawing.Point(110, 81);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(182, 20);
-            this.textEdit11.TabIndex = 37;
+            this.txt_DCMNT1_NM.Location = new System.Drawing.Point(110, 81);
+            this.txt_DCMNT1_NM.Name = "txt_DCMNT1_NM";
+            this.txt_DCMNT1_NM.Size = new System.Drawing.Size(182, 20);
+            this.txt_DCMNT1_NM.TabIndex = 37;
             // 
-            // textEdit10
+            // txt_COMP_MNG_PHONE
             // 
-            this.textEdit10.Location = new System.Drawing.Point(423, 53);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.NullValuePrompt = "연락저";
-            this.textEdit10.Size = new System.Drawing.Size(120, 20);
-            this.textEdit10.TabIndex = 36;
+            this.txt_COMP_MNG_PHONE.Location = new System.Drawing.Point(423, 53);
+            this.txt_COMP_MNG_PHONE.Name = "txt_COMP_MNG_PHONE";
+            this.txt_COMP_MNG_PHONE.Properties.NullValuePrompt = "연락저";
+            this.txt_COMP_MNG_PHONE.Size = new System.Drawing.Size(120, 20);
+            this.txt_COMP_MNG_PHONE.TabIndex = 36;
             // 
             // labelControl12
             // 
@@ -2977,29 +3023,29 @@
             this.labelControl12.TabIndex = 35;
             this.labelControl12.Text = "공급처담당자";
             // 
-            // textEdit9
+            // txt_COMP_MNG
             // 
-            this.textEdit9.Location = new System.Drawing.Point(297, 53);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Properties.NullValuePrompt = "담당자명";
-            this.textEdit9.Size = new System.Drawing.Size(120, 20);
-            this.textEdit9.TabIndex = 34;
+            this.txt_COMP_MNG.Location = new System.Drawing.Point(297, 53);
+            this.txt_COMP_MNG.Name = "txt_COMP_MNG";
+            this.txt_COMP_MNG.Properties.NullValuePrompt = "담당자명";
+            this.txt_COMP_MNG.Size = new System.Drawing.Size(120, 20);
+            this.txt_COMP_MNG.TabIndex = 34;
             // 
-            // textEdit8
+            // txt_ACCT_HOLDER
             // 
-            this.textEdit8.Location = new System.Drawing.Point(549, 27);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Properties.NullValuePrompt = "예금주";
-            this.textEdit8.Size = new System.Drawing.Size(120, 20);
-            this.textEdit8.TabIndex = 33;
+            this.txt_ACCT_HOLDER.Location = new System.Drawing.Point(549, 27);
+            this.txt_ACCT_HOLDER.Name = "txt_ACCT_HOLDER";
+            this.txt_ACCT_HOLDER.Properties.NullValuePrompt = "예금주";
+            this.txt_ACCT_HOLDER.Size = new System.Drawing.Size(120, 20);
+            this.txt_ACCT_HOLDER.TabIndex = 33;
             // 
-            // textEdit7
+            // txt_COMP_BANK
             // 
-            this.textEdit7.Location = new System.Drawing.Point(423, 27);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.NullValuePrompt = "은행명";
-            this.textEdit7.Size = new System.Drawing.Size(120, 20);
-            this.textEdit7.TabIndex = 32;
+            this.txt_COMP_BANK.Location = new System.Drawing.Point(423, 27);
+            this.txt_COMP_BANK.Name = "txt_COMP_BANK";
+            this.txt_COMP_BANK.Properties.NullValuePrompt = "은행명";
+            this.txt_COMP_BANK.Size = new System.Drawing.Size(120, 20);
+            this.txt_COMP_BANK.TabIndex = 32;
             // 
             // labelControl11
             // 
@@ -3011,31 +3057,31 @@
             this.labelControl11.TabIndex = 31;
             this.labelControl11.Text = "기안일자";
             // 
-            // dateEdit2
+            // dt_PAY
             // 
-            this.dateEdit2.EditValue = new System.DateTime(2020, 4, 8, 11, 33, 36, 0);
-            this.dateEdit2.Location = new System.Drawing.Point(110, 53);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Appearance.BackColor = System.Drawing.Color.LightYellow;
-            this.dateEdit2.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.dateEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.dateEdit2.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit2.Properties.Appearance.Options.UseTextOptions = true;
-            this.dateEdit2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            editorButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions4.SvgImage")));
-            editorButtonImageOptions4.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dt_PAY.EditValue = new System.DateTime(2020, 4, 18, 0, 0, 0, 0);
+            this.dt_PAY.Location = new System.Drawing.Point(110, 53);
+            this.dt_PAY.Name = "dt_PAY";
+            this.dt_PAY.Properties.Appearance.BackColor = System.Drawing.Color.LightYellow;
+            this.dt_PAY.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.dt_PAY.Properties.Appearance.Options.UseBackColor = true;
+            this.dt_PAY.Properties.Appearance.Options.UseFont = true;
+            this.dt_PAY.Properties.Appearance.Options.UseTextOptions = true;
+            this.dt_PAY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            editorButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions5.SvgImage")));
+            editorButtonImageOptions5.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.dt_PAY.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.dt_PAY.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit2.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit2.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dateEdit2.Size = new System.Drawing.Size(100, 22);
-            this.dateEdit2.TabIndex = 30;
-            this.dateEdit2.Tag = "PJT_EDT";
+            this.dt_PAY.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dt_PAY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dt_PAY.Properties.EditFormat.FormatString = "yyyyMMdd";
+            this.dt_PAY.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dt_PAY.Properties.Mask.EditMask = "yyyy-MM-dd";
+            this.dt_PAY.Size = new System.Drawing.Size(100, 22);
+            this.dt_PAY.TabIndex = 30;
+            this.dt_PAY.Tag = "PJT_EDT";
             // 
             // labelControl3
             // 
@@ -3047,13 +3093,13 @@
             this.labelControl3.TabIndex = 29;
             this.labelControl3.Text = "계좌정보";
             // 
-            // txt
+            // txt_COMP_ACCT
             // 
-            this.txt.Location = new System.Drawing.Point(297, 27);
-            this.txt.Name = "txt";
-            this.txt.Properties.NullValuePrompt = "계좌번호";
-            this.txt.Size = new System.Drawing.Size(120, 20);
-            this.txt.TabIndex = 28;
+            this.txt_COMP_ACCT.Location = new System.Drawing.Point(297, 27);
+            this.txt_COMP_ACCT.Name = "txt_COMP_ACCT";
+            this.txt_COMP_ACCT.Properties.NullValuePrompt = "계좌번호";
+            this.txt_COMP_ACCT.Size = new System.Drawing.Size(120, 20);
+            this.txt_COMP_ACCT.TabIndex = 28;
             // 
             // labelControl2
             // 
@@ -3099,12 +3145,24 @@
             this.gridColumn13.VisibleIndex = 9;
             this.gridColumn13.Width = 97;
             // 
+            // bedt_USER
+            // 
+            this.bedt_USER.Location = new System.Drawing.Point(607, 80);
+            this.bedt_USER.Name = "bedt_USER";
+            editorButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions4.SvgImage")));
+            editorButtonImageOptions4.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.bedt_USER.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.bedt_USER.Size = new System.Drawing.Size(190, 22);
+            this.bedt_USER.TabIndex = 52;
+            this.bedt_USER.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_USER_ButtonClick);
+            // 
             // EXEC01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1159, 666);
+            this.ClientSize = new System.Drawing.Size(1715, 666);
             this.Controls.Add(this.spreadsheetControl1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -3112,7 +3170,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "EXEC01";
             this.Text = "지출결의서 등록";
             this.Load += new System.EventHandler(this.Form_Load);
@@ -3191,7 +3249,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             this.tablePanel1.PerformLayout();
@@ -3199,20 +3256,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DCMNT3_NM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DCMNT2_NM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DCMNT1_NM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_MNG_PHONE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_MNG.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ACCT_HOLDER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_BANK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_PAY.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_PAY.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_ACCT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spreadsheetBarController1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedt_USER.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3281,7 +3339,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.LabelControl labelControl19;
-        private DevExpress.XtraEditors.TextEdit textEdit17;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.TextEdit textEdit2;
@@ -3291,22 +3348,22 @@
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.TextEdit textEdit15;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.TextEdit textEdit16;
+        private DevExpress.XtraEditors.TextEdit txt_DCMNT3_NM;
         private DevExpress.XtraEditors.TextEdit textEdit13;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.TextEdit textEdit14;
+        private DevExpress.XtraEditors.TextEdit txt_DCMNT2_NM;
         private DevExpress.XtraEditors.TextEdit textEdit12;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
+        private DevExpress.XtraEditors.TextEdit txt_DCMNT1_NM;
+        private DevExpress.XtraEditors.TextEdit txt_COMP_MNG_PHONE;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit txt_COMP_MNG;
+        private DevExpress.XtraEditors.TextEdit txt_ACCT_HOLDER;
+        private DevExpress.XtraEditors.TextEdit txt_COMP_BANK;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.DateEdit dt_PAY;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txt;
+        private DevExpress.XtraEditors.TextEdit txt_COMP_ACCT;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txt_COMP_NAME;
         private DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheetControl1;
@@ -3332,5 +3389,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.ButtonEdit bedt_USER;
     }
 }

@@ -137,7 +137,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(698, 43);
             // 
             // pnl_right02
@@ -280,7 +280,7 @@
             this.ClientSize = new System.Drawing.Size(698, 527);
             this.Controls.Add(this.groupControl1);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "DEPT";
             this.Text = "부서정보";
             this.Load += new System.EventHandler(this.USER_Load);

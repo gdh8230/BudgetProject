@@ -26,6 +26,7 @@ namespace DH_Core.CommonPopup
         public string CODE { get; set; }
         public string NAME { get; set; }
         public string CLASS { get; set; }
+        public string CLASS_NM { get; set; }
         string title;
         #endregion
 
@@ -53,6 +54,7 @@ namespace DH_Core.CommonPopup
             if (title.Equals("계정"))
             {
                 this.CLASS = dr["CLASS"].ToString();
+                this.CLASS_NM = dr["CLASS_NM"].ToString();
             }
             this.DialogResult = DialogResult.OK;
         }
@@ -72,6 +74,7 @@ namespace DH_Core.CommonPopup
                 if (title.Equals("계정"))
                 {
                     this.CLASS = dr["CLASS"].ToString();
+                    this.CLASS_NM = dr["CLASS_NM"].ToString();
                 }
             }
         }
@@ -140,7 +143,11 @@ namespace DH_Core.CommonPopup
                     break;
                 case "계정":
                     {
-                        query = "SELECT ACT_CD AS CODE, ACT_NM AS NAME, CLASS FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE @CODE+'%' AND ACT_NM LIKE @NAME+'%'";
+                        query = "SELECT ACT_CD AS CODE, ACT_NM AS NAME, CLASS, B.NAME AS CLASS_NM FROM TB_ACCOUNT A WITH(NOLOCK) " +
+                                "JOIN TS_CODE B WITH(NOLOCK) " +
+                                "ON A.CLASS = B.CODE " +
+                                "AND B.C_ID = '대계정' " +
+                                "WHERE ACT_CD LIKE @CODE+'%' AND ACT_NM LIKE @NAME+'%'";
                     }
                     break;
                 default: break;

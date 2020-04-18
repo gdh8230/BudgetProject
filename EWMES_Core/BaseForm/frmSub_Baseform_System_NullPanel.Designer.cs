@@ -92,7 +92,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(922, 43);
             // 
             // pnl_right02
@@ -106,7 +106,7 @@
             this.grp_Search_Condition.Dock = System.Windows.Forms.DockStyle.Top;
             this.grp_Search_Condition.Location = new System.Drawing.Point(0, 43);
             this.grp_Search_Condition.LookAndFeel.SkinName = "Whiteprint";
-            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grp_Search_Condition.Name = "grp_Search_Condition";
             this.grp_Search_Condition.Size = new System.Drawing.Size(922, 64);
             this.grp_Search_Condition.TabIndex = 6;
@@ -120,7 +120,7 @@
             this.Controls.Add(this.grp_Search_Condition);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "frmSub_Baseform_System_NullPanel";
             this.Text = "frmSub_Baseform_System_NullPanel";
             this.Controls.SetChildIndex(this.pnl_Top01, 0);

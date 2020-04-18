@@ -73,7 +73,7 @@
             this.grp_Search_Condition.Controls.Add(this.txtItem);
             this.grp_Search_Condition.Controls.Add(this.radio01);
             this.grp_Search_Condition.LookAndFeel.SkinName = "Whiteprint";
-            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grp_Search_Condition.Size = new System.Drawing.Size(761, 85);
             // 
             // pnl_Close
@@ -151,7 +151,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(761, 43);
             // 
             // pnl_right02
@@ -184,7 +184,7 @@
             this.gcCode.Location = new System.Drawing.Point(0, 128);
             this.gcCode.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.gcCode.LookAndFeel.SkinName = "Office 2010 Black";
-            this.gcCode.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.gcCode.LookAndFeel.UseDefaultLookAndFeel = true;
             this.gcCode.MainView = this.gvCode;
             this.gcCode.Name = "gcCode";
             this.gcCode.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -292,7 +292,7 @@
             this.ClientSize = new System.Drawing.Size(761, 462);
             this.Controls.Add(this.gcCode);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.MaximizeBox = false;
             this.Name = "frm_PUP_CMD_CODE_Set";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

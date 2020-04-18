@@ -8,6 +8,7 @@ using DevExpress.Spreadsheet;
 using DevExpress.XtraCharts;
 using DH_Core.CommonPopup;
 using DevExpress.XtraEditors;
+using System.IO;
 
 namespace EXEC
 {
@@ -88,8 +89,12 @@ namespace EXEC
             {
                 modUTIL.DevLookUpEditorSet(rledt_EXCH, ds.Tables[0], "CODE", "NAME", "CODE", "NAME");
             }
-
+            getHeaderData();
             getGridData();
+        }
+
+        private void getHeaderData()
+        {
         }
 
         private void getGridData()
@@ -182,22 +187,20 @@ namespace EXEC
             return dt;
         }
 
-        private bool df_Transaction(int Index, object[] Param, DataRow dr, out string error_msg)
+        private bool Detail_Transaction(object[] Param, DataRow dr, out string error_msg)
         {
-
             bool result = false;
             gConst.DbConn.ClearDB();
             error_msg = "";
 
             gConst.DbConn.BeginTrans();
-
             try
             {
                 #region 입력/수정/삭제
                 if (dr.RowState != DataRowState.Deleted)
                 {
 
-                    gConst.DbConn.ProcedureName = "dbo.USP_STD_SET_BUDGET_ADJ";
+                    gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_D";
                     gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, dr.RowState.Equals(DataRowState.Added) ? "I" : "U");
                     gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, dr["ACT_CD"].ToString());
                     gConst.DbConn.AddParameter("ADMIN_GBN", MSSQLAgent.DBFieldType.String, dr["ADMIN_GBN"].ToString());
@@ -211,7 +214,7 @@ namespace EXEC
                 }
                 else
                 {
-                    gConst.DbConn.ProcedureName = "dbo.USP_STD_SET_BUDGET_ADJ";
+                    gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_D";
                     gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, "D");
                     gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, dr["ACT_CD", DataRowVersion.Original].ToString());
                     gConst.DbConn.AddParameter("ADMIN_GBN", MSSQLAgent.DBFieldType.String, dr["ADMIN_GBN", DataRowVersion.Original].ToString());
@@ -224,15 +227,83 @@ namespace EXEC
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
 
                 }
-                gConst.DbConn.ExecuteNonQuery(out error_msg);
-                if (!error_msg.Equals(""))
+                if(!gConst.DbConn.ExecuteNonQuery(out error_msg))
                 {
-                    MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg  , "저장오류");
+                    MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
+                }
+                else
+                {
+
                 }
                 #endregion
                 gConst.DbConn.ClearDB();
             }
-            catch(Exception ee)
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.ToString());
+                MsgBox.MsgErr("초기화에 실패했습니다." + error_msg, "에러");
+                gConst.DbConn.Rollback();
+            }
+
+            gConst.DbConn.Commit();
+            return result;
+        }
+
+        private bool Header_Transaction(object[] Param, DataRow dr, out string error_msg)
+        {
+
+            bool result = false;
+            gConst.DbConn.ClearDB();
+            error_msg = "";
+
+            gConst.DbConn.BeginTrans();
+
+            try
+            {
+                #region 입력/수정/삭제
+                gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_H";
+                gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, Param[0]);
+                gConst.DbConn.AddParameter("ADMIN_NO", MSSQLAgent.DBFieldType.String, ADMIN_NO);
+                gConst.DbConn.AddParameter("PLAN_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyyMMdd"));
+                gConst.DbConn.AddParameter("DEPT", MSSQLAgent.DBFieldType.String, txt_DEPT.Tag.ToString());
+                gConst.DbConn.AddParameter("DEPT_NAME", MSSQLAgent.DBFieldType.String, txt_DEPT.Text);
+                gConst.DbConn.AddParameter("PLAN_USER", MSSQLAgent.DBFieldType.String, env.EmpCode);
+                gConst.DbConn.AddParameter("BUSINESS_GBN", MSSQLAgent.DBFieldType.String, ledt_BUSSINESS_GBN.EditValue);
+                gConst.DbConn.AddParameter("PJT_CD", MSSQLAgent.DBFieldType.String, bedt_PJT.Tag);
+                gConst.DbConn.AddParameter("BILL_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyyMMdd"));
+                gConst.DbConn.AddParameter("PLAN_TITLE", MSSQLAgent.DBFieldType.String, txt_PLAN_TITLE.Text);
+                gConst.DbConn.AddParameter("PLAN_CONTENT", MSSQLAgent.DBFieldType.String, txt_PLAN_CONTENT.Text);
+                gConst.DbConn.AddParameter("COMP_NAME", MSSQLAgent.DBFieldType.String, txt_COMP_NAME.Text);
+                gConst.DbConn.AddParameter("COMP_ACCT", MSSQLAgent.DBFieldType.String, txt_COMP_ACCT.Text);
+                gConst.DbConn.AddParameter("COMP_BANK", MSSQLAgent.DBFieldType.String, txt_COMP_BANK.Text);
+                gConst.DbConn.AddParameter("ACCT_HOLDER", MSSQLAgent.DBFieldType.String, txt_ACCT_HOLDER.Text);
+                gConst.DbConn.AddParameter("PAY_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_PAY.EditValue.ToString()).ToString("yyyyMMdd"));
+                gConst.DbConn.AddParameter("COMP_MNG", MSSQLAgent.DBFieldType.String, txt_COMP_MNG.Text);
+                gConst.DbConn.AddParameter("COMP_MNG_PHONE", MSSQLAgent.DBFieldType.String, txt_COMP_MNG_PHONE.Text);
+                gConst.DbConn.AddParameter("DCMNT1", MSSQLAgent.DBFieldType.String, null);
+                gConst.DbConn.AddParameter("DCMNT1_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT1_NM.Text);
+                gConst.DbConn.AddParameter("DCMNT2", MSSQLAgent.DBFieldType.String, null);
+                gConst.DbConn.AddParameter("DCMNT2_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT2_NM.Text);
+                gConst.DbConn.AddParameter("DCMNT3", MSSQLAgent.DBFieldType.String, null);
+                gConst.DbConn.AddParameter("DCMNT3_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT3_NM.Text);
+                //gConst.DbConn.AddParameter("USER", MSSQLAgent.DBFieldType.String, txt_USER.Tag.ToString());
+                gConst.DbConn.AddParameter("USER", MSSQLAgent.DBFieldType.String, bedt_USER.Tag);
+                gConst.DbConn.AddParameter("GW_NO", MSSQLAgent.DBFieldType.String, null);
+                gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
+                gConst.DbConn.AddParameter("OUTPUT", MSSQLAgent.DBFieldType.String, error_msg, 20, MSSQLAgent.DBDirection.Output);
+                if(!gConst.DbConn.ExecuteNonQuery(out error_msg))
+                {
+                    MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
+                }
+                else
+                {
+                    ADMIN_NO = error_msg;
+                    result = true;
+                }
+                #endregion
+                gConst.DbConn.ClearDB();
+            }
+            catch (Exception ee)
             {
                 Console.WriteLine(ee.ToString());
                 MsgBox.MsgErr("초기화에 실패했습니다." + error_msg, "에러");
@@ -254,20 +325,22 @@ namespace EXEC
         {
             DataSet ds_new;
 
-            Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
-
-            DataRow dr_grid1 = gridView1.GetFocusedDataRow();
-            if (DT_GRD01.HasChanges())
+            //헤더저장
+            if(Header_Transaction(gParam, null, out error_msg))
             {
-                ds_new = DT_GRD01.GetChanges();
-                foreach (DataRow dr in ds_new.Tables[0].Rows)
+                //디테일 저장
+                if (DT_GRD01.HasChanges())
                 {
-                    gParam = new string[] { dr_grid1["ACT_CD"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString() };
-                    df_Transaction(20, gParam, dr, out gOut_MSG);
+                    ds_new = DT_GRD01.GetChanges();
+                    foreach (DataRow dr in ds_new.Tables[0].Rows)
+                    {
+                        gParam = new string[] { ADMIN_NO };
+                        Detail_Transaction(gParam, dr, out gOut_MSG);
+                    }
+                    MsgBox.MsgInformation("저장 완료", "확인");
+                    btn_Search_Click(null, null);
+                    return;
                 }
-                MsgBox.MsgInformation("저장 완료", "확인");
-                btn_Search_Click(null, null);
-                return;
             }
         }
 
@@ -294,6 +367,7 @@ namespace EXEC
             DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
 
             DR["SEQ"] = gridView1.RowCount;
+            DR["TOTAL"] = 0;
             //DR["ACT_CD"] = select_row["ACT_CD"];
             //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
             ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
@@ -305,17 +379,71 @@ namespace EXEC
 
         private void btn_Excel_Click(object sender, EventArgs e)
         {
-            Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
+            try
+            {
+                spreadsheetControl1.LoadDocument("지출결의서_양식.xlsx", DocumentFormat.Xlsx);
+                Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
 
-            //sheet.InsertCells(sheet.Cells["AW3"], InsertCellsMode.ShiftCellsDown);
-            sheet.Cells["AW3"].Value = DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyy-MM-dd");
-            sheet.Cells["BJ3"].Value = DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyy-MM-dd");
-            sheet.Cells["AW4"].Value = txt_DEPT.Text;
-            sheet.Cells["BJ4"].Value = txt_PLAN_USER.Text;
-            sheet.Cells["AW5"].Value = ledt_BUSSINESS_GBN.Text;
-            sheet.Cells["BJ5"].Value = bedt_PJT.Text;
-            sheet.Cells["AW6"].Value = txt_PLAN_TITLE.Text;
-            sheet.Cells["AQ12"].Value = txt_PLAN_CONTENT.Text;
+                sheet.Cells["AW3"].Value = DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyy-MM-dd");
+                sheet.Cells["BJ3"].Value = DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyy-MM-dd");
+                sheet.Cells["AW4"].Value = txt_DEPT.Text;
+                sheet.Cells["BJ4"].Value = txt_PLAN_USER.Text;
+                sheet.Cells["AW5"].Value = ledt_BUSSINESS_GBN.Text;
+                sheet.Cells["BJ5"].Value = bedt_PJT.Text;
+                sheet.Cells["AW6"].Value = txt_PLAN_TITLE.Text;
+                sheet.Cells["AQ12"].Value = txt_PLAN_CONTENT.Text;
+
+
+                int Start_position = 18;
+                int addrow_cnt = 0;
+
+                for (int i = 0; i < DT_GRD01.Tables[0].Rows.Count; i++)
+                {
+                    if (DT_GRD01.Tables[0].Rows.Count > addrow_cnt + 5)
+                    {
+                        sheet.Rows.Insert(Start_position + i);
+                        sheet.Rows[Start_position + i].CopyFrom(sheet.Rows[Start_position + i + 1]);
+                        addrow_cnt++;
+                    }
+
+                    sheet.Cells["AQ" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["SEQ"].ToString();    //순번
+                    sheet.Cells["AR" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ITEM_NM"].ToString();    //품명
+                    sheet.Cells["AZ" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["PRICE"].ToString();    //단가
+                    sheet.Cells["BB" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["AMOUNT"].ToString();    //수량
+                    sheet.Cells["BD" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["UNIT"].ToString();    //단위
+                    sheet.Cells["BF" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["TOTAL"].ToString());    //소계
+                    sheet.Cells["BI" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["CLASS_NM"].ToString();    //대계정명
+                    sheet.Cells["BL" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ACT_NM"].ToString();    //소계정명
+
+                }
+
+
+                sheet.Cells["AQ" + (28 + addrow_cnt)].Value = "o 공급업체명: " + txt_COMP_NAME.Text;   //공급업체명
+                sheet.Cells["AQ" + (29 + addrow_cnt)].Value = "o 계좌번호 : " + txt_COMP_ACCT.Text + " / " + txt_COMP_BANK.Text + " / " + txt_ACCT_HOLDER.Text;   //계좌정보
+                sheet.Cells["AQ" + (30 + addrow_cnt)].Value = "o 지급일자 : " + DateTime.Parse(dt_PAY.EditValue.ToString()).ToString("yyyy-MM-dd");    //지급일자
+                sheet.Cells["AQ" + (31 + addrow_cnt)].Value = "o 공급업체 담당자 : " + txt_COMP_MNG.Text + " / " + txt_COMP_MNG_PHONE.Text;   //공급업체 담당자
+                sheet.Cells["AQ" + (35 + addrow_cnt)].Value = txt_DCMNT1_NM.Text;   //첨부파일1
+                if (txt_DCMNT2_NM.Text != "")
+                {
+                    sheet.Rows.Insert(35 + addrow_cnt);
+                    sheet.Rows[35 + addrow_cnt].CopyFrom(sheet.Rows[35 + addrow_cnt + 1]);
+                    sheet.Cells["AQ" + (35 + addrow_cnt + 1)].Value = txt_DCMNT2_NM.Text;   //첨부파일2
+                }
+                if (txt_DCMNT3_NM.Text != "")
+                {
+                    sheet.Rows.Insert(36 + addrow_cnt);
+                    sheet.Rows[36 + addrow_cnt].CopyFrom(sheet.Rows[36 + addrow_cnt + 1]);
+                    sheet.Cells["AQ" + (36 + addrow_cnt + 1)].Value = txt_DCMNT3_NM.Text;   //첨부파일3
+                }
+
+                //FileStream stream = new FileStream()
+                //this.spreadsheetControl1.SaveDocument("123", DocumentFormat.Xlsx);
+            }
+            catch(Exception ee)
+            {
+                Console.WriteLine(ee.ToString());
+            }
+
         }
 
         private void rledt_EXCH_EditValueChanged(object sender, EventArgs e)
@@ -368,12 +496,25 @@ namespace EXEC
                     ds = df_select(5, gParam, out gOut_MSG);
                     if (ds != null)
                     {
-                        dr["BUDGET_MONEY_DEPT"] = ds.Tables[0].Rows[0][0];
-                        dr["REMAIN_MONEY_DEPT"] = double.Parse(ds.Tables[0].Rows[0][0].ToString()) - double.Parse(ds.Tables[0].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
-                        if (ds.Tables.Count > 1)
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            dr["BUDGET_MONEY_DEPT"] = ds.Tables[0].Rows[0][0];
+                            dr["REMAIN_MONEY_DEPT"] = double.Parse(ds.Tables[0].Rows[0][0].ToString()) - double.Parse(ds.Tables[0].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
+                        }
+                        else
+                        {
+                            dr["BUDGET_MONEY_DEPT"] = 0;
+                            dr["REMAIN_MONEY_DEPT"] = 0 - double.Parse(dr["TOTAL"].ToString());
+                        }
+                        if (ds.Tables[1].Rows.Count > 0)
                         {
                             dr["BUDGET_MONEY_PJT"] = ds.Tables[1].Rows[0][0];
                             dr["REMAIN_MONEY_PJT"] = double.Parse(ds.Tables[1].Rows[0][0].ToString()) - double.Parse(ds.Tables[1].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
+                        }
+                        else
+                        {
+                            dr["BUDGET_MONEY_PJT"] = 0;
+                            dr["REMAIN_MONEY_PJT"] = 0 - double.Parse(dr["TOTAL"].ToString());
                         }
                     }
                 }
@@ -390,7 +531,13 @@ namespace EXEC
                 DR["ACT_CD"] = frm.CODE;
                 DR["ACT_NM"] = frm.NAME;
                 DR["CLASS"] = frm.CLASS;
+                DR["CLASS_NM"] = frm.CLASS_NM;
             }
+        }
+
+        private void bedt_USER_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
         }
     }
 }

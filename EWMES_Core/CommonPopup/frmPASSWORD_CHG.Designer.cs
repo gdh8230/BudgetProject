@@ -75,7 +75,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.panelControl1.LookAndFeel.SkinName = "Whiteprint";
-            this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(292, 177);
             this.panelControl1.TabIndex = 1010;
@@ -91,7 +91,7 @@
             this.sbtn_Cancel.Location = new System.Drawing.Point(157, 136);
             this.sbtn_Cancel.LookAndFeel.SkinMaskColor = System.Drawing.Color.SkyBlue;
             this.sbtn_Cancel.LookAndFeel.SkinName = "Whiteprint";
-            this.sbtn_Cancel.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.sbtn_Cancel.LookAndFeel.UseDefaultLookAndFeel = true;
             this.sbtn_Cancel.Name = "sbtn_Cancel";
             this.sbtn_Cancel.Size = new System.Drawing.Size(102, 24);
             this.sbtn_Cancel.TabIndex = 1020;
@@ -110,7 +110,7 @@
             this.sbtn_Save_Close.Location = new System.Drawing.Point(24, 136);
             this.sbtn_Save_Close.LookAndFeel.SkinMaskColor = System.Drawing.Color.SkyBlue;
             this.sbtn_Save_Close.LookAndFeel.SkinName = "Whiteprint";
-            this.sbtn_Save_Close.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.sbtn_Save_Close.LookAndFeel.UseDefaultLookAndFeel = true;
             this.sbtn_Save_Close.Name = "sbtn_Save_Close";
             this.sbtn_Save_Close.Size = new System.Drawing.Size(102, 24);
             this.sbtn_Save_Close.TabIndex = 1019;
@@ -251,7 +251,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "frmPASSWORD_CHG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "비밀번호변경";

@@ -616,6 +616,10 @@ namespace DH_Core.DB
                 }
 
                 CMD.ExecuteNonQuery();
+                if(CMD.Parameters["OUTPUT"].Value != null)
+                {
+                    error_msg = CMD.Parameters["OUTPUT"].Value.ToString();
+                }
                 result = true;
             }
             catch (SqlException ex)

@@ -139,7 +139,7 @@
             this.grp_Search_Condition.Controls.Add(this.ledt_dept);
             this.grp_Search_Condition.Controls.Add(this.labelControl1);
             this.grp_Search_Condition.LookAndFeel.SkinName = "Whiteprint";
-            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grp_Search_Condition.Size = new System.Drawing.Size(1171, 55);
             // 
             // pnl_Excel
@@ -203,7 +203,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(1171, 43);
             // 
             // pnl_right02
@@ -233,7 +233,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Black";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(320, 532);
             this.groupControl1.TabIndex = 5;
@@ -250,7 +250,7 @@
             this.grd_Data01.Location = new System.Drawing.Point(2, 25);
             this.grd_Data01.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.grd_Data01.LookAndFeel.SkinName = "Office 2010 Black";
-            this.grd_Data01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grd_Data01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grd_Data01.MainView = this.gview_Data01;
             this.grd_Data01.Name = "grd_Data01";
             this.grd_Data01.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -385,7 +385,7 @@
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.groupControl3.LookAndFeel.SkinName = "Office 2010 Black";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = true;
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(846, 268);
             this.groupControl3.TabIndex = 5;
@@ -402,7 +402,7 @@
             this.grd_Data02.Location = new System.Drawing.Point(2, 25);
             this.grd_Data02.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.grd_Data02.LookAndFeel.SkinName = "Office 2010 Black";
-            this.grd_Data02.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grd_Data02.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grd_Data02.MainView = this.gview_Data02;
             this.grd_Data02.Name = "grd_Data02";
             this.grd_Data02.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -718,7 +718,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 40);
             this.groupControl2.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.groupControl2.LookAndFeel.SkinName = "Office 2010 Black";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = true;
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(846, 219);
             this.groupControl2.TabIndex = 6;
@@ -735,7 +735,7 @@
             this.grd_Data03.Location = new System.Drawing.Point(2, 25);
             this.grd_Data03.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.grd_Data03.LookAndFeel.SkinName = "Office 2010 Black";
-            this.grd_Data03.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grd_Data03.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grd_Data03.MainView = this.gview_Data03;
             this.grd_Data03.Name = "grd_Data03";
             this.grd_Data03.Size = new System.Drawing.Size(842, 192);
@@ -854,7 +854,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.LookAndFeel.SkinName = "Whiteprint";
-            this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(846, 40);
             this.panelControl1.TabIndex = 7;
@@ -975,7 +975,7 @@
             this.ClientSize = new System.Drawing.Size(1171, 630);
             this.Controls.Add(this.splitContainerControl1);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "AUTH";
             this.Text = "사용자별 권한 등록";
             this.Load += new System.EventHandler(this.Form_Load);

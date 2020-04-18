@@ -99,7 +99,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(922, 43);
             // 
             // pnl_right02
@@ -124,7 +124,7 @@
             this.ClientSize = new System.Drawing.Size(922, 620);
             this.Controls.Add(this.grp_Search_Condition);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "frmSub_Baseform_Search_STD";
             this.Text = "frmSub_Baseform_Search_NullPanel";
             this.Activated += new System.EventHandler(this.frmSub_Baseform_Search_STD_Activated);

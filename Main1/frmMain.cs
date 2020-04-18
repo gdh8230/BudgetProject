@@ -39,7 +39,7 @@ namespace Main
         #region Functions (각 사용자정의 평션)
         private void InitSCR()
         {
-            UserLookAndFeel.Default.SetSkinStyle("iMaginary");
+            //UserLookAndFeel.Default.SetSkinStyle("Metropolis");
             bar_Datetime.Caption = DateTime.Today.ToString("yyyy-MM-dd");
         }
 

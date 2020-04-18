@@ -74,7 +74,7 @@
             this.grp_Search_Condition.Controls.Add(this.txt_emp_name);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.LookAndFeel.SkinName = "Whiteprint";
-            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grp_Search_Condition.Size = new System.Drawing.Size(549, 69);
             // 
             // pnl_Close
@@ -156,7 +156,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(549, 43);
             // 
             // pnl_right02
@@ -199,7 +199,7 @@
             this.gridControl_emp.Location = new System.Drawing.Point(0, 112);
             this.gridControl_emp.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.gridControl_emp.LookAndFeel.SkinName = "Office 2010 Black";
-            this.gridControl_emp.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.gridControl_emp.LookAndFeel.UseDefaultLookAndFeel = true;
             this.gridControl_emp.MainView = this.gridView_emp;
             this.gridControl_emp.Name = "gridControl_emp";
             this.gridControl_emp.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -288,7 +288,7 @@
             this.ClientSize = new System.Drawing.Size(549, 342);
             this.Controls.Add(this.gridControl_emp);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "frm_PUP_GET_EMP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "사원정보";

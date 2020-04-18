@@ -202,7 +202,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(1019, 43);
             // 
             // pnl_right02
@@ -695,7 +695,7 @@
             this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.groupControl1);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "BASE03";
             this.Text = "프로젝트등록";
             this.Load += new System.EventHandler(this.USER_Load);

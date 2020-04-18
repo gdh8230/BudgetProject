@@ -78,7 +78,7 @@
             this.grp_Search_Condition.Controls.Add(this.txtPjtName);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.LookAndFeel.SkinName = "Whiteprint";
-            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grp_Search_Condition.Size = new System.Drawing.Size(335, 83);
             // 
             // pnl_Close
@@ -160,7 +160,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(335, 43);
             // 
             // pnl_right02
@@ -204,7 +204,7 @@
             this.gcPjt.Location = new System.Drawing.Point(0, 126);
             this.gcPjt.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.gcPjt.LookAndFeel.SkinName = "Office 2010 Black";
-            this.gcPjt.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.gcPjt.LookAndFeel.UseDefaultLookAndFeel = true;
             this.gcPjt.MainView = this.gvPjt;
             this.gcPjt.Name = "gcPjt";
             this.gcPjt.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -339,7 +339,7 @@
             this.ClientSize = new System.Drawing.Size(335, 461);
             this.Controls.Add(this.gcPjt);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(450, 500);
             this.Name = "frm_PUP_GET_PJT_CD";

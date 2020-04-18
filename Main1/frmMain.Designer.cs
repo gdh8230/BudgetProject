@@ -116,7 +116,7 @@
             this.barAndDockingController1.AppearancesDocking.PanelCaptionActive.Options.UseFont = true;
             this.barAndDockingController1.LookAndFeel.SkinMaskColor = System.Drawing.Color.DodgerBlue;
             this.barAndDockingController1.LookAndFeel.SkinName = "Visual Studio 2013 Light";
-            this.barAndDockingController1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.barAndDockingController1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.barAndDockingController1.PropertiesBar.AllowLinkLighting = false;
             // 
             // barManager1
@@ -312,7 +312,7 @@
             this.clientPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clientPanel.Location = new System.Drawing.Point(247, 0);
             this.clientPanel.LookAndFeel.SkinName = "The Asphalt World";
-            this.clientPanel.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.clientPanel.LookAndFeel.UseDefaultLookAndFeel = true;
             this.clientPanel.Name = "clientPanel";
             this.clientPanel.Size = new System.Drawing.Size(769, 741);
             this.clientPanel.TabIndex = 18;
@@ -360,7 +360,7 @@
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
             this.panelControl2.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.Highlight;
             this.panelControl2.LookAndFeel.SkinName = "Whiteprint";
-            this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = true;
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(243, 737);
             this.panelControl2.TabIndex = 31;
@@ -434,7 +434,7 @@
             this.navBarControl1.Location = new System.Drawing.Point(2, 2);
             this.navBarControl1.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.Highlight;
             this.navBarControl1.LookAndFeel.SkinName = "Whiteprint";
-            this.navBarControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.navBarControl1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.navBarControl1.MinimumSize = new System.Drawing.Size(0, 500);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.NavigationPaneGroupClientHeight = 200;

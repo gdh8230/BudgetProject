@@ -45,7 +45,7 @@
             this.progressPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressPanel1.ImageHorzOffset = 20;
             this.progressPanel1.Location = new System.Drawing.Point(0, 16);
-            this.progressPanel1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.progressPanel1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.progressPanel1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.progressPanel1.Name = "progressPanel1";
             this.progressPanel1.Size = new System.Drawing.Size(287, 35);

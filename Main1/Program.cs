@@ -26,7 +26,7 @@ namespace Main1
                     DevExpress.Skins.SkinManager.EnableFormSkins();
                     DevExpress.Utils.AppearanceObject.DefaultFont = new Font("맑은 고딕", 9);
                     DevExpress.UserSkins.BonusSkins.Register();
-                    //UserLookAndFeel.Default.SetSkinStyle("Li");
+                    //UserLookAndFeel.Default.SetSkinStyle("Metropolis");
 
                     Application.Run(new Login());
                     //Application.Run(new Main());

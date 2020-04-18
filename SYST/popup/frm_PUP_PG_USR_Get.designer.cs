@@ -71,37 +71,37 @@
             // btn_Close
             // 
             this.btn_Close.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Close.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Close.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Excel
             // 
             this.btn_Excel.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Excel.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Excel.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Print
             // 
             this.btn_Print.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Print.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Print.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Save
             // 
             this.btn_Save.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Save.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Save.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Delete
             // 
             this.btn_Delete.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Delete.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Delete.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Add
             // 
             this.btn_Add.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Add.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Add.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Search
             // 
             this.btn_Search.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Search.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Search.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // pnl_right02
             // 
@@ -112,7 +112,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(922, 43);
             // 
             // groupControl3
@@ -131,7 +131,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(0, 43);
             this.groupControl3.LookAndFeel.SkinName = "Whiteprint";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = true;
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(922, 81);
             this.groupControl3.TabIndex = 509;
@@ -204,7 +204,7 @@
             this.grd_Data01.Location = new System.Drawing.Point(0, 124);
             this.grd_Data01.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
             this.grd_Data01.LookAndFeel.SkinName = "Office 2010 Black";
-            this.grd_Data01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grd_Data01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grd_Data01.MainView = this.gview_Data01;
             this.grd_Data01.Name = "grd_Data01";
             this.grd_Data01.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -314,7 +314,7 @@
             this.Controls.Add(this.grd_Data01);
             this.Controls.Add(this.groupControl3);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "frm_PUP_PG_USR_Get";
             this.Text = "프로그램 사용자 조회 도움";
             this.Controls.SetChildIndex(this.pnl_Top01, 0);

@@ -230,7 +230,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(1159, 43);
             // 
             // pnl_right02
@@ -963,7 +963,7 @@
             this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.groupControl1);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "STD03";
             this.Text = "예산조정";
             this.Load += new System.EventHandler(this.Form_Load);

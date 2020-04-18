@@ -71,15 +71,15 @@
             // 
             // grp_Search_Condition
             // 
+            this.grp_Search_Condition.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.grp_Search_Condition.Appearance.Options.UseBackColor = true;
             this.grp_Search_Condition.AppearanceCaption.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
             this.grp_Search_Condition.AppearanceCaption.Options.UseFont = true;
             this.grp_Search_Condition.Controls.Add(this.txt_code);
             this.grp_Search_Condition.Controls.Add(this.labelControl1);
             this.grp_Search_Condition.Controls.Add(this.txt_name);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
-            this.grp_Search_Condition.LookAndFeel.SkinName = "Whiteprint";
-            this.grp_Search_Condition.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.grp_Search_Condition.Size = new System.Drawing.Size(335, 83);
+            this.grp_Search_Condition.Size = new System.Drawing.Size(351, 83);
             // 
             // pnl_Excel
             // 
@@ -152,25 +152,23 @@
             // 
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
-            this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.pnl_Top01.Size = new System.Drawing.Size(335, 43);
+            this.pnl_Top01.Size = new System.Drawing.Size(351, 43);
             // 
             // pnl_right02
             // 
-            this.pnl_right02.Size = new System.Drawing.Size(65, 39);
+            this.pnl_right02.Size = new System.Drawing.Size(81, 39);
             // 
             // txt_name
             // 
             this.txt_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_name.Location = new System.Drawing.Point(70, 53);
+            this.txt_name.Location = new System.Drawing.Point(70, 54);
             this.txt_name.Name = "txt_name";
             this.txt_name.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txt_name.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.txt_name.Properties.Appearance.Options.UseBackColor = true;
             this.txt_name.Properties.Appearance.Options.UseFont = true;
-            this.txt_name.Size = new System.Drawing.Size(253, 22);
+            this.txt_name.Size = new System.Drawing.Size(269, 22);
             this.txt_name.TabIndex = 1;
             this.txt_name.Tag = "1";
             this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
@@ -179,7 +177,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(20, 56);
+            this.labelControl4.Location = new System.Drawing.Point(20, 57);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(44, 15);
             this.labelControl4.TabIndex = 554;
@@ -195,14 +193,11 @@
             this.gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gridControl1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridControl1.Location = new System.Drawing.Point(0, 126);
-            this.gridControl1.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
-            this.gridControl1.LookAndFeel.SkinName = "Office 2010 Black";
-            this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(335, 335);
+            this.gridControl1.Size = new System.Drawing.Size(351, 338);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -305,7 +300,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(16, 32);
+            this.labelControl1.Location = new System.Drawing.Point(16, 33);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(48, 15);
             this.labelControl1.TabIndex = 556;
@@ -315,13 +310,13 @@
             // 
             this.txt_code.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_code.Location = new System.Drawing.Point(70, 28);
+            this.txt_code.Location = new System.Drawing.Point(70, 29);
             this.txt_code.Name = "txt_code";
             this.txt_code.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txt_code.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.txt_code.Properties.Appearance.Options.UseBackColor = true;
             this.txt_code.Properties.Appearance.Options.UseFont = true;
-            this.txt_code.Size = new System.Drawing.Size(253, 22);
+            this.txt_code.Size = new System.Drawing.Size(269, 22);
             this.txt_code.TabIndex = 0;
             this.txt_code.Tag = "1";
             this.txt_code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mKeyPress);
@@ -329,13 +324,11 @@
             // frm_PUP_GET_CODE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-            this.ClientSize = new System.Drawing.Size(335, 461);
+            this.ClientSize = new System.Drawing.Size(351, 464);
             this.Controls.Add(this.gridControl1);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frm_PUP_GET_CODE.IconOptions.Icon")));
-            this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(450, 500);
+            this.MaximumSize = new System.Drawing.Size(434, 496);
             this.Name = "frm_PUP_GET_CODE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "";

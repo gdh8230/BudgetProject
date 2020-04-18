@@ -114,7 +114,7 @@
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(459, 43);
             // 
             // pnl_right02
@@ -137,7 +137,7 @@
             this.grp_Top01.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grp_Top01.Location = new System.Drawing.Point(0, 43);
             this.grp_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.grp_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grp_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.grp_Top01.Name = "grp_Top01";
             this.grp_Top01.Size = new System.Drawing.Size(459, 100);
             this.grp_Top01.TabIndex = 508;
@@ -204,7 +204,7 @@
             this.Controls.Add(this.grp_Top01);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("Code_Set.IconOptions.Icon")));
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "Code_Set";
             this.Text = "코드 등록 도움";
             this.Controls.SetChildIndex(this.pnl_Top01, 0);

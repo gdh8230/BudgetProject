@@ -170,7 +170,7 @@
             this.btn_Close.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Close.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Close.ImageOptions.SvgImage")));
             this.btn_Close.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Close.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Close.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Excel
             // 
@@ -179,7 +179,7 @@
             this.btn_Excel.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Excel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Excel.ImageOptions.SvgImage")));
             this.btn_Excel.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Excel.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Excel.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Print
             // 
@@ -188,7 +188,7 @@
             this.btn_Print.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Print.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Print.ImageOptions.SvgImage")));
             this.btn_Print.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Print.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Print.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Save
             // 
@@ -197,7 +197,7 @@
             this.btn_Save.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Save.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Save.ImageOptions.SvgImage")));
             this.btn_Save.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Save.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Save.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Delete
             // 
@@ -206,7 +206,7 @@
             this.btn_Delete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Delete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Delete.ImageOptions.SvgImage")));
             this.btn_Delete.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Delete.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Delete.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Add
             // 
@@ -215,7 +215,7 @@
             this.btn_Add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Add.ImageOptions.SvgImage")));
             this.btn_Add.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Add.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Add.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // btn_Search
             // 
@@ -224,7 +224,7 @@
             this.btn_Search.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Search.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Search.ImageOptions.SvgImage")));
             this.btn_Search.LookAndFeel.SkinName = "Whiteprint";
-            this.btn_Search.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btn_Search.LookAndFeel.UseDefaultLookAndFeel = true;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // pnl_Top01
@@ -237,7 +237,7 @@
             this.pnl_Top01.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("pnl_Top01.Appearance.Image")));
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
             this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             // 
             // pnl_right02
             // 
@@ -1032,7 +1032,7 @@
             this.Controls.Add(this.grd_Data01);
             this.Controls.Add(this.grp_Title);
             this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_PUP_Item_Get";

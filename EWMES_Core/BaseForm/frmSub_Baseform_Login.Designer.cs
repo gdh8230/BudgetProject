@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btn_Connect = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Close = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Config = new DevExpress.XtraEditors.SimpleButton();
