@@ -150,6 +150,12 @@ namespace DH_Core.CommonPopup
                                 "WHERE ACT_CD LIKE @CODE+'%' AND ACT_NM LIKE @NAME+'%'";
                     }
                     break;
+                case "사원":
+                    {
+                        query = "SELECT USR AS CODE, UNAM AS NAME FROM TS_USER A WITH(NOLOCK) " +
+                                "WHERE USR LIKE @CODE+'%' AND UNAM LIKE @NAME+'%' AND DEPT LIKE '" + env.Dept + "' ";
+                    }
+                    break;
                 default: break;
             }
             gConst.DbConn.AddParameter(new SqlParameter("@CODE", txt_code.Text.Trim()));

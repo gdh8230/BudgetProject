@@ -616,7 +616,50 @@ namespace DH_Core.DB
                 }
 
                 CMD.ExecuteNonQuery();
-                if(CMD.Parameters["OUTPUT"].Value != null)
+                result = true;
+            }
+            catch (SqlException ex)
+            {
+                LogUtil.WriteLog(DateTime.Now.ToString("yy-MM-dd hh:mm:ss") + "\r\n[stacktrace] : " + ex.StackTrace + "\r\n[message] : " + ex.Message);
+                error_msg = ex.Message;
+                result = false;
+            }
+            catch (Exception ex)
+            {
+                LogUtil.WriteLog(DateTime.Now.ToString("yy-MM-dd hh:mm:ss") + "\r\n[stacktrace] : " + ex.StackTrace + "\r\n[message] : " + ex.Message);
+                error_msg = ex.Message;
+                result = false;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 프로시저 실행
+        /// </summary>
+        /// <param name="Index">connection index</param>
+        /// <param name="error_msg">error message</param>
+        /// <returns>성공여부</returns>
+        public bool ExecuteNonQuery(out string error_msg, string a)
+        {
+            bool result = false;
+            error_msg = String.Empty;
+            try
+            {
+                if (!DBConnectState())
+                    CONN.Open();
+                CMD.Connection = CONN;
+                CMD.CommandText = PROCNAME;
+                CMD.CommandType = CommandType.StoredProcedure;
+
+                CMD.Parameters.Clear();
+
+                foreach (SqlParameter Para in Parameters)
+                {
+                    CMD.Parameters.Add(Para);
+                }
+
+                CMD.ExecuteNonQuery();
+                if (CMD.Parameters["OUTPUT"].Value != null)
                 {
                     error_msg = CMD.Parameters["OUTPUT"].Value.ToString();
                 }
