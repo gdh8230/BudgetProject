@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EXCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXCH.Designer.cs">
+      <DependentUpon>EXCH.cs</DependentUpon>
+    </Compile>
     <Compile Include="DEPT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EXCH.resx">
+      <DependentUpon>EXCH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="popup\frm_PUP_PG_USR_Get.resx">
       <DependentUpon>frm_PUP_PG_USR_Get.cs</DependentUpon>
     </EmbeddedResource>

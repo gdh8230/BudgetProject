@@ -190,8 +190,6 @@
             // 
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
-            this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(1019, 43);
             // 
             // pnl_right02
@@ -240,13 +238,13 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 22);
+            this.gridControl1.Location = new System.Drawing.Point(2, 23);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(265, 402);
+            this.gridControl1.Size = new System.Drawing.Size(265, 401);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -333,13 +331,13 @@
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl2.Location = new System.Drawing.Point(2, 22);
+            this.gridControl2.Location = new System.Drawing.Point(2, 23);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit2,
             this.repositoryItemCheckEdit2});
-            this.gridControl2.Size = new System.Drawing.Size(374, 340);
+            this.gridControl2.Size = new System.Drawing.Size(374, 400);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -439,20 +437,20 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(367, 426);
+            this.groupControl2.Size = new System.Drawing.Size(362, 426);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "당기 신청내역";
             // 
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl3.Location = new System.Drawing.Point(2, 22);
+            this.gridControl3.Location = new System.Drawing.Point(2, 23);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit3,
             this.repositoryItemCheckEdit3});
-            this.gridControl3.Size = new System.Drawing.Size(363, 340);
+            this.gridControl3.Size = new System.Drawing.Size(358, 400);
             this.gridControl3.TabIndex = 2;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -568,7 +566,7 @@
             this.dt_YEAR.Properties.Mask.EditMask = "yyyy";
             this.dt_YEAR.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dt_YEAR.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearsGroupView;
-            this.dt_YEAR.Size = new System.Drawing.Size(100, 22);
+            this.dt_YEAR.Size = new System.Drawing.Size(100, 24);
             this.dt_YEAR.TabIndex = 18;
             this.dt_YEAR.Tag = "PJT_EDT";
             this.dt_YEAR.EditValueChanged += new System.EventHandler(this.dt_YEAR_EditValueChanged);
@@ -601,7 +599,7 @@
             editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
             this.bedt_CODE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.bedt_CODE.Size = new System.Drawing.Size(120, 22);
+            this.bedt_CODE.Size = new System.Drawing.Size(120, 24);
             this.bedt_CODE.TabIndex = 32;
             this.bedt_CODE.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_CODE_ButtonClick);
             // 
@@ -633,8 +631,6 @@
             this.ClientSize = new System.Drawing.Size(1019, 527);
             this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.groupControl1);
-            this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "STD01";
             this.Text = "예산신청";
             this.Load += new System.EventHandler(this.Form_Load);

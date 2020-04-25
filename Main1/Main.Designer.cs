@@ -638,7 +638,7 @@
             this.SYS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SYS.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SYS.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SYS.Image = global::Main1.Properties.Resources.sharp_keyboard_arrow_down_black_18dp;
+            this.SYS.Image = global::Budgeting_DSG.Properties.Resources.sharp_keyboard_arrow_down_black_18dp;
             this.SYS.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SYS.Location = new System.Drawing.Point(0, 0);
             this.SYS.Margin = new System.Windows.Forms.Padding(0);

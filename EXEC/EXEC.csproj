@@ -81,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EXEC02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXEC02.Designer.cs">
+      <DependentUpon>EXEC02.cs</DependentUpon>
+    </Compile>
     <Compile Include="popup\popup_Get_AdminNo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EXEC02.resx">
+      <DependentUpon>EXEC02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EXEC01.resx">
       <DependentUpon>EXEC01.cs</DependentUpon>
     </EmbeddedResource>

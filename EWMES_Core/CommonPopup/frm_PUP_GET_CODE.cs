@@ -15,6 +15,17 @@ namespace DH_Core.CommonPopup
             InitializeComponent();
             this.env = env;
 
+            this.dept = env.Dept;
+            this.Text = title + " 정보";
+            this.title = title;
+            getData();
+        }
+        public frm_PUP_GET_CODE(_Environment env, string title, string dept)
+        {
+            InitializeComponent();
+            this.env = env;
+
+            this.dept = dept;
             this.Text = title + " 정보";
             this.title = title;
             getData();
@@ -28,6 +39,7 @@ namespace DH_Core.CommonPopup
         public string CLASS { get; set; }
         public string CLASS_NM { get; set; }
         string title;
+        string dept;
         #endregion
 
         #region Functions 
@@ -153,7 +165,7 @@ namespace DH_Core.CommonPopup
                 case "사원":
                     {
                         query = "SELECT USR AS CODE, UNAM AS NAME FROM TS_USER A WITH(NOLOCK) " +
-                                "WHERE USR LIKE @CODE+'%' AND UNAM LIKE @NAME+'%' AND DEPT LIKE '" + env.Dept + "' ";
+                                "WHERE USR LIKE @CODE+'%' AND UNAM LIKE @NAME+'%' AND DEPT LIKE '" + dept + "' ";
                     }
                     break;
                 default: break;

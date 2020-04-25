@@ -139,7 +139,7 @@
             // 
             this.bedt_ID.Location = new System.Drawing.Point(339, 241);
             this.bedt_ID.Name = "bedt_ID";
-            editorButtonImageOptions1.Image = global::Main1.Properties.Resources.outline_search_black_18dp1;
+            editorButtonImageOptions1.Image = global::Budgeting_DSG.Properties.Resources.outline_search_black_18dp1;
             this.bedt_ID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.bedt_ID.Size = new System.Drawing.Size(151, 26);

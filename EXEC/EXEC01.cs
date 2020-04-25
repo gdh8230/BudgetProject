@@ -65,8 +65,12 @@ namespace EXEC
             env = new _Environment();
             string error_msg = string.Empty;
 
-            //화면 Claer
-            ClearForm();
+            //DateEdit 초기화
+            dt_PLAN.DateTime = DateTime.Today;
+            dt_PAY.DateTime = DateTime.Today;
+            dt_BILL.DateTime = DateTime.Today;
+            ////화면 Claer
+            //ClearForm();
 
             //로그인 사용자
             txt_DEPT.Tag = env.Dept;
@@ -92,7 +96,6 @@ namespace EXEC
             {
                 modUTIL.DevLookUpEditorSet(rledt_EXCH, ds.Tables[0], "CODE", "NAME", "CODE", "NAME");
             }
-            if (ADMIN_NO == null) return;
             getHeaderData();
             getGridData();
         }
@@ -100,8 +103,8 @@ namespace EXEC
         private void ClearForm()
         {
             ADMIN_NO = null;
-            DT_GRD01 = null;
-            gridControl1.DataSource = null;
+            DT_GRD01.Clear(); ;
+            gridControl1.DataSource = DT_GRD01.Tables[0];
 
             dt_PLAN.DateTime = DateTime.Today;
             dt_PAY.DateTime = DateTime.Today;
@@ -113,8 +116,14 @@ namespace EXEC
             txt_COMP_MNG_PHONE.Text = "";
             txt_COMP_NAME.Text = "";
             txt_DCMNT1_NM.Text = "";
+            txt_DCMNT1.Text = "";
+            txt_DCMNT1.Tag = "";
             txt_DCMNT2_NM.Text = "";
+            txt_DCMNT2.Text = "";
+            txt_DCMNT2.Tag = "";
             txt_DCMNT3_NM.Text = "";
+            txt_DCMNT3.Text = "";
+            txt_DCMNT3.Tag = "";
             txt_PLAN_CONTENT.Text = "";
             txt_PLAN_TITLE.Text = "";
             bedt_PJT.Text = "";
@@ -136,9 +145,15 @@ namespace EXEC
             txt_COMP_MNG.Enabled = tp;
             txt_COMP_MNG_PHONE.Enabled = tp;
             txt_COMP_NAME.Enabled = tp;
+            txt_DCMNT1.Enabled = tp;
             txt_DCMNT1_NM.Enabled = tp;
+            txt_DCMNT2.Enabled = tp;
             txt_DCMNT2_NM.Enabled = tp;
+            txt_DCMNT3.Enabled = tp;
             txt_DCMNT3_NM.Enabled = tp;
+            btn_DCMNT1.Enabled = tp;
+            btn_DCMNT2.Enabled = tp;
+            btn_DCMNT3.Enabled = tp;
             txt_PLAN_CONTENT.Enabled = tp;
             txt_PLAN_TITLE.Enabled = tp;
             ledt_BUSSINESS_GBN.Enabled = tp;
@@ -161,24 +176,27 @@ namespace EXEC
                     return;
                 }
 
-                dt_PLAN.EditValue = ds.Tables[0].Rows[0]["PLAN_DT"];
-                dt_PAY.EditValue = ds.Tables[0].Rows[0]["PAY_DT"];
-                dt_BILL.EditValue = ds.Tables[0].Rows[0]["BILL_DT"];
-                txt_ACCT_HOLDER.Text = ds.Tables[0].Rows[0]["ACCT_HOLDER"].ToString();
-                txt_COMP_ACCT.Text = ds.Tables[0].Rows[0]["COMP_ACCT"].ToString();
-                txt_COMP_BANK.Text = ds.Tables[0].Rows[0]["COMP_BANK"].ToString();
-                txt_COMP_MNG.Text = ds.Tables[0].Rows[0]["COMP_MNG"].ToString();
-                txt_COMP_MNG_PHONE.Text = ds.Tables[0].Rows[0]["COMP_MNG_PHONE"].ToString();
-                txt_COMP_NAME.Text = ds.Tables[0].Rows[0]["COMP_NAME"].ToString();
-                txt_DCMNT1_NM.Text = ds.Tables[0].Rows[0]["DCMNT1_NM"].ToString();
-                txt_DCMNT2_NM.Text = ds.Tables[0].Rows[0]["DCMNT2_NM"].ToString();
-                txt_DCMNT3_NM.Text = ds.Tables[0].Rows[0]["DCMNT3_NM"].ToString();
-                txt_PLAN_CONTENT.Text = ds.Tables[0].Rows[0]["PLAN_CONTENT"].ToString();
-                txt_PLAN_TITLE.Text = ds.Tables[0].Rows[0]["PLAN_TITLE"].ToString();
-                bedt_PJT.Text = ds.Tables[0].Rows[0]["PJT_NM"].ToString();
-                bedt_PJT.Tag = ds.Tables[0].Rows[0]["PJT_CD"].ToString();
-                bedt_USER.Text = ds.Tables[0].Rows[0]["UNAM"].ToString();
-                bedt_USER.Tag = ds.Tables[0].Rows[0]["USER"].ToString();
+                if(ds.Tables[0].Rows.Count > 0)
+                {
+                    dt_PLAN.EditValue = ds.Tables[0].Rows[0]["PLAN_DT"];
+                    dt_PAY.EditValue = ds.Tables[0].Rows[0]["PAY_DT"];
+                    dt_BILL.EditValue = ds.Tables[0].Rows[0]["BILL_DT"];
+                    txt_ACCT_HOLDER.Text = ds.Tables[0].Rows[0]["ACCT_HOLDER"].ToString();
+                    txt_COMP_ACCT.Text = ds.Tables[0].Rows[0]["COMP_ACCT"].ToString();
+                    txt_COMP_BANK.Text = ds.Tables[0].Rows[0]["COMP_BANK"].ToString();
+                    txt_COMP_MNG.Text = ds.Tables[0].Rows[0]["COMP_MNG"].ToString();
+                    txt_COMP_MNG_PHONE.Text = ds.Tables[0].Rows[0]["COMP_MNG_PHONE"].ToString();
+                    txt_COMP_NAME.Text = ds.Tables[0].Rows[0]["COMP_NAME"].ToString();
+                    txt_DCMNT1_NM.Text = ds.Tables[0].Rows[0]["DCMNT1_NM"].ToString();
+                    txt_DCMNT2_NM.Text = ds.Tables[0].Rows[0]["DCMNT2_NM"].ToString();
+                    txt_DCMNT3_NM.Text = ds.Tables[0].Rows[0]["DCMNT3_NM"].ToString();
+                    txt_PLAN_CONTENT.Text = ds.Tables[0].Rows[0]["PLAN_CONTENT"].ToString();
+                    txt_PLAN_TITLE.Text = ds.Tables[0].Rows[0]["PLAN_TITLE"].ToString();
+                    bedt_PJT.Text = ds.Tables[0].Rows[0]["PJT_NM"].ToString();
+                    bedt_PJT.Tag = ds.Tables[0].Rows[0]["PJT_CD"].ToString();
+                    bedt_USER.Text = ds.Tables[0].Rows[0]["UNAM"].ToString();
+                    bedt_USER.Tag = ds.Tables[0].Rows[0]["USER"].ToString();
+                }
 
             this.Cursor = Cursors.Default;
             }
@@ -378,11 +396,11 @@ namespace EXEC
                 gConst.DbConn.AddParameter("PAY_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_PAY.EditValue.ToString()).ToString("yyyyMMdd"));
                 gConst.DbConn.AddParameter("COMP_MNG", MSSQLAgent.DBFieldType.String, txt_COMP_MNG.Text);
                 gConst.DbConn.AddParameter("COMP_MNG_PHONE", MSSQLAgent.DBFieldType.String, txt_COMP_MNG_PHONE.Text);
-                gConst.DbConn.AddParameter("DCMNT1", MSSQLAgent.DBFieldType.String, null);
+                gConst.DbConn.AddParameter("DCMNT1", MSSQLAgent.DBFieldType.Image, txt_DCMNT1.Tag);
                 gConst.DbConn.AddParameter("DCMNT1_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT1_NM.Text);
-                gConst.DbConn.AddParameter("DCMNT2", MSSQLAgent.DBFieldType.String, null);
+                gConst.DbConn.AddParameter("DCMNT2", MSSQLAgent.DBFieldType.Image, txt_DCMNT2.Tag);
                 gConst.DbConn.AddParameter("DCMNT2_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT2_NM.Text);
-                gConst.DbConn.AddParameter("DCMNT3", MSSQLAgent.DBFieldType.String, null);
+                gConst.DbConn.AddParameter("DCMNT3", MSSQLAgent.DBFieldType.Image, txt_DCMNT3.Tag) ;
                 gConst.DbConn.AddParameter("DCMNT3_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT3_NM.Text);
                 //gConst.DbConn.AddParameter("USER", MSSQLAgent.DBFieldType.String, txt_USER.Tag.ToString());
                 gConst.DbConn.AddParameter("USER", MSSQLAgent.DBFieldType.String, bedt_USER.Tag);
@@ -421,10 +439,10 @@ namespace EXEC
             if(_frm.ShowDialog() == DialogResult.OK)
             {
                 ADMIN_NO = _frm.ADMIN_NO;
+                EnableControl(false);
+                getHeaderData();
+                getGridData();
             }
-            EnableControl(false);
-            getHeaderData();
-            getGridData();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -485,12 +503,16 @@ namespace EXEC
 
         private void btn_Excel_Click(object sender, EventArgs e)
         {
+            if (ADMIN_NO == null || ADMIN_NO == "") return;
+
             IWorkbook workbook = spreadsheetControl1.Document;
-            using (FileStream stream = new FileStream("Documents\\SavedDocument.xlsx",
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            using (FileStream stream = new FileStream(path + "\\지출결의서_"+ADMIN_NO+".xlsx",
                 FileMode.Create, FileAccess.ReadWrite))
-                        {
-                            workbook.SaveDocument(stream, DocumentFormat.Xlsx);
-                        }
+            {
+                workbook.SaveDocument(stream, DocumentFormat.Xlsx);
+            }
         }
 
         private void rledt_EXCH_EditValueChanged(object sender, EventArgs e)
@@ -670,6 +692,66 @@ namespace EXEC
         private void btn_new_Click(object sender, EventArgs e)
         {
             ClearForm();
+        }
+
+        private void btn_DCMNT1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            //openFile.DefaultExt = "jpg";
+            openFile.Filter = "Image Files(All files (*.*)|*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|*.*";
+            openFile.ShowDialog();
+            if (openFile.FileNames.Length > 0)
+            {
+                foreach (string filename in openFile.FileNames)
+                {
+                    FileStream fs = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Read);
+                    byte[] dcmnt = new byte[fs.Length]; 
+                    fs.Read(dcmnt, 0, System.Convert.ToInt32(fs.Length));
+                    fs.Close();
+                    this.txt_DCMNT1.Text = filename;
+                    this.txt_DCMNT1.Tag = dcmnt;
+                }
+            }
+        }
+
+        private void btn_DCMNT2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            //openFile.DefaultExt = "jpg";
+            openFile.Filter = "Image Files(All files (*.*)|*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|*.*";
+            openFile.ShowDialog();
+            if (openFile.FileNames.Length > 0)
+            {
+                foreach (string filename in openFile.FileNames)
+                {
+                    FileStream fs = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Read);
+                    byte[] dcmnt = new byte[fs.Length];
+                    fs.Read(dcmnt, 0, System.Convert.ToInt32(fs.Length));
+                    fs.Close();
+                    this.txt_DCMNT2.Text = filename;
+                    this.txt_DCMNT2.Tag = dcmnt;
+                }
+            }
+        }
+
+        private void btn_DCMNT3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            //openFile.DefaultExt = "jpg";
+            openFile.Filter = "Image Files(All files (*.*)|*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|*.*";
+            openFile.ShowDialog();
+            if (openFile.FileNames.Length > 0)
+            {
+                foreach (string filename in openFile.FileNames)
+                {
+                    FileStream fs = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Read);
+                    byte[] dcmnt = new byte[fs.Length];
+                    fs.Read(dcmnt, 0, System.Convert.ToInt32(fs.Length));
+                    fs.Close();
+                    this.txt_DCMNT3.Text = filename;
+                    this.txt_DCMNT3.Tag = dcmnt;
+                }
+            }
         }
     }
 }

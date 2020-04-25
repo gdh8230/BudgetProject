@@ -233,7 +233,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 101);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(269, 395);
+            this.groupControl1.Size = new System.Drawing.Size(269, 394);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "회계 계정";
             // 
@@ -246,7 +246,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(265, 371);
+            this.gridControl1.Size = new System.Drawing.Size(265, 370);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -313,7 +313,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(750, 395);
+            this.splitContainerControl2.Size = new System.Drawing.Size(750, 394);
             this.splitContainerControl2.SplitterPosition = 378;
             this.splitContainerControl2.TabIndex = 508;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -326,7 +326,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(378, 395);
+            this.groupControl3.Size = new System.Drawing.Size(378, 394);
             this.groupControl3.TabIndex = 5;
             this.groupControl3.Text = "당기 신청내역";
             // 
@@ -339,7 +339,7 @@
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit2,
             this.repositoryItemCheckEdit2});
-            this.gridControl2.Size = new System.Drawing.Size(374, 340);
+            this.gridControl2.Size = new System.Drawing.Size(374, 400);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -439,7 +439,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(360, 395);
+            this.groupControl2.Size = new System.Drawing.Size(360, 394);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "당기 편성내역";
             // 
@@ -452,7 +452,7 @@
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit3,
             this.repositoryItemCheckEdit3});
-            this.gridControl3.Size = new System.Drawing.Size(356, 340);
+            this.gridControl3.Size = new System.Drawing.Size(356, 400);
             this.gridControl3.TabIndex = 2;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -640,7 +640,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(995, 513);
+            this.ClientSize = new System.Drawing.Size(963, 512);
             this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.groupControl1);
             this.LookAndFeel.SkinName = "Metropolis";
