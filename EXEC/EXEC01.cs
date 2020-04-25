@@ -65,6 +65,9 @@ namespace EXEC
             env = new _Environment();
             string error_msg = string.Empty;
 
+            //화면 Claer
+            ClearForm();
+
             //로그인 사용자
             txt_DEPT.Tag = env.Dept;
             txt_DEPT.Text = env.DeptName;
@@ -89,12 +92,100 @@ namespace EXEC
             {
                 modUTIL.DevLookUpEditorSet(rledt_EXCH, ds.Tables[0], "CODE", "NAME", "CODE", "NAME");
             }
+            if (ADMIN_NO == null) return;
             getHeaderData();
             getGridData();
         }
 
+        private void ClearForm()
+        {
+            ADMIN_NO = null;
+            DT_GRD01 = null;
+            gridControl1.DataSource = null;
+
+            dt_PLAN.DateTime = DateTime.Today;
+            dt_PAY.DateTime = DateTime.Today;
+            dt_BILL.DateTime = DateTime.Today;
+            txt_ACCT_HOLDER.Text = "";
+            txt_COMP_ACCT.Text = "";
+            txt_COMP_BANK.Text = "";
+            txt_COMP_MNG.Text = "";
+            txt_COMP_MNG_PHONE.Text = "";
+            txt_COMP_NAME.Text = "";
+            txt_DCMNT1_NM.Text = "";
+            txt_DCMNT2_NM.Text = "";
+            txt_DCMNT3_NM.Text = "";
+            txt_PLAN_CONTENT.Text = "";
+            txt_PLAN_TITLE.Text = "";
+            bedt_PJT.Text = "";
+            bedt_PJT.Tag = "";
+            bedt_USER.Text = "";
+            bedt_USER.Tag = "";
+
+            EnableControl(true);
+        }
+
+        private void EnableControl(bool tp)
+        {
+            dt_PLAN.Enabled =tp;
+            dt_PAY.Enabled = tp;
+            dt_BILL.Enabled = tp;
+            txt_ACCT_HOLDER.Enabled = tp;
+            txt_COMP_ACCT.Enabled = tp;
+            txt_COMP_BANK.Enabled = tp;
+            txt_COMP_MNG.Enabled = tp;
+            txt_COMP_MNG_PHONE.Enabled = tp;
+            txt_COMP_NAME.Enabled = tp;
+            txt_DCMNT1_NM.Enabled = tp;
+            txt_DCMNT2_NM.Enabled = tp;
+            txt_DCMNT3_NM.Enabled = tp;
+            txt_PLAN_CONTENT.Enabled = tp;
+            txt_PLAN_TITLE.Enabled = tp;
+            ledt_BUSSINESS_GBN.Enabled = tp;
+            bedt_PJT.Enabled = tp;
+            bedt_USER.Enabled = tp;
+        }
         private void getHeaderData()
         {
+            try 
+            { 
+                this.Cursor = Cursors.WaitCursor;
+
+                DataSet ds = new DataSet();
+                //지출결의서 헤더 조회
+                ds = df_select(2, null, out error_msg);
+                if (ds == null)
+                {
+                    MsgBox.MsgErr("지출결의서 헤더 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    this.Cursor = Cursors.Default;
+                    return;
+                }
+
+                dt_PLAN.EditValue = ds.Tables[0].Rows[0]["PLAN_DT"];
+                dt_PAY.EditValue = ds.Tables[0].Rows[0]["PAY_DT"];
+                dt_BILL.EditValue = ds.Tables[0].Rows[0]["BILL_DT"];
+                txt_ACCT_HOLDER.Text = ds.Tables[0].Rows[0]["ACCT_HOLDER"].ToString();
+                txt_COMP_ACCT.Text = ds.Tables[0].Rows[0]["COMP_ACCT"].ToString();
+                txt_COMP_BANK.Text = ds.Tables[0].Rows[0]["COMP_BANK"].ToString();
+                txt_COMP_MNG.Text = ds.Tables[0].Rows[0]["COMP_MNG"].ToString();
+                txt_COMP_MNG_PHONE.Text = ds.Tables[0].Rows[0]["COMP_MNG_PHONE"].ToString();
+                txt_COMP_NAME.Text = ds.Tables[0].Rows[0]["COMP_NAME"].ToString();
+                txt_DCMNT1_NM.Text = ds.Tables[0].Rows[0]["DCMNT1_NM"].ToString();
+                txt_DCMNT2_NM.Text = ds.Tables[0].Rows[0]["DCMNT2_NM"].ToString();
+                txt_DCMNT3_NM.Text = ds.Tables[0].Rows[0]["DCMNT3_NM"].ToString();
+                txt_PLAN_CONTENT.Text = ds.Tables[0].Rows[0]["PLAN_CONTENT"].ToString();
+                txt_PLAN_TITLE.Text = ds.Tables[0].Rows[0]["PLAN_TITLE"].ToString();
+                bedt_PJT.Text = ds.Tables[0].Rows[0]["PJT_NM"].ToString();
+                bedt_PJT.Tag = ds.Tables[0].Rows[0]["PJT_CD"].ToString();
+                bedt_USER.Text = ds.Tables[0].Rows[0]["UNAM"].ToString();
+                bedt_USER.Tag = ds.Tables[0].Rows[0]["USER"].ToString();
+
+            this.Cursor = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MsgBox.MsgErr("" + ex, "");
+            }
         }
 
         private void getGridData()
@@ -150,7 +241,7 @@ namespace EXEC
                 case 2: //지출결의서 헤더
                     {
                         gConst.DbConn.ProcedureName = "USP_EXEC_GET_SPND_RSLT_H";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_NO", Param[0]));
+                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_NO", ADMIN_NO));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
@@ -326,6 +417,13 @@ namespace EXEC
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            popup_Get_AdminNo _frm = new popup_Get_AdminNo(env, null);
+            if(_frm.ShowDialog() == DialogResult.OK)
+            {
+                ADMIN_NO = _frm.ADMIN_NO;
+            }
+            EnableControl(false);
+            getHeaderData();
             getGridData();
         }
 
@@ -350,6 +448,7 @@ namespace EXEC
                     return;
                 }
             }
+            EnableControl(true);
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
@@ -369,7 +468,6 @@ namespace EXEC
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-
             DataRow DR;
             gridView1.AddNewRow();
             DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
@@ -567,6 +665,11 @@ namespace EXEC
                 Console.WriteLine(ee.ToString());
             }
 
+        }
+
+        private void btn_new_Click(object sender, EventArgs e)
+        {
+            ClearForm();
         }
     }
 }

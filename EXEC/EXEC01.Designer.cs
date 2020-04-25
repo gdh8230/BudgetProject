@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -307,8 +308,8 @@
             this.txt_PLAN_TITLE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_PLAN_CONTENT = new DevExpress.XtraEditors.TextEdit();
-            this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.commonBar1 = new DevExpress.XtraSpreadsheet.UI.CommonBar();
             this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.spreadsheetCommandBarButtonItem1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
@@ -326,29 +327,29 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown4 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown5 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown6 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown7 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown8 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown9 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown10 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown11 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown12 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown13 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown14 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown15 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown16 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown17 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown18 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown19 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown20 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown21 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown22 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown23 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
-            this.commandBarGalleryDropDown24 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown();
+            this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown4 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown5 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown6 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown7 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown8 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown9 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown10 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown11 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown12 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown13 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown14 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown15 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown16 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown17 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown18 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown19 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown20 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown21 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown22 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown23 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.commandBarGalleryDropDown24 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.bedt_USER = new DevExpress.XtraEditors.ButtonEdit();
@@ -383,9 +384,10 @@
             this.txt_COMP_ACCT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_COMP_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.spreadsheetBarController1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetBarController();
+            this.spreadsheetBarController1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetBarController(this.components);
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_excel_make = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_new = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -478,6 +480,7 @@
             // 
             this.grp_Search_Condition.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.grp_Search_Condition.AppearanceCaption.Options.UseFont = true;
+            this.grp_Search_Condition.Controls.Add(this.btn_new);
             this.grp_Search_Condition.Controls.Add(this.btn_excel_make);
             this.grp_Search_Condition.Controls.Add(this.txt_PLAN_CONTENT);
             this.grp_Search_Condition.Controls.Add(this.labelControl1);
@@ -1029,7 +1032,7 @@
             this.commonBar1.Control = this.spreadsheetControl1;
             this.commonBar1.DockCol = 0;
             this.commonBar1.DockRow = 0;
-            this.commonBar1.FloatLocation = new System.Drawing.Point(1061, 168);
+            this.commonBar1.FloatLocation = new System.Drawing.Point(1202, 128);
             this.commonBar1.FloatSize = new System.Drawing.Size(318, 32);
             this.commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem1),
@@ -1043,7 +1046,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem9),
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem10),
             new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem11)});
-            this.commonBar1.Offset = 151;
+            this.commonBar1.Offset = 22;
             // 
             // spreadsheetControl1
             // 
@@ -2862,6 +2865,7 @@
             this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEdit3.Properties.ReadOnly = true;
             this.tablePanel1.SetRow(this.textEdit3, 1);
             this.textEdit3.Size = new System.Drawing.Size(74, 18);
             this.textEdit3.TabIndex = 34;
@@ -2874,6 +2878,7 @@
             this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEdit2.Properties.ReadOnly = true;
             this.tablePanel1.SetRow(this.textEdit2, 1);
             this.textEdit2.Size = new System.Drawing.Size(74, 18);
             this.textEdit2.TabIndex = 33;
@@ -2886,6 +2891,7 @@
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEdit1.Properties.ReadOnly = true;
             this.tablePanel1.SetRow(this.textEdit1, 1);
             this.textEdit1.Size = new System.Drawing.Size(74, 18);
             this.textEdit1.TabIndex = 32;
@@ -3066,7 +3072,7 @@
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(48, 15);
             this.labelControl11.TabIndex = 31;
-            this.labelControl11.Text = "기안일자";
+            this.labelControl11.Text = "지급일자";
             // 
             // dt_PAY
             // 
@@ -3164,6 +3170,16 @@
             this.btn_excel_make.TabIndex = 38;
             this.btn_excel_make.Text = "Excel생성";
             this.btn_excel_make.Click += new System.EventHandler(this.btn_excel_make_Click);
+            // 
+            // btn_new
+            // 
+            this.btn_new.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_new.Location = new System.Drawing.Point(1405, 0);
+            this.btn_new.Name = "btn_new";
+            this.btn_new.Size = new System.Drawing.Size(75, 20);
+            this.btn_new.TabIndex = 39;
+            this.btn_new.Text = "새로만들기";
+            this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
             // 
             // EXEC01
             // 
@@ -3401,5 +3417,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.ButtonEdit bedt_USER;
         private DevExpress.XtraEditors.SimpleButton btn_excel_make;
+        private DevExpress.XtraEditors.SimpleButton btn_new;
     }
 }
