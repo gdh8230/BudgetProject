@@ -73,9 +73,6 @@
             this.panelControl1.Controls.Add(this.lbl_Ledit02);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelControl1.LookAndFeel.SkinName = "Whiteprint";
-            this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(292, 177);
             this.panelControl1.TabIndex = 1010;
@@ -83,15 +80,10 @@
             // sbtn_Cancel
             // 
             this.sbtn_Cancel.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.sbtn_Cancel.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.sbtn_Cancel.Appearance.Options.UseFont = true;
-            this.sbtn_Cancel.Appearance.Options.UseForeColor = true;
             this.sbtn_Cancel.Appearance.Options.UseTextOptions = true;
             this.sbtn_Cancel.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.sbtn_Cancel.Location = new System.Drawing.Point(157, 136);
-            this.sbtn_Cancel.LookAndFeel.SkinMaskColor = System.Drawing.Color.SkyBlue;
-            this.sbtn_Cancel.LookAndFeel.SkinName = "Whiteprint";
-            this.sbtn_Cancel.LookAndFeel.UseDefaultLookAndFeel = true;
             this.sbtn_Cancel.Name = "sbtn_Cancel";
             this.sbtn_Cancel.Size = new System.Drawing.Size(102, 24);
             this.sbtn_Cancel.TabIndex = 1020;
@@ -102,15 +94,10 @@
             // sbtn_Save_Close
             // 
             this.sbtn_Save_Close.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.sbtn_Save_Close.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.sbtn_Save_Close.Appearance.Options.UseFont = true;
-            this.sbtn_Save_Close.Appearance.Options.UseForeColor = true;
             this.sbtn_Save_Close.Appearance.Options.UseTextOptions = true;
             this.sbtn_Save_Close.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.sbtn_Save_Close.Location = new System.Drawing.Point(24, 136);
-            this.sbtn_Save_Close.LookAndFeel.SkinMaskColor = System.Drawing.Color.SkyBlue;
-            this.sbtn_Save_Close.LookAndFeel.SkinName = "Whiteprint";
-            this.sbtn_Save_Close.LookAndFeel.UseDefaultLookAndFeel = true;
             this.sbtn_Save_Close.Name = "sbtn_Save_Close";
             this.sbtn_Save_Close.Size = new System.Drawing.Size(102, 24);
             this.sbtn_Save_Close.TabIndex = 1019;
@@ -138,10 +125,8 @@
             // 
             this.lbl_CURRENT_PASSWORD.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.lbl_CURRENT_PASSWORD.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_CURRENT_PASSWORD.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_CURRENT_PASSWORD.Appearance.Options.UseBackColor = true;
             this.lbl_CURRENT_PASSWORD.Appearance.Options.UseFont = true;
-            this.lbl_CURRENT_PASSWORD.Appearance.Options.UseForeColor = true;
             this.lbl_CURRENT_PASSWORD.Location = new System.Drawing.Point(22, 50);
             this.lbl_CURRENT_PASSWORD.Name = "lbl_CURRENT_PASSWORD";
             this.lbl_CURRENT_PASSWORD.Size = new System.Drawing.Size(72, 15);
@@ -152,10 +137,8 @@
             // 
             this.labelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(22, 76);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(72, 15);
@@ -216,10 +199,8 @@
             // 
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.Location = new System.Drawing.Point(22, 102);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(72, 15);
@@ -230,10 +211,8 @@
             // 
             this.lbl_Ledit02.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Ledit02.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_Ledit02.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_Ledit02.Appearance.Options.UseBackColor = true;
             this.lbl_Ledit02.Appearance.Options.UseFont = true;
-            this.lbl_Ledit02.Appearance.Options.UseForeColor = true;
             this.lbl_Ledit02.Location = new System.Drawing.Point(46, 24);
             this.lbl_Ledit02.Name = "lbl_Ledit02";
             this.lbl_Ledit02.Size = new System.Drawing.Size(48, 15);
@@ -250,8 +229,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "frmPASSWORD_CHG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "비밀번호변경";

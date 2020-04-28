@@ -357,7 +357,7 @@ namespace STD
                 labelControl8.Text = "부      서";
                 labelControl8.Tag = "부서";
             }
-            else if (ledt_ADMIN_GBN.Equals("1"))
+            else if (ledt_ADMIN_GBN.EditValue.Equals("1"))
             {
                 labelControl8.Text = "프로젝트";
                 labelControl8.Tag = "프로젝트";

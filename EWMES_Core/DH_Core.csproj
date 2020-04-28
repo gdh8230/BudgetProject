@@ -198,11 +198,11 @@
     <Compile Include="Control\ITEM_GRP_SELECTOR.Designer.cs">
       <DependentUpon>ITEM_GRP_SELECTOR.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\jnkcDatePicker.cs">
+    <Compile Include="Control\DatePicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\jnkcDatePicker.designer.cs">
-      <DependentUpon>jnkcDatePicker.cs</DependentUpon>
+    <Compile Include="Control\DatePicker.designer.cs">
+      <DependentUpon>DatePicker.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\jnkcDatePickerControl.cs">
       <SubType>UserControl</SubType>
@@ -324,8 +324,8 @@
     <EmbeddedResource Include="Control\ITEM_GRP_SELECTOR.resx">
       <DependentUpon>ITEM_GRP_SELECTOR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\jnkcDatePicker.resx">
-      <DependentUpon>jnkcDatePicker.cs</DependentUpon>
+    <EmbeddedResource Include="Control\DatePicker.resx">
+      <DependentUpon>DatePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonPopup\frmPASSWORD_CHG.resx">
       <DependentUpon>frmPASSWORD_CHG.cs</DependentUpon>

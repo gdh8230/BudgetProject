@@ -4,6 +4,7 @@ using Main;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using DH_Core.CommonPopup;
 
 namespace Main1
 {
@@ -224,6 +225,12 @@ namespace Main1
             {
                 btn_Login.PerformClick();
             }
+        }
+
+        private void btn_pwd_change_Click(object sender, EventArgs e)
+        {
+            frmPASSWORD_CHG frm = new frmPASSWORD_CHG(env, new string[] { "1000", "1000", bedt_ID.EditValue.ToString() });
+            frm.ShowDialog();
         }
     }
 }

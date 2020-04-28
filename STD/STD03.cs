@@ -373,6 +373,10 @@ namespace STD
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            if (bedt_CODE.EditValue.Equals(""))
+            {
+                MsgBox.MsgInformation(labelControl8.Text+ "를 선택한 후 진행해주세요.", "확인");
+            }
             DataRow DR;
             gridView5.AddNewRow();
             DR = gridView5.GetDataRow(gridView5.FocusedRowHandle);
@@ -395,7 +399,7 @@ namespace STD
                 labelControl8.Text = "부      서";
                 labelControl8.Tag = "부서";
             }
-            else if (ledt_ADMIN_GBN.Equals("1"))
+            else if (ledt_ADMIN_GBN.EditValue.Equals("1"))
             {
                 labelControl8.Text = "프로젝트";
                 labelControl8.Tag = "프로젝트";

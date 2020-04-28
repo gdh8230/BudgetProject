@@ -25,15 +25,15 @@ using System.Windows.Forms;
 
 namespace DH_Core
 {
-	public partial class jnkcDatePickerControl : UserControl
+	public partial class DatePickerControl : UserControl
 	{
-		public jnkcDatePickerControl()
+		public DatePickerControl()
 		{
 			InitializeComponent();
 			InitControl();
 		}
 
-		~jnkcDatePickerControl()
+		~DatePickerControl()
 		{
 			// Timer 해제
 			tmr_CHECK_EVENT.Stop();

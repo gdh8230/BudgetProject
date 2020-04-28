@@ -233,20 +233,20 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 101);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(269, 394);
+            this.groupControl1.Size = new System.Drawing.Size(269, 428);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "회계 계정";
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 22);
+            this.gridControl1.Location = new System.Drawing.Point(2, 23);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(265, 370);
+            this.gridControl1.Size = new System.Drawing.Size(265, 403);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -313,7 +313,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(750, 394);
+            this.splitContainerControl2.Size = new System.Drawing.Size(750, 428);
             this.splitContainerControl2.SplitterPosition = 378;
             this.splitContainerControl2.TabIndex = 508;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -326,14 +326,14 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(378, 394);
+            this.groupControl3.Size = new System.Drawing.Size(378, 428);
             this.groupControl3.TabIndex = 5;
             this.groupControl3.Text = "당기 신청내역";
             // 
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl2.Location = new System.Drawing.Point(2, 22);
+            this.gridControl2.Location = new System.Drawing.Point(2, 23);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -439,20 +439,20 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(360, 394);
+            this.groupControl2.Size = new System.Drawing.Size(362, 428);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "당기 편성내역";
             // 
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl3.Location = new System.Drawing.Point(2, 22);
+            this.gridControl3.Location = new System.Drawing.Point(2, 23);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit3,
             this.repositoryItemCheckEdit3});
-            this.gridControl3.Size = new System.Drawing.Size(356, 400);
+            this.gridControl3.Size = new System.Drawing.Size(358, 400);
             this.gridControl3.TabIndex = 2;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -568,7 +568,7 @@
             this.dt_YEAR.Properties.Mask.EditMask = "yyyy";
             this.dt_YEAR.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dt_YEAR.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearsGroupView;
-            this.dt_YEAR.Size = new System.Drawing.Size(100, 22);
+            this.dt_YEAR.Size = new System.Drawing.Size(100, 24);
             this.dt_YEAR.TabIndex = 18;
             this.dt_YEAR.Tag = "PJT_EDT";
             this.dt_YEAR.EditValueChanged += new System.EventHandler(this.dt_YEAR_EditValueChanged);
@@ -611,7 +611,7 @@
             editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
             this.bedt_CODE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.bedt_CODE.Size = new System.Drawing.Size(120, 22);
+            this.bedt_CODE.Size = new System.Drawing.Size(120, 24);
             this.bedt_CODE.TabIndex = 35;
             this.bedt_CODE.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_CODE_ButtonClick);
             // 
@@ -640,11 +640,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(963, 512);
+            this.ClientSize = new System.Drawing.Size(963, 546);
             this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.groupControl1);
-            this.LookAndFeel.SkinName = "Metropolis";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "STD02";
             this.Text = "예산편성";
             this.Load += new System.EventHandler(this.Form_Load);

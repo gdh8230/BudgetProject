@@ -176,5 +176,16 @@ namespace SYST
                 MsgBox.MsgInformation("사용자 "+dr["EMP_CD"].ToString()+"의  비밀번호가 초기화 되었습니다.", "확인");
             }
         }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            DataRow dr = gridView1.GetFocusedDataRow();
+            string error_msg = string.Empty;
+
+            if (df_Transaction(0, null, dr, out error_msg))
+            {
+                MsgBox.MsgInformation("사용자 " + dr["EMP_CD"].ToString() + "의  비밀번호가 변경 되었습니다.", "확인");
+            }
+        }
     }
 }

@@ -16,30 +16,30 @@ using System.Windows.Forms;
 
 namespace DH_Core
 {
-    public partial class jnkcDatePicker : UserControl
+    public partial class DatePicker : UserControl
     {
-        public jnkcDatePicker()
+        public DatePicker()
         {
             InitializeComponent();
             InitControl();
             this.Size = new System.Drawing.Size(382, 28);
         }
 
-        ~jnkcDatePicker()
+        ~DatePicker()
         {
             // Timer 해제
             tmr_CHECK_EVENT.Stop();
             tmr_CHECK_EVENT.Dispose();
-        }        
+        }
 
         #region Attributes
 
-        public delegate void DateEditChangedEventHandler( object sender, EventArgs e );
+        public delegate void DateEditChangedEventHandler(object sender, EventArgs e);
         /// <summary>
         /// 시작일/종료일이 변경되었을 경우 발생하는 이벤트입니다.
         /// </summary>
         public event DateEditChangedEventHandler DateEditChanged;
-        
+
         public DateTime GetStartDate { get { return dt_START.DateTime; } }  // 시작일 반환
         public DateTime GetEndDate { get { return dt_END.DateTime; } }      // 종료일 반환
         public DateTime SetStartDate { set { dt_START.DateTime = value; } } // 시작일 설정
@@ -51,69 +51,69 @@ namespace DH_Core
 
         #region Click Events
 
-        private void btn_TODAY_Click( object sender, EventArgs e )
+        private void btn_TODAY_Click(object sender, EventArgs e)
         {
             dt_START.DateTime = DateTime.Today;
             dt_END.DateTime = DateTime.Today;
         }
 
-        private void btn_MONTH_Click( object sender, EventArgs e )
+        private void btn_MONTH_Click(object sender, EventArgs e)
         {
             int year = DateTime.Today.Year;
             int month = DateTime.Today.Month;
 
-            dt_START.DateTime = new DateTime( year, month, 1 );
-            dt_END.DateTime = new DateTime( year, month, DateTime.DaysInMonth( year, month ) );
+            dt_START.DateTime = new DateTime(year, month, 1);
+            dt_END.DateTime = new DateTime(year, month, DateTime.DaysInMonth(year, month));
         }
 
-        private void btn_MINUS_DAY_Click( object sender, EventArgs e )
+        private void btn_MINUS_DAY_Click(object sender, EventArgs e)
         {
-            SetDay( -1 );            
+            SetDay(-1);
         }
 
-        private void btn_ADD_DAY_Click( object sender, EventArgs e )
+        private void btn_ADD_DAY_Click(object sender, EventArgs e)
         {
-            SetDay( 1 );
+            SetDay(1);
         }
 
-        private void btn_MINUS_MONTH_Click( object sender, EventArgs e )
+        private void btn_MINUS_MONTH_Click(object sender, EventArgs e)
         {
-            SetMonth( -1 );
+            SetMonth(-1);
         }
 
-        private void btn_ADD_MONTH_Click( object sender, EventArgs e )
+        private void btn_ADD_MONTH_Click(object sender, EventArgs e)
         {
-            SetMonth( 1 );
+            SetMonth(1);
         }
         #endregion
 
         #region Events 
-        
+
         // DateEdit Changed 체크용 Timer Event
-        private void tmr_CHECK_EVENT_Tick( object sender, EventArgs e )
+        private void tmr_CHECK_EVENT_Tick(object sender, EventArgs e)
         {
             // 값이 변경 되었을 때만 실행
-            if ( bDATEEDIT_CHANGED )
+            if (bDATEEDIT_CHANGED)
             {
                 tmr_CHECK_EVENT.Stop();
-                SendEvent( null, null );
+                SendEvent(null, null);
                 bDATEEDIT_CHANGED = false;
                 tmr_CHECK_EVENT.Start();
             }
         }
-        
-        protected void dt_EditValueChanged( object sender, EventArgs e )
+
+        protected void dt_EditValueChanged(object sender, EventArgs e)
         {
             // DateEdit에 Event를 두번 타지 않도록 처리
-            bDATEEDIT_CHANGED = true;            
+            bDATEEDIT_CHANGED = true;
         }
 
         private void SendEvent(object sender, EventArgs e)
         {
-            if ( DateEditChanged == null ) return;           
+            if (DateEditChanged == null) return;
 
             // EventHandler에 전달
-            DateEditChanged( this, e );
+            DateEditChanged(this, e);
         }
 
         #endregion
@@ -125,7 +125,7 @@ namespace DH_Core
         /// </summary>
         public void SetToday()
         {
-            btn_TODAY_Click( null, null );
+            btn_TODAY_Click(null, null);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace DH_Core
         /// </summary>
         public void SetMonth()
         {
-            btn_MONTH_Click( null, null );
+            btn_MONTH_Click(null, null);
         }
 
         /// <summary>
@@ -149,15 +149,15 @@ namespace DH_Core
         {
             int year = DateTime.Today.Year;
             int month = DateTime.Today.Month;
-            
+
             //dt_START.DateTime = DateTime.Today.AddDays(-7);
             dt_START.DateTime = new DateTime(year, month, 1);
             dt_END.DateTime = DateTime.Today;
-            
+
             // DateEdit Changed 체크용 Timer 생성
             tmr_CHECK_EVENT = new Timer();
             tmr_CHECK_EVENT.Interval = 500;
-            tmr_CHECK_EVENT.Tick += new EventHandler( tmr_CHECK_EVENT_Tick );
+            tmr_CHECK_EVENT.Tick += new EventHandler(tmr_CHECK_EVENT_Tick);
             tmr_CHECK_EVENT.Start();
 
             // DateEdit Value Changed Event 연결
@@ -169,7 +169,7 @@ namespace DH_Core
         /// DateEdit의 Display Format을 변경합니다
         /// </summary>
         /// <param name="_format"></param>
-        public void DisplayFormat( string _format )
+        public void DisplayFormat(string _format)
         {
             dt_START.Properties.DisplayFormat.FormatString = _format;
             dt_END.Properties.DisplayFormat.FormatString = _format;
@@ -178,21 +178,21 @@ namespace DH_Core
 
         }
 
-        private void SetDay( double value )
+        private void SetDay(double value)
         {
             // 날짜를 하루씩 이동
-            dt_START.DateTime = dt_START.DateTime.AddDays( value );            
+            dt_START.DateTime = dt_START.DateTime.AddDays(value);
             dt_END.DateTime = dt_START.DateTime;
         }
 
-        private void SetMonth( int value )
+        private void SetMonth(int value)
         {
             // 날짜를 월 1일 ~ 월말 까지 한달로 설정
-            int year = dt_START.DateTime.AddMonths( value ).Year;
-            int month = dt_START.DateTime.AddMonths( value ).Month;
+            int year = dt_START.DateTime.AddMonths(value).Year;
+            int month = dt_START.DateTime.AddMonths(value).Month;
 
-            dt_START.DateTime = new DateTime( year, month, 1 );
-            dt_END.DateTime = new DateTime( year, month, DateTime.DaysInMonth( year, month ) ); // 매 월 마지막 일 획득
+            dt_START.DateTime = new DateTime(year, month, 1);
+            dt_END.DateTime = new DateTime(year, month, DateTime.DaysInMonth(year, month)); // 매 월 마지막 일 획득
         }
 
         #endregion
@@ -200,14 +200,14 @@ namespace DH_Core
 
         private void dt_START_EditValueChanged(object sender, EventArgs e)
         {
-            if(dt_START.DateTime>=dt_END.DateTime)
-            dt_END.DateTime = dt_START.DateTime;
+            if (dt_START.DateTime >= dt_END.DateTime)
+                dt_END.DateTime = dt_START.DateTime;
         }
 
         private void dt_END_EditValueChanged(object sender, EventArgs e)
         {
             if (dt_START.DateTime >= dt_END.DateTime)
-            dt_START.DateTime = dt_END.DateTime;
+                dt_START.DateTime = dt_END.DateTime;
         }
 
         private void dt_Enter(object sender, EventArgs e) //자동 커서 기능 추가 되면서 에러 방지 메소드

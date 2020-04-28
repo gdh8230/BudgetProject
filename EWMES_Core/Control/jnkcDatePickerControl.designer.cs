@@ -1,6 +1,6 @@
 ﻿namespace DH_Core
 {
-	partial class jnkcDatePickerControl
+	partial class DatePickerControl
 	{
 		/// <summary>
 		/// 필수 디자이너 변수입니다.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(jnkcDatePickerControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatePickerControl));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dt_START = new DevExpress.XtraEditors.DateEdit();
@@ -342,13 +342,13 @@
             this.dt_END.Size = new System.Drawing.Size(91, 22);
             this.dt_END.TabIndex = 1;
             // 
-            // jnkcDatePickerControl
+            // DatePickerControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
-            this.Name = "jnkcDatePickerControl";
+            this.Name = "DatePickerControl";
             this.Size = new System.Drawing.Size(436, 22);
             ((System.ComponentModel.ISupportInitialize)(this.dt_START.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_START.Properties)).EndInit();

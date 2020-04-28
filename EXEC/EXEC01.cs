@@ -31,6 +31,8 @@ namespace EXEC
         static DataSet DT_GRD06 = new DataSet();    //FOR GRID2
         static DataRow select_row;
         string ADMIN_NO = null;
+        double drowup = 0;
+        double use = 0;
         string error_msg = "";
         #endregion
 
@@ -288,6 +290,26 @@ namespace EXEC
                         gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[3]));
                         gConst.DbConn.AddParameter(new SqlParameter("@MONTH", Param[4]));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
+                    }
+                    break;
+                case 6: //부서별 예산 편성/집행 금액 조회
+                    {
+                        string query = string.Empty;
+                        query += "SELECT SUM(A.DROWUP_MONEY) - SUM(B.ADJ_MONEY) AS DROWUP ";
+                        query += "FROM BUDGET_CTRL A WITH(NOLOCK) ";
+                        query += "LEFT JOIN (SELECT ADJ_YEAR, ADJ_MONTH, ADMIN_CD, SUM(ADJ_MONEY) as ADJ_MONEY   FROM BUDGET_ADJ WITH(NOLOCK) WHERE ADMIN_GBN = 0 GROUP BY ADJ_YEAR, ADJ_MONTH, ADMIN_CD) B ";
+                        query += "ON A.YEAR = B.ADJ_YEAR ";
+                        query += "AND A.MONTH = B.ADJ_MONTH ";
+                        query += "AND	A.ADMIN_CD = B.ADMIN_CD ";
+                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH = '" + Param[1] + "' AND A.ADMIN_CD = '" + Param[2] + "' ";
+                        query += "GROUP BY A.YEAR, A.MONTH ";
+
+                        query += "SELECT	SUM(B.TOTAL) ";
+                        query += "FROM	SPND_RSLT_H	A WITH(NOLOCK) ";
+                        query += "JOIN	SPND_RSLT_D B WITH(NOLOCK) ";
+                        query += "ON		A.ADMIN_NO = B.ADMIN_NO ";
+                        query += "WHERE	LEFT(PLAN_DT,6) = '" + Param[0] + "'+'" + Param[1] + "' AND DEPT = '" + Param[2] + "' AND ISNULL";
+                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
                 default: break;
@@ -679,6 +701,9 @@ namespace EXEC
                     sheet.Cells["AQ" + (36 + addrow_cnt + 1)].Value = txt_DCMNT3_NM.Text;   //첨부파일3
                 }
 
+                sheet.Cells["BF" + (31 + addrow_cnt)].Value = drowup;
+                sheet.Cells["BS" + (31 + addrow_cnt)].Value = use;
+
                 //FileStream stream = new FileStream()
                 //this.spreadsheetControl1.SaveDocument("123", DocumentFormat.Xlsx);
             }
@@ -751,6 +776,30 @@ namespace EXEC
                     this.txt_DCMNT3.Text = filename;
                     this.txt_DCMNT3.Tag = dcmnt;
                 }
+            }
+        }
+
+        private void txt_DEPT_EditValueChanged(object sender, EventArgs e)
+        {
+            gParam = new string[] { ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM"), txt_DEPT.Tag.ToString() };
+            DataSet ds = df_select(6, gParam, out error_msg);
+            if(ds != null)
+            {
+                if(ds.Tables[0].Rows.Count >0)
+                {
+                    drowup = double.Parse(ds.Tables[0].Rows[0][0].ToString());
+                    txt_DROWUP.Text = drowup.ToString();
+                }
+                else
+                {
+
+                }
+                if(ds.Tables[1].Rows.Count > 0)
+                {
+                    use = double.Parse(ds.Tables[1].Rows[0][0].ToString());
+                    txt_USE.Text = use.ToString();
+                }
+
             }
         }
     }

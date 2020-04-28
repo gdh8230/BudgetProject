@@ -67,6 +67,16 @@ namespace EXEC
 
             ////화면 Claer
             //ClearForm();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CODE");
+            dt.Columns.Add("NAME");
+
+            dt.Rows.Add("%", "전체");
+            dt.Rows.Add("0", "미결");
+            dt.Rows.Add("1", "결재");
+
+            modUTIL.DevLookUpEditorSet(ledt_GW_YN, dt, "NAME", "CODE");
+            ledt_GW_YN.ItemIndex = 0;
 
 
             DataSet ds;
@@ -76,6 +86,7 @@ namespace EXEC
             if (ds != null && ds.Tables[0].Rows.Count > 0)
             {
                 modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN, ds.Tables[0], "NAME", "CODE");
+                modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN2, ds.Tables[0], "NAME", "CODE");
                 ledt_BUSSINESS_GBN.ItemIndex = 0;
             }
 
@@ -129,7 +140,7 @@ namespace EXEC
                 this.Cursor = Cursors.WaitCursor;
 
                 DT_GRD01 = null;
-                gridControl1.DataSource = null;
+                gridControl3.DataSource = null;
                 //지출결의서 디테일 조회
                 gParam = new string[] { ADMIN_NO };
                 DT_GRD01 = df_select(3, gParam, out error_msg);
@@ -140,7 +151,7 @@ namespace EXEC
                     return;
                 }
 
-                gridControl1.DataSource = DT_GRD01.Tables[0];
+                gridControl3.DataSource = DT_GRD01.Tables[0];
 
                 this.Cursor = Cursors.Default;
             }
@@ -160,11 +171,24 @@ namespace EXEC
             error_msg = "";
             switch (Index)
             {
-                case 0: //사업구분 lookup 조회
+                case 0: //지출결의서 헤더 조회
                     {
                         string query = string.Empty;
-                        if (Param[0].Equals("0")) query += "SELECT '%' CODE, '전체' NAME UNION ALL "; // param[0] 값이 0일경우 전체포함 1일경우 전체미포함
-                        query += "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '사업구분'";
+                        query += "SELECT A.*, B.UNAM as PLANER , C.UNAM as [USER], CASE ISNULL(GW_NO,'') WHEN '' THEN '미결' ELSE '결재' END as GW_YN, D.PJT_NM  ";
+                        query += "FROM SPND_RSLT_H A WITH(NOLOCK)  ";
+                        query += "LEFT JOIN TS_USER B WITH(NOLOCK)  ";
+                        query += "ON		A.PLAN_USER= B.USR  ";
+                        query += "LEFT JOIn TS_USER C WITH(NOLOCK)  ";
+                        query += "ON		A.[USER] = C.USR  ";
+                        query += "LEFT JOIN TB_PJT D WITH(NOLOCK)  ";
+                        query += "ON		A.PJT_CD = D.PJT_CD  ";
+                        query += "WHERE	PLAN_DT BETWEEN '" + DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "'  ";
+                        query += "AND		PLAN_USER LIKE '" + bedt_PLAN_USER.Tag + "' + '%'  ";
+                        query += "AND		A.DEPT LIKE '" + bedt_DEPT.Tag + "' + '%'  ";
+                        query += "AND		[USER] LIKE '" + bedt_USER.Tag + "' + '%'  ";
+                        query += "AND		A.PJT_CD LIKE '" + bedt_PJT.Tag + "' + '%'  ";
+                        query += "AND		BUSINESS_GBN LIKE '" + ledt_BUSSINESS_GBN.EditValue + "' + '%'  ";
+                        query += "AND		CASE ISNULL(GW_NO,'') WHEN '' THEN '0' ELSE '1' END  LIKE '" + ledt_GW_YN.EditValue + "'  ";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -346,12 +370,26 @@ namespace EXEC
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            popup_Get_AdminNo _frm = new popup_Get_AdminNo(env, null);
-            if(_frm.ShowDialog() == DialogResult.OK)
+            try
             {
-                ADMIN_NO = _frm.ADMIN_NO;
-                getHeaderData();
-                getGridData();
+                this.Cursor = Cursors.WaitCursor;
+                DT_GRD01 = null;
+                gridControl1.DataSource = null;
+                DT_GRD01 = df_select(0, null, out error_msg);
+                if (DT_GRD01 == null)
+                {
+                    MsgBox.MsgErr("지출결의서 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    this.Cursor = Cursors.Default;
+                    return;
+                }
+
+                gridControl1.DataSource = DT_GRD01.Tables[0];
+                //DT_GRD02 = DT_GRD01.Copy();
+                this.Cursor = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MsgBox.MsgErr("" + ex, "");
             }
         }
 
@@ -405,8 +443,8 @@ namespace EXEC
             //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
             ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
             DT_GRD01.Tables[0].Rows.Add(DR);
-            gridControl1.DataSource = null;
-            gridControl1.DataSource = DT_GRD01.Tables[0];
+            gridControl3.DataSource = null;
+            gridControl3.DataSource = DT_GRD01.Tables[0];
             gridView1.FocusedRowHandle = gridView1.RowCount - 1;
         }
 
@@ -458,6 +496,35 @@ namespace EXEC
                 modUTIL.DevLookUpEditorSet(ledt_ACT, ds.Tables[0], "NAME", "CODE");
                 ledt_ACT.ItemIndex = 0;
             }
+
+        }
+
+        private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView2.GetFocusedDataRow();
+
+            if(dr == null)
+            {
+                return;
+            }
+            dt_PAY.EditValue = dr["PAY_DT"];
+            dt_BILL.EditValue = dr["BILL_DT"];
+            txt_ACCT_HOLDER.Text = dr["ACCT_HOLDER"].ToString();
+            txt_COMP_ACCT.Text = dr["COMP_ACCT"].ToString();
+            txt_COMP_BANK.Text = dr["COMP_BANK"].ToString();
+            txt_COMP_MNG.Text = dr["COMP_MNG"].ToString();
+            txt_COMP_MNG_PHONE.Text = dr["COMP_MNG_PHONE"].ToString();
+            txt_COMP_NAME.Text = dr["COMP_NAME"].ToString();
+            txt_DCMNT1_NM.Text = dr["DCMNT1_NM"].ToString();
+            txt_DCMNT2_NM.Text = dr["DCMNT2_NM"].ToString();
+            txt_DCMNT3_NM.Text = dr["DCMNT3_NM"].ToString();
+            txt_PLAN_CONTENT.Text = dr["PLAN_CONTENT"].ToString();
+            txt_PLAN_TITLE.Text = dr["PLAN_TITLE"].ToString();
+            bedt_PJT2.Text = dr["PJT_NM"].ToString();
+            bedt_PJT2.Tag = dr["PJT_CD"].ToString();
+            bedt_USER2.Text = dr["USER1"].ToString();
+            bedt_USER2.Tag = dr["USER"].ToString();
+            ledt_BUSSINESS_GBN2.EditValue = dr["BUSINESS_GBN"];
 
         }
     }

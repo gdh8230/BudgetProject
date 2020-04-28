@@ -1,6 +1,6 @@
 ﻿namespace DH_Core
 {
-    partial class jnkcDatePicker_Day
+    partial class DatePicker_Day
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(jnkcDatePicker_Day));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatePicker_Day));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dt_day = new DevExpress.XtraEditors.DateEdit();
             this.btn_TODAY = new DevExpress.XtraEditors.SimpleButton();
@@ -83,7 +83,7 @@
             this.sbtn_ADD_DAY.TabIndex = 17;
             this.sbtn_ADD_DAY.Click += new System.EventHandler(this.btn_ADD_DAY_Click);
             // 
-            // jnkcDatePicker_Day
+            // DatePicker_Day
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
@@ -91,7 +91,7 @@
             this.Controls.Add(this.btn_TODAY);
             this.Controls.Add(this.sbtn_MINUS_DAY);
             this.Controls.Add(this.dt_day);
-            this.Name = "jnkcDatePicker_Day";
+            this.Name = "DatePicker_Day";
             this.Size = new System.Drawing.Size(185, 27);
             ((System.ComponentModel.ISupportInitialize)(this.dt_day.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_day.Properties)).EndInit();

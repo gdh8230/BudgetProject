@@ -33,35 +33,18 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.txt_PWD = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txt_NAME = new MetroFramework.Controls.MetroTextBox();
             this.bedt_ID = new DevExpress.XtraEditors.ButtonEdit();
             this.btn_Login = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Config = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Exit = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.btn_pwd_change = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_ID.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(261, 309);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel3.TabIndex = 18;
-            this.metroLabel3.Text = "비밀번호 :";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(263, 244);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(70, 19);
-            this.metroLabel4.TabIndex = 17;
-            this.metroLabel4.Text = "사용자ID :";
             // 
             // txt_PWD
             // 
@@ -93,15 +76,6 @@
             this.txt_PWD.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PWD.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_PWD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PWD_KeyPress);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(261, 276);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel1.TabIndex = 22;
-            this.metroLabel1.Text = "사용자명 :";
             // 
             // txt_NAME
             // 
@@ -158,9 +132,9 @@
             // 
             // btn_Config
             // 
-            this.btn_Config.Location = new System.Drawing.Point(415, 338);
+            this.btn_Config.Location = new System.Drawing.Point(420, 338);
             this.btn_Config.Name = "btn_Config";
-            this.btn_Config.Size = new System.Drawing.Size(75, 27);
+            this.btn_Config.Size = new System.Drawing.Size(70, 27);
             this.btn_Config.TabIndex = 3;
             this.btn_Config.Text = "환경설정";
             this.btn_Config.Click += new System.EventHandler(this.btn_CONFIG_Click);
@@ -174,17 +148,57 @@
             this.btn_Exit.Text = "종료";
             this.btn_Exit.Click += new System.EventHandler(this.btn_EXIT_Click);
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(274, 247);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(59, 15);
+            this.labelControl1.TabIndex = 23;
+            this.labelControl1.Text = "사용자 ID :";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(278, 279);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(55, 15);
+            this.labelControl2.TabIndex = 24;
+            this.labelControl2.Text = "사용자명 :";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(278, 311);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(55, 15);
+            this.labelControl3.TabIndex = 25;
+            this.labelControl3.Text = "비밀번호 :";
+            // 
+            // btn_pwd_change
+            // 
+            this.btn_pwd_change.Location = new System.Drawing.Point(339, 338);
+            this.btn_pwd_change.Name = "btn_pwd_change";
+            this.btn_pwd_change.Size = new System.Drawing.Size(75, 27);
+            this.btn_pwd_change.TabIndex = 26;
+            this.btn_pwd_change.Text = "비밀번호변경";
+            this.btn_pwd_change.Click += new System.EventHandler(this.btn_pwd_change_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 409);
+            this.Controls.Add(this.btn_pwd_change);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.bedt_ID);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txt_NAME);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.txt_PWD);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.btn_Config);
@@ -200,15 +214,16 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroTextBox txt_PWD;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txt_NAME;
         private DevExpress.XtraEditors.ButtonEdit bedt_ID;
         private DevExpress.XtraEditors.SimpleButton btn_Login;
         private DevExpress.XtraEditors.SimpleButton btn_Config;
         private DevExpress.XtraEditors.SimpleButton btn_Exit;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton btn_pwd_change;
     }
 }
 

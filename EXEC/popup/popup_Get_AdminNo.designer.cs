@@ -33,7 +33,7 @@
             this.grp_Title = new DevExpress.XtraEditors.GroupControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txt_ADMIN_NO = new DevExpress.XtraEditors.TextEdit();
-            this.jnkcDatePicker1 = new DH_Core.jnkcDatePicker();
+            this.DatePicker1 = new DH_Core.DatePicker();
             this.grd_Data01 = new DevExpress.XtraGrid.GridControl();
             this.gview_Data01 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_CODE = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -157,7 +157,7 @@
             this.grp_Title.AppearanceCaption.Options.UseTextOptions = true;
             this.grp_Title.Controls.Add(this.labelControl5);
             this.grp_Title.Controls.Add(this.txt_ADMIN_NO);
-            this.grp_Title.Controls.Add(this.jnkcDatePicker1);
+            this.grp_Title.Controls.Add(this.DatePicker1);
             this.grp_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.grp_Title.Location = new System.Drawing.Point(0, 43);
             this.grp_Title.Name = "grp_Title";
@@ -182,14 +182,14 @@
             this.txt_ADMIN_NO.Size = new System.Drawing.Size(120, 20);
             this.txt_ADMIN_NO.TabIndex = 42;
             // 
-            // jnkcDatePicker1
+            // DatePicker1
             // 
-            this.jnkcDatePicker1.AutoSize = true;
-            this.jnkcDatePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.jnkcDatePicker1.Location = new System.Drawing.Point(12, 31);
-            this.jnkcDatePicker1.Name = "jnkcDatePicker1";
-            this.jnkcDatePicker1.Size = new System.Drawing.Size(354, 26);
-            this.jnkcDatePicker1.TabIndex = 41;
+            this.DatePicker1.AutoSize = true;
+            this.DatePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.DatePicker1.Location = new System.Drawing.Point(12, 31);
+            this.DatePicker1.Name = "DatePicker1";
+            this.DatePicker1.Size = new System.Drawing.Size(354, 26);
+            this.DatePicker1.TabIndex = 41;
             // 
             // grd_Data01
             // 
@@ -454,7 +454,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit ledt_L_CD;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit ledt_M_CD;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit ledt_S_CD;
-        private DH_Core.jnkcDatePicker jnkcDatePicker1;
+        private DH_Core.DatePicker DatePicker1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txt_ADMIN_NO;
     }

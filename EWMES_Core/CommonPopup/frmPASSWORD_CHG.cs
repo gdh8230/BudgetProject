@@ -14,14 +14,13 @@ namespace DH_Core.CommonPopup
 {
     public partial class frmPASSWORD_CHG : DevExpress.XtraEditors.XtraForm
     {
-        public frmPASSWORD_CHG(_Environment ENV, string[] Param, string type)
+        public frmPASSWORD_CHG(_Environment ENV, string[] Param)
         {
             InitializeComponent();
             env = ENV;
             COMP = Param[0];
             FACT = Param[1];
             USR = txt_USER_ID.Text = Param[2];
-            p_type = type; //로그인 화면 또는 사용자 관리 화면
         }
         #region Attributes (속성정의 집합)
         ////////////////////////////////
@@ -54,12 +53,6 @@ namespace DH_Core.CommonPopup
                 txt_USER_ID.Focus();
                 return;
             }
-            else if (txt_CURRENT_PASSWORD.Text.Trim() == "" && p_type != null)
-            {
-                MsgBox.MsgInformation("현재 비밀번호를 입력하세요.", "확인");
-                txt_CURRENT_PASSWORD.Focus();
-                return;
-            }
             else if (txt_NEW_PASSWORD.Text.Trim() == "")
             {
                 MsgBox.MsgInformation("신규 비밀번호를 입력하세요.", "확인");
@@ -80,12 +73,10 @@ namespace DH_Core.CommonPopup
                                         txt_NEW_PASSWORD.Text.Trim(),
                                         txt_USER_ID.Text.Trim()
                 };
-                DataSet DS = df_Transaction(20, gParam, ref gOut_MSG);
-                if(gOut_MSG[0] == "Y")
+                if(df_Transaction(20, gParam, ref gOut_MSG))
                 {
                     MsgBox.MsgInformation("정상적으로 변경되었습니다.", "알림");
                     this.DialogResult = DialogResult.OK;
-
                 }
             }
             else
@@ -129,12 +120,13 @@ namespace DH_Core.CommonPopup
         /// <param name="Index"></param>
         /// <param name="Param"></param>
         /// <returns></returns>
-        private DataSet df_Transaction(int Index, object[] Param, ref string[] Out_MSG)
+        private bool df_Transaction(int Index, object[] Param, ref string[] Out_MSG)
         {
             // Index 1 ~  9  : ComboBox관련 등록관련 쿼리 또는 프로시져
             // Index 10 ~ 19 : Select관련 쿼리 또는 프로시져
             // Index 20 ~ 29 : Transaction 쿼리 또는 프로시져
-            DataSet DT = null;
+            bool result = false;
+
             error_msg = string.Empty;
             gConst.DbConn.ClearDB();
             gConst.DbConn.BeginTrans();
@@ -142,15 +134,9 @@ namespace DH_Core.CommonPopup
             {
                 case 20://사용자로그인 비밀번호 변경
                     {
-                        gConst.DbConn.ProcedureName = "dbo.USP_COM_SET_MES_CHG_PSWD";
-                        gConst.DbConn.AddParameter("CURR_PWD", MSSQLAgent.DBFieldType.String, Param[0]);
-                        gConst.DbConn.AddParameter("NEW_PWD", MSSQLAgent.DBFieldType.String, Param[1]);
-                        gConst.DbConn.AddParameter("USR", MSSQLAgent.DBFieldType.String, Param[2]);
-                        gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, p_type == null ? "W" : "L");
-                        gConst.DbConn.AddParameter("COMP", MSSQLAgent.DBFieldType.String, COMP);
-                        gConst.DbConn.AddParameter("FACT", MSSQLAgent.DBFieldType.String, FACT);
-                        gConst.DbConn.AddParameter("RESFLAG", MSSQLAgent.DBFieldType.String, Out_MSG[0], 1, MSSQLAgent.DBDirection.Output);
-                        gConst.DbConn.AddParameter("RESULT", MSSQLAgent.DBFieldType.String, Out_MSG[1], 200, MSSQLAgent.DBDirection.Output);
+                        string query = string.Empty;
+                        query += "UPDATE TS_USER SET PSWD = '" + txt_NEW_PASSWORD.Text.Trim() + "' WHERE USR = '" + txt_USER_ID.Text + "'"; // param[0] 값이 0일경우 전체포함 1일경우 전체미포함
+                        result = gConst.DbConn.ExecuteSQLQuery(query, out error_msg);
                     }
                     break;
             }
@@ -169,7 +155,7 @@ namespace DH_Core.CommonPopup
                 gConst.DbConn.Commit();
             }
             gConst.DbConn.DBClose();
-            return DT;
+            return result;
         }
 
 
