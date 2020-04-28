@@ -82,7 +82,7 @@ namespace EXEC
             DataSet ds;
 
             //사업구분 lookup
-            ds = df_select(0, new string[] { "0" }, out error_msg);
+            ds = df_select(6, new string[] { "0" }, out error_msg);
             if (ds != null && ds.Tables[0].Rows.Count > 0)
             {
                 modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN, ds.Tables[0], "NAME", "CODE");
@@ -140,7 +140,7 @@ namespace EXEC
                 this.Cursor = Cursors.WaitCursor;
 
                 DT_GRD01 = null;
-                gridControl3.DataSource = null;
+                gridControl2.DataSource = null;
                 //지출결의서 디테일 조회
                 gParam = new string[] { ADMIN_NO };
                 DT_GRD01 = df_select(3, gParam, out error_msg);
@@ -151,7 +151,7 @@ namespace EXEC
                     return;
                 }
 
-                gridControl3.DataSource = DT_GRD01.Tables[0];
+                gridControl2.DataSource = DT_GRD01.Tables[0];
 
                 this.Cursor = Cursors.Default;
             }
@@ -234,82 +234,21 @@ namespace EXEC
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
+                case 6: //사업구분 lookup 조회
+                    {
+                        string query = string.Empty;
+                        if (Param[0].Equals("0")) query += "SELECT '%' CODE, '전체' NAME UNION ALL "; // param[0] 값이 0일경우 전체포함 1일경우 전체미포함
+                        query += "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '사업구분'";
+                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
+                    }
+                    break;
                 default: break;
             }
             gConst.DbConn.DBClose();
             return dt;
         }
 
-        private bool Detail_Transaction(object[] Param, DataRow dr, out string error_msg)
-        {
-            bool result = false;
-            gConst.DbConn.ClearDB();
-            error_msg = "";
-
-            gConst.DbConn.BeginTrans();
-            try
-            {
-                #region 입력/수정/삭제
-                if (dr.RowState != DataRowState.Deleted)
-                {
-
-                    gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_D";
-                    gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, dr.RowState.Equals(DataRowState.Added) ? "I" : "U");
-                    gConst.DbConn.AddParameter("SEQ", MSSQLAgent.DBFieldType.String, dr["SEQ"].ToString());
-                    gConst.DbConn.AddParameter("ADMIN_NO", MSSQLAgent.DBFieldType.String,ADMIN_NO);
-                    gConst.DbConn.AddParameter("ITEM_NM", MSSQLAgent.DBFieldType.String, dr["ITEM_NM"].ToString()); //조정구분
-                    gConst.DbConn.AddParameter("EXCH_CD", MSSQLAgent.DBFieldType.String, dr["EXCH_CD"].ToString());
-                    gConst.DbConn.AddParameter("EXCH_RATE", MSSQLAgent.DBFieldType.String, dr["EXCH_RATE"].ToString());
-                    gConst.DbConn.AddParameter("PRICE", MSSQLAgent.DBFieldType.String, dr["PRICE"].ToString());
-                    gConst.DbConn.AddParameter("AMOUNT", MSSQLAgent.DBFieldType.String, dr["AMOUNT"].ToString());
-                    gConst.DbConn.AddParameter("UNIT", MSSQLAgent.DBFieldType.String, dr["UNIT"].ToString());
-                    gConst.DbConn.AddParameter("TOTAL", MSSQLAgent.DBFieldType.String, dr["TOTAL"].ToString());
-                    gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, dr["ACT_CD"].ToString());
-                    gConst.DbConn.AddParameter("CLASS", MSSQLAgent.DBFieldType.String, dr["CLASS"].ToString());
-                    gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
-                }
-                else
-                {
-                    gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_D";
-                    gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, "D");
-                    gConst.DbConn.AddParameter("SEQ", MSSQLAgent.DBFieldType.String, dr["SEQ", DataRowVersion.Original].ToString());
-                    gConst.DbConn.AddParameter("ADMIN_NO", MSSQLAgent.DBFieldType.String, ADMIN_NO);
-                    gConst.DbConn.AddParameter("ITEM_NM", MSSQLAgent.DBFieldType.String, null); //조정구분
-                    gConst.DbConn.AddParameter("EXCH_CD", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("EXCH_RATE", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("PRICE", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("AMOUNT", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("UNIT", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("TOTAL", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("CLASS", MSSQLAgent.DBFieldType.String, null);
-                    gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
-
-                }
-                if(!gConst.DbConn.ExecuteNonQuery(out error_msg))
-                {
-                    MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
-                    gConst.DbConn.Rollback();
-                }
-                else
-                {
-
-                }
-                #endregion
-                gConst.DbConn.ClearDB();
-            }
-            catch (Exception ee)
-            {
-                Console.WriteLine(ee.ToString());
-                MsgBox.MsgErr("초기화에 실패했습니다." + error_msg, "에러");
-                gConst.DbConn.Rollback();
-            }
-
-            gConst.DbConn.Commit();
-            return result;
-        }
-
-        private bool Header_Transaction(object[] Param, DataRow dr, out string error_msg)
+        private bool df_Transaction(object[] Param, DataRow dr, out string error_msg)
         {
 
             bool result = false;
@@ -321,28 +260,15 @@ namespace EXEC
             try
             {
                 #region 입력/수정/삭제
-                gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_H";
-                gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, Param[0]);
-                gConst.DbConn.AddParameter("ADMIN_NO", MSSQLAgent.DBFieldType.String, ADMIN_NO);
-                gConst.DbConn.AddParameter("COMP_NAME", MSSQLAgent.DBFieldType.String, txt_COMP_NAME.Text);
-                gConst.DbConn.AddParameter("COMP_ACCT", MSSQLAgent.DBFieldType.String, txt_COMP_ACCT.Text);
-                gConst.DbConn.AddParameter("COMP_BANK", MSSQLAgent.DBFieldType.String, txt_COMP_BANK.Text);
-                gConst.DbConn.AddParameter("ACCT_HOLDER", MSSQLAgent.DBFieldType.String, txt_ACCT_HOLDER.Text);
-                gConst.DbConn.AddParameter("PAY_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_PAY.EditValue.ToString()).ToString("yyyyMMdd"));
-                gConst.DbConn.AddParameter("COMP_MNG", MSSQLAgent.DBFieldType.String, txt_COMP_MNG.Text);
-                gConst.DbConn.AddParameter("COMP_MNG_PHONE", MSSQLAgent.DBFieldType.String, txt_COMP_MNG_PHONE.Text);
-                gConst.DbConn.AddParameter("DCMNT1", MSSQLAgent.DBFieldType.Image, txt_DCMNT1.Tag);
-                gConst.DbConn.AddParameter("DCMNT1_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT1_NM.Text);
-                gConst.DbConn.AddParameter("DCMNT2", MSSQLAgent.DBFieldType.Image, txt_DCMNT2.Tag);
-                gConst.DbConn.AddParameter("DCMNT2_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT2_NM.Text);
-                gConst.DbConn.AddParameter("DCMNT3", MSSQLAgent.DBFieldType.Image, txt_DCMNT3.Tag) ;
-                gConst.DbConn.AddParameter("DCMNT3_NM", MSSQLAgent.DBFieldType.String, txt_DCMNT3_NM.Text);
-                //gConst.DbConn.AddParameter("USER", MSSQLAgent.DBFieldType.String, txt_USER.Tag.ToString());
-                gConst.DbConn.AddParameter("USER", MSSQLAgent.DBFieldType.String, bedt_USER.Tag);
-                gConst.DbConn.AddParameter("GW_NO", MSSQLAgent.DBFieldType.String, null);
-                gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
-                gConst.DbConn.AddParameter("OUTPUT", MSSQLAgent.DBFieldType.String, error_msg, 20, MSSQLAgent.DBDirection.Output);
-                if(!gConst.DbConn.ExecuteNonQuery(out error_msg, ""))
+
+                string query = string.Empty;
+                query += "UPDATE    SPND_RSLT_H ";
+                query += "SET		GW_NO = @GW_NO ";
+                query += "		    ,MODIFY_DT = GETDATE() ";
+                query += "		    ,MODIFY_ID = '' ";
+                query += "WHERE	ADMIN_NO = @ADMIN_NO ";
+
+                if (!gConst.DbConn.ExecuteNonQuery(out error_msg, ""))
                 {
                     MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
                     gConst.DbConn.Rollback();
@@ -358,7 +284,6 @@ namespace EXEC
             catch (Exception ee)
             {
                 Console.WriteLine(ee.ToString());
-                MsgBox.MsgErr("초기화에 실패했습니다." + error_msg, "에러");
                 gConst.DbConn.Rollback();
             }
 
@@ -397,23 +322,11 @@ namespace EXEC
         {
             DataSet ds_new;
 
-            //헤더저장
-            if(Header_Transaction(gParam, null, out error_msg))
-            {
-                //디테일 저장
-                if (DT_GRD01.HasChanges())
-                {
-                    ds_new = DT_GRD01.GetChanges();
-                    foreach (DataRow dr in ds_new.Tables[0].Rows)
-                    {
-                        gParam = new string[] { ADMIN_NO };
-                        Detail_Transaction(gParam, dr, out gOut_MSG);
-                    }
-                    MsgBox.MsgInformation("저장 완료", "확인");
-                    //btn_Search_Click(null, null);
-                    return;
-                }
-            }
+            DataRow dr = gridView2.GetFocusedDataRow();
+            gParam = new string[] { ADMIN_NO };
+            df_Transaction(gParam, dr, out gOut_MSG);
+
+            MsgBox.MsgInformation("저장 완료", "확인");
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
@@ -434,18 +347,18 @@ namespace EXEC
         private void btn_Add_Click(object sender, EventArgs e)
         {
             DataRow DR;
-            gridView1.AddNewRow();
-            DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            gridView2.AddNewRow();
+            DR = gridView2.GetDataRow(gridView2.FocusedRowHandle);
 
-            DR["SEQ"] = gridView1.RowCount;
+            DR["SEQ"] = gridView2.RowCount;
             DR["TOTAL"] = 0;
             //DR["ACT_CD"] = select_row["ACT_CD"];
             //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
             ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
             DT_GRD01.Tables[0].Rows.Add(DR);
-            gridControl3.DataSource = null;
-            gridControl3.DataSource = DT_GRD01.Tables[0];
-            gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+            gridControl2.DataSource = null;
+            gridControl2.DataSource = DT_GRD01.Tables[0];
+            gridView2.FocusedRowHandle = gridView2.RowCount - 1;
         }
 
         private void bedt_DEPT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -463,8 +376,8 @@ namespace EXEC
             frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "프로젝트");
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                bedt_USER.Tag = frm.CODE;
-                bedt_USER.Text = frm.NAME;
+                bedt_PJT.Tag = frm.CODE;
+                bedt_PJT.Text = frm.NAME;
             }
         }
 
@@ -499,9 +412,9 @@ namespace EXEC
 
         }
 
-        private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            DataRow dr = gridView2.GetFocusedDataRow();
+            DataRow dr = gridView1.GetFocusedDataRow();
 
             if(dr == null)
             {

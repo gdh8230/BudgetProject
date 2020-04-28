@@ -277,7 +277,7 @@ namespace STD
                     gConst.DbConn.AddParameter("ADJ_GBN", MSSQLAgent.DBFieldType.String, dr["ADJ_GBN"].ToString()); //조정구분
                     gConst.DbConn.AddParameter("ADJ_DT", MSSQLAgent.DBFieldType.String, dr["ADJ_DT"].ToString());
                     gConst.DbConn.AddParameter("ADJ_MONTH", MSSQLAgent.DBFieldType.String, dr["ADJ_MONTH"].ToString());
-                    gConst.DbConn.AddParameter("ADJ_MONEY", MSSQLAgent.DBFieldType.String, dr["ADJ_MONEY"].ToString());
+                    gConst.DbConn.AddParameter("ADJ_MONEY", MSSQLAgent.DBFieldType.String, dr["ADJ_MONEY"].ToString().Equals("") ? 0 : Convert.ToDecimal(dr["ADJ_MONEY"].ToString()));
                     gConst.DbConn.AddParameter("ADJ_NOTE", MSSQLAgent.DBFieldType.String, dr["ADJ_NOTE"].ToString());
                     gConst.DbConn.AddParameter("SEQ", MSSQLAgent.DBFieldType.String, dr["SEQ"].ToString());
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);

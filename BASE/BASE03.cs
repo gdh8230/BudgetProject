@@ -129,7 +129,7 @@ namespace BASE
                     {
                         string query = "SELECT PJT_CD, PJT_NM, dbo.f_get_STR2DATE(APRV_DT, '-') AS APRV_DT, dbo.f_get_STR2DATE(PJT_SDT, '-') AS PJT_SDT, dbo.f_get_STR2DATE(PJT_EDT, '-') AS PJT_EDT, DEPT, PJT_STAT, EMP, CLIENT, PJT_MONEY, PJT_PLACE" +
                                         " FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE '%' + @PJD_CD + '%' AND PJT_NM LIKE '%' + @PJT_NM + '%' " +
-                                        "AND PJT_STAT LIKE @PJT_STAT";
+                                        "AND ISNULL(PJT_STAT,'') LIKE @PJT_STAT AND STAT <> 'D'";
                         gConst.DbConn.AddParameter(new SqlParameter("@PJD_CD", txt_PJT_CD.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@PJT_NM", txt_PJT_NM2.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@PJT_STAT", ledt_get_PJT_STAT.EditValue.ToString()));
@@ -175,9 +175,9 @@ namespace BASE
                     gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, dr.RowState.Equals(DataRowState.Added) ? "I" : "U" );
                     gConst.DbConn.AddParameter("PJT_CD", MSSQLAgent.DBFieldType.String, dr["PJT_CD"].ToString());
                     gConst.DbConn.AddParameter("PJT_NM", MSSQLAgent.DBFieldType.String, dr["PJT_NM"].ToString());
-                    gConst.DbConn.AddParameter("APRV_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dr["APRV_DT"].ToString()).ToString("yyyyMMdd"));
-                    gConst.DbConn.AddParameter("PJT_SDT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dr["PJT_SDT"].ToString()).ToString("yyyyMMdd"));
-                    gConst.DbConn.AddParameter("PJT_EDT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dr["PJT_EDT"].ToString()).ToString("yyyyMMdd"));
+                    gConst.DbConn.AddParameter("APRV_DT", MSSQLAgent.DBFieldType.String, dr["APRV_DT"].ToString().Equals("") ? null : DateTime.Parse(dr["APRV_DT"].ToString()).ToString("yyyyMMdd"));
+                    gConst.DbConn.AddParameter("PJT_SDT", MSSQLAgent.DBFieldType.String, dr["PJT_SDT"].ToString().Equals("") ? null : DateTime.Parse(dr["PJT_SDT"].ToString()).ToString("yyyyMMdd"));
+                    gConst.DbConn.AddParameter("PJT_EDT", MSSQLAgent.DBFieldType.String, dr["PJT_EDT"].ToString().Equals("") ? null : DateTime.Parse(dr["PJT_EDT"].ToString()).ToString("yyyyMMdd"));
                     gConst.DbConn.AddParameter("PJT_STAT", MSSQLAgent.DBFieldType.String, dr["PJT_STAT"].ToString());
                     gConst.DbConn.AddParameter("DEPT", MSSQLAgent.DBFieldType.String, dr["DEPT"].ToString());
                     gConst.DbConn.AddParameter("EMP", MSSQLAgent.DBFieldType.String, dr["EMP"].ToString());
@@ -340,6 +340,11 @@ namespace BASE
                     btn_Save_Click(null, null);
                 }
             }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            gridView1.DeleteRow(gridView1.FocusedRowHandle);
         }
     }
 }

@@ -139,10 +139,11 @@ namespace BASE
             {
                 case 0: //회계 계정 조회
                     {
-                        string query = "SELECT ACT_CD, ACT_NM, ACT_GRP_NM, BUDGET_NM, CTRL_YN, CLASS FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND ISNULL(CTRL_YN,'N') LIKE @CTRL_YN  ";
+                        string query = "SELECT ACT_CD, ACT_NM, ACT_GRP_NM, BUDGET_NM, CTRL_YN, CLASS FROM TB_ACCOUNT WITH(NOLOCK) WHERE ACT_CD LIKE '%' + @ACT_CD + '%' AND ACT_NM LIKE '%' + @ACT_NM + '%' AND ISNULL(CTRL_YN,'N') LIKE @CTRL_YN AND CLASS LIKE @CLASS  ";
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", txt_act_cd.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_NM", txt_act_nm.Text));
                         gConst.DbConn.AddParameter(new SqlParameter("@CTRL_YN", ledt_CTRL_YN.EditValue.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@CLASS", ledt_act_sort.EditValue.ToString()));
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -192,10 +193,11 @@ namespace BASE
 
             try
             {
-                string query = "UPDATE TB_ACCOUNT SET BUDGET_NM = @BUDGET_NM, CTRL_YN = @CTRL_YN, MODIFY_DT = GETDATE(), MODIFY_ID = @USR WHERE ACT_CD = @ACT_CD ";
+                string query = "UPDATE TB_ACCOUNT SET BUDGET_NM = @BUDGET_NM, CTRL_YN = @CTRL_YN, CLASS = @CLASS, MODIFY_DT = GETDATE(), MODIFY_ID = @USR WHERE ACT_CD = @ACT_CD ";
                 gConst.DbConn.AddParameter(new SqlParameter("@BUDGET_NM", dr["BUDGET_NM"]));
                 gConst.DbConn.AddParameter(new SqlParameter("@CTRL_YN", dr["CTRL_YN"]));
                 gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", dr["ACT_CD"]));
+                gConst.DbConn.AddParameter(new SqlParameter("@CLASS", dr["CLASS"]));
                 gConst.DbConn.AddParameter(new SqlParameter("@USR", env.EmpCode));
                 result = gConst.DbConn.ExecuteSQLQuery(query, out error_msg);
 

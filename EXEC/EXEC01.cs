@@ -132,6 +132,8 @@ namespace EXEC
             bedt_PJT.Tag = "";
             bedt_USER.Text = "";
             bedt_USER.Tag = "";
+            txt_ADMIN_NO.Text = "";
+            txt_GW_NO.Text = "";
 
             EnableControl(true);
         }
@@ -180,6 +182,7 @@ namespace EXEC
 
                 if(ds.Tables[0].Rows.Count > 0)
                 {
+                    txt_ADMIN_NO.Text = ADMIN_NO;
                     dt_PLAN.EditValue = ds.Tables[0].Rows[0]["PLAN_DT"];
                     dt_PAY.EditValue = ds.Tables[0].Rows[0]["PAY_DT"];
                     dt_BILL.EditValue = ds.Tables[0].Rows[0]["BILL_DT"];
@@ -198,6 +201,7 @@ namespace EXEC
                     bedt_PJT.Tag = ds.Tables[0].Rows[0]["PJT_CD"].ToString();
                     bedt_USER.Text = ds.Tables[0].Rows[0]["UNAM"].ToString();
                     bedt_USER.Tag = ds.Tables[0].Rows[0]["USER"].ToString();
+                    txt_GW_NO.Text = ds.Tables[0].Rows[0]["GW_NO"].ToString();
                 }
 
             this.Cursor = Cursors.Default;
@@ -301,14 +305,14 @@ namespace EXEC
                         query += "ON A.YEAR = B.ADJ_YEAR ";
                         query += "AND A.MONTH = B.ADJ_MONTH ";
                         query += "AND	A.ADMIN_CD = B.ADMIN_CD ";
-                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH = '" + Param[1] + "' AND A.ADMIN_CD = '" + Param[2] + "' ";
+                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH = '" + Param[1] + "' AND A.ADMIN_CD = '" + Param[2] + "' AND A.STAT <> 'D' ";
                         query += "GROUP BY A.YEAR, A.MONTH ";
 
                         query += "SELECT	SUM(B.TOTAL) ";
                         query += "FROM	SPND_RSLT_H	A WITH(NOLOCK) ";
                         query += "JOIN	SPND_RSLT_D B WITH(NOLOCK) ";
                         query += "ON		A.ADMIN_NO = B.ADMIN_NO ";
-                        query += "WHERE	LEFT(PLAN_DT,6) = '" + Param[0] + "'+'" + Param[1] + "' AND DEPT = '" + Param[2] + "' AND ISNULL";
+                        query += "WHERE	LEFT(PLAN_DT,6) = '" + Param[0] + "'+'" + Param[1] + "' AND DEPT = '" + Param[2] + "' AND A.STAT<> 'D' AND B.STAT <> 'D'";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -469,6 +473,11 @@ namespace EXEC
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            if (!txt_GW_NO.Text.Equals(""))
+            {
+                MsgBox.MsgInformation("결재 완료되어 삭제가 불가능합니다.", "확인");
+                return;
+            }
             DataSet ds_new;
 
             //헤더저장
@@ -801,6 +810,11 @@ namespace EXEC
                 }
 
             }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            gridView1.DeleteRow(gridView1.FocusedRowHandle);
         }
     }
 }

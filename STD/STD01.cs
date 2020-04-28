@@ -233,7 +233,7 @@ namespace STD
                     gConst.DbConn.AddParameter("ADMIN_GBN", MSSQLAgent.DBFieldType.String, ledt_ADMIN_GBN.EditValue.ToString());
                     gConst.DbConn.AddParameter("ADMIN_CD", MSSQLAgent.DBFieldType.String, bedt_CODE.Tag.ToString());
                     gConst.DbConn.AddParameter("QUARTER", MSSQLAgent.DBFieldType.String, dr["QUARTER"].ToString());
-                    gConst.DbConn.AddParameter("REQ_MONEY", MSSQLAgent.DBFieldType.String, dr["MONEY"].ToString());
+                    gConst.DbConn.AddParameter("REQ_MONEY", MSSQLAgent.DBFieldType.String, dr["MONEY"].ToString().Equals("") ? 0 : Convert.ToDecimal(dr["MONEY"].ToString()));
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
                 }
                 else

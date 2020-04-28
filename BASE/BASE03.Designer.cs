@@ -180,6 +180,7 @@
             this.btn_Delete.ImageOptions.ImageIndex = 16;
             this.btn_Delete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Delete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Delete.ImageOptions.SvgImage")));
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Add
             // 
@@ -201,8 +202,6 @@
             // 
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
-            this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(1019, 43);
             // 
             // pnl_right02
@@ -286,13 +285,13 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 22);
+            this.gridControl1.Location = new System.Drawing.Point(2, 23);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(265, 402);
+            this.gridControl1.Size = new System.Drawing.Size(265, 401);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -430,7 +429,7 @@
             this.dt_APRV.Properties.EditFormat.FormatString = "yyyy-MM-dd";
             this.dt_APRV.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dt_APRV.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dt_APRV.Size = new System.Drawing.Size(228, 22);
+            this.dt_APRV.Size = new System.Drawing.Size(228, 24);
             this.dt_APRV.TabIndex = 21;
             this.dt_APRV.Tag = "APRV_DT";
             this.dt_APRV.Leave += new System.EventHandler(this.dateEdit_Leave);
@@ -484,7 +483,7 @@
             this.dedt_EDATE.Properties.EditFormat.FormatString = "yyyy-MM-dd";
             this.dedt_EDATE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dedt_EDATE.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dedt_EDATE.Size = new System.Drawing.Size(100, 22);
+            this.dedt_EDATE.Size = new System.Drawing.Size(100, 24);
             this.dedt_EDATE.TabIndex = 17;
             this.dedt_EDATE.Tag = "PJT_EDT";
             this.dedt_EDATE.Leave += new System.EventHandler(this.dateEdit_Leave);
@@ -519,7 +518,7 @@
             this.dedt_SDATE.Properties.EditFormat.FormatString = "yyyy-MM-dd";
             this.dedt_SDATE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dedt_SDATE.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dedt_SDATE.Size = new System.Drawing.Size(100, 22);
+            this.dedt_SDATE.Size = new System.Drawing.Size(100, 24);
             this.dedt_SDATE.TabIndex = 15;
             this.dedt_SDATE.Tag = "PJT_SDT";
             this.dedt_SDATE.Leave += new System.EventHandler(this.dateEdit_Leave);
@@ -609,7 +608,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(750, 154);
+            this.groupControl2.Size = new System.Drawing.Size(750, 149);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "대상업체 정보";
             // 
@@ -694,8 +693,6 @@
             this.ClientSize = new System.Drawing.Size(1019, 527);
             this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.groupControl1);
-            this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "BASE03";
             this.Text = "프로젝트등록";
             this.Load += new System.EventHandler(this.USER_Load);

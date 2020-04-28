@@ -145,12 +145,12 @@ namespace DH_Core.CommonPopup
             {
                 case "프로젝트":
                     {
-                        query = "SELECT PJT_CD AS CODE, PJT_NM AS NAME FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE @CODE+'%' AND PJT_NM LIKE @NAME+'%'";
+                        query = "SELECT PJT_CD AS CODE, PJT_NM AS NAME FROM TB_PJT WITH(NOLOCK) WHERE PJT_CD LIKE @CODE+'%' AND PJT_NM LIKE @NAME+'%' AND STAT <> 'D'";
                     }
                     break;
                 case "부서":
                     {
-                        query = "SELECT DEPT AS CODE, DEPT_NAME AS NAME FROM TS_DEPT WITH(NOLOCK) WHERE DEPT LIKE @CODE+'%' AND DEPT_NAME LIKE @NAME+'%'";
+                        query = "SELECT DEPT AS CODE, DEPT_NAME AS NAME FROM TS_DEPT WITH(NOLOCK) WHERE DEPT LIKE @CODE+'%' AND DEPT_NAME LIKE @NAME+'%' ISNULL(STAT.'') <> 'D'";
                     }
                     break;
                 case "계정":
@@ -165,7 +165,7 @@ namespace DH_Core.CommonPopup
                 case "사원":
                     {
                         query = "SELECT USR AS CODE, UNAM AS NAME FROM TS_USER A WITH(NOLOCK) " +
-                                "WHERE USR LIKE @CODE+'%' AND UNAM LIKE @NAME+'%' AND DEPT LIKE '" + dept + "' ";
+                                "WHERE USR LIKE @CODE+'%' AND UNAM LIKE @NAME+'%' AND DEPT LIKE '" + dept + "' AND STAT <> 'D' ";
                     }
                     break;
                 default: break;
