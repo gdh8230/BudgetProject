@@ -168,6 +168,11 @@ namespace DH_Core.CommonPopup
                                 "WHERE USR LIKE @CODE+'%' AND UNAM LIKE @NAME+'%' AND DEPT LIKE '" + dept + "' AND STAT <> 'D' ";
                     }
                     break;
+                case "본부":
+                    {
+                        query = "SELECT DISTINCT SECT_CD AS CODE, SECT_NAME AS NAME FROM TS_DEPT WITH(NOLOCK) WHERE SECT_CD LIKE @CODE+'%' AND SECT_CD LIKE @NAME+'%' AND ISNULL(STAT,'') <> 'D'";
+                    }
+                    break;
                 default: break;
             }
             gConst.DbConn.AddParameter(new SqlParameter("@CODE", txt_code.Text.Trim()));

@@ -61,6 +61,9 @@ namespace STAT
             AutoritySet();
 
             env = new _Environment();
+
+            dt_YEAR.EditValue = DateTime.Today;
+            dt_END.EditValue = DateTime.Today;
         }
 
         #endregion
@@ -139,7 +142,7 @@ namespace STAT
         }
         private void bedt_DEPT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "부서");
+            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "본부");
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 bedt_DEPT.Tag = frm.CODE;

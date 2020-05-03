@@ -303,6 +303,10 @@ namespace BASE
         private void textEdit_Leave(object sender, EventArgs e)
         {
             TextEdit textEdit = sender as TextEdit;
+            if (textEdit.EditValue.Equals("") && textEdit.Tag.Equals("PJT_MONEY"))
+            {
+                textEdit.EditValue = 0;
+            }
             if (!select_row[textEdit.Tag.ToString()].Equals(textEdit.EditValue))
             {
                 select_row[textEdit.Tag.ToString()] = textEdit.EditValue;
@@ -321,7 +325,11 @@ namespace BASE
         private void dateEdit_Leave(object sender, EventArgs e)
         {
             DateEdit dateEdit = sender as DateEdit;
-            if (!select_row[dateEdit.Tag.ToString()].Equals(dateEdit.EditValue))
+            if(dateEdit.EditValue == null)
+            {
+                select_row[dateEdit.Tag.ToString()] = "";
+            }
+            else if (!select_row[dateEdit.Tag.ToString()].Equals(dateEdit.EditValue))
             {
                 select_row[dateEdit.Tag.ToString()] = DateTime.Parse(dateEdit.EditValue.ToString()).ToString("yyyy-MM-dd");
             }

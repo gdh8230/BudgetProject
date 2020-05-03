@@ -110,8 +110,8 @@ namespace STAT
                         query += "JOIN TB_ACCOUNT D WITH(NOLOCK) ON	B.ACT_CD = D.ACT_CD ";
                         query += "JOIN TS_DEPT E WITH(NOLOCK) ON	A.DEPT = E.DEPT ";
                         query += "LEFT JOIN TB_PJT F WITH(NOLOCK) ON	A.PJT_CD = F.PJT_CD ";
-                        query += "WHERE (BILL_DT BETWEEN '"+ DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "') AND A.DEPT like '" + bedt_DEPT.Tag.ToString() + "' + '%' AND PLAN_USER LIKE '" + bedt_PLAN_USER.Tag.ToString() + "' + '%' ";
-                        query += "AND B.CLASS LIKE '" + ledt_CLASS.EditValue + "' AND B.ACT_CD LIKE '" + ledt_ACT.EditValue + "' AND A.PJT_CD LIKE '" + bedt_PJT.Tag.ToString() + "' AND A.[USER] LIKE '" + bedt_USER.Tag.ToString() + "' ";
+                        query += "WHERE (PLAN_DT BETWEEN '" + DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "') AND A.DEPT like '" + bedt_DEPT.Tag.ToString() + "' + '%' AND PLAN_USER LIKE '" + bedt_PLAN_USER.Tag.ToString() + "' + '%' ";
+                        query += "AND B.CLASS LIKE '" + ledt_CLASS.EditValue + "' AND B.ACT_CD LIKE '" + ledt_ACT.EditValue + "' AND ISNULL(A.PJT_CD,'') LIKE '" + bedt_PJT.Tag.ToString() + "' AND ISNULL(A.[USER],'') LIKE '" + bedt_USER.Tag.ToString() + "' ";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;

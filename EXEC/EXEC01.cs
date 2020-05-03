@@ -195,6 +195,9 @@ namespace EXEC
                     txt_DCMNT1_NM.Text = ds.Tables[0].Rows[0]["DCMNT1_NM"].ToString();
                     txt_DCMNT2_NM.Text = ds.Tables[0].Rows[0]["DCMNT2_NM"].ToString();
                     txt_DCMNT3_NM.Text = ds.Tables[0].Rows[0]["DCMNT3_NM"].ToString();
+                    txt_DCMNT1.Text = ds.Tables[0].Rows[0]["DCMNT1"].ToString();
+                    txt_DCMNT2.Text = ds.Tables[0].Rows[0]["DCMNT2"].ToString();
+                    txt_DCMNT3.Text = ds.Tables[0].Rows[0]["DCMNT3"].ToString();
                     txt_PLAN_CONTENT.Text = ds.Tables[0].Rows[0]["PLAN_CONTENT"].ToString();
                     txt_PLAN_TITLE.Text = ds.Tables[0].Rows[0]["PLAN_TITLE"].ToString();
                     bedt_PJT.Text = ds.Tables[0].Rows[0]["PJT_NM"].ToString();
@@ -478,6 +481,22 @@ namespace EXEC
                 MsgBox.MsgInformation("결재 완료되어 삭제가 불가능합니다.", "확인");
                 return;
             }
+            if (!txt_DCMNT1.Text.Equals("") && txt_DCMNT1_NM.Text.Equals(""))
+            {
+                MsgBox.MsgInformation("첨부문서명을 입력하세요.", "확인");
+                return;
+            }
+            if (!txt_DCMNT2.Text.Equals("") && txt_DCMNT2_NM.Text.Equals(""))
+            {
+                MsgBox.MsgInformation("첨부문서명을 입력하세요.", "확인");
+                return;
+            }
+            if (!txt_DCMNT3.Text.Equals("") && txt_DCMNT3_NM.Text.Equals(""))
+            {
+                MsgBox.MsgInformation("첨부문서명을 입력하세요.", "확인");
+                return;
+            }
+
             DataSet ds_new;
 
             //헤더저장
@@ -523,6 +542,20 @@ namespace EXEC
 
             DR["SEQ"] = gridView1.RowCount;
             DR["TOTAL"] = 0;
+            DR["EXCH_CD"] = "001"; 
+            gParam = new string[] { DR["EXCH_CD"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM") };
+            DataSet ds = df_select(4, gParam, out error_msg);
+            if (ds != null)
+            {
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    DR["EXCH_RATE"] = ds.Tables[0].Rows[0]["EXCH_RATE"];
+                }
+                else
+                {
+                    DR["EXCH_RATE"] = 0;
+                }
+            }
             //DR["ACT_CD"] = select_row["ACT_CD"];
             //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
             ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");

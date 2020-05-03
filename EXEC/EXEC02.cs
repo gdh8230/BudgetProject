@@ -30,6 +30,7 @@ namespace EXEC
         static DataSet DT_GRD05 = new DataSet();    //FOR GRID2
         static DataSet DT_GRD06 = new DataSet();    //FOR GRID2
         static DataRow select_row;
+
         string ADMIN_NO = null;
         string error_msg = "";
         #endregion
@@ -440,6 +441,9 @@ namespace EXEC
             txt_DCMNT1_NM.Text = dr["DCMNT1_NM"].ToString();
             txt_DCMNT2_NM.Text = dr["DCMNT2_NM"].ToString();
             txt_DCMNT3_NM.Text = dr["DCMNT3_NM"].ToString();
+            txt_DCMNT1_NM.Tag =  dr["DCMNT1"];
+            txt_DCMNT2_NM.Tag = dr["DCMNT2"];
+            txt_DCMNT3_NM.Tag = dr["DCMNT3"];
             txt_PLAN_CONTENT.Text = dr["PLAN_CONTENT"].ToString();
             txt_PLAN_TITLE.Text = dr["PLAN_TITLE"].ToString();
             bedt_PJT2.Text = dr["PJT_NM"].ToString();
@@ -462,6 +466,34 @@ namespace EXEC
             }
 
             gridControl2.DataSource = DT_GRD02.Tables[0];
+        }
+
+        private void btn_DCMNT1_Click(object sender, EventArgs e)
+        {
+            string FileName;
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = txt_DCMNT1_NM.Text;
+            saveFileDialog.Title = "다른 경로로 저장";
+            saveFileDialog.OverwritePrompt = true;
+            saveFileDialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate);
+                byte[] dcmt = (byte[])txt_DCMNT1_NM.Tag;
+                fs.Write(dcmt, 0, dcmt.Length );
+                fs.Close();
+            }
+        }
+
+        private void btn_DCMNT2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DCMNT3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
