@@ -110,9 +110,7 @@ namespace EXEC
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            grd_Data01.DataSource = null;
-            grd_Data01.DataSource = DT_GRD01.Tables[0];
-            grd_Data01.Refresh();
+            DataDisplay();
         }
         #endregion
 
@@ -149,7 +147,7 @@ namespace EXEC
                                         "		,A.PJT_CD " +
                                         "		,C.PJT_NM " +
                                         "FROM	SPND_RSLT_H A WITH(NOLOCK) " +
-                                        "JOIN	TS_CODE B WITH(NOLOCK) " +
+                                        "LEFT JOIN	TS_CODE B WITH(NOLOCK) " +
                                         "ON		A.BUSINESS_GBN = B.CODE " +
                                         "AND		B.C_ID = '사업구분' " +
                                         "LEFT JOIN TB_PJT C WITH(NOLOCK) " +

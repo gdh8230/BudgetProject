@@ -233,7 +233,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 101);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(269, 428);
+            this.groupControl1.Size = new System.Drawing.Size(269, 462);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "회계 계정";
             // 
@@ -246,7 +246,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(265, 403);
+            this.gridControl1.Size = new System.Drawing.Size(265, 437);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -313,7 +313,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(750, 428);
+            this.splitContainerControl2.Size = new System.Drawing.Size(750, 462);
             this.splitContainerControl2.SplitterPosition = 378;
             this.splitContainerControl2.TabIndex = 508;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -326,7 +326,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(378, 428);
+            this.groupControl3.Size = new System.Drawing.Size(378, 462);
             this.groupControl3.TabIndex = 5;
             this.groupControl3.Text = "당기 신청내역";
             // 
@@ -439,7 +439,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(362, 428);
+            this.groupControl2.Size = new System.Drawing.Size(362, 462);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "당기 편성내역";
             // 
@@ -640,7 +640,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(963, 546);
+            this.ClientSize = new System.Drawing.Size(963, 580);
             this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "STD02";

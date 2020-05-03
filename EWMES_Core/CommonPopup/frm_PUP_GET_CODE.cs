@@ -150,7 +150,7 @@ namespace DH_Core.CommonPopup
                     break;
                 case "부서":
                     {
-                        query = "SELECT DEPT AS CODE, DEPT_NAME AS NAME FROM TS_DEPT WITH(NOLOCK) WHERE DEPT LIKE @CODE+'%' AND DEPT_NAME LIKE @NAME+'%' ISNULL(STAT.'') <> 'D'";
+                        query = "SELECT DEPT AS CODE, DEPT_NAME AS NAME FROM TS_DEPT WITH(NOLOCK) WHERE DEPT LIKE @CODE+'%' AND DEPT_NAME LIKE @NAME+'%' AND ISNULL(STAT,'') <> 'D'";
                     }
                     break;
                 case "계정":

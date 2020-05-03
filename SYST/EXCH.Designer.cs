@@ -46,10 +46,10 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.dt_YEAR = new DevExpress.XtraEditors.DateEdit();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -275,8 +275,21 @@
             this.gridColumn10.FieldName = "NAME";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 1;
+            this.gridColumn10.VisibleIndex = 0;
             this.gridColumn10.Width = 150;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.LightYellow;
+            this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn1.Caption = "환율";
+            this.gridColumn1.FieldName = "EXCH_RATE";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 150;
             // 
             // repositoryItemTextEdit2
             // 
@@ -292,7 +305,7 @@
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 15);
             this.labelControl4.TabIndex = 25;
-            this.labelControl4.Text = "편성년도";
+            this.labelControl4.Text = "적용년도";
             // 
             // dt_YEAR
             // 
@@ -321,19 +334,6 @@
             this.dt_YEAR.Size = new System.Drawing.Size(100, 24);
             this.dt_YEAR.TabIndex = 24;
             this.dt_YEAR.Tag = "PJT_EDT";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.LightYellow;
-            this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn1.Caption = "환율";
-            this.gridColumn1.FieldName = "EXCH_RATE";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 150;
             // 
             // EXCH
             // 

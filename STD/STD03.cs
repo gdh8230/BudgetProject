@@ -416,5 +416,10 @@ namespace STD
                 bedt_CODE.Text = frm.NAME;
             }
         }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            gridView5.DeleteRow(gridView5.FocusedRowHandle);
+        }
     }
 }

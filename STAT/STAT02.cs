@@ -4,17 +4,15 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using DH_Core;
 using DH_Core.DB;
-using DevExpress.Spreadsheet;
-using DevExpress.XtraCharts;
 using DH_Core.CommonPopup;
 using DevExpress.XtraEditors;
 using System.IO;
 
-namespace EXEC
+namespace STAT
 {
-    public partial class EXEC02 : frmSub_Baseform_Search_STD
+    public partial class STAT02 : frmSub_Baseform_Search_STD
     {
-        public EXEC02()
+        public STAT02()
         {
             InitializeComponent();
         }
@@ -270,18 +268,19 @@ namespace EXEC
 
                 string query = string.Empty;
                 query += "UPDATE    SPND_RSLT_H ";
-                query += "SET		GW_NO = '" + txt_GW_NO.Text + "' ";
+                query += "SET		GW_NO = @GW_NO ";
                 query += "		    ,MODIFY_DT = GETDATE() ";
-                query += "		    ,MODIFY_ID = '"+ env.EmpCode + "' ";
-                query += "WHERE	ADMIN_NO = '"+ Param[0] + "' ";
+                query += "		    ,MODIFY_ID = '' ";
+                query += "WHERE	ADMIN_NO = @ADMIN_NO ";
 
-                if (!gConst.DbConn.ExecuteSQLQuery(query, out error_msg))
+                if (!gConst.DbConn.ExecuteNonQuery(out error_msg, ""))
                 {
                     MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
                     gConst.DbConn.Rollback();
                 }
                 else
                 {
+                    ADMIN_NO = error_msg;
                     result = true;
                 }
                 #endregion
@@ -328,8 +327,8 @@ namespace EXEC
         {
             DataSet ds_new;
 
-            DataRow dr = gridView1.GetFocusedDataRow();
-            gParam = new string[] { dr["ADMIN_NO"].ToString() };
+            DataRow dr = gridView2.GetFocusedDataRow();
+            gParam = new string[] { ADMIN_NO };
             df_Transaction(gParam, dr, out gOut_MSG);
 
             MsgBox.MsgInformation("저장 완료", "확인");
@@ -426,9 +425,6 @@ namespace EXEC
             {
                 return;
             }
-
-            txt_GW_NO.Text = dr["GW_NO"].ToString();
-
             dt_PAY.EditValue = dr["PAY_DT"];
             dt_BILL.EditValue = dr["BILL_DT"];
             txt_ACCT_HOLDER.Text = dr["ACCT_HOLDER"].ToString();

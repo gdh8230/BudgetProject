@@ -4,17 +4,15 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using DH_Core;
 using DH_Core.DB;
-using DevExpress.Spreadsheet;
-using DevExpress.XtraCharts;
 using DH_Core.CommonPopup;
 using DevExpress.XtraEditors;
 using System.IO;
 
-namespace EXEC
+namespace STAT
 {
-    public partial class EXEC02 : frmSub_Baseform_Search_STD
+    public partial class STAT03 : frmSub_Baseform_Search_STD
     {
-        public EXEC02()
+        public STAT03()
         {
             InitializeComponent();
         }
@@ -65,30 +63,7 @@ namespace EXEC
             env = new _Environment();
             string error_msg = string.Empty;
 
-            ////화면 Claer
-            //ClearForm();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("CODE");
-            dt.Columns.Add("NAME");
-
-            dt.Rows.Add("%", "전체");
-            dt.Rows.Add("0", "미결");
-            dt.Rows.Add("1", "결재");
-
-            modUTIL.DevLookUpEditorSet(ledt_GW_YN, dt, "NAME", "CODE");
-            ledt_GW_YN.ItemIndex = 0;
-
-
             DataSet ds;
-
-            //사업구분 lookup
-            ds = df_select(6, new string[] { "0" }, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN, ds.Tables[0], "NAME", "CODE");
-                modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN2, ds.Tables[0], "NAME", "CODE");
-                ledt_BUSSINESS_GBN.ItemIndex = 0;
-            }
 
             //환종 lookup
             ds = df_select(1, null, out error_msg);
@@ -105,62 +80,14 @@ namespace EXEC
                 ledt_CLASS.ItemIndex = 0;
             }
 
-            //getHeaderData();
-            //getGridData();
+            ////세부계정 lookup
+            //ds = df_select(3, new string[] { "0" }, out error_msg);
+            //if (ds != null && ds.Tables[0].Rows.Count > 0)
+            //{
+            //    modUTIL.DevLookUpEditorSet(ledt_ACT, ds.Tables[0], "NAME", "CODE");
+            //    ledt_ACT.ItemIndex = 0;
+            //}
         }
-
-        private void getHeaderData()
-        {
-            try 
-            { 
-                this.Cursor = Cursors.WaitCursor;
-
-                DataSet ds = new DataSet();
-                //지출결의서 헤더 조회
-                ds = df_select(2, null, out error_msg);
-                if (ds == null)
-                {
-                    MsgBox.MsgErr("지출결의서 헤더 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
-
-                this.Cursor = Cursors.Default;
-            }
-            catch (Exception ex)
-            {
-                MsgBox.MsgErr("" + ex, "");
-            }
-        }
-
-        private void getGridData()
-        {
-            try
-            {
-                this.Cursor = Cursors.WaitCursor;
-
-                DT_GRD01 = null;
-                gridControl2.DataSource = null;
-                //지출결의서 디테일 조회
-                gParam = new string[] { ADMIN_NO };
-                DT_GRD01 = df_select(3, gParam, out error_msg);
-                if (DT_GRD01 == null)
-                {
-                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
-
-                gridControl2.DataSource = DT_GRD01.Tables[0];
-
-                this.Cursor = Cursors.Default;
-            }
-            catch (Exception ex)
-            {
-                MsgBox.MsgErr("" + ex, "");
-            }
-        }
-
         #endregion
 
         #region DB CRUD(데이터베이스 처리)
@@ -171,24 +98,20 @@ namespace EXEC
             error_msg = "";
             switch (Index)
             {
-                case 0: //지출결의서 헤더 조회
+                case 0: //예산 사용 내역 조회
                     {
                         string query = string.Empty;
-                        query += "SELECT A.*, B.UNAM as PLANER , C.UNAM as [USER], CASE ISNULL(GW_NO,'') WHEN '' THEN '미결' ELSE '결재' END as GW_YN, D.PJT_NM  ";
-                        query += "FROM SPND_RSLT_H A WITH(NOLOCK)  ";
-                        query += "LEFT JOIN TS_USER B WITH(NOLOCK)  ";
-                        query += "ON		A.PLAN_USER= B.USR  ";
-                        query += "LEFT JOIn TS_USER C WITH(NOLOCK)  ";
-                        query += "ON		A.[USER] = C.USR  ";
-                        query += "LEFT JOIN TB_PJT D WITH(NOLOCK)  ";
-                        query += "ON		A.PJT_CD = D.PJT_CD  ";
-                        query += "WHERE	PLAN_DT BETWEEN '" + DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "'  ";
-                        query += "AND		PLAN_USER LIKE '" + bedt_PLAN_USER.Tag + "' + '%'  ";
-                        query += "AND		A.DEPT LIKE '" + bedt_DEPT.Tag + "' + '%'  ";
-                        query += "AND		[USER] LIKE '" + bedt_USER.Tag + "' + '%'  ";
-                        query += "AND		A.PJT_CD LIKE '" + bedt_PJT.Tag + "' + '%'  ";
-                        query += "AND		BUSINESS_GBN LIKE '" + ledt_BUSSINESS_GBN.EditValue + "' + '%'  ";
-                        query += "AND		CASE ISNULL(GW_NO,'') WHEN '' THEN '0' ELSE '1' END  LIKE '" + ledt_GW_YN.EditValue + "'  ";
+                        query += "SELECT A.ADMIN_NO, B.CLASS, C.NAME as CLASS_NM, B.ACT_CD, D.BUDGET_NM as ACT_NM, ";
+                        query += "		dbo.f_get_STR2DATE(BILL_DT, '-') as BILL_DT, PLAN_TITLE, ITEM_NM, TOTAL, ";
+                        query += "		A.DEPT_NAME as DEPT_NM, E.SECT_NAME, PJT_NM ";
+                        query += "FROM SPND_RSLT_H A WiTH(NOLOCK) ";
+                        query += "JOIN SPND_RSLT_D B WITH(NOLOCK) ON	A.ADMIN_NO = B.ADMIN_NO ";
+                        query += "JOIN TS_CODE C WITH(NOLOCK) ON	B.CLASS = C.CODE AND	C.C_ID = '대계정' ";
+                        query += "JOIN TB_ACCOUNT D WITH(NOLOCK) ON	B.ACT_CD = D.ACT_CD ";
+                        query += "JOIN TS_DEPT E WITH(NOLOCK) ON	A.DEPT = E.DEPT ";
+                        query += "LEFT JOIN TB_PJT F WITH(NOLOCK) ON	A.PJT_CD = F.PJT_CD ";
+                        query += "WHERE (BILL_DT BETWEEN '"+ DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "') AND A.DEPT like '" + bedt_DEPT.Tag.ToString() + "' + '%' AND PLAN_USER LIKE '" + bedt_PLAN_USER.Tag.ToString() + "' + '%' ";
+                        query += "AND B.CLASS LIKE '" + ledt_CLASS.EditValue + "' AND B.ACT_CD LIKE '" + ledt_ACT.EditValue + "' AND A.PJT_CD LIKE '" + bedt_PJT.Tag.ToString() + "' AND A.[USER] LIKE '" + bedt_USER.Tag.ToString() + "' ";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -254,49 +177,6 @@ namespace EXEC
             gConst.DbConn.DBClose();
             return dt;
         }
-
-        private bool df_Transaction(object[] Param, DataRow dr, out string error_msg)
-        {
-
-            bool result = false;
-            gConst.DbConn.ClearDB();
-            error_msg = "";
-
-            gConst.DbConn.BeginTrans();
-
-            try
-            {
-                #region 입력/수정/삭제
-
-                string query = string.Empty;
-                query += "UPDATE    SPND_RSLT_H ";
-                query += "SET		GW_NO = '" + txt_GW_NO.Text + "' ";
-                query += "		    ,MODIFY_DT = GETDATE() ";
-                query += "		    ,MODIFY_ID = '"+ env.EmpCode + "' ";
-                query += "WHERE	ADMIN_NO = '"+ Param[0] + "' ";
-
-                if (!gConst.DbConn.ExecuteSQLQuery(query, out error_msg))
-                {
-                    MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
-                    gConst.DbConn.Rollback();
-                }
-                else
-                {
-                    result = true;
-                }
-                #endregion
-                gConst.DbConn.ClearDB();
-            }
-            catch (Exception ee)
-            {
-                Console.WriteLine(ee.ToString());
-                gConst.DbConn.Rollback();
-            }
-
-            gConst.DbConn.Commit();
-            return result;
-        }
-
         #endregion
 
         private void btn_Search_Click(object sender, EventArgs e)
@@ -323,50 +203,6 @@ namespace EXEC
                 MsgBox.MsgErr("" + ex, "");
             }
         }
-
-        private void btn_Save_Click(object sender, EventArgs e)
-        {
-            DataSet ds_new;
-
-            DataRow dr = gridView1.GetFocusedDataRow();
-            gParam = new string[] { dr["ADMIN_NO"].ToString() };
-            df_Transaction(gParam, dr, out gOut_MSG);
-
-            MsgBox.MsgInformation("저장 완료", "확인");
-        }
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            if (DT_GRD01.HasChanges())
-            {
-                if (!MsgBox.MsgQuestion("변경사항이 있습니다. 저장하신 후 진행하시겠습니까?", "알림"))
-                {
-                    return;
-                }
-                else
-                {
-                    btn_Save_Click(null, null);
-                }
-            }
-        }
-
-        private void btn_Add_Click(object sender, EventArgs e)
-        {
-            DataRow DR;
-            gridView2.AddNewRow();
-            DR = gridView2.GetDataRow(gridView2.FocusedRowHandle);
-
-            DR["SEQ"] = gridView2.RowCount;
-            DR["TOTAL"] = 0;
-            //DR["ACT_CD"] = select_row["ACT_CD"];
-            //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
-            ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
-            DT_GRD01.Tables[0].Rows.Add(DR);
-            gridControl2.DataSource = null;
-            gridControl2.DataSource = DT_GRD01.Tables[0];
-            gridView2.FocusedRowHandle = gridView2.RowCount - 1;
-        }
-
         private void bedt_DEPT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "부서");
@@ -416,52 +252,6 @@ namespace EXEC
                 ledt_ACT.ItemIndex = 0;
             }
 
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            DataRow dr = gridView1.GetFocusedDataRow();
-
-            if(dr == null)
-            {
-                return;
-            }
-
-            txt_GW_NO.Text = dr["GW_NO"].ToString();
-
-            dt_PAY.EditValue = dr["PAY_DT"];
-            dt_BILL.EditValue = dr["BILL_DT"];
-            txt_ACCT_HOLDER.Text = dr["ACCT_HOLDER"].ToString();
-            txt_COMP_ACCT.Text = dr["COMP_ACCT"].ToString();
-            txt_COMP_BANK.Text = dr["COMP_BANK"].ToString();
-            txt_COMP_MNG.Text = dr["COMP_MNG"].ToString();
-            txt_COMP_MNG_PHONE.Text = dr["COMP_MNG_PHONE"].ToString();
-            txt_COMP_NAME.Text = dr["COMP_NAME"].ToString();
-            txt_DCMNT1_NM.Text = dr["DCMNT1_NM"].ToString();
-            txt_DCMNT2_NM.Text = dr["DCMNT2_NM"].ToString();
-            txt_DCMNT3_NM.Text = dr["DCMNT3_NM"].ToString();
-            txt_PLAN_CONTENT.Text = dr["PLAN_CONTENT"].ToString();
-            txt_PLAN_TITLE.Text = dr["PLAN_TITLE"].ToString();
-            bedt_PJT2.Text = dr["PJT_NM"].ToString();
-            bedt_PJT2.Tag = dr["PJT_CD"].ToString();
-            bedt_USER2.Text = dr["USER1"].ToString();
-            bedt_USER2.Tag = dr["USER"].ToString();
-            ledt_BUSSINESS_GBN2.EditValue = dr["BUSINESS_GBN"];
-
-
-            DT_GRD02 = null;
-            gridControl2.DataSource = null;
-            //지출결의서 디테일 조회
-            gParam = new string[] { dr["ADMIN_NO"].ToString() };
-            DT_GRD02 = df_select(7, gParam, out error_msg);
-            if (DT_GRD02 == null)
-            {
-                MsgBox.MsgErr("지출결의서 상세 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                this.Cursor = Cursors.Default;
-                return;
-            }
-
-            gridControl2.DataSource = DT_GRD02.Tables[0];
         }
     }
 }

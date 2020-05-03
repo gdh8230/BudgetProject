@@ -299,7 +299,7 @@ namespace EXEC
                 case 6: //부서별 예산 편성/집행 금액 조회
                     {
                         string query = string.Empty;
-                        query += "SELECT SUM(A.DROWUP_MONEY) - SUM(B.ADJ_MONEY) AS DROWUP ";
+                        query += "SELECT ISNULL(SUM(A.DROWUP_MONEY),0) - ISNULL(SUM(B.ADJ_MONEY),0) AS DROWUP ";
                         query += "FROM BUDGET_CTRL A WITH(NOLOCK) ";
                         query += "LEFT JOIN (SELECT ADJ_YEAR, ADJ_MONTH, ADMIN_CD, SUM(ADJ_MONEY) as ADJ_MONEY   FROM BUDGET_ADJ WITH(NOLOCK) WHERE ADMIN_GBN = 0 GROUP BY ADJ_YEAR, ADJ_MONTH, ADMIN_CD) B ";
                         query += "ON A.YEAR = B.ADJ_YEAR ";
@@ -308,7 +308,7 @@ namespace EXEC
                         query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH = '" + Param[1] + "' AND A.ADMIN_CD = '" + Param[2] + "' AND A.STAT <> 'D' ";
                         query += "GROUP BY A.YEAR, A.MONTH ";
 
-                        query += "SELECT	SUM(B.TOTAL) ";
+                        query += "SELECT	ISNULL(SUM(B.TOTAL),0) ";
                         query += "FROM	SPND_RSLT_H	A WITH(NOLOCK) ";
                         query += "JOIN	SPND_RSLT_D B WITH(NOLOCK) ";
                         query += "ON		A.ADMIN_NO = B.ADMIN_NO ";
