@@ -253,5 +253,12 @@ namespace STAT
             }
 
         }
+
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            Excel_Print((DataTable)gridControl1.DataSource,
+                                           gridView1,
+                                           this.Text + "_" + DateTime.Now.ToShortDateString().Replace("-", "").Replace("/", ""));
+        }
     }
 }

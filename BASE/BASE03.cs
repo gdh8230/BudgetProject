@@ -309,6 +309,9 @@ namespace BASE
             }
             if (!select_row[textEdit.Tag.ToString()].Equals(textEdit.EditValue))
             {
+                if (textEdit.Tag.ToString().Equals("PJT_MONEY")){
+                    textEdit.EditValue = 0;
+                }
                 select_row[textEdit.Tag.ToString()] = textEdit.EditValue;
             }
 

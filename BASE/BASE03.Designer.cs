@@ -647,6 +647,7 @@
             // 
             // txt_PJT_MONEY
             // 
+            this.txt_PJT_MONEY.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_PJT_MONEY.Location = new System.Drawing.Point(102, 61);
             this.txt_PJT_MONEY.Name = "txt_PJT_MONEY";
             this.txt_PJT_MONEY.Properties.Appearance.BackColor = System.Drawing.Color.LightYellow;
@@ -657,6 +658,8 @@
             this.txt_PJT_MONEY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txt_PJT_MONEY.Properties.DisplayFormat.FormatString = "#,###";
             this.txt_PJT_MONEY.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txt_PJT_MONEY.Properties.Mask.EditMask = "#,##0";
+            this.txt_PJT_MONEY.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txt_PJT_MONEY.Properties.NullText = "0";
             this.txt_PJT_MONEY.Size = new System.Drawing.Size(228, 22);
             this.txt_PJT_MONEY.TabIndex = 10;

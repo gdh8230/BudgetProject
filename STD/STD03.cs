@@ -114,7 +114,7 @@ namespace STD
                 DT_GRD02 = df_select(1, gParam, out error_msg);
                 if (DT_GRD02 == null)
                 {
-                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    MsgBox.MsgErr("당기 신청 내역을 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
                     this.Cursor = Cursors.Default;
                     return;
                 }
@@ -128,13 +128,26 @@ namespace STD
                 DT_GRD03 = df_select(1, gParam, out error_msg);
                 if (DT_GRD03 == null)
                 {
-                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    MsgBox.MsgErr("당기 편성 내역을 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
                     this.Cursor = Cursors.Default;
                     return;
                 }
 
                 gridControl3.DataSource = DT_GRD03.Tables[0];
-                //DT_GRD02 = DT_GRD01.Copy();
+
+                //당기 집행 내역
+                DT_GRD04 = null;
+                gridControl4.DataSource = null;
+                gParam = new string[] { dr["CODE"].ToString(), ((DateTime)dt_YEAR.EditValue).Year.ToString(), "1" };
+                DT_GRD04 = df_select(2, gParam, out error_msg);
+                if (DT_GRD04 == null)
+                {
+                    MsgBox.MsgErr("당기 집행 내역을 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    this.Cursor = Cursors.Default;
+                    return;
+                }
+
+                gridControl4.DataSource = DT_GRD04.Tables[0];
 
                 //조정 내역
                 DT_GRD05 = null;
@@ -208,9 +221,9 @@ namespace STD
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
-                case 2: //예산 신청 내역
+                case 2: //예산 집행 내역
                     {
-                        gConst.DbConn.ProcedureName = "USP_STD_GET_BUDGET_REQ";
+                        gConst.DbConn.ProcedureName = "[USP_STD_GET_SPND_RSLT]";
                         gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_GBN", ledt_ADMIN_GBN.EditValue.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_CD", bedt_CODE.Tag.ToString()));
                         gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", Param[0]));

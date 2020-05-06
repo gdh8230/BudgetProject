@@ -479,7 +479,7 @@ namespace EXEC
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate);
+                FileStream fs = new FileStream(saveFileDialog.FileName + "_" + DateTime.Now.ToShortDateString().Replace("-", "").Replace("/", ""), FileMode.OpenOrCreate);
                 byte[] dcmt = (byte[])txt_DCMNT1_NM.Tag;
                 fs.Write(dcmt, 0, dcmt.Length );
                 fs.Close();
@@ -488,12 +488,36 @@ namespace EXEC
 
         private void btn_DCMNT2_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = txt_DCMNT2_NM.Text;
+            saveFileDialog.Title = "다른 경로로 저장";
+            saveFileDialog.OverwritePrompt = true;
+            saveFileDialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
 
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate);
+                byte[] dcmt = (byte[])txt_DCMNT2_NM.Tag;
+                fs.Write(dcmt, 0, dcmt.Length);
+                fs.Close();
+            }
         }
 
         private void btn_DCMNT3_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = txt_DCMNT3_NM.Text;
+            saveFileDialog.Title = "다른 경로로 저장";
+            saveFileDialog.OverwritePrompt = true;
+            saveFileDialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
 
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate);
+                byte[] dcmt = (byte[])txt_DCMNT3_NM.Tag;
+                fs.Write(dcmt, 0, dcmt.Length );
+                fs.Close();
+            }
         }
     }
 }

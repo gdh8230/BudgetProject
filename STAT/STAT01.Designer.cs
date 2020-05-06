@@ -58,6 +58,7 @@
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.rtedt_ACT = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -68,7 +69,6 @@
             this.dt_START = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dt_YEAR = new DevExpress.XtraEditors.DateEdit();
-            this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -137,6 +137,7 @@
             this.btn_Excel.ImageOptions.ImageIndex = 18;
             this.btn_Excel.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btn_Excel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Excel.ImageOptions.SvgImage")));
+            this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
             // 
             // btn_Print
             // 
@@ -252,8 +253,7 @@
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "조직별"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "계정별"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "본부별"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("3", "프로젝트별")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("2", "본부별")});
             this.radioGroup1.Size = new System.Drawing.Size(166, 59);
             this.radioGroup1.TabIndex = 57;
             this.radioGroup1.EditValueChanged += new System.EventHandler(this.radioGroup1_EditValueChanged);
@@ -279,6 +279,15 @@
             this.groupControl1.Size = new System.Drawing.Size(1313, 535);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "조회 내역";
+            // 
+            // spreadsheetControl1
+            // 
+            this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spreadsheetControl1.Location = new System.Drawing.Point(2, 23);
+            this.spreadsheetControl1.Name = "spreadsheetControl1";
+            this.spreadsheetControl1.Size = new System.Drawing.Size(1309, 510);
+            this.spreadsheetControl1.TabIndex = 1;
+            this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
             // gridControl1
             // 
@@ -524,15 +533,6 @@
             this.dt_YEAR.Size = new System.Drawing.Size(100, 24);
             this.dt_YEAR.TabIndex = 61;
             this.dt_YEAR.Tag = "PJT_EDT";
-            // 
-            // spreadsheetControl1
-            // 
-            this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetControl1.Location = new System.Drawing.Point(2, 23);
-            this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Size = new System.Drawing.Size(1309, 510);
-            this.spreadsheetControl1.TabIndex = 1;
-            this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
             // STAT01
             // 

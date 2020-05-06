@@ -183,9 +183,9 @@ namespace EXEC
                 if(ds.Tables[0].Rows.Count > 0)
                 {
                     txt_ADMIN_NO.Text = ADMIN_NO;
-                    dt_PLAN.EditValue = ds.Tables[0].Rows[0]["PLAN_DT"];
-                    dt_PAY.EditValue = ds.Tables[0].Rows[0]["PAY_DT"];
-                    dt_BILL.EditValue = ds.Tables[0].Rows[0]["BILL_DT"];
+                    dt_PLAN.EditValue = DateTime.Parse(ds.Tables[0].Rows[0]["PLAN_DT"].ToString());
+                    dt_PAY.EditValue = DateTime.Parse(ds.Tables[0].Rows[0]["PAY_DT"].ToString());
+                    dt_BILL.EditValue = DateTime.Parse(ds.Tables[0].Rows[0]["BILL_DT"].ToString());
                     txt_ACCT_HOLDER.Text = ds.Tables[0].Rows[0]["ACCT_HOLDER"].ToString();
                     txt_COMP_ACCT.Text = ds.Tables[0].Rows[0]["COMP_ACCT"].ToString();
                     txt_COMP_BANK.Text = ds.Tables[0].Rows[0]["COMP_BANK"].ToString();
@@ -195,7 +195,7 @@ namespace EXEC
                     txt_DCMNT1_NM.Text = ds.Tables[0].Rows[0]["DCMNT1_NM"].ToString();
                     txt_DCMNT2_NM.Text = ds.Tables[0].Rows[0]["DCMNT2_NM"].ToString();
                     txt_DCMNT3_NM.Text = ds.Tables[0].Rows[0]["DCMNT3_NM"].ToString();
-                    txt_DCMNT1.Text = ds.Tables[0].Rows[0]["DCMNT1"].ToString();
+                    txt_DCMNT1.Text = ds.Tables[0].Rows[0]["DCMNT1"].ToString(); //? null : ds.Tables[0].Rows[0]["DCMNT1"].ToString();
                     txt_DCMNT2.Text = ds.Tables[0].Rows[0]["DCMNT2"].ToString();
                     txt_DCMNT3.Text = ds.Tables[0].Rows[0]["DCMNT3"].ToString();
                     txt_PLAN_CONTENT.Text = ds.Tables[0].Rows[0]["PLAN_CONTENT"].ToString();
@@ -536,6 +536,11 @@ namespace EXEC
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            if (!txt_GW_NO.Text.Equals(""))
+            {
+                MsgBox.MsgInformation("결재 완료되어 수정 불가능합니다.", "확인");
+                return;
+            }
             DataRow DR;
             gridView1.AddNewRow();
             DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
@@ -569,13 +574,27 @@ namespace EXEC
         {
             if (ADMIN_NO == null || ADMIN_NO == "") return;
 
-            IWorkbook workbook = spreadsheetControl1.Document;
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
-            using (FileStream stream = new FileStream(path + "\\지출결의서_"+ADMIN_NO+".xlsx",
-                FileMode.Create, FileAccess.ReadWrite))
+            if (!MsgBox.MsgQuestion("엑셀 저장하시겠습니까?", "알림"))
             {
-                workbook.SaveDocument(stream, DocumentFormat.Xlsx);
+                return;
+            }
+
+            IWorkbook workbook = spreadsheetControl1.Document;
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = this.Text;
+            saveFileDialog.Title = "다른 경로로 저장";
+            saveFileDialog.OverwritePrompt = true;
+            saveFileDialog.Filter = "Excel Files(.xls)|*.xls| Excel Files(.xlsx)| *.xlsx | Excel Files(*.xlsm) | *.xlsm";
+            //string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(saveFileDialog.FileName + "_" + DateTime.Now.ToShortDateString().Replace("-", "").Replace("/", "") + ".xlsx",
+                FileMode.Create, FileAccess.ReadWrite))
+                {
+                    workbook.SaveDocument(stream, DocumentFormat.Xlsx);
+                }
             }
         }
 

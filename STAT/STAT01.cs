@@ -286,5 +286,31 @@ namespace STAT
                 bedt_DEPT.Visible = false;
             }
         }
+
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            if (!MsgBox.MsgQuestion("엑셀 저장하시겠습니까?", "알림"))
+            {
+                return;
+            }
+
+            IWorkbook workbook = spreadsheetControl1.Document;
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = this.Text;
+            saveFileDialog.Title = "다른 경로로 저장";
+            saveFileDialog.OverwritePrompt = true;
+            saveFileDialog.Filter = "Excel Files(.xls)|*.xls| Excel Files(.xlsx)| *.xlsx | Excel Files(*.xlsm) | *.xlsm";
+            //string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(saveFileDialog.FileName + "_" + DateTime.Now.ToShortDateString().Replace("-", "").Replace("/", "")+".xlsx",
+                FileMode.Create, FileAccess.ReadWrite))
+                {
+                    workbook.SaveDocument(stream, DocumentFormat.Xlsx);
+                }
+            }
+        }
     }
 }
