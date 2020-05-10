@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Spreadsheet;
 using DH_Core;
+using static DH_Core.DB.MSSQLAgent;
 
 namespace BASE
 {
@@ -107,13 +108,50 @@ namespace BASE
 
             try
             {
-                gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_D";
-                gConst.DbConn.AddParameter(new SqlParameter("@BASE", dt));
-                gConst.DbConn.AddParameter(new SqlParameter("@YEAR", ""));
-                gConst.DbConn.AddParameter(new SqlParameter("@MONTH", ""));
-                gConst.DbConn.ExecuteNonQuery(out error_msg);
+                string query = string.Empty;
+                query += "DELETE FROM SPND_RSLT_D WHERE ADMIN_NO in (SELECT ADMIN_NO FROM SPND_RSLT_H WHERE PLAN_DT LIKE '" + ((DateTime)dt_YEAR.EditValue).ToString("yyyyMM") + "' +'%') ";
+                query += "DELETE FROM SPND_RSLT_H WHERE PLAN_DT LIKE '" + ((DateTime)dt_YEAR.EditValue).ToString("yyyyMM") + "' +'%') ";
+                gConst.DbConn.ExecuteSQLQuery(query, out error_msg);
+                foreach (DataRow dr1 in dt.Rows)
+                {
 
-                gConst.DbConn.ClearDB();
+                    gConst.DbConn.ProcedureName = "dbo.USP_BASE_SET_RESULT2";
+                    //gConst.DbConn.AddParameter("@BASE", 6, dt.Rows[i].Table);
+
+                    gConst.DbConn.AddParameter(new SqlParameter("@SEQ", dr1["SEQ"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@PLAN_DT", dr1["PLAN_DT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@DEPT", dr1["DEPT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@DEPT_NAME", dr1["DEPT_NAME"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@PLAN_USER", dr1["PLAN_USER"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@BUSINESS_GBN", dr1["BUSINESS_GBN"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@PJT_CD", dr1["PJT_CD"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@BILL_DT", dr1["BILL_DT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@PLAN_TITLE", dr1["PLAN_TITLE"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@PLAN_CONTENT", dr1["PLAN_CONTENT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@COMP_NAME", dr1["COMP_NAME"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@COMP_ACCT", dr1["COMP_ACCT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@COMP_BANK", dr1["COMP_BANK"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@ACCT_HOLDER", dr1["ACCT_HOLDER"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@PAY_DT", dr1["PAY_DT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@COMP_MNG", dr1["COMP_MNG"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@COMP_MNG_PHONE", dr1["COMP_MNG_PHONE"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@USER", dr1["USER"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@GW_NO", dr1["GW_NO"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@ITEM_NM", dr1["ITEM_NM"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@EXCH_CD", dr1["EXCH_CD"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@PRICE", dr1["PRICE"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@AMOUNT", dr1["AMOUNT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@UNIT", dr1["UNIT"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@TOTAL", dr1["TOTAL"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", dr1["ACT_CD"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@CLASS", dr1["CLASS"]));
+                    gConst.DbConn.AddParameter(new SqlParameter("@YEAR", ((DateTime)dt_YEAR.EditValue).Year));
+                    gConst.DbConn.AddParameter(new SqlParameter("@MONTH", ((DateTime)dt_YEAR.EditValue).ToString("MM")));
+                    gConst.DbConn.AddParameter(new SqlParameter("@MODIFY_ID", env.EmpCode));
+                    gConst.DbConn.ExecuteNonQuery(out error_msg);
+                    gConst.DbConn.ClearDB();
+                }
+
             }
             catch
             {
@@ -134,7 +172,11 @@ namespace BASE
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if(gridControl1.DataSource != null)
+            if (!MsgBox.MsgQuestion( ((DateTime)dt_YEAR.EditValue).ToString("yyyy-MM") + "데이터가 전부 삭제된 후 저장됩니다. 진행하시겠습니까?", "알림"))
+            {
+                return;
+            }
+            if (gridControl1.DataSource != null)
             {
                 df_Transaction(20, gParam, null, out gOut_MSG);
                 MsgBox.MsgInformation("저장 완료", "확인");
@@ -193,7 +235,7 @@ namespace BASE
                     OleDbDataAdapter excel_adapter = new OleDbDataAdapter(excel_sql, excel_con);
                     DataSet excel_DS = new DataSet();
                     excel_adapter.Fill(excel_DS);
-                    excel_DS.Tables[0].Rows[0].Delete();
+                    excel_DS.Tables[0].Rows.RemoveAt(0);
                     dt = excel_DS.Tables[0];
 
                     gridControl1.DataSource = dt;

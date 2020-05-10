@@ -734,8 +734,8 @@ namespace EXEC
 
                     sheet.Cells["AQ" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["SEQ"].ToString();    //순번
                     sheet.Cells["AR" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ITEM_NM"].ToString();    //품명
-                    sheet.Cells["AZ" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["PRICE"].ToString();    //단가
-                    sheet.Cells["BB" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["AMOUNT"].ToString();    //수량
+                    sheet.Cells["AZ" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["PRICE"].ToString());    //단가
+                    sheet.Cells["BB" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["AMOUNT"].ToString());    //수량
                     sheet.Cells["BD" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["UNIT"].ToString();    //단위
                     sheet.Cells["BF" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["TOTAL"].ToString());    //소계
                     sheet.Cells["BI" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["CLASS_NM"].ToString();    //대계정명

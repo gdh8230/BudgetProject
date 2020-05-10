@@ -479,7 +479,7 @@ namespace EXEC
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                FileStream fs = new FileStream(saveFileDialog.FileName + "_" + DateTime.Now.ToShortDateString().Replace("-", "").Replace("/", ""), FileMode.OpenOrCreate);
+                FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate);
                 byte[] dcmt = (byte[])txt_DCMNT1_NM.Tag;
                 fs.Write(dcmt, 0, dcmt.Length );
                 fs.Close();
