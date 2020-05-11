@@ -849,7 +849,7 @@ namespace EXEC
                 if(ds.Tables[0].Rows.Count >0)
                 {
                     drowup = double.Parse(ds.Tables[0].Rows[0][0].ToString());
-                    txt_DROWUP.Text = drowup.ToString();
+                    txt_DROWUP.Text = double.Parse(ds.Tables[0].Rows[0][0].ToString()).ToString("#,##0");
                 }
                 else
                 {
@@ -858,7 +858,7 @@ namespace EXEC
                 if(ds.Tables[1].Rows.Count > 0)
                 {
                     use = double.Parse(ds.Tables[1].Rows[0][0].ToString());
-                    txt_USE.Text = use.ToString();
+                    txt_USE.Text = double.Parse(ds.Tables[1].Rows[0][0].ToString()).ToString("#,##0");
                 }
 
             }
