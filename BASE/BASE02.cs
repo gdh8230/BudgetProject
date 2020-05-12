@@ -118,7 +118,6 @@ namespace BASE
                     gConst.DbConn.ProcedureName = "dbo.USP_BASE_SET_RESULT2";
                     //gConst.DbConn.AddParameter("@BASE", 6, dt.Rows[i].Table);
 
-                    if(dr1["SEQ"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@SEQ", dr1["SEQ"].ToString()));
                     if (dr1["PLAN_DT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PLAN_DT", dr1["PLAN_DT"].ToString()));
                     if (dr1["DEPT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@DEPT", dr1["DEPT"].ToString()));
                     if (dr1["DEPT_NAME"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@DEPT_NAME", dr1["DEPT_NAME"].ToString()));
@@ -151,11 +150,16 @@ namespace BASE
                     gConst.DbConn.ExecuteNonQuery(out error_msg);
                     gConst.DbConn.ClearDB();
                 }
+                if(error_msg != "")
+                {
+                    MsgBox.MsgErr("저장에 실패했습니다." + error_msg, "에러");
+                    gConst.DbConn.Rollback();
+                }
 
             }
-            catch
+            catch(Exception ee)
             {
-                MsgBox.MsgErr("초기화에 실패했습니다." + error_msg, "에러");
+                MsgBox.MsgErr("실패했습니다." + ee.ToString(), "에러");
                 gConst.DbConn.Rollback();
             }
 
