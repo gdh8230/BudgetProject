@@ -103,54 +103,63 @@ namespace BASE
             bool result = false;
             gConst.DbConn.ClearDB();
             error_msg = "";
+            string query = string.Empty;
 
             gConst.DbConn.BeginTrans();
 
             try
             {
-                string query = string.Empty;
                 query += "DELETE FROM SPND_RSLT_D WHERE ADMIN_NO in (SELECT ADMIN_NO FROM SPND_RSLT_H WHERE PLAN_DT LIKE '" + ((DateTime)dt_YEAR.EditValue).ToString("yyyyMM") + "' +'%') ";
                 query += "DELETE FROM SPND_RSLT_H WHERE PLAN_DT LIKE '" + ((DateTime)dt_YEAR.EditValue).ToString("yyyyMM") + "' +'%' ";
                 gConst.DbConn.ExecuteSQLQuery(query, out error_msg);
                 foreach (DataRow dr1 in dt.Rows)
                 {
-
+                    query = string.Empty;
+                    //query += "  USP_BASE_SET_RESULT2 '"+ DateTime.Parse(dr1["PLAN_DT"].ToString()).ToString("yyyyMMdd") + "', '" + dr1["DEPT"] + "', '" + dr1["DEPT_NAME"] + "', '" + dr1["PLAN_USER"] + "', '" + dr1["BUSINESS_GBN"] + "', '" + dr1["PJT_CD"] + "', '" + (dr1["BILL_DT"].ToString().Equals("") ? DateTime.Parse(dr1["PLAN_DT"].ToString()).ToString("yyyyMMdd") : DateTime.Parse(dr1["BILL_DT"].ToString()).ToString("yyyyMMdd")) + "', '" + dr1["PLAN_TITLE"] + "', ";
+                    //query += "   '" + dr1["PLAN_CONTENT"] + "', '" + dr1["COMP_NAME"] + "', '" + dr1["COMP_ACCT"] + "', '" + dr1["COMP_BANK"] + "', '" + dr1["ACCT_HOLDER"] + "', '" + DateTime.Parse(dr1["PAY_DT"].ToString()).ToString("yyyyMMdd") + "', '" + dr1["COMP_MNG"] + "',   ";
+                    //query += "   '" + dr1["COMP_MNG_PHONE"] + "', '" + dr1["USER"] + "', '" + dr1["GW_NO"] + "', '" + dr1["ITEM_NM"] + "', '" + (dr1["EXCH_CD"].Equals("") ? "001" : dr1["EXCH_CD"].ToString()) + "', " + dr1["PRICE"] + ", " + dr1["AMOUNT"] + ",   ";
+                    //query += "   '" + dr1["UNIT"] + "', " + dr1["TOTAL"] + ", '" + dr1["ACT_CD"] + "', '" + dr1["CLASS"] + "', '" + ((DateTime)dt_YEAR.EditValue).Year.ToString() + "', '" + ((DateTime)dt_YEAR.EditValue).ToString("MM") + "', '" + env.EmpCode + "'   ";
                     gConst.DbConn.ProcedureName = "dbo.USP_BASE_SET_RESULT2";
                     //gConst.DbConn.AddParameter("@BASE", 6, dt.Rows[i].Table);
-
-                    if (dr1["PLAN_DT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PLAN_DT", dr1["PLAN_DT"].ToString()));
+                    if (dr1["PLAN_DT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PLAN_DT", DateTime.Parse(dr1["PLAN_DT"].ToString()).ToString("yyyyMMdd")));
                     if (dr1["DEPT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@DEPT", dr1["DEPT"].ToString()));
                     if (dr1["DEPT_NAME"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@DEPT_NAME", dr1["DEPT_NAME"].ToString()));
                     if (dr1["PLAN_USER"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PLAN_USER", dr1["PLAN_USER"].ToString()));
                     if (dr1["BUSINESS_GBN"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@BUSINESS_GBN", dr1["BUSINESS_GBN"].ToString()));
                     if (dr1["PJT_CD"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PJT_CD", dr1["PJT_CD"].ToString()));
-                    if (dr1["BILL_DT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@BILL_DT", dr1["BILL_DT"].ToString()));
+                    if (dr1["BILL_DT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@BILL_DT", (dr1["BILL_DT"].ToString().Equals("") ? DateTime.Parse(dr1["PLAN_DT"].ToString()).ToString("yyyyMMdd") : DateTime.Parse(dr1["BILL_DT"].ToString()).ToString("yyyyMMdd"))));
                     if (dr1["PLAN_TITLE"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PLAN_TITLE", dr1["PLAN_TITLE"].ToString()));
                     if (dr1["PLAN_CONTENT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PLAN_CONTENT", dr1["PLAN_CONTENT"].ToString()));
-                    if(dr1["COMP_NAME"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_NAME", dr1["COMP_NAME"].ToString()));
-                    if(dr1["COMP_ACCT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_ACCT", dr1["COMP_ACCT"].ToString()));
-                    if(dr1["COMP_BANK"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_BANK", dr1["COMP_BANK"].ToString()));
-                    if(dr1["ACCT_HOLDER"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@ACCT_HOLDER", dr1["ACCT_HOLDER"].ToString()));
-                    if(dr1["PAY_DT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PAY_DT", dr1["PAY_DT"].ToString()));
-                    if(dr1["COMP_MNG"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_MNG", dr1["COMP_MNG"].ToString()));
-                    if(dr1["COMP_MNG_PHONE"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_MNG_PHONE", dr1["COMP_MNG_PHONE"].ToString()));
-                    if(dr1["USER"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@USER", dr1["USER"].ToString()));
-                    if(dr1["GW_NO"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@GW_NO", dr1["GW_NO"].ToString()));
-                    if(dr1["ITEM_NM"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@ITEM_NM", dr1["ITEM_NM"].ToString()));
-                    if(dr1["EXCH_CD"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@EXCH_CD", dr1["EXCH_CD"].ToString()));
-                    if(dr1["PRICE"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PRICE", dr1["PRICE"].ToString()));
-                    if(dr1["AMOUNT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@AMOUNT", dr1["AMOUNT"].ToString()));
-                    if(dr1["UNIT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@UNIT", dr1["UNIT"].ToString()));
-                    if(dr1["TOTAL"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@TOTAL", dr1["TOTAL"].ToString()));
-                    if(dr1["ACT_CD"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", dr1["ACT_CD"].ToString()));
-                    if(dr1["CLASS"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@CLASS", dr1["CLASS"].ToString()));
+                    if (dr1["COMP_NAME"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_NAME", dr1["COMP_NAME"].ToString()));
+                    if (dr1["COMP_ACCT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_ACCT", dr1["COMP_ACCT"].ToString()));
+                    if (dr1["COMP_BANK"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_BANK", dr1["COMP_BANK"].ToString()));
+                    if (dr1["ACCT_HOLDER"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@ACCT_HOLDER", dr1["ACCT_HOLDER"].ToString()));
+                    if (dr1["PAY_DT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PAY_DT", (dr1["PAY_DT"].ToString().Equals("") ? DateTime.Parse(dr1["PLAN_DT"].ToString()).ToString("yyyyMMdd") : DateTime.Parse(dr1["PAY_DT"].ToString()).ToString("yyyyMMdd"))));
+                    if (dr1["COMP_MNG"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_MNG", dr1["COMP_MNG"].ToString()));
+                    if (dr1["COMP_MNG_PHONE"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@COMP_MNG_PHONE", dr1["COMP_MNG_PHONE"].ToString()));
+                    if (dr1["USER"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@USER", dr1["USER"].ToString()));
+                    if (dr1["GW_NO"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@GW_NO", dr1["GW_NO"].ToString()));
+                    if (dr1["ITEM_NM"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@ITEM_NM", dr1["ITEM_NM"].ToString()));
+                    if (dr1["EXCH_CD"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@EXCH_CD", dr1["EXCH_CD"].ToString()));
+                    if (dr1["PRICE"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@PRICE", dr1["PRICE"].ToString()));
+                    if (dr1["AMOUNT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@AMOUNT", dr1["AMOUNT"].ToString()));
+                    if (dr1["UNIT"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@UNIT", dr1["UNIT"].ToString()));
+                    if (dr1["TOTAL"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@TOTAL", dr1["TOTAL"].ToString()));
+                    if (dr1["ACT_CD"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@ACT_CD", dr1["ACT_CD"].ToString()));
+                    if (dr1["CLASS"].ToString() != "") gConst.DbConn.AddParameter(new SqlParameter("@CLASS", dr1["CLASS"].ToString()));
                     gConst.DbConn.AddParameter(new SqlParameter("@YEAR", ((DateTime)dt_YEAR.EditValue).Year.ToString()));
                     gConst.DbConn.AddParameter(new SqlParameter("@MONTH", ((DateTime)dt_YEAR.EditValue).ToString("MM")));
                     gConst.DbConn.AddParameter(new SqlParameter("@MODIFY_ID", env.EmpCode));
                     gConst.DbConn.ExecuteNonQuery(out error_msg);
                     gConst.DbConn.ClearDB();
+                    //query += "   DECLARE @ADMIN_NO	NVARCHAR(20), @EXCH_RATE NUMERIC(17,6)   ";
+                    //query += "   SET @EXCH_RATE = (SELECT EXCH_RATE FROM TB_EXCHANGE WHERE [YEAR] = '"+ ((DateTime)dt_YEAR.EditValue).Year + "'  AND [MONTH] = '" + ((DateTime)dt_YEAR.EditValue).ToString("MM") + "' AND EXCH_CD = '" + (dr1["EXCH_CD"].Equals("") ? "001" : dr1["EXCH_CD"].ToString()) + "')  ";
+                    //query += "   SET @ADMIN_NO = @DEPT + CONVERT(NVARCHAR(6),GETDATE(),12) +(SELECT ISNULL(RIGHT(CAST(RIGHT(MAX(ADMIN_NO),4) AS INT)+10001,4),'0001') FROM SPND_RSLT_H WITH(NOLOCK) WHERE LEFT(ADMIN_NO,10) = @DEPT + CONVERT(NVARCHAR(6), GETDATE(), 12)) ";
+                    //query += "                                                  ";
+                    //query += "                                                  ";
+                    //gConst.DbConn.ExecuteSQLQuery(query, out error_msg);
                 }
-                if(error_msg != "")
+                if (error_msg != "")
                 {
                     MsgBox.MsgErr("저장에 실패했습니다." + error_msg, "에러");
                     gConst.DbConn.Rollback();

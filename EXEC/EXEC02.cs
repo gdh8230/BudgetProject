@@ -190,6 +190,7 @@ namespace EXEC
                         query += "AND		A.PJT_CD LIKE '" + bedt_PJT.Tag + "' + '%'  ";
                         query += "AND		BUSINESS_GBN LIKE '" + ledt_BUSSINESS_GBN.EditValue + "' + '%'  ";
                         query += "AND		CASE ISNULL(GW_NO,'') WHEN '' THEN '0' ELSE '1' END  LIKE '" + ledt_GW_YN.EditValue + "'  ";
+                        query += "AND		A.STAT <> 'D'  ";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
