@@ -52,17 +52,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="STAT03.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="STAT03.Designer.cs">
-      <DependentUpon>STAT03.cs</DependentUpon>
-    </Compile>
     <Compile Include="STAT02.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="STAT02.Designer.cs">
       <DependentUpon>STAT02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STAT03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STAT03.Designer.cs">
+      <DependentUpon>STAT03.cs</DependentUpon>
     </Compile>
     <Compile Include="STAT01.cs">
       <SubType>Form</SubType>
@@ -74,11 +74,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="STAT03.resx">
-      <DependentUpon>STAT03.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="STAT02.resx">
       <DependentUpon>STAT02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STAT03.resx">
+      <DependentUpon>STAT03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="STAT01.resx">
       <DependentUpon>STAT01.cs</DependentUpon>
@@ -92,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="예산대비집행양식.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="예산대비집행양식_프로젝트.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

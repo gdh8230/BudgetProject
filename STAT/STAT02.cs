@@ -7,6 +7,7 @@ using DH_Core.DB;
 using DH_Core.CommonPopup;
 using DevExpress.XtraEditors;
 using System.IO;
+using DevExpress.Spreadsheet;
 
 namespace STAT
 {
@@ -61,102 +62,9 @@ namespace STAT
             AutoritySet();
 
             env = new _Environment();
-            string error_msg = string.Empty;
 
-            ////화면 Claer
-            //ClearForm();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("CODE");
-            dt.Columns.Add("NAME");
-
-            dt.Rows.Add("%", "전체");
-            dt.Rows.Add("0", "미결");
-            dt.Rows.Add("1", "결재");
-
-            modUTIL.DevLookUpEditorSet(ledt_GW_YN, dt, "NAME", "CODE");
-            ledt_GW_YN.ItemIndex = 0;
-
-
-            DataSet ds;
-
-            //사업구분 lookup
-            ds = df_select(6, new string[] { "0" }, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN, ds.Tables[0], "NAME", "CODE");
-                modUTIL.DevLookUpEditorSet(ledt_BUSSINESS_GBN2, ds.Tables[0], "NAME", "CODE");
-                ledt_BUSSINESS_GBN.ItemIndex = 0;
-            }
-
-            //환종 lookup
-            ds = df_select(1, null, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(rledt_EXCH, ds.Tables[0], "CODE", "NAME", "CODE", "NAME");
-            }
-
-            //대계정 lookup
-            ds = df_select(2, new string[] { "0" }, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(ledt_CLASS, ds.Tables[0], "NAME", "CODE");
-                ledt_CLASS.ItemIndex = 0;
-            }
-
-            //getHeaderData();
-            //getGridData();
-        }
-
-        private void getHeaderData()
-        {
-            try 
-            { 
-                this.Cursor = Cursors.WaitCursor;
-
-                DataSet ds = new DataSet();
-                //지출결의서 헤더 조회
-                ds = df_select(2, null, out error_msg);
-                if (ds == null)
-                {
-                    MsgBox.MsgErr("지출결의서 헤더 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
-
-                this.Cursor = Cursors.Default;
-            }
-            catch (Exception ex)
-            {
-                MsgBox.MsgErr("" + ex, "");
-            }
-        }
-
-        private void getGridData()
-        {
-            try
-            {
-                this.Cursor = Cursors.WaitCursor;
-
-                DT_GRD01 = null;
-                gridControl2.DataSource = null;
-                //지출결의서 디테일 조회
-                gParam = new string[] { ADMIN_NO };
-                DT_GRD01 = df_select(3, gParam, out error_msg);
-                if (DT_GRD01 == null)
-                {
-                    MsgBox.MsgErr("프로젝트 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                    this.Cursor = Cursors.Default;
-                    return;
-                }
-
-                gridControl2.DataSource = DT_GRD01.Tables[0];
-
-                this.Cursor = Cursors.Default;
-            }
-            catch (Exception ex)
-            {
-                MsgBox.MsgErr("" + ex, "");
-            }
+            dt_YEAR.EditValue = DateTime.Today;
+            dt_END.EditValue = DateTime.Today;
         }
 
         #endregion
@@ -169,81 +77,41 @@ namespace STAT
             error_msg = "";
             switch (Index)
             {
-                case 0: //지출결의서 헤더 조회
+                case 0: //조직별
                     {
-                        string query = string.Empty;
-                        query += "SELECT A.*, B.UNAM as PLANER , C.UNAM as [USER], CASE ISNULL(GW_NO,'') WHEN '' THEN '미결' ELSE '결재' END as GW_YN, D.PJT_NM  ";
-                        query += "FROM SPND_RSLT_H A WITH(NOLOCK)  ";
-                        query += "LEFT JOIN TS_USER B WITH(NOLOCK)  ";
-                        query += "ON		A.PLAN_USER= B.USR  ";
-                        query += "LEFT JOIn TS_USER C WITH(NOLOCK)  ";
-                        query += "ON		A.[USER] = C.USR  ";
-                        query += "LEFT JOIN TB_PJT D WITH(NOLOCK)  ";
-                        query += "ON		A.PJT_CD = D.PJT_CD  ";
-                        query += "WHERE	PLAN_DT BETWEEN '" + DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "'  ";
-                        query += "AND		PLAN_USER LIKE '" + bedt_PLAN_USER.Tag + "' + '%'  ";
-                        query += "AND		A.DEPT LIKE '" + bedt_DEPT.Tag + "' + '%'  ";
-                        query += "AND		[USER] LIKE '" + bedt_USER.Tag + "' + '%'  ";
-                        query += "AND		A.PJT_CD LIKE '" + bedt_PJT.Tag + "' + '%'  ";
-                        query += "AND		BUSINESS_GBN LIKE '" + ledt_BUSSINESS_GBN.EditValue + "' + '%'  ";
-                        query += "AND		CASE ISNULL(GW_NO,'') WHEN '' THEN '0' ELSE '1' END  LIKE '" + ledt_GW_YN.EditValue + "'  ";
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
-                    }
-                    break;
-                case 1: //환종 lookup 조회
-                    {
-                        string query = "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '환종'";
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
-                    }
-                    break;
-                case 2: //대계정 조회
-                    {
-                        string query = string.Empty;
-                        if (Param[0].Equals("0")) query += "SELECT '%' CODE, '전체' NAME UNION ALL "; // param[0] 값이 0일경우 전체포함 1일경우 전체미포함
-                        query += "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '대계정'";
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
-                    }
-                    break;
-                case 3: //소계정 조회
-                    {
-                        string query = string.Empty;
-                        if (Param[0].Equals("0")) query += "SELECT '%' CODE, '전체' NAME UNION ALL "; // param[0] 값이 0일경우 전체포함 1일경우 전체미포함
-                        query += "SELECT	ACT_CD AS CODE ,BUDGET_NM AS NAME FROM	TB_ACCOUNT WHERE	CLASS LIKE  '" + ledt_CLASS.EditValue.ToString() + "'";
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
-                    }
-                    break;
-                case 4: //환율 정보
-                    {
-                        string query = "SELECT EXCH_RATE FROM TB_EXCHANGE WITH(NOLOCK) WHERE YEAR = @YEAR AND MONTH = @MONTH AND EXCH_CD = @EXCH_CD";
-                        gConst.DbConn.AddParameter(new SqlParameter("@EXCH_CD", Param[0]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[1]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@MONTH", Param[2]));
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
-                    }
-                    break;
-                case 5: //예산
-                    {
-                        gConst.DbConn.ProcedureName = "USP_EXEC_GET_BUDGET";
-                        gConst.DbConn.AddParameter(new SqlParameter("@DEPT", Param[0]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_CD", Param[1]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@CLASS", Param[2]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", Param[3]));
-                        gConst.DbConn.AddParameter(new SqlParameter("@MONTH", Param[4]));
+                        gConst.DbConn.ProcedureName = "REPORT_SECT";
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", ((DateTime)dt_YEAR.EditValue).Year.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@S_MONTH", ((DateTime)dt_START.EditValue).Month.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@E_MONTH", ((DateTime)dt_END.EditValue).Month.ToString()));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
-                case 6: //사업구분 lookup 조회
+                case 1: //계정별
                     {
-                        string query = string.Empty;
-                        if (Param[0].Equals("0")) query += "SELECT '%' CODE, '전체' NAME UNION ALL "; // param[0] 값이 0일경우 전체포함 1일경우 전체미포함
-                        query += "SELECT CODE, NAME FROM TS_CODE WITH(NOLOCK) WHERE C_ID = '사업구분'";
-                        dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
+                        gConst.DbConn.ProcedureName = "REPORT_ACT";
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", ((DateTime)dt_YEAR.EditValue).Year.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@S_MONTH", ((DateTime)dt_START.EditValue).Month.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@E_MONTH", ((DateTime)dt_END.EditValue).Month.ToString()));
+                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
-                case 7:  //지출결의서 디테일
+                case 2: //부서별
                     {
-                        gConst.DbConn.ProcedureName = "USP_EXEC_GET_SPND_RSLT_D";
-                        gConst.DbConn.AddParameter(new SqlParameter("@ADMIN_NO", Param[0]));
+                        gConst.DbConn.ProcedureName = "REPORT_DEPT";
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", ((DateTime)dt_YEAR.EditValue).Year.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@S_MONTH", ((DateTime)dt_START.EditValue).Month.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@E_MONTH", ((DateTime)dt_END.EditValue).Month.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@DEPT", bedt_PJT.Tag.ToString()));
+                        dt = gConst.DbConn.GetDataSetQuery(out error_msg);
+                    }
+                    break;
+                case 4: //프로젝트별
+                    {
+                        gConst.DbConn.ProcedureName = "REPORT_PJT";
+                        gConst.DbConn.AddParameter(new SqlParameter("@YEAR", ((DateTime)dt_YEAR.EditValue).Year.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@S_MONTH", ((DateTime)dt_START.EditValue).Month.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@E_MONTH", ((DateTime)dt_END.EditValue).Month.ToString()));
+                        gConst.DbConn.AddParameter(new SqlParameter("@PJT_CD", bedt_PJT.Tag.ToString()));
                         dt = gConst.DbConn.GetDataSetQuery(out error_msg);
                     }
                     break;
@@ -253,65 +121,28 @@ namespace STAT
             return dt;
         }
 
-        private bool df_Transaction(object[] Param, DataRow dr, out string error_msg)
-        {
-
-            bool result = false;
-            gConst.DbConn.ClearDB();
-            error_msg = "";
-
-            gConst.DbConn.BeginTrans();
-
-            try
-            {
-                #region 입력/수정/삭제
-
-                string query = string.Empty;
-                query += "UPDATE    SPND_RSLT_H ";
-                query += "SET		GW_NO = @GW_NO ";
-                query += "		    ,MODIFY_DT = GETDATE() ";
-                query += "		    ,MODIFY_ID = '' ";
-                query += "WHERE	ADMIN_NO = @ADMIN_NO ";
-
-                if (!gConst.DbConn.ExecuteNonQuery(out error_msg, ""))
-                {
-                    MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
-                    gConst.DbConn.Rollback();
-                }
-                else
-                {
-                    ADMIN_NO = error_msg;
-                    result = true;
-                }
-                #endregion
-                gConst.DbConn.ClearDB();
-            }
-            catch (Exception ee)
-            {
-                Console.WriteLine(ee.ToString());
-                gConst.DbConn.Rollback();
-            }
-
-            gConst.DbConn.Commit();
-            return result;
-        }
-
         #endregion
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
             try
             {
+                string title;
                 this.Cursor = Cursors.WaitCursor;
                 DT_GRD01 = null;
                 gridControl1.DataSource = null;
-                DT_GRD01 = df_select(0, null, out error_msg);
+                DT_GRD01 = df_select(4, null, out error_msg);
                 if (DT_GRD01 == null)
                 {
                     MsgBox.MsgErr("지출결의서 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
                     this.Cursor = Cursors.Default;
                     return;
                 }
+
+                spreadsheetControl1.LoadDocument("예산대비집행양식_프로젝트.xlsx", DocumentFormat.Xlsx);
+                title = "예산 대비 집행/실적(프로젝트 - " + bedt_PJT.Text + ")";
+
+                Set_Excel_Data(DT_GRD01, title);
 
                 gridControl1.DataSource = DT_GRD01.Tables[0];
                 //DT_GRD02 = DT_GRD01.Copy();
@@ -323,60 +154,89 @@ namespace STAT
             }
         }
 
-        private void btn_Save_Click(object sender, EventArgs e)
+        private void Set_Excel_Data(DataSet ds, string title)
         {
-            DataSet ds_new;
-
-            DataRow dr = gridView2.GetFocusedDataRow();
-            gParam = new string[] { ADMIN_NO };
-            df_Transaction(gParam, dr, out gOut_MSG);
-
-            MsgBox.MsgInformation("저장 완료", "확인");
-        }
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            if (DT_GRD01.HasChanges())
+            Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
+            sheet.Cells["B6"].Value = title;
+            int Start_position = 6;
+            int addrow_cnt = 0;
+            int EndMonth = ((DateTime)dt_END.EditValue).Month;
+            for (int i = 0; i < DT_GRD01.Tables[0].Rows.Count; i++)
             {
-                if (!MsgBox.MsgQuestion("변경사항이 있습니다. 저장하신 후 진행하시겠습니까?", "알림"))
+                if (DT_GRD01.Tables[0].Rows.Count > addrow_cnt + 10)
                 {
-                    return;
+                    sheet.Rows.Insert(Start_position + i);
+                    sheet.Rows[Start_position + i].CopyFrom(sheet.Rows[Start_position + i + 1]);
+                    addrow_cnt++;
                 }
-                else
+
+                sheet.Cells["B" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["NAME"].ToString();
+                if(EndMonth >= 1 )
                 {
-                    btn_Save_Click(null, null);
+                    sheet.Cells["C" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["1월 예산"].ToString());
+                    sheet.Cells["D" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["1월 집행"].ToString());
+                    if(EndMonth >= 2)
+                    {
+                        sheet.Cells["J" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["2월 예산"].ToString());
+                        sheet.Cells["L" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["2월 집행"].ToString());
+                        if(EndMonth >= 3)
+                        {
+                            sheet.Cells["R" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["3월 예산"].ToString());
+                            sheet.Cells["T" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["3월 집행"].ToString());
+                            if (EndMonth >= 4)
+                            {
+                                sheet.Cells["Z" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["4월 예산"].ToString());
+                                sheet.Cells["AB" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["4월 집행"].ToString());
+                                if (EndMonth >= 5)
+                                {
+                                    sheet.Cells["AH" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["5월 예산"].ToString());
+                                    sheet.Cells["AJ" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["5월 집행"].ToString());
+                                    if (EndMonth >= 6)
+                                    {
+                                        sheet.Cells["AP" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["6월 예산"].ToString());
+                                        sheet.Cells["AR" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["6월 집행"].ToString());
+                                        if (EndMonth >= 7)
+                                        {
+                                            sheet.Cells["AX" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["7월 예산"].ToString());;
+                                            sheet.Cells["AZ" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["7월 집행"].ToString()); ;
+                                            if (EndMonth >= 8)
+                                            {
+                                                sheet.Cells["BF" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["8월 예산"].ToString());
+                                                sheet.Cells["BH" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["8월 집행"].ToString());
+                                                if (EndMonth >= 9)
+                                                {
+                                                    sheet.Cells["BN" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["9월 예산"].ToString());
+                                                    sheet.Cells["BP" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["9월 집행"].ToString());
+                                                    if (EndMonth >= 10)
+                                                    {
+                                                        sheet.Cells["BV" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["10월 예산"].ToString());
+                                                        sheet.Cells["BX" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["10월 집행"].ToString());
+                                                        if (EndMonth >= 11)
+                                                        {
+                                                            sheet.Cells["CD" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["11월 예산"].ToString());
+                                                            sheet.Cells["CF" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["11월 집행"].ToString());
+                                                            if (EndMonth >= 12)
+                                                            {
+                                                                sheet.Cells["CL" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["12월 예산"].ToString());
+                                                                sheet.Cells["CN" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["12월 집행"].ToString());
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
+
             }
-        }
 
-        private void btn_Add_Click(object sender, EventArgs e)
-        {
-            DataRow DR;
-            gridView2.AddNewRow();
-            DR = gridView2.GetDataRow(gridView2.FocusedRowHandle);
-
-            DR["SEQ"] = gridView2.RowCount;
-            DR["TOTAL"] = 0;
-            //DR["ACT_CD"] = select_row["ACT_CD"];
-            //DR["ADMIN_GBN"] = ledt_ADMIN_GBN.EditValue;
-            ////DR["ADJ_MONTH"] = DateTime.Parse(DateTime.Now.ToString()).ToString("yyyy-MM");
-            DT_GRD01.Tables[0].Rows.Add(DR);
-            gridControl2.DataSource = null;
-            gridControl2.DataSource = DT_GRD01.Tables[0];
-            gridView2.FocusedRowHandle = gridView2.RowCount - 1;
         }
 
         private void bedt_DEPT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "부서");
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                bedt_DEPT.Tag = frm.CODE;
-                bedt_DEPT.Text = frm.NAME;
-            }
-        }
-
-        private void bedt_PJT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "프로젝트");
             if (frm.ShowDialog() == DialogResult.OK)
@@ -385,79 +245,44 @@ namespace STAT
                 bedt_PJT.Text = frm.NAME;
             }
         }
-
-        private void bedt_PLAN_USER_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void radioGroup1_EditValueChanged(object sender, EventArgs e)
         {
-            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "사원", bedt_DEPT.Tag.ToString());
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                bedt_PLAN_USER.Tag = frm.CODE;
-                bedt_PLAN_USER.Text = frm.NAME;
-            }
+            //if(radioGroup1.SelectedIndex == 2)
+            //{
+            //    labelControl5.Visible = true;
+            //    bedt_PJT.Visible = true;
+            //}
+            //else
+            //{
+            //    labelControl5.Visible = false;
+            //    bedt_PJT.Visible = false;
+            //}
         }
 
-        private void bedt_USER_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void btn_Excel_Click(object sender, EventArgs e)
         {
-            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "사원");
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                bedt_USER.Tag = frm.CODE;
-                bedt_USER.Text = frm.NAME;
-            }
-        }
-
-        private void ledt_CLASS_EditValueChanged(object sender, EventArgs e)
-        {
-            DataSet ds = df_select(3, new string[] { "0" }, out error_msg);
-            if (ds != null && ds.Tables[0].Rows.Count > 0)
-            {
-                modUTIL.DevLookUpEditorSet(ledt_ACT, ds.Tables[0], "NAME", "CODE");
-                ledt_ACT.ItemIndex = 0;
-            }
-
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            DataRow dr = gridView1.GetFocusedDataRow();
-
-            if(dr == null)
+            if (!MsgBox.MsgQuestion("엑셀 저장하시겠습니까?", "알림"))
             {
                 return;
             }
-            dt_PAY.EditValue = dr["PAY_DT"];
-            dt_BILL.EditValue = dr["BILL_DT"];
-            txt_ACCT_HOLDER.Text = dr["ACCT_HOLDER"].ToString();
-            txt_COMP_ACCT.Text = dr["COMP_ACCT"].ToString();
-            txt_COMP_BANK.Text = dr["COMP_BANK"].ToString();
-            txt_COMP_MNG.Text = dr["COMP_MNG"].ToString();
-            txt_COMP_MNG_PHONE.Text = dr["COMP_MNG_PHONE"].ToString();
-            txt_COMP_NAME.Text = dr["COMP_NAME"].ToString();
-            txt_DCMNT1_NM.Text = dr["DCMNT1_NM"].ToString();
-            txt_DCMNT2_NM.Text = dr["DCMNT2_NM"].ToString();
-            txt_DCMNT3_NM.Text = dr["DCMNT3_NM"].ToString();
-            txt_PLAN_CONTENT.Text = dr["PLAN_CONTENT"].ToString();
-            txt_PLAN_TITLE.Text = dr["PLAN_TITLE"].ToString();
-            bedt_PJT2.Text = dr["PJT_NM"].ToString();
-            bedt_PJT2.Tag = dr["PJT_CD"].ToString();
-            bedt_USER2.Text = dr["USER1"].ToString();
-            bedt_USER2.Tag = dr["USER"].ToString();
-            ledt_BUSSINESS_GBN2.EditValue = dr["BUSINESS_GBN"];
 
+            IWorkbook workbook = spreadsheetControl1.Document;
 
-            DT_GRD02 = null;
-            gridControl2.DataSource = null;
-            //지출결의서 디테일 조회
-            gParam = new string[] { dr["ADMIN_NO"].ToString() };
-            DT_GRD02 = df_select(7, gParam, out error_msg);
-            if (DT_GRD02 == null)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = this.Text;
+            saveFileDialog.Title = "다른 경로로 저장";
+            saveFileDialog.OverwritePrompt = true;
+            saveFileDialog.Filter = "Excel Files(.xls)|*.xls| Excel Files(.xlsx)| *.xlsx | Excel Files(*.xlsm) | *.xlsm";
+            //string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MsgBox.MsgErr("지출결의서 상세 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
-                this.Cursor = Cursors.Default;
-                return;
+                using (FileStream stream = new FileStream(saveFileDialog.FileName + "_" + DateTime.Now.ToShortDateString().Replace("-", "").Replace("/", "")+".xlsx",
+                FileMode.Create, FileAccess.ReadWrite))
+                {
+                    workbook.SaveDocument(stream, DocumentFormat.Xlsx);
+                }
             }
-
-            gridControl2.DataSource = DT_GRD02.Tables[0];
         }
     }
 }

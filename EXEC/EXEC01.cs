@@ -126,7 +126,7 @@ namespace EXEC
             txt_DCMNT3_NM.Text = "";
             txt_DCMNT3.Text = "";
             txt_DCMNT3.Tag = "";
-            txt_PLAN_CONTENT.Text = "";
+            medt_PLAN_CONTENT.Text = "";
             txt_PLAN_TITLE.Text = "";
             bedt_PJT.Text = "";
             bedt_PJT.Tag = "";
@@ -158,7 +158,7 @@ namespace EXEC
             btn_DCMNT1.Enabled = tp;
             btn_DCMNT2.Enabled = tp;
             btn_DCMNT3.Enabled = tp;
-            txt_PLAN_CONTENT.Enabled = tp;
+            medt_PLAN_CONTENT.Enabled = tp;
             txt_PLAN_TITLE.Enabled = tp;
             ledt_BUSSINESS_GBN.Enabled = tp;
             bedt_PJT.Enabled = tp;
@@ -198,7 +198,7 @@ namespace EXEC
                     txt_DCMNT1.Text = ds.Tables[0].Rows[0]["DCMNT1"].ToString(); //? null : ds.Tables[0].Rows[0]["DCMNT1"].ToString();
                     txt_DCMNT2.Text = ds.Tables[0].Rows[0]["DCMNT2"].ToString();
                     txt_DCMNT3.Text = ds.Tables[0].Rows[0]["DCMNT3"].ToString();
-                    txt_PLAN_CONTENT.Text = ds.Tables[0].Rows[0]["PLAN_CONTENT"].ToString();
+                    medt_PLAN_CONTENT.Text = ds.Tables[0].Rows[0]["PLAN_CONTENT"].ToString();
                     txt_PLAN_TITLE.Text = ds.Tables[0].Rows[0]["PLAN_TITLE"].ToString();
                     bedt_PJT.Text = ds.Tables[0].Rows[0]["PJT_NM"].ToString();
                     bedt_PJT.Tag = ds.Tables[0].Rows[0]["PJT_CD"].ToString();
@@ -417,7 +417,7 @@ namespace EXEC
                 gConst.DbConn.AddParameter("PJT_CD", MSSQLAgent.DBFieldType.String, bedt_PJT.Tag);
                 gConst.DbConn.AddParameter("BILL_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyyMMdd"));
                 gConst.DbConn.AddParameter("PLAN_TITLE", MSSQLAgent.DBFieldType.String, txt_PLAN_TITLE.Text);
-                gConst.DbConn.AddParameter("PLAN_CONTENT", MSSQLAgent.DBFieldType.String, txt_PLAN_CONTENT.Text);
+                gConst.DbConn.AddParameter("PLAN_CONTENT", MSSQLAgent.DBFieldType.String, medt_PLAN_CONTENT.Text);
                 gConst.DbConn.AddParameter("COMP_NAME", MSSQLAgent.DBFieldType.String, txt_COMP_NAME.Text);
                 gConst.DbConn.AddParameter("COMP_ACCT", MSSQLAgent.DBFieldType.String, txt_COMP_ACCT.Text);
                 gConst.DbConn.AddParameter("COMP_BANK", MSSQLAgent.DBFieldType.String, txt_COMP_BANK.Text);
@@ -717,7 +717,7 @@ namespace EXEC
                 sheet.Cells["AW5"].Value = ledt_BUSSINESS_GBN.Text;
                 sheet.Cells["BJ5"].Value = bedt_PJT.Text;
                 sheet.Cells["AW6"].Value = txt_PLAN_TITLE.Text;
-                sheet.Cells["AQ12"].Value = txt_PLAN_CONTENT.Text;
+                sheet.Cells["AQ12"].Value = medt_PLAN_CONTENT.Text;
 
 
                 int Start_position = 18;

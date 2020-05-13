@@ -307,7 +307,6 @@
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.txt_PLAN_TITLE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_PLAN_CONTENT = new DevExpress.XtraEditors.TextEdit();
             this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
@@ -371,6 +370,7 @@
             this.txt_ADMIN_NO = new DevExpress.XtraEditors.TextEdit();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.txt_GW_NO = new DevExpress.XtraEditors.TextEdit();
+            this.medt_PLAN_CONTENT = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -406,7 +406,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt_BILL.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_BILL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_TITLE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_CONTENT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).BeginInit();
@@ -454,19 +453,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ADMIN_NO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_GW_NO.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medt_PLAN_CONTENT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_Search_Condition
             // 
             this.grp_Search_Condition.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.grp_Search_Condition.AppearanceCaption.Options.UseFont = true;
+            this.grp_Search_Condition.Controls.Add(this.medt_PLAN_CONTENT);
             this.grp_Search_Condition.Controls.Add(this.labelControl20);
             this.grp_Search_Condition.Controls.Add(this.txt_GW_NO);
             this.grp_Search_Condition.Controls.Add(this.labelControl18);
             this.grp_Search_Condition.Controls.Add(this.txt_ADMIN_NO);
             this.grp_Search_Condition.Controls.Add(this.btn_new);
             this.grp_Search_Condition.Controls.Add(this.btn_excel_make);
-            this.grp_Search_Condition.Controls.Add(this.txt_PLAN_CONTENT);
             this.grp_Search_Condition.Controls.Add(this.labelControl1);
             this.grp_Search_Condition.Controls.Add(this.labelControl10);
             this.grp_Search_Condition.Controls.Add(this.txt_PLAN_TITLE);
@@ -482,7 +482,7 @@
             this.grp_Search_Condition.Controls.Add(this.txt_DEPT);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.Controls.Add(this.dt_PLAN);
-            this.grp_Search_Condition.Size = new System.Drawing.Size(1715, 138);
+            this.grp_Search_Condition.Size = new System.Drawing.Size(1715, 184);
             this.grp_Search_Condition.Text = "지출결의서 헤더";
             // 
             // btn_Close
@@ -567,7 +567,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1028, 481);
+            this.groupControl1.Size = new System.Drawing.Size(1028, 435);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "결의 내역";
             // 
@@ -581,7 +581,7 @@
             this.rtedt_ACT,
             this.repositoryItemCheckEdit1,
             this.rledt_EXCH});
-            this.gridControl1.Size = new System.Drawing.Size(1024, 456);
+            this.gridControl1.Size = new System.Drawing.Size(1024, 410);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -994,13 +994,6 @@
             this.labelControl1.TabIndex = 36;
             this.labelControl1.Text = "기안개요 및 목적";
             // 
-            // txt_PLAN_CONTENT
-            // 
-            this.txt_PLAN_CONTENT.Location = new System.Drawing.Point(110, 108);
-            this.txt_PLAN_CONTENT.Name = "txt_PLAN_CONTENT";
-            this.txt_PLAN_CONTENT.Size = new System.Drawing.Size(496, 20);
-            this.txt_PLAN_CONTENT.TabIndex = 37;
-            // 
             // commandBarGalleryDropDown1
             // 
             this.commandBarGalleryDropDown1.Manager = null;
@@ -1009,9 +1002,9 @@
             // spreadsheetControl1
             // 
             this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetControl1.Location = new System.Drawing.Point(1032, 181);
+            this.spreadsheetControl1.Location = new System.Drawing.Point(1032, 227);
             this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Size = new System.Drawing.Size(683, 485);
+            this.spreadsheetControl1.Size = new System.Drawing.Size(683, 439);
             this.spreadsheetControl1.TabIndex = 10;
             this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
@@ -2608,9 +2601,9 @@
             this.panelControl1.Controls.Add(this.groupControl2);
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 181);
+            this.panelControl1.Location = new System.Drawing.Point(0, 227);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1032, 485);
+            this.panelControl1.Size = new System.Drawing.Size(1032, 439);
             this.panelControl1.TabIndex = 9;
             // 
             // groupControl2
@@ -2647,7 +2640,7 @@
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.txt_COMP_NAME);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(2, 308);
+            this.groupControl2.Location = new System.Drawing.Point(2, 262);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(1028, 175);
             this.groupControl2.TabIndex = 9;
@@ -3013,6 +3006,13 @@
             this.txt_GW_NO.Size = new System.Drawing.Size(120, 20);
             this.txt_GW_NO.TabIndex = 42;
             // 
+            // medt_PLAN_CONTENT
+            // 
+            this.medt_PLAN_CONTENT.Location = new System.Drawing.Point(110, 107);
+            this.medt_PLAN_CONTENT.Name = "medt_PLAN_CONTENT";
+            this.medt_PLAN_CONTENT.Size = new System.Drawing.Size(496, 71);
+            this.medt_PLAN_CONTENT.TabIndex = 44;
+            // 
             // EXEC01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -3064,7 +3064,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt_BILL.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_BILL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_TITLE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_CONTENT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).EndInit();
@@ -3113,6 +3112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ADMIN_NO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_GW_NO.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medt_PLAN_CONTENT.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3137,7 +3137,6 @@
         private DevExpress.XtraEditors.TextEdit txt_DEPT;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.ButtonEdit bedt_PJT;
-        private DevExpress.XtraEditors.TextEdit txt_PLAN_CONTENT;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit txt_PLAN_TITLE;
@@ -3220,5 +3219,6 @@
         private DevExpress.XtraEditors.TextEdit txt_GW_NO;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.TextEdit txt_ADMIN_NO;
+        private DevExpress.XtraEditors.MemoEdit medt_PLAN_CONTENT;
     }
 }
