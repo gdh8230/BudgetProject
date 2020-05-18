@@ -8,6 +8,8 @@ using DH_Core.CommonPopup;
 using DevExpress.XtraEditors;
 using System.IO;
 using DevExpress.Spreadsheet;
+using DevExpress.Utils;
+using DevExpress.XtraGrid.Columns;
 
 namespace STAT
 {
@@ -127,10 +129,14 @@ namespace STAT
         {
             try
             {
+                if(bedt_PJT.Tag.ToString() == "")
+                {
+                    MsgBox.MsgErr("프로젝트를 선택해주세요.\r\n" + error_msg, "에러");
+                    return;
+                }
                 string title;
                 this.Cursor = Cursors.WaitCursor;
                 DT_GRD01 = null;
-                gridControl1.DataSource = null;
                 DT_GRD01 = df_select(4, null, out error_msg);
                 if (DT_GRD01 == null)
                 {
@@ -144,7 +150,6 @@ namespace STAT
 
                 Set_Excel_Data(DT_GRD01, title);
 
-                gridControl1.DataSource = DT_GRD01.Tables[0];
                 //DT_GRD02 = DT_GRD01.Copy();
                 this.Cursor = Cursors.Default;
             }
@@ -161,64 +166,72 @@ namespace STAT
             int Start_position = 6;
             int addrow_cnt = 0;
             int EndMonth = ((DateTime)dt_END.EditValue).Month;
-            for (int i = 0; i < DT_GRD01.Tables[0].Rows.Count; i++)
-            {
-                if (DT_GRD01.Tables[0].Rows.Count > addrow_cnt + 10)
-                {
-                    sheet.Rows.Insert(Start_position + i);
-                    sheet.Rows[Start_position + i].CopyFrom(sheet.Rows[Start_position + i + 1]);
-                    addrow_cnt++;
-                }
 
-                sheet.Cells["B" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["NAME"].ToString();
-                if(EndMonth >= 1 )
+            for (int i = 0; i < DT_GRD01.Tables[1].Rows.Count; i++)
+            {
+                if (i > 0)
                 {
-                    sheet.Cells["C" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["1월 예산"].ToString());
-                    sheet.Cells["D" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["1월 집행"].ToString());
-                    if(EndMonth >= 2)
+                    sheet.Rows.Insert(Start_position + 20 + addrow_cnt, 21);
+                }
+                for (int k = 0; k < 21; k++)
+                {
+                    sheet.Rows[Start_position + 21 + addrow_cnt + k-1].CopyFrom(sheet.Rows[Start_position + k-1]);
+                }
+                sheet.Cells["C" + (Start_position + addrow_cnt)].Value = DT_GRD01.Tables[1].Rows[i]["SECT_NAME"].ToString();
+
+                DataRow[] rows = DT_GRD01.Tables[0].Select("SECT_CD = '" + DT_GRD01.Tables[1].Rows[i]["SECT_CD"] + "'");
+                for (int j = 0; j < rows.Length; j++)
+                {
+                    sheet.Cells["D" + (Start_position + addrow_cnt + j)].Value = rows[j]["예산계정명"].ToString();
+                    if (EndMonth >= 1)
                     {
-                        sheet.Cells["J" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["2월 예산"].ToString());
-                        sheet.Cells["L" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["2월 집행"].ToString());
-                        if(EndMonth >= 3)
+                        sheet.Cells["E" + (Start_position + addrow_cnt + j)].Value = double.Parse(rows[j]["1월 예산"].ToString());
+                        sheet.Cells["F" + (Start_position + addrow_cnt + j)].Value = double.Parse(rows[j]["1월 집행"].ToString());
+                        if (EndMonth >= 2)
                         {
-                            sheet.Cells["R" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["3월 예산"].ToString());
-                            sheet.Cells["T" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["3월 집행"].ToString());
-                            if (EndMonth >= 4)
+                            sheet.Cells["L" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["2월 예산"].ToString());
+                            sheet.Cells["N" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["2월 집행"].ToString());
+                            if (EndMonth >= 3)
                             {
-                                sheet.Cells["Z" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["4월 예산"].ToString());
-                                sheet.Cells["AB" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["4월 집행"].ToString());
-                                if (EndMonth >= 5)
+                                sheet.Cells["T" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["3월 예산"].ToString());
+                                sheet.Cells["V" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["3월 집행"].ToString());
+                                if (EndMonth >= 4)
                                 {
-                                    sheet.Cells["AH" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["5월 예산"].ToString());
-                                    sheet.Cells["AJ" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["5월 집행"].ToString());
-                                    if (EndMonth >= 6)
+                                    sheet.Cells["AB" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["4월 예산"].ToString());
+                                    sheet.Cells["AD" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["4월 집행"].ToString());
+                                    if (EndMonth >= 5)
                                     {
-                                        sheet.Cells["AP" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["6월 예산"].ToString());
-                                        sheet.Cells["AR" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["6월 집행"].ToString());
-                                        if (EndMonth >= 7)
+                                        sheet.Cells["AJ" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["5월 예산"].ToString());
+                                        sheet.Cells["AL" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["5월 집행"].ToString());
+                                        if (EndMonth >= 6)
                                         {
-                                            sheet.Cells["AX" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["7월 예산"].ToString());;
-                                            sheet.Cells["AZ" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["7월 집행"].ToString()); ;
-                                            if (EndMonth >= 8)
+                                            sheet.Cells["AR" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["6월 예산"].ToString());
+                                            sheet.Cells["AT" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["6월 집행"].ToString());
+                                            if (EndMonth >= 7)
                                             {
-                                                sheet.Cells["BF" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["8월 예산"].ToString());
-                                                sheet.Cells["BH" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["8월 집행"].ToString());
-                                                if (EndMonth >= 9)
+                                                sheet.Cells["AZ" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["7월 예산"].ToString()); ;
+                                                sheet.Cells["BB" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["7월 집행"].ToString()); ;
+                                                if (EndMonth >= 8)
                                                 {
-                                                    sheet.Cells["BN" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["9월 예산"].ToString());
-                                                    sheet.Cells["BP" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["9월 집행"].ToString());
-                                                    if (EndMonth >= 10)
+                                                    sheet.Cells["BH" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["8월 예산"].ToString());
+                                                    sheet.Cells["BJ" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["8월 집행"].ToString());
+                                                    if (EndMonth >= 9)
                                                     {
-                                                        sheet.Cells["BV" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["10월 예산"].ToString());
-                                                        sheet.Cells["BX" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["10월 집행"].ToString());
-                                                        if (EndMonth >= 11)
+                                                        sheet.Cells["BP" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["9월 예산"].ToString());
+                                                        sheet.Cells["BR" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["9월 집행"].ToString());
+                                                        if (EndMonth >= 10)
                                                         {
-                                                            sheet.Cells["CD" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["11월 예산"].ToString());
-                                                            sheet.Cells["CF" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["11월 집행"].ToString());
-                                                            if (EndMonth >= 12)
+                                                            sheet.Cells["BX" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["10월 예산"].ToString());
+                                                            sheet.Cells["BZ" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["10월 집행"].ToString());
+                                                            if (EndMonth >= 11)
                                                             {
-                                                                sheet.Cells["CL" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["12월 예산"].ToString());
-                                                                sheet.Cells["CN" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["12월 집행"].ToString());
+                                                                sheet.Cells["CF" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["11월 예산"].ToString());
+                                                                sheet.Cells["CH" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["11월 집행"].ToString());
+                                                                if (EndMonth >= 12)
+                                                                {
+                                                                    sheet.Cells["CN" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["12월 예산"].ToString());
+                                                                    sheet.Cells["CP" + (Start_position + addrow_cnt + j)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["12월 집행"].ToString());
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -231,9 +244,9 @@ namespace STAT
                         }
                     }
                 }
-
+                addrow_cnt = addrow_cnt + 21;
+                sheet.MergeCells(sheet.Range["C" + (Start_position + addrow_cnt) + ":" + "C" + (Start_position + addrow_cnt + 19)]);
             }
-
         }
 
         private void bedt_DEPT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -282,6 +295,34 @@ namespace STAT
                 {
                     workbook.SaveDocument(stream, DocumentFormat.Xlsx);
                 }
+            }
+        }
+
+        private void gridView1_CellMerge(object sender, DevExpress.XtraGrid.Views.Grid.CellMergeEventArgs e)
+        {
+            if (e.Column.FieldName == "프로젝트코드")
+            {
+                int iValue1 = Convert.ToInt32(e.CellValue1);
+                int iValue2 = Convert.ToInt32(e.CellValue2);
+
+                e.Merge = true;
+                e.Handled = true;
+            }
+            if (e.Column.FieldName == "부문")
+            {
+                int iValue1 = Convert.ToInt32(e.CellValue1);
+                int iValue2 = Convert.ToInt32(e.CellValue2);
+
+                e.Merge = true;
+                e.Handled = true;
+            }
+            if (e.Column.FieldName == "예산계정명")
+            {
+                int iValue1 = Convert.ToInt32(e.CellValue1);
+                int iValue2 = Convert.ToInt32(e.CellValue2);
+
+                e.Merge = true;
+                e.Handled = true;
             }
         }
     }

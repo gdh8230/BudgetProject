@@ -75,10 +75,10 @@ namespace EXEC
             //ClearForm();
 
             //로그인 사용자
-            txt_DEPT.Tag = env.Dept;
-            txt_DEPT.Text = env.DeptName;
-            txt_PLAN_USER.Tag = env.EmpCode;
-            txt_PLAN_USER.Text = env.EmpName;
+            bedt_DEPT.Tag = env.Dept;
+            bedt_DEPT.Text = env.DeptName;
+            bedt_PLAN_USER.Tag = env.EmpCode;
+            bedt_PLAN_USER.Text = env.EmpName;
 
 
             DataSet ds;
@@ -302,20 +302,22 @@ namespace EXEC
                 case 6: //부서별 예산 편성/집행 금액 조회
                     {
                         string query = string.Empty;
-                        query += "SELECT ISNULL(SUM(A.DROWUP_MONEY),0) - ISNULL(SUM(B.ADJ_MONEY),0) AS DROWUP ";
+                        query += "DECLARE @SECT NVARCHAR(20) ";
+                        query += "SELECT @SECT = SECT_CD FROM TS_DEPT WHERE DEPT = '" + Param[2] + "' ";
+                        query += "SELECT ISNULL(SUM(A.DROWUP_MONEY),0) + ISNULL(SUM(B.ADJ_MONEY),0) AS DROWUP ";
                         query += "FROM BUDGET_CTRL A WITH(NOLOCK) ";
                         query += "LEFT JOIN (SELECT ADJ_YEAR, ADJ_MONTH, ADMIN_CD, SUM(ADJ_MONEY) as ADJ_MONEY   FROM BUDGET_ADJ WITH(NOLOCK) WHERE ADMIN_GBN = 0 GROUP BY ADJ_YEAR, ADJ_MONTH, ADMIN_CD) B ";
                         query += "ON A.YEAR = B.ADJ_YEAR ";
                         query += "AND A.MONTH = B.ADJ_MONTH ";
                         query += "AND	A.ADMIN_CD = B.ADMIN_CD ";
-                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH = '" + Param[1] + "' AND A.ADMIN_CD = '" + Param[2] + "' AND A.STAT <> 'D' ";
+                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH = '" + Param[1] + "' AND A.ADMIN_CD in (SELECT DEPT FROM TS_DEPT WHERE SECT_CD = @SECT) AND A.STAT <> 'D' ";
                         query += "GROUP BY A.YEAR, A.MONTH ";
 
                         query += "SELECT	ISNULL(SUM(B.TOTAL),0) ";
                         query += "FROM	SPND_RSLT_H	A WITH(NOLOCK) ";
                         query += "JOIN	SPND_RSLT_D B WITH(NOLOCK) ";
                         query += "ON		A.ADMIN_NO = B.ADMIN_NO ";
-                        query += "WHERE	LEFT(PLAN_DT,6) = '" + Param[0] + "'+'" + Param[1] + "' AND DEPT = '" + Param[2] + "' AND A.STAT<> 'D' AND B.STAT <> 'D'";
+                        query += "WHERE	LEFT(PLAN_DT,4) = '" + Param[0] + "' AND LEFT(PLAN_DT,6) <= '" + Param[0] + "'+'" + Param[1] + "' AND DEPT in (SELECT DEPT FROM TS_DEPT WHERE SECT_CD = @SECT) AND A.STAT<> 'D' AND B.STAT <> 'D'";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -410,8 +412,8 @@ namespace EXEC
                 gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, Param[0]);
                 gConst.DbConn.AddParameter("ADMIN_NO", MSSQLAgent.DBFieldType.String, ADMIN_NO);
                 gConst.DbConn.AddParameter("PLAN_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyyMMdd"));
-                gConst.DbConn.AddParameter("DEPT", MSSQLAgent.DBFieldType.String, txt_DEPT.Tag.ToString());
-                gConst.DbConn.AddParameter("DEPT_NAME", MSSQLAgent.DBFieldType.String, txt_DEPT.Text);
+                gConst.DbConn.AddParameter("DEPT", MSSQLAgent.DBFieldType.String, bedt_DEPT.Tag.ToString());
+                gConst.DbConn.AddParameter("DEPT_NAME", MSSQLAgent.DBFieldType.String, bedt_DEPT.Text);
                 gConst.DbConn.AddParameter("PLAN_USER", MSSQLAgent.DBFieldType.String, env.EmpCode);
                 gConst.DbConn.AddParameter("BUSINESS_GBN", MSSQLAgent.DBFieldType.String, ledt_BUSSINESS_GBN.EditValue);
                 gConst.DbConn.AddParameter("PJT_CD", MSSQLAgent.DBFieldType.String, bedt_PJT.Tag);
@@ -644,7 +646,7 @@ namespace EXEC
                 if (dr["EXCH_RATE"].ToString() != "" && dr["PRICE"].ToString() != "" && dr["AMOUNT"].ToString() != "" && dr["ACT_CD"].ToString() != "")
                 {
                     DataSet ds;
-                    gParam = new string[] { txt_DEPT.Tag.ToString(), bedt_PJT.Tag == null ? "" : bedt_PJT.Tag.ToString(), dr["CLASS"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM") };
+                    gParam = new string[] { bedt_DEPT.Tag.ToString(), bedt_PJT.Tag == null ? "" : bedt_PJT.Tag.ToString(), dr["CLASS"].ToString(), ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM") };
                     ds = df_select(5, gParam, out gOut_MSG);
                     if (ds != null)
                     {
@@ -690,7 +692,7 @@ namespace EXEC
         private void bedt_USER_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             DataRow DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "사원");
+            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "사원", "%");
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 bedt_USER.Tag = frm.CODE;
@@ -712,8 +714,8 @@ namespace EXEC
 
                 sheet.Cells["AW3"].Value = DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyy-MM-dd");
                 sheet.Cells["BJ3"].Value = DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyy-MM-dd");
-                sheet.Cells["AW4"].Value = txt_DEPT.Text;
-                sheet.Cells["BJ4"].Value = txt_PLAN_USER.Text;
+                sheet.Cells["AW4"].Value = bedt_DEPT.Text;
+                sheet.Cells["BJ4"].Value = bedt_PLAN_USER.Text;
                 sheet.Cells["AW5"].Value = ledt_BUSSINESS_GBN.Text;
                 sheet.Cells["BJ5"].Value = bedt_PJT.Text;
                 sheet.Cells["AW6"].Value = txt_PLAN_TITLE.Text;
@@ -842,7 +844,7 @@ namespace EXEC
 
         private void txt_DEPT_EditValueChanged(object sender, EventArgs e)
         {
-            gParam = new string[] { ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM"), txt_DEPT.Tag.ToString() };
+            gParam = new string[] { ((DateTime)dt_PLAN.EditValue).Year.ToString(), ((DateTime)dt_PLAN.EditValue).ToString("MM"), bedt_DEPT.Tag.ToString() };
             DataSet ds = df_select(6, gParam, out error_msg);
             if(ds != null)
             {
@@ -867,6 +869,28 @@ namespace EXEC
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             gridView1.DeleteRow(gridView1.FocusedRowHandle);
+        }
+
+        private void bedt_DEPT_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DataRow DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "부서");
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                bedt_DEPT.Tag = frm.CODE;
+                bedt_DEPT.Text = frm.NAME;
+            }
+        }
+
+        private void bedt_PLAN_USER_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DataRow DR = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            frm_PUP_GET_CODE frm = new frm_PUP_GET_CODE(env, "사원", "%");
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                bedt_PLAN_USER.Tag = frm.CODE;
+                bedt_PLAN_USER.Text = frm.NAME;
+            }
         }
     }
 }

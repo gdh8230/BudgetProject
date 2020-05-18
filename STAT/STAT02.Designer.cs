@@ -58,11 +58,6 @@
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.rtedt_ACT = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.rledt_EXCH = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.dt_END = new DevExpress.XtraEditors.DateEdit();
             this.lbl_wave = new System.Windows.Forms.Label();
             this.dt_START = new DevExpress.XtraEditors.DateEdit();
@@ -93,11 +88,6 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rtedt_ACT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rledt_EXCH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_END.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_END.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_START.Properties.CalendarTimeProperties)).BeginInit();
@@ -235,7 +225,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.bedt_PJT.Size = new System.Drawing.Size(100, 24);
             this.bedt_PJT.TabIndex = 43;
-            this.bedt_PJT.Tag = "%";
+            this.bedt_PJT.Tag = "";
             this.bedt_PJT.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_DEPT_ButtonClick);
             // 
             // panelControl3
@@ -252,7 +242,6 @@
             this.groupControl1.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.groupControl1.Appearance.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.spreadsheetControl1);
-            this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
@@ -268,53 +257,6 @@
             this.spreadsheetControl1.Size = new System.Drawing.Size(1309, 510);
             this.spreadsheetControl1.TabIndex = 1;
             this.spreadsheetControl1.Text = "spreadsheetControl1";
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(641, 247);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.rtedt_ACT,
-            this.repositoryItemCheckEdit1,
-            this.rledt_EXCH});
-            this.gridControl1.Size = new System.Drawing.Size(670, 286);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
-            // 
-            // rtedt_ACT
-            // 
-            this.rtedt_ACT.AutoHeight = false;
-            this.rtedt_ACT.Name = "rtedt_ACT";
-            this.rtedt_ACT.NullValuePrompt = "선택하세요.";
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.ValueChecked = "Y";
-            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
-            // 
-            // rledt_EXCH
-            // 
-            this.rledt_EXCH.AutoHeight = false;
-            this.rledt_EXCH.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rledt_EXCH.Name = "rledt_EXCH";
-            this.rledt_EXCH.NullText = "";
             // 
             // dt_END
             // 
@@ -571,11 +513,6 @@
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rtedt_ACT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rledt_EXCH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_END.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_END.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_START.Properties.CalendarTimeProperties)).EndInit();
@@ -596,11 +533,6 @@
         private DevExpress.XtraEditors.ButtonEdit bedt_PJT;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rtedt_ACT;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rledt_EXCH;
         private DevExpress.XtraEditors.DateEdit dt_END;
         private System.Windows.Forms.Label lbl_wave;
         private DevExpress.XtraEditors.DateEdit dt_START;
