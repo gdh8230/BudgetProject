@@ -711,6 +711,8 @@ namespace EXEC
                 }
                 spreadsheetControl1.LoadDocument("지출결의서_양식.xlsx", DocumentFormat.Xlsx);
                 Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
+                sheet.ActiveView.ShowGridlines = false;
+                sheet.ActiveView.ShowFormulas = false;
 
                 sheet.Cells["AW3"].Value = DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyy-MM-dd");
                 sheet.Cells["BJ3"].Value = DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyy-MM-dd");

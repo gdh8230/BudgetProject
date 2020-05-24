@@ -331,10 +331,17 @@ namespace EXEC
             DataSet ds_new;
 
             DataRow dr = gridView1.GetFocusedDataRow();
-            gParam = new string[] { dr["ADMIN_NO"].ToString() };
-            df_Transaction(gParam, dr, out gOut_MSG);
+            if(env.EmpCode.Equals(dr["PLAN_USER"])|| env.EmpCode.Equals("suser"))
+            {
+                gParam = new string[] { dr["ADMIN_NO"].ToString() };
+                df_Transaction(gParam, dr, out gOut_MSG);
 
-            MsgBox.MsgInformation("저장 완료", "확인");
+                MsgBox.MsgInformation("저장 완료", "확인");
+            }
+            else
+            {
+                MsgBox.MsgInformation("기안자와 로그인계정사용자가 일치하지 않아 수정 불가능합니다.", "확인");
+            }
         }
 
         private void btn_Close_Click(object sender, EventArgs e)

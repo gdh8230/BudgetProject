@@ -38,6 +38,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txt_act_nm = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,6 +52,8 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ledt_CTRL_YN = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -87,6 +90,8 @@
             // 
             this.grp_Search_Condition.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.grp_Search_Condition.AppearanceCaption.Options.UseFont = true;
+            this.grp_Search_Condition.Controls.Add(this.simpleButton3);
+            this.grp_Search_Condition.Controls.Add(this.simpleButton2);
             this.grp_Search_Condition.Controls.Add(this.ledt_CTRL_YN);
             this.grp_Search_Condition.Controls.Add(this.labelControl4);
             this.grp_Search_Condition.Controls.Add(this.labelControl3);
@@ -153,8 +158,6 @@
             // 
             this.pnl_Top01.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Top01.Appearance.Options.UseBackColor = true;
-            this.pnl_Top01.LookAndFeel.SkinName = "Whiteprint";
-            this.pnl_Top01.LookAndFeel.UseDefaultLookAndFeel = true;
             this.pnl_Top01.Size = new System.Drawing.Size(1019, 43);
             // 
             // pnl_right02
@@ -225,6 +228,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.spreadsheetControl1);
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 98);
@@ -233,17 +237,26 @@
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "조회내역";
             // 
+            // spreadsheetControl1
+            // 
+            this.spreadsheetControl1.Location = new System.Drawing.Point(437, 157);
+            this.spreadsheetControl1.Name = "spreadsheetControl1";
+            this.spreadsheetControl1.Size = new System.Drawing.Size(400, 200);
+            this.spreadsheetControl1.TabIndex = 1;
+            this.spreadsheetControl1.Text = "spreadsheetControl1";
+            this.spreadsheetControl1.Visible = false;
+            // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 22);
+            this.gridControl1.Location = new System.Drawing.Point(2, 23);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemCheckEdit1,
             this.rledt_CLASS});
-            this.gridControl1.Size = new System.Drawing.Size(1015, 405);
+            this.gridControl1.Size = new System.Drawing.Size(1015, 404);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -394,14 +407,30 @@
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "통제유무";
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(784, 25);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(88, 23);
+            this.simpleButton2.TabIndex = 8;
+            this.simpleButton2.Text = "엑셀양식내려받기";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(878, 25);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(88, 23);
+            this.simpleButton3.TabIndex = 9;
+            this.simpleButton3.Text = "엑셀업로드";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
             // BASE01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 527);
             this.Controls.Add(this.groupControl1);
-            this.LookAndFeel.SkinName = "Whiteprint";
-            this.LookAndFeel.UseDefaultLookAndFeel = true;
             this.Name = "BASE01";
             this.Text = "예산통제설정";
             this.Load += new System.EventHandler(this.USER_Load);
@@ -466,5 +495,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rledt_CLASS;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheetControl1;
     }
 }

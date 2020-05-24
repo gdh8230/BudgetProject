@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Spreadsheet;
 using DH_Core;
 
 namespace BASE
@@ -234,6 +237,111 @@ namespace BASE
                 MsgBox.MsgInformation("저장 완료", "확인");
                 btn_Search_Click(null, null);
                 return;
+            }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+            spreadsheetControl1.LoadDocument("예산계정 양식.xls", DocumentFormat.Xls);
+            Worksheet sheet = this.spreadsheetControl1.Document.Worksheets[0];
+
+            IWorkbook workbook = spreadsheetControl1.Document;
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = "예산계정 양식";
+            saveFileDialog.Title = "다른 경로로 저장";
+            saveFileDialog.OverwritePrompt = true;
+            saveFileDialog.Filter = "Excel Files(.xls)|*.xls| Excel Files(.xlsx)| *.xlsx | Excel Files(*.xlsm) | *.xlsm";
+            //string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(saveFileDialog.FileName,
+                FileMode.Create, FileAccess.ReadWrite))
+                {
+                    workbook.SaveDocument(stream, DocumentFormat.Xls);
+                }
+            }
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            OleDbConnection excel_con = null;
+            string xls_filename;
+
+            try
+            {
+                //엑셀 불러오기
+                FileDialog file_dlg = new OpenFileDialog();
+                file_dlg.InitialDirectory = "c\\";
+                file_dlg.Filter = "모든 파일 (*.*)|*.*";
+                file_dlg.RestoreDirectory = true;
+
+                //엑셀문서를 보여주기
+                if (file_dlg.ShowDialog() == DialogResult.OK)
+                {
+                    xls_filename = file_dlg.FileName;
+
+                    string str_con = "Provider = Microsoft.ACE.OLEDB.12.0.0;Data Source=" + xls_filename + ";Extended Properties='Excel 12.0;HDR=YES'";
+                    excel_con = new OleDbConnection(str_con);
+
+                    excel_con.Open();
+                    string excel_sql = @"select * from[Sheet1$]";
+
+                    OleDbDataAdapter excel_adapter = new OleDbDataAdapter(excel_sql, excel_con);
+                    DataSet excel_DS = new DataSet();
+                    excel_adapter.Fill(excel_DS);
+                    dt = excel_DS.Tables[0];
+
+                }
+                if (MsgBox.MsgQuestion("예산계정을 업로드 하시겠습니까? 기존 데이터는 삭제됩니다.", "경고"))
+                {
+                    gConst.DbConn.ClearDB();
+                    error_msg = "";
+                    string query = string.Empty;
+
+                    gConst.DbConn.BeginTrans();
+
+                    try
+                    {
+                        query += "DELETE FROM TB_ACCOUNT ";
+                        gConst.DbConn.ExecuteSQLQuery(query, out error_msg);
+                        foreach (DataRow dr1 in dt.Rows)
+                        {
+                            query = string.Empty;
+                            query += " INSERT INTO TB_ACCOUNT(ACT_CD,CLASS,ACT_NM,ACT_GRP_NM,BUDGET_NM,CTRL_YN, MODIFY_ID, MODIFY_DT)    ";
+                            query += " VALUES( '"+ dr1["예산계정코드"] + "', '"+ dr1["대계정"] +"', '"+ dr1["회계계정명"] +"', '"+ dr1["계정그룹명"] +"', '"+ dr1["예산계정명"] +"', '"+ dr1[5]+"', '"+ env.EmpCode +"', getdate() )   ";
+
+                            gConst.DbConn.ExecuteSQLQuery(query, out error_msg);
+                            gConst.DbConn.ClearDB();
+                        }
+                        if (error_msg != "")
+                        {
+                            MsgBox.MsgErr("저장에 실패했습니다." + error_msg, "에러");
+                            gConst.DbConn.Rollback();
+                        }
+
+                        getData();
+                    }
+                    catch (Exception ee)
+                    {
+                        MsgBox.MsgErr("실패했습니다." + ee.ToString(), "에러");
+                        gConst.DbConn.Rollback();
+                    }
+
+                    gConst.DbConn.Commit();
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("파일 가져오기 실패 : " + ex.Message);
             }
         }
     }
