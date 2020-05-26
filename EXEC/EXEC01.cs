@@ -304,14 +304,15 @@ namespace EXEC
                         string query = string.Empty;
                         query += "DECLARE @SECT NVARCHAR(20) ";
                         query += "SELECT @SECT = SECT_CD FROM TS_DEPT WHERE DEPT = '" + Param[2] + "' ";
+                        query += "SELECT SUM(DROWUP) FROM( ";
                         query += "SELECT ISNULL(SUM(A.DROWUP_MONEY),0) + ISNULL(SUM(B.ADJ_MONEY),0) AS DROWUP ";
                         query += "FROM BUDGET_CTRL A WITH(NOLOCK) ";
                         query += "LEFT JOIN (SELECT ADJ_YEAR, ADJ_MONTH, ADMIN_CD, SUM(ADJ_MONEY) as ADJ_MONEY   FROM BUDGET_ADJ WITH(NOLOCK) WHERE ADMIN_GBN = 0 GROUP BY ADJ_YEAR, ADJ_MONTH, ADMIN_CD) B ";
                         query += "ON A.YEAR = B.ADJ_YEAR ";
                         query += "AND A.MONTH = B.ADJ_MONTH ";
                         query += "AND	A.ADMIN_CD = B.ADMIN_CD ";
-                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH = '" + Param[1] + "' AND A.ADMIN_CD in (SELECT DEPT FROM TS_DEPT WHERE SECT_CD = @SECT) AND A.STAT <> 'D' ";
-                        query += "GROUP BY A.YEAR, A.MONTH ";
+                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH <= '" + Param[1] + "' AND A.ADMIN_CD in (SELECT DEPT FROM TS_DEPT WHERE SECT_CD = @SECT) AND A.STAT <> 'D' ";
+                        query += "GROUP BY A.YEAR, A.MONTH ) A ";
 
                         query += "SELECT	ISNULL(SUM(B.TOTAL),0) ";
                         query += "FROM	SPND_RSLT_H	A WITH(NOLOCK) ";
@@ -353,6 +354,7 @@ namespace EXEC
                     gConst.DbConn.AddParameter("TOTAL", MSSQLAgent.DBFieldType.String, dr["TOTAL"].ToString());
                     gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, dr["ACT_CD"].ToString());
                     gConst.DbConn.AddParameter("CLASS", MSSQLAgent.DBFieldType.String, dr["CLASS"].ToString());
+                    gConst.DbConn.AddParameter("COMP_NAME", MSSQLAgent.DBFieldType.String, dr["COMP_NAME"].ToString());
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
                 }
                 else
@@ -370,10 +372,11 @@ namespace EXEC
                     gConst.DbConn.AddParameter("TOTAL", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("ACT_CD", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("CLASS", MSSQLAgent.DBFieldType.String, null);
+                    gConst.DbConn.AddParameter("COMP_NAME", MSSQLAgent.DBFieldType.String, null);
                     gConst.DbConn.AddParameter("MODIFY_ID", MSSQLAgent.DBFieldType.String, env.EmpCode);
 
                 }
-                if(!gConst.DbConn.ExecuteNonQuery(out error_msg))
+                if (!gConst.DbConn.ExecuteNonQuery(out error_msg))
                 {
                     MsgBox.MsgErr("다음 사유로 인하여 처리되지 않았습니다.\n" + error_msg, "저장오류");
                     gConst.DbConn.Rollback();
@@ -420,7 +423,7 @@ namespace EXEC
                 gConst.DbConn.AddParameter("BILL_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyyMMdd"));
                 gConst.DbConn.AddParameter("PLAN_TITLE", MSSQLAgent.DBFieldType.String, txt_PLAN_TITLE.Text);
                 gConst.DbConn.AddParameter("PLAN_CONTENT", MSSQLAgent.DBFieldType.String, medt_PLAN_CONTENT.Text);
-                gConst.DbConn.AddParameter("COMP_NAME", MSSQLAgent.DBFieldType.String, txt_COMP_NAME.Text);
+                //gConst.DbConn.AddParameter("COMP_NAME", MSSQLAgent.DBFieldType.String, txt_COMP_NAME.Text);
                 gConst.DbConn.AddParameter("COMP_ACCT", MSSQLAgent.DBFieldType.String, txt_COMP_ACCT.Text);
                 gConst.DbConn.AddParameter("COMP_BANK", MSSQLAgent.DBFieldType.String, txt_COMP_BANK.Text);
                 gConst.DbConn.AddParameter("ACCT_HOLDER", MSSQLAgent.DBFieldType.String, txt_ACCT_HOLDER.Text);
@@ -738,6 +741,7 @@ namespace EXEC
 
                     sheet.Cells["AQ" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["SEQ"].ToString();    //순번
                     sheet.Cells["AR" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ITEM_NM"].ToString();    //품명
+                    sheet.Cells["AV" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["COMP_NAME"].ToString();    //공급업체명
                     sheet.Cells["AZ" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["PRICE"].ToString());    //단가
                     sheet.Cells["BB" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["AMOUNT"].ToString());    //수량
                     sheet.Cells["BD" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["UNIT"].ToString();    //단위
@@ -748,7 +752,7 @@ namespace EXEC
                 }
 
 
-                sheet.Cells["AQ" + (28 + addrow_cnt)].Value = "o 공급업체명: " + txt_COMP_NAME.Text;   //공급업체명
+                sheet.Cells["AQ" + (28 + addrow_cnt)].Value = "o 공급업체명: " + DT_GRD01.Tables[0].Rows[0]["COMP_NAME"].ToString();   //공급업체명
                 sheet.Cells["AQ" + (29 + addrow_cnt)].Value = "o 계좌번호 : " + txt_COMP_ACCT.Text + " / " + txt_COMP_BANK.Text + " / " + txt_ACCT_HOLDER.Text;   //계좌정보
                 sheet.Cells["AQ" + (30 + addrow_cnt)].Value = "o 지급일자 : " + DateTime.Parse(dt_PAY.EditValue.ToString()).ToString("yyyy-MM-dd");    //지급일자
                 sheet.Cells["AQ" + (31 + addrow_cnt)].Value = "o 공급업체 담당자 : " + txt_COMP_MNG.Text + " / " + txt_COMP_MNG_PHONE.Text;   //공급업체 담당자
@@ -864,7 +868,7 @@ namespace EXEC
                     use = double.Parse(ds.Tables[1].Rows[0][0].ToString());
                     txt_USE.Text = double.Parse(ds.Tables[1].Rows[0][0].ToString()).ToString("#,##0");
                 }
-
+                textEdit1.Text = double.Parse((drowup - use).ToString()).ToString("#,##0");
             }
         }
 

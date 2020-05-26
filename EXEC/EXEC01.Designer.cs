@@ -381,6 +381,9 @@
             this.medt_PLAN_CONTENT = new DevExpress.XtraEditors.MemoEdit();
             this.bedt_DEPT = new DevExpress.XtraEditors.ButtonEdit();
             this.bedt_PLAN_USER = new DevExpress.XtraEditors.ButtonEdit();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -464,6 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.medt_PLAN_CONTENT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_DEPT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_PLAN_USER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_Search_Condition
@@ -617,7 +621,8 @@
             this.gridColumn12,
             this.gridColumn14,
             this.gridColumn15,
-            this.gridColumn16});
+            this.gridColumn16,
+            this.gridColumn17});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
@@ -657,7 +662,7 @@
             this.gridColumn1.FieldName = "EXCH_CD";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 4;
+            this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 77;
             // 
             // rledt_EXCH
@@ -677,7 +682,7 @@
             this.gridColumn2.FieldName = "EXCH_RATE";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 5;
+            this.gridColumn2.VisibleIndex = 6;
             this.gridColumn2.Width = 77;
             // 
             // gridColumn4
@@ -688,7 +693,7 @@
             this.gridColumn4.FieldName = "PRICE";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 6;
+            this.gridColumn4.VisibleIndex = 7;
             this.gridColumn4.Width = 77;
             // 
             // gridColumn6
@@ -699,7 +704,7 @@
             this.gridColumn6.FieldName = "AMOUNT";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 7;
+            this.gridColumn6.VisibleIndex = 8;
             this.gridColumn6.Width = 77;
             // 
             // gridColumn7
@@ -708,7 +713,7 @@
             this.gridColumn7.FieldName = "UNIT";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 8;
+            this.gridColumn7.VisibleIndex = 9;
             this.gridColumn7.Width = 77;
             // 
             // gridColumn8
@@ -719,7 +724,7 @@
             this.gridColumn8.FieldName = "TOTAL";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.VisibleIndex = 10;
             this.gridColumn8.Width = 77;
             // 
             // gridColumn9
@@ -758,7 +763,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 10;
+            this.gridColumn11.VisibleIndex = 11;
             this.gridColumn11.Width = 80;
             // 
             // gridColumn12
@@ -774,7 +779,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 11;
+            this.gridColumn12.VisibleIndex = 12;
             this.gridColumn12.Width = 78;
             // 
             // gridColumn14
@@ -790,7 +795,7 @@
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.ReadOnly = true;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 12;
+            this.gridColumn14.VisibleIndex = 13;
             this.gridColumn14.Width = 80;
             // 
             // gridColumn15
@@ -806,7 +811,7 @@
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.ReadOnly = true;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 13;
+            this.gridColumn15.VisibleIndex = 14;
             this.gridColumn15.Width = 80;
             // 
             // gridColumn16
@@ -2603,6 +2608,8 @@
             // 
             this.groupControl2.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.groupControl2.Appearance.Options.UseFont = true;
+            this.groupControl2.Controls.Add(this.labelControl21);
+            this.groupControl2.Controls.Add(this.textEdit1);
             this.groupControl2.Controls.Add(this.labelControl17);
             this.groupControl2.Controls.Add(this.txt_USE);
             this.groupControl2.Controls.Add(this.labelControl16);
@@ -2643,15 +2650,15 @@
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Location = new System.Drawing.Point(557, 136);
+            this.labelControl17.Location = new System.Drawing.Point(749, 110);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(44, 15);
+            this.labelControl17.Size = new System.Drawing.Size(68, 15);
             this.labelControl17.TabIndex = 56;
-            this.labelControl17.Text = "사 용 액";
+            this.labelControl17.Text = "사용액(누계)";
             // 
             // txt_USE
             // 
-            this.txt_USE.Location = new System.Drawing.Point(607, 133);
+            this.txt_USE.Location = new System.Drawing.Point(823, 107);
             this.txt_USE.Name = "txt_USE";
             this.txt_USE.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txt_USE.Properties.Appearance.Options.UseBackColor = true;
@@ -2670,13 +2677,13 @@
             this.labelControl16.Appearance.Options.UseFont = true;
             this.labelControl16.Location = new System.Drawing.Point(557, 110);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(44, 15);
+            this.labelControl16.Size = new System.Drawing.Size(56, 15);
             this.labelControl16.TabIndex = 54;
-            this.labelControl16.Text = "예     산";
+            this.labelControl16.Text = "예산(누계)";
             // 
             // txt_DROWUP
             // 
-            this.txt_DROWUP.Location = new System.Drawing.Point(607, 107);
+            this.txt_DROWUP.Location = new System.Drawing.Point(619, 107);
             this.txt_DROWUP.Name = "txt_DROWUP";
             this.txt_DROWUP.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txt_DROWUP.Properties.Appearance.Options.UseBackColor = true;
@@ -2692,7 +2699,7 @@
             // 
             // bedt_USER
             // 
-            this.bedt_USER.Location = new System.Drawing.Point(607, 80);
+            this.bedt_USER.Location = new System.Drawing.Point(619, 80);
             this.bedt_USER.Name = "bedt_USER";
             editorButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions6.SvgImage")));
             editorButtonImageOptions6.SvgImageSize = new System.Drawing.Size(16, 16);
@@ -2919,6 +2926,7 @@
             this.labelControl2.Size = new System.Drawing.Size(60, 15);
             this.labelControl2.TabIndex = 27;
             this.labelControl2.Text = "공급업체명";
+            this.labelControl2.Visible = false;
             // 
             // txt_COMP_NAME
             // 
@@ -2926,6 +2934,7 @@
             this.txt_COMP_NAME.Name = "txt_COMP_NAME";
             this.txt_COMP_NAME.Size = new System.Drawing.Size(100, 20);
             this.txt_COMP_NAME.TabIndex = 26;
+            this.txt_COMP_NAME.Visible = false;
             // 
             // gridColumn13
             // 
@@ -3031,6 +3040,39 @@
             this.bedt_PLAN_USER.TabIndex = 53;
             this.bedt_PLAN_USER.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_PLAN_USER_ButtonClick);
             // 
+            // labelControl21
+            // 
+            this.labelControl21.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl21.Appearance.Options.UseFont = true;
+            this.labelControl21.Location = new System.Drawing.Point(557, 136);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(48, 15);
+            this.labelControl21.TabIndex = 58;
+            this.labelControl21.Text = "잔      액";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(619, 133);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.DisplayFormat.FormatString = "#,##0";
+            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.EditFormat.FormatString = "#,##0";
+            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.NullValuePrompt = "잔액";
+            this.textEdit1.Properties.ReadOnly = true;
+            this.textEdit1.Size = new System.Drawing.Size(120, 20);
+            this.textEdit1.TabIndex = 57;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "공급업체명";
+            this.gridColumn17.FieldName = "COMP_NAME";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 4;
+            // 
             // EXEC01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -3131,6 +3173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.medt_PLAN_CONTENT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_DEPT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_PLAN_USER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3238,5 +3281,8 @@
         private DevExpress.XtraEditors.MemoEdit medt_PLAN_CONTENT;
         private DevExpress.XtraEditors.ButtonEdit bedt_DEPT;
         private DevExpress.XtraEditors.ButtonEdit bedt_PLAN_USER;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
     }
 }

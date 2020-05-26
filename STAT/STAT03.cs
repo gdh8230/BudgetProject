@@ -103,7 +103,7 @@ namespace STAT
                         string query = string.Empty;
                         query += "SELECT A.ADMIN_NO, B.CLASS, C.NAME as CLASS_NM, B.ACT_CD, D.BUDGET_NM as ACT_NM, ";
                         query += "		dbo.f_get_STR2DATE(PLAN_DT, '-') as PLAN_DT, dbo.f_get_STR2DATE(BILL_DT, '-') as BILL_DT, dbo.f_get_STR2DATE(PAY_DT, '-') as PAY_DT, PLAN_TITLE, ITEM_NM, TOTAL, ";
-                        query += "		A.DEPT_NAME as DEPT_NM, E.SECT_NAME, PJT_NM, COMP_NAME ";
+                        query += "		A.DEPT_NAME as DEPT_NM, E.SECT_NAME, PJT_NM, B.COMP_NAME ";
                         query += "FROM SPND_RSLT_H A WiTH(NOLOCK) ";
                         query += "JOIN SPND_RSLT_D B WITH(NOLOCK) ON	A.ADMIN_NO = B.ADMIN_NO ";
                         query += "JOIN TS_CODE C WITH(NOLOCK) ON	B.CLASS = C.CODE AND	C.C_ID = '대계정' ";
@@ -111,7 +111,7 @@ namespace STAT
                         query += "JOIN TS_DEPT E WITH(NOLOCK) ON	A.DEPT = E.DEPT ";
                         query += "LEFT JOIN TB_PJT F WITH(NOLOCK) ON	A.PJT_CD = F.PJT_CD ";
                         query += "WHERE (PLAN_DT BETWEEN '" + DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "') AND A.DEPT like '" + bedt_DEPT.Tag.ToString() + "' + '%' AND PLAN_USER LIKE '" + bedt_PLAN_USER.Tag.ToString() + "' + '%' ";
-                        query += "AND B.CLASS LIKE '" + ledt_CLASS.EditValue + "' AND B.ACT_CD LIKE '" + ledt_ACT.EditValue + "' AND ISNULL(A.PJT_CD,'') LIKE '" + bedt_PJT.Tag.ToString() + "' AND ISNULL(A.[USER],'') LIKE '" + bedt_USER.Tag.ToString() + "' ";
+                        query += "AND B.CLASS LIKE '" + ledt_CLASS.EditValue + "' AND B.ACT_CD LIKE '" + ledt_ACT.EditValue + "' AND ISNULL(A.PJT_CD,'') LIKE '" + bedt_PJT.Tag.ToString() + "' AND A.STAT <>'D' AND B.STAT <> 'D'  AND ISNULL(A.[USER],'') LIKE '" + bedt_USER.Tag.ToString() + "' ";
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
