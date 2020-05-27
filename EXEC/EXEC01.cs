@@ -412,7 +412,7 @@ namespace EXEC
             {
                 #region 입력/수정/삭제
                 gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_H";
-                gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, Param[0]);
+                gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, dr.RowState.Equals(DataRowState.Added) ? "I" : "U");
                 gConst.DbConn.AddParameter("ADMIN_NO", MSSQLAgent.DBFieldType.String, ADMIN_NO);
                 gConst.DbConn.AddParameter("PLAN_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyyMMdd"));
                 gConst.DbConn.AddParameter("DEPT", MSSQLAgent.DBFieldType.String, bedt_DEPT.Tag.ToString());

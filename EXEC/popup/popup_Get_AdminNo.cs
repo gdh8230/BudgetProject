@@ -155,8 +155,8 @@ namespace EXEC
                                         "WHERE	PLAN_DT BETWEEN '" + Param[0] + "' AND '" + Param[1] + "' " +
                                         "AND		ADMIN_NO LIKE '" + Param[2] + "' + '%' " +
                                         "AND		A.PLAN_USER LIKE '" + (env.EmpCode.Equals("suser") ? "%" : env.EmpCode) + "' + '%' " +
-                                        "AND		A.STAT <> 'D' " +
-                                        "AND		A.DEPT = '" + env.Dept + "' ";
+                                        "AND		A.STAT <> 'D' ";
+                                        //"AND		A.DEPT = '" + env.Dept + "' ";
                         DT = gConst.DbConn.GetDataSetQuery(Query, out Errchk);
                     }
                     break;

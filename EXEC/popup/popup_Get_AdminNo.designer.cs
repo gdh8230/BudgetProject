@@ -270,7 +270,7 @@
             this.col_CODE.OptionsColumn.AllowEdit = false;
             this.col_CODE.Visible = true;
             this.col_CODE.VisibleIndex = 0;
-            this.col_CODE.Width = 100;
+            this.col_CODE.Width = 140;
             // 
             // col_NAME
             // 
@@ -282,7 +282,7 @@
             this.col_NAME.OptionsColumn.AllowEdit = false;
             this.col_NAME.Visible = true;
             this.col_NAME.VisibleIndex = 1;
-            this.col_NAME.Width = 70;
+            this.col_NAME.Width = 85;
             // 
             // col_SPEC
             // 
