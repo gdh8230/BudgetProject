@@ -481,9 +481,9 @@ namespace EXEC
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (!txt_GW_NO.Text.Equals(""))
+            if (!txt_GW_NO.Text.Equals("") && !env.EmpCode.Equals("suser"))
             {
-                MsgBox.MsgInformation("결재 완료되어 삭제가 불가능합니다.", "확인");
+                MsgBox.MsgInformation("결재 완료되어 수정/삭제가 불가능합니다.", "확인");
                 return;
             }
             if (!txt_DCMNT1.Text.Equals("") && txt_DCMNT1_NM.Text.Equals(""))
