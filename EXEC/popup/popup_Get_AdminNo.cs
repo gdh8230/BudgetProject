@@ -54,8 +54,8 @@ namespace EXEC
         {
             try
             {
-                gParam = new string[] { DatePicker1.GetStartDate.ToString()
-                                        ,DatePicker1.GetEndDate.ToString()
+                gParam = new string[] { DatePicker1.GetStartDate.ToString("yyyyMMdd")
+                                        ,DatePicker1.GetEndDate.ToString("yyyyMMdd")
                                         ,txt_ADMIN_NO.Text.Equals("") ? "%" : txt_ADMIN_NO.Text};
                 DT_GRD01 = df_Transaction( 10, gParam );
                 if ( DT_GRD01 != null )
