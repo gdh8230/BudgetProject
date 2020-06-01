@@ -304,7 +304,7 @@ namespace EXEC
                         string query = string.Empty;
                         query += "DECLARE @SECT NVARCHAR(20) ";
                         query += "SELECT @SECT = SECT_CD FROM TS_DEPT WHERE DEPT = '" + Param[2] + "' ";
-                        query += "SELECT  SUM(DROWUP_MONEY) + SUM(ADJ_MONEY) AS DROWUP ";
+                        query += "SELECT  SUM(ISNULL(DROWUP_MONEY,0)) + SUM(ISNULL(ADJ_MONEY,0)) AS DROWUP ";
                         query += "FROM (SELECT YEAR, MONTH, SECT_CD, SUM(DROWUP_MONEY) AS DROWUP_MONEY ";
                         query += "		FROM  BUDGET_CTRL A WITH(NOLOCK) ";
                         query += "		JOIN  TS_DEPT B WITH(NOLOCK) ";
@@ -532,6 +532,7 @@ namespace EXEC
                         Detail_Transaction(gParam, dr, out gOut_MSG);
                     }
                     MsgBox.MsgInformation("저장 완료", "확인");
+                    txt_ADMIN_NO.Text = ADMIN_NO;
                     //btn_Search_Click(null, null);
                     return;
                 }
