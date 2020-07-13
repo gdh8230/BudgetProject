@@ -181,7 +181,7 @@ namespace STAT
 
                 DataRow[] rows = DT_GRD01.Tables[0].Select("SECT_CD = '" + DT_GRD01.Tables[1].Rows[i]["SECT_CD"] + "'");
                 for (int j = 0; j < rows.Length; j++)
-                {
+                    {
                     sheet.Cells["D" + (Start_position + addrow_cnt + j)].Value = rows[j]["예산계정명"].ToString();
                     if (EndMonth >= 1)
                     {

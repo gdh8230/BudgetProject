@@ -256,6 +256,12 @@
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Util\AppUtil.cs" />
+    <Compile Include="Util\EXEC01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\EXEC01.Designer.cs">
+      <DependentUpon>EXEC01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\FormUpload.cs" />
     <Compile Include="Util\CommonEnum.cs" />
     <Compile Include="Util\DevEditorUtil.cs" />
@@ -353,6 +359,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\EXEC01.resx">
+      <DependentUpon>EXEC01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Util\ProgressIndicator\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>

@@ -279,7 +279,7 @@ namespace SYST
             for (int count = Rows.Length-1 ; count >= 0 ; count--)
             {
                 gview_Data02.DeleteRow(Rows[count]);
-            
+
             }
             btn_Save_Click(null, null);
         }
@@ -328,6 +328,7 @@ namespace SYST
         }
 
         #endregion
+
 
         #region Events (클릭을 제외한 이벤트처리)
         /////////////////////////////////////

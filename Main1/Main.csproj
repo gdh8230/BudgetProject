@@ -43,6 +43,10 @@
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DH_Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\DH_Core.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -125,10 +129,6 @@
     <ProjectReference Include="..\BASE\BASE.csproj">
       <Project>{b9852191-1692-4fc2-a4a4-8653d4445997}</Project>
       <Name>BASE</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EWMES_Core\DH_Core.csproj">
-      <Project>{2377f907-1e07-4792-96e3-14c46d8d5735}</Project>
-      <Name>DH_Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\EXEC\EXEC.csproj">
       <Project>{a307069c-c556-4b0a-a429-6e8a2ccd808e}</Project>
