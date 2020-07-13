@@ -386,9 +386,10 @@ namespace STD
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (bedt_CODE.EditValue.Equals(""))
+            if (bedt_CODE.EditValue == null || bedt_CODE.EditValue.Equals(""))
             {
-                MsgBox.MsgInformation(labelControl8.Text+ "를 선택한 후 진행해주세요.", "확인");
+                MsgBox.MsgInformation(ledt_ADMIN_GBN.Text+ "를 선택한 후 진행해주세요.", "확인");
+                return;
             }
             DataRow DR;
             gridView5.AddNewRow();

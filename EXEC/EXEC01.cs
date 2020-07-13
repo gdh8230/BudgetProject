@@ -304,15 +304,30 @@ namespace EXEC
                         string query = string.Empty;
                         query += "DECLARE @SECT NVARCHAR(20) ";
                         query += "SELECT @SECT = SECT_CD FROM TS_DEPT WHERE DEPT = '" + Param[2] + "' ";
-                        query += "SELECT SUM(DROWUP) FROM( ";
-                        query += "SELECT ISNULL(SUM(A.DROWUP_MONEY),0) + ISNULL(SUM(B.ADJ_MONEY),0) AS DROWUP ";
-                        query += "FROM BUDGET_CTRL A WITH(NOLOCK) ";
-                        query += "LEFT JOIN (SELECT ADJ_YEAR, ADJ_MONTH, ADMIN_CD, SUM(ADJ_MONEY) as ADJ_MONEY   FROM BUDGET_ADJ WITH(NOLOCK) WHERE ADMIN_GBN = 0 GROUP BY ADJ_YEAR, ADJ_MONTH, ADMIN_CD) B ";
-                        query += "ON A.YEAR = B.ADJ_YEAR ";
-                        query += "AND A.MONTH = B.ADJ_MONTH ";
-                        query += "AND	A.ADMIN_CD = B.ADMIN_CD ";
-                        query += "WHERE ACT_GBN = 1 AND A.ADMIN_GBN = 0 AND YEAR = '" + Param[0] + "'  AND MONTH <= '" + Param[1] + "' AND A.ADMIN_CD in (SELECT DEPT FROM TS_DEPT WHERE SECT_CD = @SECT) AND A.STAT <> 'D' ";
-                        query += "GROUP BY A.YEAR, A.MONTH ) A ";
+                        query += "SELECT  SUM(ISNULL(DROWUP_MONEY,0)) + SUM(ISNULL(ADJ_MONEY,0)) AS DROWUP ";
+                        query += "FROM (SELECT YEAR, MONTH, SECT_CD, SUM(DROWUP_MONEY) AS DROWUP_MONEY ";
+                        query += "		FROM  BUDGET_CTRL A WITH(NOLOCK) ";
+                        query += "		JOIN  TS_DEPT B WITH(NOLOCK) ";
+                        query += "		ON		A.ADMIN_CD = B.DEPT ";
+                        query += "		AND		ACT_GBN = 1 ";
+                        query += "		AND		ADMIN_GBN = 0 ";
+                        query += "		AND		A.STAT <> 'D'  ";
+                        query += "		AND		A.ADMIN_CD in (SELECT DEPT FROM TS_DEPT  ";
+                        query += "								WHERE SECT_CD = @SECT) ";
+                        query += "		GROUP BY YEAR, MONTH, SECT_CD) A ";
+                        query += "LEFT JOIN (SELECT ADJ_YEAR, ADJ_MONTH, SECT_CD, SUM(ADJ_MONEY) as ADJ_MONEY    ";
+                        query += "			FROM BUDGET_ADJ A WITH(NOLOCK)  ";
+                        query += "			JOIN TS_DEPT B WITH(NOLOCK) ";
+                        query += "			ON	A.ADMIN_CD = B.DEPT ";
+                        query += "			AND	A.STAT <> 'D'";
+                        query += "			AND A.ADMIN_CD in (SELECT DEPT FROM TS_DEPT ";
+                        query += "								WHERE SECT_CD = @SECT) ";
+                        query += "			AND	A.ADMIN_GBN = 0 ";
+                        query += "			GROUP BY ADJ_YEAR, ADJ_MONTH, SECT_CD) B  ";
+                        query += "ON A.YEAR = B.ADJ_YEAR   ";
+                        query += "AND A.MONTH = B.ADJ_MONTH   ";
+                        query += "AND	A.SECT_CD = B.SECT_CD   ";
+                        query += "WHERE YEAR = '" + Param[0] + "'  AND MONTH <= '" + Param[1] + "'";
 
                         query += "SELECT	ISNULL(SUM(B.TOTAL),0) ";
                         query += "FROM	SPND_RSLT_H	A WITH(NOLOCK) ";
@@ -412,7 +427,7 @@ namespace EXEC
             {
                 #region 입력/수정/삭제
                 gConst.DbConn.ProcedureName = "dbo.USP_EXEC_SET_SPND_RSLT_H";
-                gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, Param[0]);
+                gConst.DbConn.AddParameter("ACCTYPE", MSSQLAgent.DBFieldType.String, "I");
                 gConst.DbConn.AddParameter("ADMIN_NO", MSSQLAgent.DBFieldType.String, ADMIN_NO);
                 gConst.DbConn.AddParameter("PLAN_DT", MSSQLAgent.DBFieldType.String, DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyyMMdd"));
                 gConst.DbConn.AddParameter("DEPT", MSSQLAgent.DBFieldType.String, bedt_DEPT.Tag.ToString());
@@ -481,9 +496,9 @@ namespace EXEC
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (!txt_GW_NO.Text.Equals(""))
+            if (!txt_GW_NO.Text.Equals("") && !env.EmpCode.Equals("suser"))
             {
-                MsgBox.MsgInformation("결재 완료되어 삭제가 불가능합니다.", "확인");
+                MsgBox.MsgInformation("결재 완료되어 수정/삭제가 불가능합니다.", "확인");
                 return;
             }
             if (!txt_DCMNT1.Text.Equals("") && txt_DCMNT1_NM.Text.Equals(""))
@@ -517,6 +532,7 @@ namespace EXEC
                         Detail_Transaction(gParam, dr, out gOut_MSG);
                     }
                     MsgBox.MsgInformation("저장 완료", "확인");
+                    txt_ADMIN_NO.Text = ADMIN_NO;
                     //btn_Search_Click(null, null);
                     return;
                 }
