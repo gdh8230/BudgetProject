@@ -488,7 +488,15 @@ namespace EXEC
             if(_frm.ShowDialog() == DialogResult.OK)
             {
                 ADMIN_NO = _frm.ADMIN_NO;
-                EnableControl(false);
+                DataRow dr = _frm.ITEM_ROW;
+                if (dr["GW_NO"].ToString() == "")
+                {
+                    EnableControl(true);
+                }
+                else
+                {
+                    EnableControl(false);
+                }
                 getHeaderData();
                 getGridData();
             }
@@ -672,7 +680,7 @@ namespace EXEC
                         if (ds.Tables[0].Rows.Count > 0)
                         {
                             dr["BUDGET_MONEY_DEPT"] = ds.Tables[0].Rows[0][0];
-                            dr["REMAIN_MONEY_DEPT"] = double.Parse(ds.Tables[0].Rows[0][0].ToString()) - double.Parse(ds.Tables[0].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
+                            dr["REMAIN_MONEY_DEPT"] = double.Parse(ds.Tables[0].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
                         }
                         else
                         {
@@ -682,7 +690,7 @@ namespace EXEC
                         if (ds.Tables[1].Rows.Count > 0)
                         {
                             dr["BUDGET_MONEY_PJT"] = ds.Tables[1].Rows[0][0];
-                            dr["REMAIN_MONEY_PJT"] = double.Parse(ds.Tables[1].Rows[0][0].ToString()) - double.Parse(ds.Tables[1].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
+                            dr["REMAIN_MONEY_PJT"] = double.Parse(ds.Tables[1].Rows[0][1].ToString()) - double.Parse(dr["TOTAL"].ToString());
                         }
                         else
                         {
@@ -733,14 +741,14 @@ namespace EXEC
                 sheet.ActiveView.ShowGridlines = false;
                 sheet.ActiveView.ShowFormulas = false;
 
-                sheet.Cells["AW3"].Value = DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyy-MM-dd");
-                sheet.Cells["BJ3"].Value = DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyy-MM-dd");
-                sheet.Cells["AW4"].Value = bedt_DEPT.Text;
-                sheet.Cells["BJ4"].Value = bedt_PLAN_USER.Text;
-                sheet.Cells["AW5"].Value = ledt_BUSSINESS_GBN.Text;
-                sheet.Cells["BJ5"].Value = bedt_PJT.Text;
-                sheet.Cells["AW6"].Value = txt_PLAN_TITLE.Text;
-                sheet.Cells["AQ12"].Value = medt_PLAN_CONTENT.Text;
+                sheet.Cells["D3"].Value = DateTime.Parse(dt_PLAN.EditValue.ToString()).ToString("yyyy-MM-dd");
+                sheet.Cells["H3"].Value = DateTime.Parse(dt_BILL.EditValue.ToString()).ToString("yyyy-MM-dd");
+                sheet.Cells["D4"].Value = bedt_DEPT.Text;
+                sheet.Cells["H4"].Value = bedt_PLAN_USER.Text;
+                sheet.Cells["D5"].Value = ledt_BUSSINESS_GBN.Text;
+                sheet.Cells["H5"].Value = bedt_PJT.Text;
+                sheet.Cells["D6"].Value = txt_PLAN_TITLE.Text;
+                sheet.Cells["B12"].Value = medt_PLAN_CONTENT.Text;
 
 
                 int Start_position = 18;
@@ -755,39 +763,39 @@ namespace EXEC
                         addrow_cnt++;
                     }
 
-                    sheet.Cells["AQ" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["SEQ"].ToString();    //순번
-                    sheet.Cells["AR" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ITEM_NM"].ToString();    //품명
-                    sheet.Cells["AV" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["COMP_NAME"].ToString();    //공급업체명
-                    sheet.Cells["AZ" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["PRICE"].ToString());    //단가
-                    sheet.Cells["BB" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["AMOUNT"].ToString());    //수량
-                    sheet.Cells["BD" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["UNIT"].ToString();    //단위
-                    sheet.Cells["BF" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["TOTAL"].ToString());    //소계
-                    sheet.Cells["BI" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["CLASS_NM"].ToString();    //대계정명
-                    sheet.Cells["BL" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ACT_NM"].ToString();    //소계정명
+                    sheet.Cells["B" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["SEQ"].ToString();    //순번
+                    sheet.Cells["C" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ITEM_NM"].ToString();    //품명
+                    sheet.Cells["D" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["COMP_NAME"].ToString();    //공급업체명
+                    sheet.Cells["E" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["PRICE"].ToString());    //단가
+                    sheet.Cells["F" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["AMOUNT"].ToString());    //수량
+                    sheet.Cells["G" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["UNIT"].ToString();    //단위
+                    sheet.Cells["H" + (Start_position + i)].Value = double.Parse(DT_GRD01.Tables[0].Rows[i]["TOTAL"].ToString());    //소계
+                    sheet.Cells["I" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["CLASS_NM"].ToString();    //대계정명
+                    sheet.Cells["J" + (Start_position + i)].Value = DT_GRD01.Tables[0].Rows[i]["ACT_NM"].ToString();    //소계정명
 
                 }
 
 
-                sheet.Cells["AQ" + (28 + addrow_cnt)].Value = "o 공급업체명: " + DT_GRD01.Tables[0].Rows[0]["COMP_NAME"].ToString();   //공급업체명
-                sheet.Cells["AQ" + (29 + addrow_cnt)].Value = "o 계좌번호 : " + txt_COMP_ACCT.Text + " / " + txt_COMP_BANK.Text + " / " + txt_ACCT_HOLDER.Text;   //계좌정보
-                sheet.Cells["AQ" + (30 + addrow_cnt)].Value = "o 지급일자 : " + DateTime.Parse(dt_PAY.EditValue.ToString()).ToString("yyyy-MM-dd");    //지급일자
-                sheet.Cells["AQ" + (31 + addrow_cnt)].Value = "o 공급업체 담당자 : " + txt_COMP_MNG.Text + " / " + txt_COMP_MNG_PHONE.Text;   //공급업체 담당자
-                sheet.Cells["AQ" + (35 + addrow_cnt)].Value = txt_DCMNT1_NM.Text;   //첨부파일1
+                sheet.Cells["B" + (28 + addrow_cnt)].Value = "o 공급업체명: " + DT_GRD01.Tables[0].Rows[0]["COMP_NAME"].ToString();   //공급업체명
+                sheet.Cells["B" + (29 + addrow_cnt)].Value = "o 계좌번호 : " + txt_COMP_ACCT.Text + " / " + txt_COMP_BANK.Text + " / " + txt_ACCT_HOLDER.Text;   //계좌정보
+                sheet.Cells["B" + (30 + addrow_cnt)].Value = "o 지급일자 : " + DateTime.Parse(dt_PAY.EditValue.ToString()).ToString("yyyy-MM-dd");    //지급일자
+                sheet.Cells["B" + (31 + addrow_cnt)].Value = "o 공급업체 담당자 : " + txt_COMP_MNG.Text + " / " + txt_COMP_MNG_PHONE.Text;   //공급업체 담당자
+                sheet.Cells["B" + (35 + addrow_cnt)].Value = txt_DCMNT1_NM.Text;   //첨부파일1
                 if (txt_DCMNT2_NM.Text != "")
                 {
                     sheet.Rows.Insert(35 + addrow_cnt);
                     sheet.Rows[35 + addrow_cnt].CopyFrom(sheet.Rows[35 + addrow_cnt + 1]);
-                    sheet.Cells["AQ" + (35 + addrow_cnt + 1)].Value = txt_DCMNT2_NM.Text;   //첨부파일2
+                    sheet.Cells["B" + (35 + addrow_cnt + 1)].Value = txt_DCMNT2_NM.Text;   //첨부파일2
                 }
                 if (txt_DCMNT3_NM.Text != "")
                 {
                     sheet.Rows.Insert(36 + addrow_cnt);
                     sheet.Rows[36 + addrow_cnt].CopyFrom(sheet.Rows[36 + addrow_cnt + 1]);
-                    sheet.Cells["AQ" + (36 + addrow_cnt + 1)].Value = txt_DCMNT3_NM.Text;   //첨부파일3
+                    sheet.Cells["B" + (36 + addrow_cnt + 1)].Value = txt_DCMNT3_NM.Text;   //첨부파일3
                 }
 
-                sheet.Cells["BF" + (31 + addrow_cnt)].Value = drowup;
-                sheet.Cells["BS" + (31 + addrow_cnt)].Value = use;
+                sheet.Cells["H" + (33 + addrow_cnt)].Value = drowup;
+                sheet.Cells["M" + (33 + addrow_cnt)].Value = use;
 
                 //FileStream stream = new FileStream()
                 //this.spreadsheetControl1.SaveDocument("123", DocumentFormat.Xlsx);

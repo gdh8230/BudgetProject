@@ -101,17 +101,17 @@ namespace STAT
                 case 0: //예산 사용 내역 조회
                     {
                         string query = string.Empty;
-                        query += "SELECT A.ADMIN_NO, B.CLASS, C.NAME as CLASS_NM, B.ACT_CD, D.BUDGET_NM as ACT_NM, ";
-                        query += "		dbo.f_get_STR2DATE(PLAN_DT, '-') as PLAN_DT, dbo.f_get_STR2DATE(BILL_DT, '-') as BILL_DT, dbo.f_get_STR2DATE(PAY_DT, '-') as PAY_DT, PLAN_TITLE, ITEM_NM, TOTAL, ";
-                        query += "		A.DEPT_NAME as DEPT_NM, E.SECT_NAME, PJT_NM, B.COMP_NAME ";
+                        query += "SELECT A.ADMIN_NO, B.CLASS, C.NAME as CLASS_NM, B.ACT_CD, D.BUDGET_NM as ACT_NM, PLAN_USER, GW_NO, " + Environment.NewLine;
+                        query += "		dbo.f_get_STR2DATE(PLAN_DT, '-') as PLAN_DT, dbo.f_get_STR2DATE(BILL_DT, '-') as BILL_DT, dbo.f_get_STR2DATE(PAY_DT, '-') as PAY_DT, PLAN_TITLE, ITEM_NM, TOTAL, " + Environment.NewLine;
+                        query += "		A.DEPT_NAME as DEPT_NM, E.SECT_NAME, PJT_NM, B.COMP_NAME " + Environment.NewLine;
                         query += "FROM SPND_RSLT_H A WiTH(NOLOCK) ";
-                        query += "JOIN SPND_RSLT_D B WITH(NOLOCK) ON	A.ADMIN_NO = B.ADMIN_NO ";
-                        query += "JOIN TS_CODE C WITH(NOLOCK) ON	B.CLASS = C.CODE AND	C.C_ID = '대계정' ";
-                        query += "JOIN TB_ACCOUNT D WITH(NOLOCK) ON	B.ACT_CD = D.ACT_CD ";
-                        query += "JOIN TS_DEPT E WITH(NOLOCK) ON	A.DEPT = E.DEPT ";
-                        query += "LEFT JOIN TB_PJT F WITH(NOLOCK) ON	A.PJT_CD = F.PJT_CD ";
-                        query += "WHERE (PLAN_DT BETWEEN '" + DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "') AND A.DEPT like '" + bedt_DEPT.Tag.ToString() + "' + '%' AND PLAN_USER LIKE '" + bedt_PLAN_USER.Tag.ToString() + "' + '%' ";
-                        query += "AND B.CLASS LIKE '" + ledt_CLASS.EditValue + "' AND B.ACT_CD LIKE '" + ledt_ACT.EditValue + "' AND ISNULL(A.PJT_CD,'') LIKE '" + bedt_PJT.Tag.ToString() + "' AND A.STAT <>'D' AND B.STAT <> 'D'  AND ISNULL(A.[USER],'') LIKE '" + bedt_USER.Tag.ToString() + "' ";
+                        query += "JOIN SPND_RSLT_D B WITH(NOLOCK) ON	A.ADMIN_NO = B.ADMIN_NO " + Environment.NewLine;
+                        query += "JOIN TS_CODE C WITH(NOLOCK) ON	B.CLASS = C.CODE AND	C.C_ID = '대계정' " + Environment.NewLine;
+                        query += "JOIN TB_ACCOUNT D WITH(NOLOCK) ON	B.ACT_CD = D.ACT_CD " + Environment.NewLine;
+                        query += "JOIN TS_DEPT E WITH(NOLOCK) ON	A.DEPT = E.DEPT " + Environment.NewLine;
+                        query += "LEFT JOIN TB_PJT F WITH(NOLOCK) ON	A.PJT_CD = F.PJT_CD " + Environment.NewLine;
+                        query += "WHERE (PLAN_DT BETWEEN '" + DatePicker1.GetStartDate.ToString("yyyyMMdd") + "' AND '" + DatePicker1.GetEndDate.ToString("yyyyMMdd") + "') AND A.DEPT like '" + bedt_DEPT.Tag.ToString() + "' + '%' AND PLAN_USER LIKE '" + bedt_PLAN_USER.Tag.ToString() + "' + '%' " + Environment.NewLine;
+                        query += "AND B.CLASS LIKE '" + ledt_CLASS.EditValue + "' AND B.ACT_CD LIKE '" + ledt_ACT.EditValue + "' AND ISNULL(A.PJT_CD,'') LIKE '" + bedt_PJT.Tag.ToString() + "' AND A.STAT <>'D' AND B.STAT <> 'D'  AND ISNULL(A.[USER],'') LIKE '" + bedt_USER.Tag.ToString() + "' " + Environment.NewLine;
                         dt = gConst.DbConn.GetDataSetQuery(query, out error_msg);
                     }
                     break;
@@ -189,7 +189,7 @@ namespace STAT
                 DT_GRD01 = df_select(0, null, out error_msg);
                 if (DT_GRD01 == null)
                 {
-                    MsgBox.MsgErr("지출결의서 정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
+                    MsgBox.MsgErr("정보를 가져오는데 실패 했습니다.\r\n" + error_msg, "에러");
                     this.Cursor = Cursors.Default;
                     return;
                 }

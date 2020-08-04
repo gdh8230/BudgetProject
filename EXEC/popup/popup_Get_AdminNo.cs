@@ -146,6 +146,7 @@ namespace EXEC
                                         "		,B.NAME " +
                                         "		,A.PJT_CD " +
                                         "		,C.PJT_NM " +
+                                        "		,A.GW_NO " +
                                         "FROM	SPND_RSLT_H A WITH(NOLOCK) " +
                                         "LEFT JOIN	TS_CODE B WITH(NOLOCK) " +
                                         "ON		A.BUSINESS_GBN = B.CODE " +

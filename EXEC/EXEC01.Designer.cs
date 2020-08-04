@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EXEC01));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -44,238 +46,237 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem2 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem3 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem4 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem5 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem6 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup2 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem7 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem8 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem9 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem10 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem11 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem12 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup3 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem13 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem14 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem15 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem16 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem17 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem18 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem19 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem20 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem21 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem22 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem23 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem24 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup4 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem25 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem26 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem27 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem28 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem29 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem30 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem31 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup5 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem32 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem33 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem34 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem35 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem36 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup6 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem37 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem38 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem39 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup7 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem40 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem41 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem42 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem43 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem44 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup8 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem45 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem46 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem47 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup9 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem48 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem49 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem50 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem51 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup10 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem52 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem53 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem54 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem55 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup11 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem56 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem57 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem58 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem59 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup12 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem60 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem61 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem62 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem63 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup13 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem64 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem65 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem66 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem67 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem68 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem69 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup14 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem70 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup15 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem71 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem72 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup16 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem73 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem74 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup17 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem75 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem76 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup18 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem77 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem78 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem79 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup19 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem80 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem81 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem82 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup20 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem83 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem84 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem85 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup21 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem86 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem87 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem88 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup22 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem89 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem90 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem91 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup23 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem92 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem93 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem94 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup24 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem95 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem96 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem97 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup25 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem98 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem99 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem100 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem101 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem102 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup26 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem103 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem104 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup27 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem105 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem106 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem107 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem108 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup28 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem109 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem110 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem111 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup29 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem112 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem113 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem114 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem115 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem116 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem117 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem118 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem119 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem120 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup30 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem121 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem122 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem123 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem124 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem125 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem126 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem127 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem128 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem129 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup31 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem130 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem131 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem132 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem133 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup32 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem134 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem135 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem136 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem137 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup33 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem138 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem139 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem140 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup34 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem141 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem142 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup35 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem143 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem144 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem145 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem146 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup36 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem147 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem148 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem149 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem150 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem151 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem152 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem153 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup37 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem154 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem155 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem156 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem157 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem158 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem159 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem160 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem161 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem162 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem163 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem164 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup38 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem165 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem166 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem167 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem168 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem169 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup39 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem170 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem171 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup40 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem172 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem173 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem174 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem175 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup81 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem351 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem352 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem353 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem354 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem355 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem356 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup82 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem357 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem358 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem359 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem360 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem361 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem362 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup83 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem363 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem364 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem365 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem366 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem367 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem368 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem369 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem370 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem371 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem372 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem373 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem374 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup84 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem375 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem376 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem377 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem378 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem379 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem380 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem381 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup85 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem382 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem383 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem384 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem385 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem386 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup86 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem387 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem388 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem389 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup87 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem390 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem391 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem392 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem393 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem394 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup88 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem395 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem396 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem397 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup89 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem398 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem399 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem400 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem401 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup90 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem402 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem403 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem404 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem405 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup91 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem406 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem407 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem408 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem409 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup92 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem410 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem411 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem412 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem413 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup93 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem414 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem415 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem416 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem417 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem418 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem419 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup94 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem420 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup95 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem421 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem422 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup96 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem423 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem424 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup97 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem425 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem426 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup98 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem427 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem428 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem429 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup99 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem430 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem431 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem432 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup100 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem433 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem434 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem435 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup101 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem436 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem437 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem438 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup102 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem439 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem440 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem441 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup103 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem442 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem443 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem444 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup104 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem445 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem446 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem447 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup105 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem448 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem449 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem450 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem451 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem452 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup106 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem453 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem454 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup107 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem455 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem456 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem457 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem458 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup108 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem459 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem460 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem461 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup109 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem462 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem463 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem464 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem465 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem466 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem467 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem468 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem469 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem470 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup110 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem471 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem472 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem473 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem474 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem475 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem476 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem477 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem478 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem479 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup111 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem480 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem481 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem482 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem483 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup112 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem484 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem485 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem486 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem487 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup113 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem488 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem489 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem490 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup114 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem491 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem492 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup115 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem493 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem494 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem495 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem496 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup116 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem497 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem498 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem499 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem500 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem501 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem502 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem503 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup117 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem504 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem505 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem506 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem507 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem508 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem509 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem510 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem511 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem512 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem513 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem514 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup118 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem515 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem516 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem517 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem518 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem519 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup119 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem520 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem521 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup120 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem522 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem523 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem524 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem525 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EXEC01));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -301,6 +302,7 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.dt_PLAN = new DevExpress.XtraEditors.DateEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -342,6 +344,8 @@
             this.commandBarGalleryDropDown24 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.txt_USE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
@@ -381,9 +385,7 @@
             this.medt_PLAN_CONTENT = new DevExpress.XtraEditors.MemoEdit();
             this.bedt_DEPT = new DevExpress.XtraEditors.ButtonEdit();
             this.bedt_PLAN_USER = new DevExpress.XtraEditors.ButtonEdit();
-            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -445,6 +447,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_USE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DROWUP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_USER.Properties)).BeginInit();
@@ -467,7 +470,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.medt_PLAN_CONTENT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_DEPT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_PLAN_USER.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grp_Search_Condition
@@ -581,7 +585,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1028, 435);
+            this.groupControl1.Size = new System.Drawing.Size(961, 260);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "결의 내역";
             // 
@@ -595,7 +599,7 @@
             this.rtedt_ACT,
             this.repositoryItemCheckEdit1,
             this.rledt_EXCH});
-            this.gridControl1.Size = new System.Drawing.Size(1024, 410);
+            this.gridControl1.Size = new System.Drawing.Size(957, 235);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -756,7 +760,7 @@
             this.gridColumn11.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn11.Caption = "예산금액(부서)";
+            this.gridColumn11.Caption = "예산금액(계정)";
             this.gridColumn11.DisplayFormat.FormatString = "#,##0";
             this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn11.FieldName = "BUDGET_MONEY_DEPT";
@@ -772,7 +776,7 @@
             this.gridColumn12.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.gridColumn12.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn12.Caption = "잔액(부서)";
+            this.gridColumn12.Caption = "잔액(계정)";
             this.gridColumn12.DisplayFormat.FormatString = "#,##0";
             this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn12.FieldName = "REMAIN_MONEY_DEPT";
@@ -824,6 +828,14 @@
             this.gridColumn16.VisibleIndex = 1;
             this.gridColumn16.Width = 59;
             // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "공급업체명";
+            this.gridColumn17.FieldName = "COMP_NAME";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 4;
+            // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
@@ -842,10 +854,10 @@
             this.dt_PLAN.Properties.Appearance.Options.UseFont = true;
             this.dt_PLAN.Properties.Appearance.Options.UseTextOptions = true;
             this.dt_PLAN.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            editorButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions5.SvgImage")));
-            editorButtonImageOptions5.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions7.SvgImage")));
+            editorButtonImageOptions7.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dt_PLAN.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dt_PLAN.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt_PLAN.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
@@ -1000,9 +1012,9 @@
             // spreadsheetControl1
             // 
             this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetControl1.Location = new System.Drawing.Point(1032, 227);
+            this.spreadsheetControl1.Location = new System.Drawing.Point(0, 0);
             this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Size = new System.Drawing.Size(683, 439);
+            this.spreadsheetControl1.Size = new System.Drawing.Size(740, 439);
             this.spreadsheetControl1.TabIndex = 10;
             this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
@@ -1012,99 +1024,99 @@
             // 
             // 
             this.commandBarGalleryDropDown2.Gallery.ColumnCount = 3;
-            spreadsheetCommandGalleryItemGroup1.Caption = "Gradient Fill";
-            spreadsheetCommandGalleryItemGroup1.CommandName = "ConditionalFormattingDataBarsGradientFillCommandGroup";
-            spreadsheetCommandGalleryItem1.Caption = "Blue Data Bar (Gradient)";
-            spreadsheetCommandGalleryItem1.CommandName = "ConditionalFormattingDataBarGradientBlue";
-            spreadsheetCommandGalleryItem1.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItemGroup81.Caption = "Gradient Fill";
+            spreadsheetCommandGalleryItemGroup81.CommandName = "ConditionalFormattingDataBarsGradientFillCommandGroup";
+            spreadsheetCommandGalleryItem351.Caption = "Blue Data Bar (Gradient)";
+            spreadsheetCommandGalleryItem351.CommandName = "ConditionalFormattingDataBarGradientBlue";
+            spreadsheetCommandGalleryItem351.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem1.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem351.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem2.Caption = "Green Data Bar (Gradient)";
-            spreadsheetCommandGalleryItem2.CommandName = "ConditionalFormattingDataBarGradientGreen";
-            spreadsheetCommandGalleryItem2.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem352.Caption = "Green Data Bar (Gradient)";
+            spreadsheetCommandGalleryItem352.CommandName = "ConditionalFormattingDataBarGradientGreen";
+            spreadsheetCommandGalleryItem352.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem2.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem352.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem3.Caption = "Red Data Bar (Gradient)";
-            spreadsheetCommandGalleryItem3.CommandName = "ConditionalFormattingDataBarGradientRed";
-            spreadsheetCommandGalleryItem3.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem353.Caption = "Red Data Bar (Gradient)";
+            spreadsheetCommandGalleryItem353.CommandName = "ConditionalFormattingDataBarGradientRed";
+            spreadsheetCommandGalleryItem353.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem3.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem353.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem4.Caption = "Orange Data Bar (Gradient)";
-            spreadsheetCommandGalleryItem4.CommandName = "ConditionalFormattingDataBarGradientOrange";
-            spreadsheetCommandGalleryItem4.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem354.Caption = "Orange Data Bar (Gradient)";
+            spreadsheetCommandGalleryItem354.CommandName = "ConditionalFormattingDataBarGradientOrange";
+            spreadsheetCommandGalleryItem354.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem4.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem354.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem5.Caption = "Light Blue Data Bar (Gradient)";
-            spreadsheetCommandGalleryItem5.CommandName = "ConditionalFormattingDataBarGradientLightBlue";
-            spreadsheetCommandGalleryItem5.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem355.Caption = "Light Blue Data Bar (Gradient)";
+            spreadsheetCommandGalleryItem355.CommandName = "ConditionalFormattingDataBarGradientLightBlue";
+            spreadsheetCommandGalleryItem355.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem5.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem355.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem6.Caption = "Purple Data Bar (Gradient)";
-            spreadsheetCommandGalleryItem6.CommandName = "ConditionalFormattingDataBarGradientPurple";
-            spreadsheetCommandGalleryItem6.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem356.Caption = "Purple Data Bar (Gradient)";
+            spreadsheetCommandGalleryItem356.CommandName = "ConditionalFormattingDataBarGradientPurple";
+            spreadsheetCommandGalleryItem356.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem6.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem356.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem1,
-            spreadsheetCommandGalleryItem2,
-            spreadsheetCommandGalleryItem3,
-            spreadsheetCommandGalleryItem4,
-            spreadsheetCommandGalleryItem5,
-            spreadsheetCommandGalleryItem6});
-            spreadsheetCommandGalleryItemGroup2.Caption = "Solid Fill";
-            spreadsheetCommandGalleryItemGroup2.CommandName = "ConditionalFormattingDataBarsSolidFillCommandGroup";
-            spreadsheetCommandGalleryItem7.Caption = "Blue Data Bar (Solid)";
-            spreadsheetCommandGalleryItem7.CommandName = "ConditionalFormattingDataBarSolidBlue";
-            spreadsheetCommandGalleryItem7.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItemGroup81.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem351,
+            spreadsheetCommandGalleryItem352,
+            spreadsheetCommandGalleryItem353,
+            spreadsheetCommandGalleryItem354,
+            spreadsheetCommandGalleryItem355,
+            spreadsheetCommandGalleryItem356});
+            spreadsheetCommandGalleryItemGroup82.Caption = "Solid Fill";
+            spreadsheetCommandGalleryItemGroup82.CommandName = "ConditionalFormattingDataBarsSolidFillCommandGroup";
+            spreadsheetCommandGalleryItem357.Caption = "Blue Data Bar (Solid)";
+            spreadsheetCommandGalleryItem357.CommandName = "ConditionalFormattingDataBarSolidBlue";
+            spreadsheetCommandGalleryItem357.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem7.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem357.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem8.Caption = "Green Data Bar (Solid)";
-            spreadsheetCommandGalleryItem8.CommandName = "ConditionalFormattingDataBarSolidGreen";
-            spreadsheetCommandGalleryItem8.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem358.Caption = "Green Data Bar (Solid)";
+            spreadsheetCommandGalleryItem358.CommandName = "ConditionalFormattingDataBarSolidGreen";
+            spreadsheetCommandGalleryItem358.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem8.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem358.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem9.Caption = "Red Data Bar (Solid)";
-            spreadsheetCommandGalleryItem9.CommandName = "ConditionalFormattingDataBarSolidRed";
-            spreadsheetCommandGalleryItem9.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem359.Caption = "Red Data Bar (Solid)";
+            spreadsheetCommandGalleryItem359.CommandName = "ConditionalFormattingDataBarSolidRed";
+            spreadsheetCommandGalleryItem359.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem9.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem359.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem10.Caption = "Orange Data Bar (Solid)";
-            spreadsheetCommandGalleryItem10.CommandName = "ConditionalFormattingDataBarSolidOrange";
-            spreadsheetCommandGalleryItem10.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem360.Caption = "Orange Data Bar (Solid)";
+            spreadsheetCommandGalleryItem360.CommandName = "ConditionalFormattingDataBarSolidOrange";
+            spreadsheetCommandGalleryItem360.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem10.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem360.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem11.Caption = "Light Blue Data Bar (Solid)";
-            spreadsheetCommandGalleryItem11.CommandName = "ConditionalFormattingDataBarSolidLightBlue";
-            spreadsheetCommandGalleryItem11.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem361.Caption = "Light Blue Data Bar (Solid)";
+            spreadsheetCommandGalleryItem361.CommandName = "ConditionalFormattingDataBarSolidLightBlue";
+            spreadsheetCommandGalleryItem361.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem11.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem361.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem12.Caption = "Purple Data Bar (Solid)";
-            spreadsheetCommandGalleryItem12.CommandName = "ConditionalFormattingDataBarSolidPurple";
-            spreadsheetCommandGalleryItem12.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem362.Caption = "Purple Data Bar (Solid)";
+            spreadsheetCommandGalleryItem362.CommandName = "ConditionalFormattingDataBarSolidPurple";
+            spreadsheetCommandGalleryItem362.Description = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItem12.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
+            spreadsheetCommandGalleryItem362.Hint = "View a colored data bar in the cell. The length of the data bar represents the va" +
     "lue in the cell. A longer bar represents a higher value.";
-            spreadsheetCommandGalleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem7,
-            spreadsheetCommandGalleryItem8,
-            spreadsheetCommandGalleryItem9,
-            spreadsheetCommandGalleryItem10,
-            spreadsheetCommandGalleryItem11,
-            spreadsheetCommandGalleryItem12});
+            spreadsheetCommandGalleryItemGroup82.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem357,
+            spreadsheetCommandGalleryItem358,
+            spreadsheetCommandGalleryItem359,
+            spreadsheetCommandGalleryItem360,
+            spreadsheetCommandGalleryItem361,
+            spreadsheetCommandGalleryItem362});
             this.commandBarGalleryDropDown2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup1,
-            spreadsheetCommandGalleryItemGroup2});
+            spreadsheetCommandGalleryItemGroup81,
+            spreadsheetCommandGalleryItemGroup82});
             this.commandBarGalleryDropDown2.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown2.Manager = null;
             this.commandBarGalleryDropDown2.Name = "commandBarGalleryDropDown2";
@@ -1115,95 +1127,95 @@
             // 
             // 
             this.commandBarGalleryDropDown3.Gallery.ColumnCount = 4;
-            spreadsheetCommandGalleryItemGroup3.Caption = "Color Scales";
-            spreadsheetCommandGalleryItemGroup3.CommandName = "ConditionalFormattingColorScalesCommandGroup";
-            spreadsheetCommandGalleryItem13.Caption = "Green - Yellow - Red Color Scale";
-            spreadsheetCommandGalleryItem13.CommandName = "ConditionalFormattingColorScaleGreenYellowRed";
-            spreadsheetCommandGalleryItem13.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItemGroup83.Caption = "Color Scales";
+            spreadsheetCommandGalleryItemGroup83.CommandName = "ConditionalFormattingColorScalesCommandGroup";
+            spreadsheetCommandGalleryItem363.Caption = "Green - Yellow - Red Color Scale";
+            spreadsheetCommandGalleryItem363.CommandName = "ConditionalFormattingColorScaleGreenYellowRed";
+            spreadsheetCommandGalleryItem363.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem13.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem363.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem14.Caption = "Red - Yellow - Green Color Scale";
-            spreadsheetCommandGalleryItem14.CommandName = "ConditionalFormattingColorScaleRedYellowGreen";
-            spreadsheetCommandGalleryItem14.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem364.Caption = "Red - Yellow - Green Color Scale";
+            spreadsheetCommandGalleryItem364.CommandName = "ConditionalFormattingColorScaleRedYellowGreen";
+            spreadsheetCommandGalleryItem364.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem14.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem364.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem15.Caption = "Green - White - Red Color Scale";
-            spreadsheetCommandGalleryItem15.CommandName = "ConditionalFormattingColorScaleGreenWhiteRed";
-            spreadsheetCommandGalleryItem15.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem365.Caption = "Green - White - Red Color Scale";
+            spreadsheetCommandGalleryItem365.CommandName = "ConditionalFormattingColorScaleGreenWhiteRed";
+            spreadsheetCommandGalleryItem365.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem15.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem365.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem16.Caption = "Red - White - Green Color Scale";
-            spreadsheetCommandGalleryItem16.CommandName = "ConditionalFormattingColorScaleRedWhiteGreen";
-            spreadsheetCommandGalleryItem16.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem366.Caption = "Red - White - Green Color Scale";
+            spreadsheetCommandGalleryItem366.CommandName = "ConditionalFormattingColorScaleRedWhiteGreen";
+            spreadsheetCommandGalleryItem366.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem16.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem366.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem17.Caption = "Blue - White - Red Color Scale";
-            spreadsheetCommandGalleryItem17.CommandName = "ConditionalFormattingColorScaleBlueWhiteRed";
-            spreadsheetCommandGalleryItem17.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem367.Caption = "Blue - White - Red Color Scale";
+            spreadsheetCommandGalleryItem367.CommandName = "ConditionalFormattingColorScaleBlueWhiteRed";
+            spreadsheetCommandGalleryItem367.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem17.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem367.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem18.Caption = "Red - White - Blue Color Scale";
-            spreadsheetCommandGalleryItem18.CommandName = "ConditionalFormattingColorScaleRedWhiteBlue";
-            spreadsheetCommandGalleryItem18.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem368.Caption = "Red - White - Blue Color Scale";
+            spreadsheetCommandGalleryItem368.CommandName = "ConditionalFormattingColorScaleRedWhiteBlue";
+            spreadsheetCommandGalleryItem368.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem18.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem368.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem19.Caption = "White - Red Color Scale";
-            spreadsheetCommandGalleryItem19.CommandName = "ConditionalFormattingColorScaleWhiteRed";
-            spreadsheetCommandGalleryItem19.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem369.Caption = "White - Red Color Scale";
+            spreadsheetCommandGalleryItem369.CommandName = "ConditionalFormattingColorScaleWhiteRed";
+            spreadsheetCommandGalleryItem369.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem19.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem369.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem20.Caption = "Red - White Color Scale";
-            spreadsheetCommandGalleryItem20.CommandName = "ConditionalFormattingColorScaleRedWhite";
-            spreadsheetCommandGalleryItem20.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem370.Caption = "Red - White Color Scale";
+            spreadsheetCommandGalleryItem370.CommandName = "ConditionalFormattingColorScaleRedWhite";
+            spreadsheetCommandGalleryItem370.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem20.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem370.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem21.Caption = "Green - White Color Scale";
-            spreadsheetCommandGalleryItem21.CommandName = "ConditionalFormattingColorScaleGreenWhite";
-            spreadsheetCommandGalleryItem21.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem371.Caption = "Green - White Color Scale";
+            spreadsheetCommandGalleryItem371.CommandName = "ConditionalFormattingColorScaleGreenWhite";
+            spreadsheetCommandGalleryItem371.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem21.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem371.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem22.Caption = "White - Green Color Scale";
-            spreadsheetCommandGalleryItem22.CommandName = "ConditionalFormattingColorScaleWhiteGreen";
-            spreadsheetCommandGalleryItem22.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem372.Caption = "White - Green Color Scale";
+            spreadsheetCommandGalleryItem372.CommandName = "ConditionalFormattingColorScaleWhiteGreen";
+            spreadsheetCommandGalleryItem372.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem22.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem372.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem23.Caption = "Green - Yellow Color Scale";
-            spreadsheetCommandGalleryItem23.CommandName = "ConditionalFormattingColorScaleGreenYellow";
-            spreadsheetCommandGalleryItem23.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem373.Caption = "Green - Yellow Color Scale";
+            spreadsheetCommandGalleryItem373.CommandName = "ConditionalFormattingColorScaleGreenYellow";
+            spreadsheetCommandGalleryItem373.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem23.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem373.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem24.Caption = "Yellow - Green Color Scale";
-            spreadsheetCommandGalleryItem24.CommandName = "ConditionalFormattingColorScaleYellowGreen";
-            spreadsheetCommandGalleryItem24.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem374.Caption = "Yellow - Green Color Scale";
+            spreadsheetCommandGalleryItem374.CommandName = "ConditionalFormattingColorScaleYellowGreen";
+            spreadsheetCommandGalleryItem374.Description = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItem24.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
+            spreadsheetCommandGalleryItem374.Hint = "Displays a two or three color gradient in a range of cells. The shade of the colo" +
     "r represents the value in the cell.";
-            spreadsheetCommandGalleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem13,
-            spreadsheetCommandGalleryItem14,
-            spreadsheetCommandGalleryItem15,
-            spreadsheetCommandGalleryItem16,
-            spreadsheetCommandGalleryItem17,
-            spreadsheetCommandGalleryItem18,
-            spreadsheetCommandGalleryItem19,
-            spreadsheetCommandGalleryItem20,
-            spreadsheetCommandGalleryItem21,
-            spreadsheetCommandGalleryItem22,
-            spreadsheetCommandGalleryItem23,
-            spreadsheetCommandGalleryItem24});
+            spreadsheetCommandGalleryItemGroup83.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem363,
+            spreadsheetCommandGalleryItem364,
+            spreadsheetCommandGalleryItem365,
+            spreadsheetCommandGalleryItem366,
+            spreadsheetCommandGalleryItem367,
+            spreadsheetCommandGalleryItem368,
+            spreadsheetCommandGalleryItem369,
+            spreadsheetCommandGalleryItem370,
+            spreadsheetCommandGalleryItem371,
+            spreadsheetCommandGalleryItem372,
+            spreadsheetCommandGalleryItem373,
+            spreadsheetCommandGalleryItem374});
             this.commandBarGalleryDropDown3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup3});
+            spreadsheetCommandGalleryItemGroup83});
             this.commandBarGalleryDropDown3.Gallery.ShowGroupCaption = false;
             this.commandBarGalleryDropDown3.Manager = null;
             this.commandBarGalleryDropDown3.Name = "commandBarGalleryDropDown3";
@@ -1214,163 +1226,163 @@
             // 
             // 
             this.commandBarGalleryDropDown4.Gallery.ColumnCount = 4;
-            spreadsheetCommandGalleryItemGroup4.Caption = "Directional";
-            spreadsheetCommandGalleryItemGroup4.CommandName = "ConditionalFormattingIconSetsDirectionalCommandGroup";
-            spreadsheetCommandGalleryItem25.Caption = "3 Arrows (Colored)";
-            spreadsheetCommandGalleryItem25.CommandName = "ConditionalFormattingIconSetArrows3Colored";
-            spreadsheetCommandGalleryItem25.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItemGroup84.Caption = "Directional";
+            spreadsheetCommandGalleryItemGroup84.CommandName = "ConditionalFormattingIconSetsDirectionalCommandGroup";
+            spreadsheetCommandGalleryItem375.Caption = "3 Arrows (Colored)";
+            spreadsheetCommandGalleryItem375.CommandName = "ConditionalFormattingIconSetArrows3Colored";
+            spreadsheetCommandGalleryItem375.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem25.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem375.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem26.Caption = "3 Arrows (Gray)";
-            spreadsheetCommandGalleryItem26.CommandName = "ConditionalFormattingIconSetArrows3Grayed";
-            spreadsheetCommandGalleryItem26.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem376.Caption = "3 Arrows (Gray)";
+            spreadsheetCommandGalleryItem376.CommandName = "ConditionalFormattingIconSetArrows3Grayed";
+            spreadsheetCommandGalleryItem376.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem26.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem376.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem27.Caption = "4 Arrows (Colored)";
-            spreadsheetCommandGalleryItem27.CommandName = "ConditionalFormattingIconSetArrows4Colored";
-            spreadsheetCommandGalleryItem27.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem377.Caption = "4 Arrows (Colored)";
+            spreadsheetCommandGalleryItem377.CommandName = "ConditionalFormattingIconSetArrows4Colored";
+            spreadsheetCommandGalleryItem377.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem27.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem377.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem28.Caption = "4 Arrows (Gray)";
-            spreadsheetCommandGalleryItem28.CommandName = "ConditionalFormattingIconSetArrows4Grayed";
-            spreadsheetCommandGalleryItem28.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem378.Caption = "4 Arrows (Gray)";
+            spreadsheetCommandGalleryItem378.CommandName = "ConditionalFormattingIconSetArrows4Grayed";
+            spreadsheetCommandGalleryItem378.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem28.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem378.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem29.Caption = "5 Arrows (Colored)";
-            spreadsheetCommandGalleryItem29.CommandName = "ConditionalFormattingIconSetArrows5Colored";
-            spreadsheetCommandGalleryItem29.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem379.Caption = "5 Arrows (Colored)";
+            spreadsheetCommandGalleryItem379.CommandName = "ConditionalFormattingIconSetArrows5Colored";
+            spreadsheetCommandGalleryItem379.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem29.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem379.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem30.Caption = "5 Arrows (Gray)";
-            spreadsheetCommandGalleryItem30.CommandName = "ConditionalFormattingIconSetArrows5Grayed";
-            spreadsheetCommandGalleryItem30.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem380.Caption = "5 Arrows (Gray)";
+            spreadsheetCommandGalleryItem380.CommandName = "ConditionalFormattingIconSetArrows5Grayed";
+            spreadsheetCommandGalleryItem380.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem30.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem380.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem31.Caption = "3 Triangles";
-            spreadsheetCommandGalleryItem31.CommandName = "ConditionalFormattingIconSetTriangles3";
-            spreadsheetCommandGalleryItem31.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem381.Caption = "3 Triangles";
+            spreadsheetCommandGalleryItem381.CommandName = "ConditionalFormattingIconSetTriangles3";
+            spreadsheetCommandGalleryItem381.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem31.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem381.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem25,
-            spreadsheetCommandGalleryItem26,
-            spreadsheetCommandGalleryItem27,
-            spreadsheetCommandGalleryItem28,
-            spreadsheetCommandGalleryItem29,
-            spreadsheetCommandGalleryItem30,
-            spreadsheetCommandGalleryItem31});
-            spreadsheetCommandGalleryItemGroup5.Caption = "Shapes";
-            spreadsheetCommandGalleryItemGroup5.CommandName = "ConditionalFormattingIconSetsShapesCommandGroup";
-            spreadsheetCommandGalleryItem32.Caption = "3 Traffic Lights (Unrimmed)";
-            spreadsheetCommandGalleryItem32.CommandName = "ConditionalFormattingIconSetTrafficLights3";
-            spreadsheetCommandGalleryItem32.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItemGroup84.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem375,
+            spreadsheetCommandGalleryItem376,
+            spreadsheetCommandGalleryItem377,
+            spreadsheetCommandGalleryItem378,
+            spreadsheetCommandGalleryItem379,
+            spreadsheetCommandGalleryItem380,
+            spreadsheetCommandGalleryItem381});
+            spreadsheetCommandGalleryItemGroup85.Caption = "Shapes";
+            spreadsheetCommandGalleryItemGroup85.CommandName = "ConditionalFormattingIconSetsShapesCommandGroup";
+            spreadsheetCommandGalleryItem382.Caption = "3 Traffic Lights (Unrimmed)";
+            spreadsheetCommandGalleryItem382.CommandName = "ConditionalFormattingIconSetTrafficLights3";
+            spreadsheetCommandGalleryItem382.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem32.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem382.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem33.Caption = "3 Traffic Lights (Rimmed)";
-            spreadsheetCommandGalleryItem33.CommandName = "ConditionalFormattingIconSetTrafficLights3Rimmed";
-            spreadsheetCommandGalleryItem33.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem383.Caption = "3 Traffic Lights (Rimmed)";
+            spreadsheetCommandGalleryItem383.CommandName = "ConditionalFormattingIconSetTrafficLights3Rimmed";
+            spreadsheetCommandGalleryItem383.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem33.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem383.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem34.Caption = "4 Traffic Lights";
-            spreadsheetCommandGalleryItem34.CommandName = "ConditionalFormattingIconSetTrafficLights4";
-            spreadsheetCommandGalleryItem34.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem384.Caption = "4 Traffic Lights";
+            spreadsheetCommandGalleryItem384.CommandName = "ConditionalFormattingIconSetTrafficLights4";
+            spreadsheetCommandGalleryItem384.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem34.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem384.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem35.Caption = "3 Signs";
-            spreadsheetCommandGalleryItem35.CommandName = "ConditionalFormattingIconSetSigns3";
-            spreadsheetCommandGalleryItem35.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem385.Caption = "3 Signs";
+            spreadsheetCommandGalleryItem385.CommandName = "ConditionalFormattingIconSetSigns3";
+            spreadsheetCommandGalleryItem385.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem35.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem385.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem36.Caption = "Red To Black";
-            spreadsheetCommandGalleryItem36.CommandName = "ConditionalFormattingIconSetRedToBlack";
-            spreadsheetCommandGalleryItem36.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem386.Caption = "Red To Black";
+            spreadsheetCommandGalleryItem386.CommandName = "ConditionalFormattingIconSetRedToBlack";
+            spreadsheetCommandGalleryItem386.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem36.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem386.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItemGroup5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem32,
-            spreadsheetCommandGalleryItem33,
-            spreadsheetCommandGalleryItem34,
-            spreadsheetCommandGalleryItem35,
-            spreadsheetCommandGalleryItem36});
-            spreadsheetCommandGalleryItemGroup6.Caption = "Indicators";
-            spreadsheetCommandGalleryItemGroup6.CommandName = "ConditionalFormattingIconSetsIndicatorsCommandGroup";
-            spreadsheetCommandGalleryItem37.Caption = "3 Symbols (Circled)";
-            spreadsheetCommandGalleryItem37.CommandName = "ConditionalFormattingIconSetSymbols3Circled";
-            spreadsheetCommandGalleryItem37.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItemGroup85.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem382,
+            spreadsheetCommandGalleryItem383,
+            spreadsheetCommandGalleryItem384,
+            spreadsheetCommandGalleryItem385,
+            spreadsheetCommandGalleryItem386});
+            spreadsheetCommandGalleryItemGroup86.Caption = "Indicators";
+            spreadsheetCommandGalleryItemGroup86.CommandName = "ConditionalFormattingIconSetsIndicatorsCommandGroup";
+            spreadsheetCommandGalleryItem387.Caption = "3 Symbols (Circled)";
+            spreadsheetCommandGalleryItem387.CommandName = "ConditionalFormattingIconSetSymbols3Circled";
+            spreadsheetCommandGalleryItem387.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem37.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem387.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem38.Caption = "3 Symbols (Uncircled)";
-            spreadsheetCommandGalleryItem38.CommandName = "ConditionalFormattingIconSetSymbols3";
-            spreadsheetCommandGalleryItem38.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem388.Caption = "3 Symbols (Uncircled)";
+            spreadsheetCommandGalleryItem388.CommandName = "ConditionalFormattingIconSetSymbols3";
+            spreadsheetCommandGalleryItem388.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem38.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem388.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem39.Caption = "3 Flags";
-            spreadsheetCommandGalleryItem39.CommandName = "ConditionalFormattingIconSetFlags3";
-            spreadsheetCommandGalleryItem39.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem389.Caption = "3 Flags";
+            spreadsheetCommandGalleryItem389.CommandName = "ConditionalFormattingIconSetFlags3";
+            spreadsheetCommandGalleryItem389.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem39.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem389.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItemGroup6.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem37,
-            spreadsheetCommandGalleryItem38,
-            spreadsheetCommandGalleryItem39});
-            spreadsheetCommandGalleryItemGroup7.Caption = "Ratings";
-            spreadsheetCommandGalleryItemGroup7.CommandName = "ConditionalFormattingIconSetsRatingsCommandGroup";
-            spreadsheetCommandGalleryItem40.Caption = "3 Stars";
-            spreadsheetCommandGalleryItem40.CommandName = "ConditionalFormattingIconSetStars3";
-            spreadsheetCommandGalleryItem40.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItemGroup86.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem387,
+            spreadsheetCommandGalleryItem388,
+            spreadsheetCommandGalleryItem389});
+            spreadsheetCommandGalleryItemGroup87.Caption = "Ratings";
+            spreadsheetCommandGalleryItemGroup87.CommandName = "ConditionalFormattingIconSetsRatingsCommandGroup";
+            spreadsheetCommandGalleryItem390.Caption = "3 Stars";
+            spreadsheetCommandGalleryItem390.CommandName = "ConditionalFormattingIconSetStars3";
+            spreadsheetCommandGalleryItem390.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem40.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem390.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem41.Caption = "4 Ratings";
-            spreadsheetCommandGalleryItem41.CommandName = "ConditionalFormattingIconSetRatings4";
-            spreadsheetCommandGalleryItem41.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem391.Caption = "4 Ratings";
+            spreadsheetCommandGalleryItem391.CommandName = "ConditionalFormattingIconSetRatings4";
+            spreadsheetCommandGalleryItem391.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem41.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem391.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem42.Caption = "5 Ratings";
-            spreadsheetCommandGalleryItem42.CommandName = "ConditionalFormattingIconSetRatings5";
-            spreadsheetCommandGalleryItem42.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem392.Caption = "5 Ratings";
+            spreadsheetCommandGalleryItem392.CommandName = "ConditionalFormattingIconSetRatings5";
+            spreadsheetCommandGalleryItem392.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem42.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem392.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem43.Caption = "5 Quarters";
-            spreadsheetCommandGalleryItem43.CommandName = "ConditionalFormattingIconSetQuarters5";
-            spreadsheetCommandGalleryItem43.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem393.Caption = "5 Quarters";
+            spreadsheetCommandGalleryItem393.CommandName = "ConditionalFormattingIconSetQuarters5";
+            spreadsheetCommandGalleryItem393.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem43.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem393.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem44.Caption = "5 Boxes";
-            spreadsheetCommandGalleryItem44.CommandName = "ConditionalFormattingIconSetBoxes5";
-            spreadsheetCommandGalleryItem44.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem394.Caption = "5 Boxes";
+            spreadsheetCommandGalleryItem394.CommandName = "ConditionalFormattingIconSetBoxes5";
+            spreadsheetCommandGalleryItem394.Description = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItem44.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
+            spreadsheetCommandGalleryItem394.Hint = "Display an icon from the above icon set in each cell. Each icon represents a valu" +
     "e in the cell.";
-            spreadsheetCommandGalleryItemGroup7.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem40,
-            spreadsheetCommandGalleryItem41,
-            spreadsheetCommandGalleryItem42,
-            spreadsheetCommandGalleryItem43,
-            spreadsheetCommandGalleryItem44});
+            spreadsheetCommandGalleryItemGroup87.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem390,
+            spreadsheetCommandGalleryItem391,
+            spreadsheetCommandGalleryItem392,
+            spreadsheetCommandGalleryItem393,
+            spreadsheetCommandGalleryItem394});
             this.commandBarGalleryDropDown4.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup4,
-            spreadsheetCommandGalleryItemGroup5,
-            spreadsheetCommandGalleryItemGroup6,
-            spreadsheetCommandGalleryItemGroup7});
+            spreadsheetCommandGalleryItemGroup84,
+            spreadsheetCommandGalleryItemGroup85,
+            spreadsheetCommandGalleryItemGroup86,
+            spreadsheetCommandGalleryItemGroup87});
             this.commandBarGalleryDropDown4.Gallery.RowCount = 7;
             this.commandBarGalleryDropDown4.Manager = null;
             this.commandBarGalleryDropDown4.Name = "commandBarGalleryDropDown4";
@@ -1395,146 +1407,146 @@
             // 
             // 
             this.commandBarGalleryDropDown6.Gallery.ColumnCount = 4;
-            spreadsheetCommandGalleryItemGroup8.Caption = "2-D Column";
-            spreadsheetCommandGalleryItemGroup8.CommandName = "InsertChartColumn2DCommandGroup";
-            spreadsheetCommandGalleryItem45.Caption = "Clustered Column";
-            spreadsheetCommandGalleryItem45.CommandName = "InsertChartColumnClustered2D";
-            spreadsheetCommandGalleryItem45.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            spreadsheetCommandGalleryItemGroup88.Caption = "2-D Column";
+            spreadsheetCommandGalleryItemGroup88.CommandName = "InsertChartColumn2DCommandGroup";
+            spreadsheetCommandGalleryItem395.Caption = "Clustered Column";
+            spreadsheetCommandGalleryItem395.CommandName = "InsertChartColumnClustered2D";
+            spreadsheetCommandGalleryItem395.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.";
-            spreadsheetCommandGalleryItem45.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            spreadsheetCommandGalleryItem395.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.";
-            spreadsheetCommandGalleryItem46.Caption = "Stacked Column";
-            spreadsheetCommandGalleryItem46.CommandName = "InsertChartColumnStacked2D";
-            spreadsheetCommandGalleryItem46.Description = "Compare the contribution of each value to a total across categories by using vert" +
+            spreadsheetCommandGalleryItem396.Caption = "Stacked Column";
+            spreadsheetCommandGalleryItem396.CommandName = "InsertChartColumnStacked2D";
+            spreadsheetCommandGalleryItem396.Description = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".";
-            spreadsheetCommandGalleryItem46.Hint = "Compare the contribution of each value to a total across categories by using vert" +
+            spreadsheetCommandGalleryItem396.Hint = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".";
-            spreadsheetCommandGalleryItem47.Caption = "100% Stacked Column";
-            spreadsheetCommandGalleryItem47.CommandName = "InsertChartColumnPercentStacked2D";
-            spreadsheetCommandGalleryItem47.Description = "Compare the percentage that each value contributes to a total across categories b" +
+            spreadsheetCommandGalleryItem397.Caption = "100% Stacked Column";
+            spreadsheetCommandGalleryItem397.CommandName = "InsertChartColumnPercentStacked2D";
+            spreadsheetCommandGalleryItem397.Description = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse is to emphasize the proportion of each data " +
     "series.";
-            spreadsheetCommandGalleryItem47.Hint = "Compare the percentage that each value contributes to a total across categories b" +
+            spreadsheetCommandGalleryItem397.Hint = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse is to emphasize the proportion of each data " +
     "series.";
-            spreadsheetCommandGalleryItemGroup8.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem45,
-            spreadsheetCommandGalleryItem46,
-            spreadsheetCommandGalleryItem47});
-            spreadsheetCommandGalleryItemGroup9.Caption = "3-D Column";
-            spreadsheetCommandGalleryItemGroup9.CommandName = "InsertChartColumn3DCommandGroup";
-            spreadsheetCommandGalleryItem48.Caption = "3-D Clustered Column";
-            spreadsheetCommandGalleryItem48.CommandName = "InsertChartColumnClustered3D";
-            spreadsheetCommandGalleryItem48.Description = "Compare values across categories and display clustered columns in 3-D format.";
-            spreadsheetCommandGalleryItem48.Hint = "Compare values across categories and display clustered columns in 3-D format.";
-            spreadsheetCommandGalleryItem49.Caption = "Stacked Column in 3-D";
-            spreadsheetCommandGalleryItem49.CommandName = "InsertChartColumnStacked3D";
-            spreadsheetCommandGalleryItem49.Description = "Compare the contribution of each value to a total across categories and display s" +
+            spreadsheetCommandGalleryItemGroup88.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem395,
+            spreadsheetCommandGalleryItem396,
+            spreadsheetCommandGalleryItem397});
+            spreadsheetCommandGalleryItemGroup89.Caption = "3-D Column";
+            spreadsheetCommandGalleryItemGroup89.CommandName = "InsertChartColumn3DCommandGroup";
+            spreadsheetCommandGalleryItem398.Caption = "3-D Clustered Column";
+            spreadsheetCommandGalleryItem398.CommandName = "InsertChartColumnClustered3D";
+            spreadsheetCommandGalleryItem398.Description = "Compare values across categories and display clustered columns in 3-D format.";
+            spreadsheetCommandGalleryItem398.Hint = "Compare values across categories and display clustered columns in 3-D format.";
+            spreadsheetCommandGalleryItem399.Caption = "Stacked Column in 3-D";
+            spreadsheetCommandGalleryItem399.CommandName = "InsertChartColumnStacked3D";
+            spreadsheetCommandGalleryItem399.Description = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            spreadsheetCommandGalleryItem49.Hint = "Compare the contribution of each value to a total across categories and display s" +
+            spreadsheetCommandGalleryItem399.Hint = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            spreadsheetCommandGalleryItem50.Caption = "100% Stacked Column in 3-D";
-            spreadsheetCommandGalleryItem50.CommandName = "InsertChartColumnPercentStacked3D";
-            spreadsheetCommandGalleryItem50.Description = "Compare the percentage that each value contributes to a total across categories a" +
+            spreadsheetCommandGalleryItem400.Caption = "100% Stacked Column in 3-D";
+            spreadsheetCommandGalleryItem400.CommandName = "InsertChartColumnPercentStacked3D";
+            spreadsheetCommandGalleryItem400.Description = "Compare the percentage that each value contributes to a total across categories a" +
     "nd display 100% stacked columns in 3-D format.";
-            spreadsheetCommandGalleryItem50.Hint = "Compare the percentage that each value contributes to a total across categories a" +
+            spreadsheetCommandGalleryItem400.Hint = "Compare the percentage that each value contributes to a total across categories a" +
     "nd display 100% stacked columns in 3-D format.";
-            spreadsheetCommandGalleryItem51.Caption = "3-D Column";
-            spreadsheetCommandGalleryItem51.CommandName = "InsertChartColumn3D";
-            spreadsheetCommandGalleryItem51.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            spreadsheetCommandGalleryItem401.Caption = "3-D Column";
+            spreadsheetCommandGalleryItem401.CommandName = "InsertChartColumn3D";
+            spreadsheetCommandGalleryItem401.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.";
-            spreadsheetCommandGalleryItem51.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            spreadsheetCommandGalleryItem401.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.";
-            spreadsheetCommandGalleryItemGroup9.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem48,
-            spreadsheetCommandGalleryItem49,
-            spreadsheetCommandGalleryItem50,
-            spreadsheetCommandGalleryItem51});
-            spreadsheetCommandGalleryItemGroup10.Caption = "Cylinder";
-            spreadsheetCommandGalleryItemGroup10.CommandName = "InsertChartCylinderCommandGroup";
-            spreadsheetCommandGalleryItem52.Caption = "Clustered Cylinder";
-            spreadsheetCommandGalleryItem52.CommandName = "InsertChartCylinderClustered";
-            spreadsheetCommandGalleryItem52.Description = "Compare values across categories.";
-            spreadsheetCommandGalleryItem52.Hint = "Compare values across categories.";
-            spreadsheetCommandGalleryItem53.Caption = "Stacked Cylinder";
-            spreadsheetCommandGalleryItem53.CommandName = "InsertChartCylinderStacked";
-            spreadsheetCommandGalleryItem53.Description = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem53.Hint = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem54.Caption = "100% Stacked Cylinder";
-            spreadsheetCommandGalleryItem54.CommandName = "InsertChartCylinderPercentStacked";
-            spreadsheetCommandGalleryItem54.Description = "Compare the percentage that each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem54.Hint = "Compare the percentage that each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem55.Caption = "3-D Cylinder";
-            spreadsheetCommandGalleryItem55.CommandName = "InsertChartCylinder";
-            spreadsheetCommandGalleryItem55.Description = "Compare values across categories and across series and display a cylinder chart o" +
+            spreadsheetCommandGalleryItemGroup89.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem398,
+            spreadsheetCommandGalleryItem399,
+            spreadsheetCommandGalleryItem400,
+            spreadsheetCommandGalleryItem401});
+            spreadsheetCommandGalleryItemGroup90.Caption = "Cylinder";
+            spreadsheetCommandGalleryItemGroup90.CommandName = "InsertChartCylinderCommandGroup";
+            spreadsheetCommandGalleryItem402.Caption = "Clustered Cylinder";
+            spreadsheetCommandGalleryItem402.CommandName = "InsertChartCylinderClustered";
+            spreadsheetCommandGalleryItem402.Description = "Compare values across categories.";
+            spreadsheetCommandGalleryItem402.Hint = "Compare values across categories.";
+            spreadsheetCommandGalleryItem403.Caption = "Stacked Cylinder";
+            spreadsheetCommandGalleryItem403.CommandName = "InsertChartCylinderStacked";
+            spreadsheetCommandGalleryItem403.Description = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem403.Hint = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem404.Caption = "100% Stacked Cylinder";
+            spreadsheetCommandGalleryItem404.CommandName = "InsertChartCylinderPercentStacked";
+            spreadsheetCommandGalleryItem404.Description = "Compare the percentage that each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem404.Hint = "Compare the percentage that each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem405.Caption = "3-D Cylinder";
+            spreadsheetCommandGalleryItem405.CommandName = "InsertChartCylinder";
+            spreadsheetCommandGalleryItem405.Description = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            spreadsheetCommandGalleryItem55.Hint = "Compare values across categories and across series and display a cylinder chart o" +
+            spreadsheetCommandGalleryItem405.Hint = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            spreadsheetCommandGalleryItemGroup10.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem52,
-            spreadsheetCommandGalleryItem53,
-            spreadsheetCommandGalleryItem54,
-            spreadsheetCommandGalleryItem55});
-            spreadsheetCommandGalleryItemGroup11.Caption = "Cone";
-            spreadsheetCommandGalleryItemGroup11.CommandName = "InsertChartConeCommandGroup";
-            spreadsheetCommandGalleryItem56.Caption = "Clustered Cone";
-            spreadsheetCommandGalleryItem56.CommandName = "InsertChartConeClustered";
-            spreadsheetCommandGalleryItem56.Description = "Compare values across categories.";
-            spreadsheetCommandGalleryItem56.Hint = "Compare values across categories.";
-            spreadsheetCommandGalleryItem57.Caption = "Stacked Cone";
-            spreadsheetCommandGalleryItem57.CommandName = "InsertChartConeStacked";
-            spreadsheetCommandGalleryItem57.Description = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem57.Hint = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem58.Caption = "100% Stacked Cone";
-            spreadsheetCommandGalleryItem58.CommandName = "InsertChartConePercentStacked";
-            spreadsheetCommandGalleryItem58.Description = "Compare the percentage that each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem58.Hint = "Compare the percentage that each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem59.Caption = "3-D Cone";
-            spreadsheetCommandGalleryItem59.CommandName = "InsertChartCone";
-            spreadsheetCommandGalleryItem59.Description = "Compare values across categories and across series and display a cone chart on th" +
+            spreadsheetCommandGalleryItemGroup90.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem402,
+            spreadsheetCommandGalleryItem403,
+            spreadsheetCommandGalleryItem404,
+            spreadsheetCommandGalleryItem405});
+            spreadsheetCommandGalleryItemGroup91.Caption = "Cone";
+            spreadsheetCommandGalleryItemGroup91.CommandName = "InsertChartConeCommandGroup";
+            spreadsheetCommandGalleryItem406.Caption = "Clustered Cone";
+            spreadsheetCommandGalleryItem406.CommandName = "InsertChartConeClustered";
+            spreadsheetCommandGalleryItem406.Description = "Compare values across categories.";
+            spreadsheetCommandGalleryItem406.Hint = "Compare values across categories.";
+            spreadsheetCommandGalleryItem407.Caption = "Stacked Cone";
+            spreadsheetCommandGalleryItem407.CommandName = "InsertChartConeStacked";
+            spreadsheetCommandGalleryItem407.Description = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem407.Hint = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem408.Caption = "100% Stacked Cone";
+            spreadsheetCommandGalleryItem408.CommandName = "InsertChartConePercentStacked";
+            spreadsheetCommandGalleryItem408.Description = "Compare the percentage that each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem408.Hint = "Compare the percentage that each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem409.Caption = "3-D Cone";
+            spreadsheetCommandGalleryItem409.CommandName = "InsertChartCone";
+            spreadsheetCommandGalleryItem409.Description = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            spreadsheetCommandGalleryItem59.Hint = "Compare values across categories and across series and display a cone chart on th" +
+            spreadsheetCommandGalleryItem409.Hint = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            spreadsheetCommandGalleryItemGroup11.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem56,
-            spreadsheetCommandGalleryItem57,
-            spreadsheetCommandGalleryItem58,
-            spreadsheetCommandGalleryItem59});
-            spreadsheetCommandGalleryItemGroup12.Caption = "Pyramid";
-            spreadsheetCommandGalleryItemGroup12.CommandName = "InsertChartPyramidCommandGroup";
-            spreadsheetCommandGalleryItem60.Caption = "Clustered Pyramid";
-            spreadsheetCommandGalleryItem60.CommandName = "InsertChartPyramidClustered";
-            spreadsheetCommandGalleryItem60.Description = "Compare values across categories.";
-            spreadsheetCommandGalleryItem60.Hint = "Compare values across categories.";
-            spreadsheetCommandGalleryItem61.Caption = "Stacked Pyramid";
-            spreadsheetCommandGalleryItem61.CommandName = "InsertChartPyramidStacked";
-            spreadsheetCommandGalleryItem61.Description = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem61.Hint = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem62.Caption = "100% Stacked Pyramid";
-            spreadsheetCommandGalleryItem62.CommandName = "InsertChartPyramidPercentStacked";
-            spreadsheetCommandGalleryItem62.Description = "Compare the percentage that each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem62.Hint = "Compare the percentage that each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem63.Caption = "3-D Pyramid";
-            spreadsheetCommandGalleryItem63.CommandName = "InsertChartPyramid";
-            spreadsheetCommandGalleryItem63.Description = "Compare values across categories and across series and display a pyramid chart on" +
+            spreadsheetCommandGalleryItemGroup91.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem406,
+            spreadsheetCommandGalleryItem407,
+            spreadsheetCommandGalleryItem408,
+            spreadsheetCommandGalleryItem409});
+            spreadsheetCommandGalleryItemGroup92.Caption = "Pyramid";
+            spreadsheetCommandGalleryItemGroup92.CommandName = "InsertChartPyramidCommandGroup";
+            spreadsheetCommandGalleryItem410.Caption = "Clustered Pyramid";
+            spreadsheetCommandGalleryItem410.CommandName = "InsertChartPyramidClustered";
+            spreadsheetCommandGalleryItem410.Description = "Compare values across categories.";
+            spreadsheetCommandGalleryItem410.Hint = "Compare values across categories.";
+            spreadsheetCommandGalleryItem411.Caption = "Stacked Pyramid";
+            spreadsheetCommandGalleryItem411.CommandName = "InsertChartPyramidStacked";
+            spreadsheetCommandGalleryItem411.Description = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem411.Hint = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem412.Caption = "100% Stacked Pyramid";
+            spreadsheetCommandGalleryItem412.CommandName = "InsertChartPyramidPercentStacked";
+            spreadsheetCommandGalleryItem412.Description = "Compare the percentage that each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem412.Hint = "Compare the percentage that each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem413.Caption = "3-D Pyramid";
+            spreadsheetCommandGalleryItem413.CommandName = "InsertChartPyramid";
+            spreadsheetCommandGalleryItem413.Description = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            spreadsheetCommandGalleryItem63.Hint = "Compare values across categories and across series and display a pyramid chart on" +
+            spreadsheetCommandGalleryItem413.Hint = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            spreadsheetCommandGalleryItemGroup12.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem60,
-            spreadsheetCommandGalleryItem61,
-            spreadsheetCommandGalleryItem62,
-            spreadsheetCommandGalleryItem63});
+            spreadsheetCommandGalleryItemGroup92.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem410,
+            spreadsheetCommandGalleryItem411,
+            spreadsheetCommandGalleryItem412,
+            spreadsheetCommandGalleryItem413});
             this.commandBarGalleryDropDown6.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup8,
-            spreadsheetCommandGalleryItemGroup9,
-            spreadsheetCommandGalleryItemGroup10,
-            spreadsheetCommandGalleryItemGroup11,
-            spreadsheetCommandGalleryItemGroup12});
+            spreadsheetCommandGalleryItemGroup88,
+            spreadsheetCommandGalleryItemGroup89,
+            spreadsheetCommandGalleryItemGroup90,
+            spreadsheetCommandGalleryItemGroup91,
+            spreadsheetCommandGalleryItemGroup92});
             this.commandBarGalleryDropDown6.Gallery.RowCount = 5;
             this.commandBarGalleryDropDown6.Manager = null;
             this.commandBarGalleryDropDown6.Name = "commandBarGalleryDropDown6";
@@ -1545,62 +1557,62 @@
             // 
             // 
             this.commandBarGalleryDropDown7.Gallery.ColumnCount = 3;
-            spreadsheetCommandGalleryItemGroup13.Caption = "2-D Line";
-            spreadsheetCommandGalleryItemGroup13.CommandName = "InsertChartLine2DCommandGroup";
-            spreadsheetCommandGalleryItem64.Caption = "Line";
-            spreadsheetCommandGalleryItem64.CommandName = "InsertChartLine";
-            spreadsheetCommandGalleryItem64.Description = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
+            spreadsheetCommandGalleryItemGroup93.Caption = "2-D Line";
+            spreadsheetCommandGalleryItemGroup93.CommandName = "InsertChartLine2DCommandGroup";
+            spreadsheetCommandGalleryItem414.Caption = "Line";
+            spreadsheetCommandGalleryItem414.CommandName = "InsertChartLine";
+            spreadsheetCommandGalleryItem414.Description = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
     "e are many data points and the order is important.";
-            spreadsheetCommandGalleryItem64.Hint = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
+            spreadsheetCommandGalleryItem414.Hint = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
     "e are many data points and the order is important.";
-            spreadsheetCommandGalleryItem65.Caption = "Stacked Line";
-            spreadsheetCommandGalleryItem65.CommandName = "InsertChartStackedLine";
-            spreadsheetCommandGalleryItem65.Description = "Display the trend of the contribution of each value over time or ordered categori" +
+            spreadsheetCommandGalleryItem415.Caption = "Stacked Line";
+            spreadsheetCommandGalleryItem415.CommandName = "InsertChartStackedLine";
+            spreadsheetCommandGalleryItem415.Description = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.\r\n\r\nConsider using a stacked area chart instead.";
-            spreadsheetCommandGalleryItem65.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
+            spreadsheetCommandGalleryItem415.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.\r\n\r\nConsider using a stacked area chart instead.";
-            spreadsheetCommandGalleryItem66.Caption = "100% Stacked line";
-            spreadsheetCommandGalleryItem66.CommandName = "InsertChartPercentStackedLine";
-            spreadsheetCommandGalleryItem66.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
+            spreadsheetCommandGalleryItem416.Caption = "100% Stacked line";
+            spreadsheetCommandGalleryItem416.CommandName = "InsertChartPercentStackedLine";
+            spreadsheetCommandGalleryItem416.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.\r\n\r\nConsider using 100% stacked area chart instead.";
-            spreadsheetCommandGalleryItem66.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
+            spreadsheetCommandGalleryItem416.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.\r\n\r\nConsider using 100% stacked area chart instead.";
-            spreadsheetCommandGalleryItem67.Caption = "Line with Markers";
-            spreadsheetCommandGalleryItem67.CommandName = "InsertChartLineWithMarkers";
-            spreadsheetCommandGalleryItem67.Description = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
+            spreadsheetCommandGalleryItem417.Caption = "Line with Markers";
+            spreadsheetCommandGalleryItem417.CommandName = "InsertChartLineWithMarkers";
+            spreadsheetCommandGalleryItem417.Description = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
     "e are only a few data points.";
-            spreadsheetCommandGalleryItem67.Hint = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
+            spreadsheetCommandGalleryItem417.Hint = "Display trend over time (dates, years) or ordered categories.\r\n\r\nUseful when ther" +
     "e are only a few data points.";
-            spreadsheetCommandGalleryItem68.Caption = "Stacked Line with Markers";
-            spreadsheetCommandGalleryItem68.CommandName = "InsertChartStackedLineWithMarkers";
-            spreadsheetCommandGalleryItem68.Description = "Display the trend of the contribution of each value over time or ordered categori" +
+            spreadsheetCommandGalleryItem418.Caption = "Stacked Line with Markers";
+            spreadsheetCommandGalleryItem418.CommandName = "InsertChartStackedLineWithMarkers";
+            spreadsheetCommandGalleryItem418.Description = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.\r\n\r\nConsider using a stacked area chart instead.";
-            spreadsheetCommandGalleryItem68.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
+            spreadsheetCommandGalleryItem418.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.\r\n\r\nConsider using a stacked area chart instead.";
-            spreadsheetCommandGalleryItem69.Caption = "100% Stacked Line with Markers";
-            spreadsheetCommandGalleryItem69.CommandName = "InsertChartPercentStackedLineWithMarkers";
-            spreadsheetCommandGalleryItem69.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
+            spreadsheetCommandGalleryItem419.Caption = "100% Stacked Line with Markers";
+            spreadsheetCommandGalleryItem419.CommandName = "InsertChartPercentStackedLineWithMarkers";
+            spreadsheetCommandGalleryItem419.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.\r\n\r\nConsider using 100% stacked area chart instead.";
-            spreadsheetCommandGalleryItem69.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
+            spreadsheetCommandGalleryItem419.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.\r\n\r\nConsider using 100% stacked area chart instead.";
-            spreadsheetCommandGalleryItemGroup13.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem64,
-            spreadsheetCommandGalleryItem65,
-            spreadsheetCommandGalleryItem66,
-            spreadsheetCommandGalleryItem67,
-            spreadsheetCommandGalleryItem68,
-            spreadsheetCommandGalleryItem69});
-            spreadsheetCommandGalleryItemGroup14.Caption = "3-D Line";
-            spreadsheetCommandGalleryItemGroup14.CommandName = "InsertChartLine3DCommandGroup";
-            spreadsheetCommandGalleryItem70.Caption = "3-D Line";
-            spreadsheetCommandGalleryItem70.CommandName = "InsertChartLine3D";
-            spreadsheetCommandGalleryItem70.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
-            spreadsheetCommandGalleryItem70.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
-            spreadsheetCommandGalleryItemGroup14.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem70});
+            spreadsheetCommandGalleryItemGroup93.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem414,
+            spreadsheetCommandGalleryItem415,
+            spreadsheetCommandGalleryItem416,
+            spreadsheetCommandGalleryItem417,
+            spreadsheetCommandGalleryItem418,
+            spreadsheetCommandGalleryItem419});
+            spreadsheetCommandGalleryItemGroup94.Caption = "3-D Line";
+            spreadsheetCommandGalleryItemGroup94.CommandName = "InsertChartLine3DCommandGroup";
+            spreadsheetCommandGalleryItem420.Caption = "3-D Line";
+            spreadsheetCommandGalleryItem420.CommandName = "InsertChartLine3D";
+            spreadsheetCommandGalleryItem420.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
+            spreadsheetCommandGalleryItem420.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
+            spreadsheetCommandGalleryItemGroup94.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem420});
             this.commandBarGalleryDropDown7.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup13,
-            spreadsheetCommandGalleryItemGroup14});
+            spreadsheetCommandGalleryItemGroup93,
+            spreadsheetCommandGalleryItemGroup94});
             this.commandBarGalleryDropDown7.Manager = null;
             this.commandBarGalleryDropDown7.Name = "commandBarGalleryDropDown7";
             // 
@@ -1610,61 +1622,61 @@
             // 
             // 
             this.commandBarGalleryDropDown8.Gallery.ColumnCount = 2;
-            spreadsheetCommandGalleryItemGroup15.Caption = "2-D Pie";
-            spreadsheetCommandGalleryItemGroup15.CommandName = "InsertChartPie2DCommandGroup";
-            spreadsheetCommandGalleryItem71.Caption = "Pie";
-            spreadsheetCommandGalleryItem71.CommandName = "InsertChartPie2D";
-            spreadsheetCommandGalleryItem71.Description = "Display the contribution of each value to a total.\r\n\r\nUse it when the values can " +
+            spreadsheetCommandGalleryItemGroup95.Caption = "2-D Pie";
+            spreadsheetCommandGalleryItemGroup95.CommandName = "InsertChartPie2DCommandGroup";
+            spreadsheetCommandGalleryItem421.Caption = "Pie";
+            spreadsheetCommandGalleryItem421.CommandName = "InsertChartPie2D";
+            spreadsheetCommandGalleryItem421.Description = "Display the contribution of each value to a total.\r\n\r\nUse it when the values can " +
     "be added together or when you have only one data series and all values are posit" +
     "ive.";
-            spreadsheetCommandGalleryItem71.Hint = "Display the contribution of each value to a total.\r\n\r\nUse it when the values can " +
+            spreadsheetCommandGalleryItem421.Hint = "Display the contribution of each value to a total.\r\n\r\nUse it when the values can " +
     "be added together or when you have only one data series and all values are posit" +
     "ive.";
-            spreadsheetCommandGalleryItem72.Caption = "Exploded Pie";
-            spreadsheetCommandGalleryItem72.CommandName = "InsertChartPieExploded2D";
-            spreadsheetCommandGalleryItem72.Description = "Display the contribution of each value to a total while emphasizing individual va" +
+            spreadsheetCommandGalleryItem422.Caption = "Exploded Pie";
+            spreadsheetCommandGalleryItem422.CommandName = "InsertChartPieExploded2D";
+            spreadsheetCommandGalleryItem422.Description = "Display the contribution of each value to a total while emphasizing individual va" +
     "lues.\r\n\r\nConsider using a pie chart, and explode individual values instead.";
-            spreadsheetCommandGalleryItem72.Hint = "Display the contribution of each value to a total while emphasizing individual va" +
+            spreadsheetCommandGalleryItem422.Hint = "Display the contribution of each value to a total while emphasizing individual va" +
     "lues.\r\n\r\nConsider using a pie chart, and explode individual values instead.";
-            spreadsheetCommandGalleryItemGroup15.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem71,
-            spreadsheetCommandGalleryItem72});
-            spreadsheetCommandGalleryItemGroup16.Caption = "3-D Pie";
-            spreadsheetCommandGalleryItemGroup16.CommandName = "InsertChartPie3DCommandGroup";
-            spreadsheetCommandGalleryItem73.Caption = "Pie in 3-D";
-            spreadsheetCommandGalleryItem73.CommandName = "InsertChartPie3D";
-            spreadsheetCommandGalleryItem73.Description = "Display the contribution of each value to a total.";
-            spreadsheetCommandGalleryItem73.Hint = "Display the contribution of each value to a total.";
-            spreadsheetCommandGalleryItem74.Caption = "Exploded pie in 3-D";
-            spreadsheetCommandGalleryItem74.CommandName = "InsertChartPieExploded3D";
-            spreadsheetCommandGalleryItem74.Description = "Display the contribution of each value to a total while emphasizing individual va" +
+            spreadsheetCommandGalleryItemGroup95.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem421,
+            spreadsheetCommandGalleryItem422});
+            spreadsheetCommandGalleryItemGroup96.Caption = "3-D Pie";
+            spreadsheetCommandGalleryItemGroup96.CommandName = "InsertChartPie3DCommandGroup";
+            spreadsheetCommandGalleryItem423.Caption = "Pie in 3-D";
+            spreadsheetCommandGalleryItem423.CommandName = "InsertChartPie3D";
+            spreadsheetCommandGalleryItem423.Description = "Display the contribution of each value to a total.";
+            spreadsheetCommandGalleryItem423.Hint = "Display the contribution of each value to a total.";
+            spreadsheetCommandGalleryItem424.Caption = "Exploded pie in 3-D";
+            spreadsheetCommandGalleryItem424.CommandName = "InsertChartPieExploded3D";
+            spreadsheetCommandGalleryItem424.Description = "Display the contribution of each value to a total while emphasizing individual va" +
     "lues.\r\n\r\nConsider using a 3-D pie chart, and explode individual values instead.";
-            spreadsheetCommandGalleryItem74.Hint = "Display the contribution of each value to a total while emphasizing individual va" +
+            spreadsheetCommandGalleryItem424.Hint = "Display the contribution of each value to a total while emphasizing individual va" +
     "lues.\r\n\r\nConsider using a 3-D pie chart, and explode individual values instead.";
-            spreadsheetCommandGalleryItemGroup16.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem73,
-            spreadsheetCommandGalleryItem74});
-            spreadsheetCommandGalleryItemGroup17.Caption = "Doughnut";
-            spreadsheetCommandGalleryItemGroup17.CommandName = "InsertChartDoughnut2DCommandGroup";
-            spreadsheetCommandGalleryItem75.Caption = "Doughnut";
-            spreadsheetCommandGalleryItem75.CommandName = "InsertChartDoughnut2D";
-            spreadsheetCommandGalleryItem75.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            spreadsheetCommandGalleryItemGroup96.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem423,
+            spreadsheetCommandGalleryItem424});
+            spreadsheetCommandGalleryItemGroup97.Caption = "Doughnut";
+            spreadsheetCommandGalleryItemGroup97.CommandName = "InsertChartDoughnut2DCommandGroup";
+            spreadsheetCommandGalleryItem425.Caption = "Doughnut";
+            spreadsheetCommandGalleryItem425.CommandName = "InsertChartDoughnut2D";
+            spreadsheetCommandGalleryItem425.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            spreadsheetCommandGalleryItem75.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            spreadsheetCommandGalleryItem425.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            spreadsheetCommandGalleryItem76.Caption = "Exploded Doughnut";
-            spreadsheetCommandGalleryItem76.CommandName = "InsertChartDoughnutExploded2D";
-            spreadsheetCommandGalleryItem76.Description = "Display the contribution of each value to a total while emphasizing individual va" +
+            spreadsheetCommandGalleryItem426.Caption = "Exploded Doughnut";
+            spreadsheetCommandGalleryItem426.CommandName = "InsertChartDoughnutExploded2D";
+            spreadsheetCommandGalleryItem426.Description = "Display the contribution of each value to a total while emphasizing individual va" +
     "lues like an exploded pie chart, but it can contain multiple series.";
-            spreadsheetCommandGalleryItem76.Hint = "Display the contribution of each value to a total while emphasizing individual va" +
+            spreadsheetCommandGalleryItem426.Hint = "Display the contribution of each value to a total while emphasizing individual va" +
     "lues like an exploded pie chart, but it can contain multiple series.";
-            spreadsheetCommandGalleryItemGroup17.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem75,
-            spreadsheetCommandGalleryItem76});
+            spreadsheetCommandGalleryItemGroup97.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem425,
+            spreadsheetCommandGalleryItem426});
             this.commandBarGalleryDropDown8.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup15,
-            spreadsheetCommandGalleryItemGroup16,
-            spreadsheetCommandGalleryItemGroup17});
+            spreadsheetCommandGalleryItemGroup95,
+            spreadsheetCommandGalleryItemGroup96,
+            spreadsheetCommandGalleryItemGroup97});
             this.commandBarGalleryDropDown8.Manager = null;
             this.commandBarGalleryDropDown8.Name = "commandBarGalleryDropDown8";
             // 
@@ -1674,110 +1686,110 @@
             // 
             // 
             this.commandBarGalleryDropDown9.Gallery.ColumnCount = 3;
-            spreadsheetCommandGalleryItemGroup18.Caption = "2-D Bar";
-            spreadsheetCommandGalleryItemGroup18.CommandName = "InsertChartBar2DCommandGroup";
-            spreadsheetCommandGalleryItem77.Caption = "Clustered Bar";
-            spreadsheetCommandGalleryItem77.CommandName = "InsertChartBarClustered2D";
-            spreadsheetCommandGalleryItem77.Description = "Compare values across categories using horizontal rectangles.\r\n\r\nUse it when the " +
+            spreadsheetCommandGalleryItemGroup98.Caption = "2-D Bar";
+            spreadsheetCommandGalleryItemGroup98.CommandName = "InsertChartBar2DCommandGroup";
+            spreadsheetCommandGalleryItem427.Caption = "Clustered Bar";
+            spreadsheetCommandGalleryItem427.CommandName = "InsertChartBarClustered2D";
+            spreadsheetCommandGalleryItem427.Description = "Compare values across categories using horizontal rectangles.\r\n\r\nUse it when the " +
     "values on the chart represent durations or when the category text is very long.";
-            spreadsheetCommandGalleryItem77.Hint = "Compare values across categories using horizontal rectangles.\r\n\r\nUse it when the " +
+            spreadsheetCommandGalleryItem427.Hint = "Compare values across categories using horizontal rectangles.\r\n\r\nUse it when the " +
     "values on the chart represent durations or when the category text is very long.";
-            spreadsheetCommandGalleryItem78.Caption = "Stacked Bar";
-            spreadsheetCommandGalleryItem78.CommandName = "InsertChartBarStacked2D";
-            spreadsheetCommandGalleryItem78.Description = "Compare the contribution of each value to a total across categories by using hori" +
+            spreadsheetCommandGalleryItem428.Caption = "Stacked Bar";
+            spreadsheetCommandGalleryItem428.CommandName = "InsertChartBarStacked2D";
+            spreadsheetCommandGalleryItem428.Description = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.\r\n\r\nUse it when the values on the chart represent durations or" +
     " when the category text is very long.";
-            spreadsheetCommandGalleryItem78.Hint = "Compare the contribution of each value to a total across categories by using hori" +
+            spreadsheetCommandGalleryItem428.Hint = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.\r\n\r\nUse it when the values on the chart represent durations or" +
     " when the category text is very long.";
-            spreadsheetCommandGalleryItem79.Caption = "100% Stacked Bar";
-            spreadsheetCommandGalleryItem79.CommandName = "InsertChartBarPercentStacked2D";
-            spreadsheetCommandGalleryItemGroup18.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem77,
-            spreadsheetCommandGalleryItem78,
-            spreadsheetCommandGalleryItem79});
-            spreadsheetCommandGalleryItemGroup19.Caption = "3-D Bar";
-            spreadsheetCommandGalleryItemGroup19.CommandName = "InsertChartBar3DCommandGroup";
-            spreadsheetCommandGalleryItem80.Caption = "Clustered Bar in 3-D";
-            spreadsheetCommandGalleryItem80.CommandName = "InsertChartBarClustered3D";
-            spreadsheetCommandGalleryItem80.Description = "Compare values across categories and display clustered bars in 3-D format.";
-            spreadsheetCommandGalleryItem80.Hint = "Compare values across categories and display clustered bars in 3-D format.";
-            spreadsheetCommandGalleryItem81.Caption = "Stacked Bar in 3-D";
-            spreadsheetCommandGalleryItem81.CommandName = "InsertChartBarStacked3D";
-            spreadsheetCommandGalleryItem81.Description = "Compare the contribution of each value to a total across categories and display s" +
+            spreadsheetCommandGalleryItem429.Caption = "100% Stacked Bar";
+            spreadsheetCommandGalleryItem429.CommandName = "InsertChartBarPercentStacked2D";
+            spreadsheetCommandGalleryItemGroup98.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem427,
+            spreadsheetCommandGalleryItem428,
+            spreadsheetCommandGalleryItem429});
+            spreadsheetCommandGalleryItemGroup99.Caption = "3-D Bar";
+            spreadsheetCommandGalleryItemGroup99.CommandName = "InsertChartBar3DCommandGroup";
+            spreadsheetCommandGalleryItem430.Caption = "Clustered Bar in 3-D";
+            spreadsheetCommandGalleryItem430.CommandName = "InsertChartBarClustered3D";
+            spreadsheetCommandGalleryItem430.Description = "Compare values across categories and display clustered bars in 3-D format.";
+            spreadsheetCommandGalleryItem430.Hint = "Compare values across categories and display clustered bars in 3-D format.";
+            spreadsheetCommandGalleryItem431.Caption = "Stacked Bar in 3-D";
+            spreadsheetCommandGalleryItem431.CommandName = "InsertChartBarStacked3D";
+            spreadsheetCommandGalleryItem431.Description = "Compare the contribution of each value to a total across categories and display s" +
     "tacked bars in 3-D format.";
-            spreadsheetCommandGalleryItem81.Hint = "Compare the contribution of each value to a total across categories and display s" +
+            spreadsheetCommandGalleryItem431.Hint = "Compare the contribution of each value to a total across categories and display s" +
     "tacked bars in 3-D format.";
-            spreadsheetCommandGalleryItem82.Caption = "100% Stacked Bar in 3-D";
-            spreadsheetCommandGalleryItem82.CommandName = "InsertChartBarPercentStacked3D";
-            spreadsheetCommandGalleryItem82.Description = "Compare the percentange each value contributes to a total across categories and d" +
+            spreadsheetCommandGalleryItem432.Caption = "100% Stacked Bar in 3-D";
+            spreadsheetCommandGalleryItem432.CommandName = "InsertChartBarPercentStacked3D";
+            spreadsheetCommandGalleryItem432.Description = "Compare the percentange each value contributes to a total across categories and d" +
     "isplay 100% stacked bars in 3-D format.";
-            spreadsheetCommandGalleryItem82.Hint = "Compare the percentange each value contributes to a total across categories and d" +
+            spreadsheetCommandGalleryItem432.Hint = "Compare the percentange each value contributes to a total across categories and d" +
     "isplay 100% stacked bars in 3-D format.";
-            spreadsheetCommandGalleryItemGroup19.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem80,
-            spreadsheetCommandGalleryItem81,
-            spreadsheetCommandGalleryItem82});
-            spreadsheetCommandGalleryItemGroup20.Caption = "Cylinder";
-            spreadsheetCommandGalleryItemGroup20.CommandName = "InsertChartHorizontalCylinderCommandGroup";
-            spreadsheetCommandGalleryItem83.Caption = "Clustered Horizontal Cylinder";
-            spreadsheetCommandGalleryItem83.CommandName = "InsertChartHorizontalCylinderClustered";
-            spreadsheetCommandGalleryItem83.Description = "Compare values across categories.";
-            spreadsheetCommandGalleryItem83.Hint = "Compare values across categories.";
-            spreadsheetCommandGalleryItem84.Caption = "Stacked Horizontal Cylinder";
-            spreadsheetCommandGalleryItem84.CommandName = "InsertChartHorizontalCylinderStacked";
-            spreadsheetCommandGalleryItem84.Description = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem84.Hint = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem85.Caption = "100% Stacked Horizontal Cylinder";
-            spreadsheetCommandGalleryItem85.CommandName = "InsertChartHorizontalCylinderPercentStacked";
-            spreadsheetCommandGalleryItem85.Description = "Compare the percentange each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem85.Hint = "Compare the percentange each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItemGroup20.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem83,
-            spreadsheetCommandGalleryItem84,
-            spreadsheetCommandGalleryItem85});
-            spreadsheetCommandGalleryItemGroup21.Caption = "Cone";
-            spreadsheetCommandGalleryItemGroup21.CommandName = "InsertChartHorizontalConeCommandGroup";
-            spreadsheetCommandGalleryItem86.Caption = "Clustered Horizontal Cone";
-            spreadsheetCommandGalleryItem86.CommandName = "InsertChartHorizontalConeClustered";
-            spreadsheetCommandGalleryItem86.Description = "Compare values across categories.";
-            spreadsheetCommandGalleryItem86.Hint = "Compare values across categories.";
-            spreadsheetCommandGalleryItem87.Caption = "Stacked Horizontal Cone";
-            spreadsheetCommandGalleryItem87.CommandName = "InsertChartHorizontalConeStacked";
-            spreadsheetCommandGalleryItem87.Description = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem87.Hint = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem88.Caption = "100% Stacked Horizontal Cone";
-            spreadsheetCommandGalleryItem88.CommandName = "InsertChartHorizontalConePercentStacked";
-            spreadsheetCommandGalleryItem88.Description = "Compare the percentange each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem88.Hint = "Compare the percentange each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItemGroup21.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem86,
-            spreadsheetCommandGalleryItem87,
-            spreadsheetCommandGalleryItem88});
-            spreadsheetCommandGalleryItemGroup22.Caption = "Pyramid";
-            spreadsheetCommandGalleryItemGroup22.CommandName = "InsertChartHorizontalPyramidCommandGroup";
-            spreadsheetCommandGalleryItem89.Caption = "Clustered Horizontal Pyramid";
-            spreadsheetCommandGalleryItem89.CommandName = "InsertChartHorizontalPyramidClustered";
-            spreadsheetCommandGalleryItem89.Description = "Compare values across categories.";
-            spreadsheetCommandGalleryItem89.Hint = "Compare values across categories.";
-            spreadsheetCommandGalleryItem90.Caption = "Stacked Horizontal Pyramid";
-            spreadsheetCommandGalleryItem90.CommandName = "InsertChartHorizontalPyramidStacked";
-            spreadsheetCommandGalleryItem90.Description = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem90.Hint = "Compare the contribution of each value to a total across categories.";
-            spreadsheetCommandGalleryItem91.Caption = "100% Stacked Horizontal Pyramid";
-            spreadsheetCommandGalleryItem91.CommandName = "InsertChartHorizontalPyramidPercentStacked";
-            spreadsheetCommandGalleryItem91.Description = "Compare the percentange each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItem91.Hint = "Compare the percentange each value contributes to a total across categories.";
-            spreadsheetCommandGalleryItemGroup22.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem89,
-            spreadsheetCommandGalleryItem90,
-            spreadsheetCommandGalleryItem91});
+            spreadsheetCommandGalleryItemGroup99.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem430,
+            spreadsheetCommandGalleryItem431,
+            spreadsheetCommandGalleryItem432});
+            spreadsheetCommandGalleryItemGroup100.Caption = "Cylinder";
+            spreadsheetCommandGalleryItemGroup100.CommandName = "InsertChartHorizontalCylinderCommandGroup";
+            spreadsheetCommandGalleryItem433.Caption = "Clustered Horizontal Cylinder";
+            spreadsheetCommandGalleryItem433.CommandName = "InsertChartHorizontalCylinderClustered";
+            spreadsheetCommandGalleryItem433.Description = "Compare values across categories.";
+            spreadsheetCommandGalleryItem433.Hint = "Compare values across categories.";
+            spreadsheetCommandGalleryItem434.Caption = "Stacked Horizontal Cylinder";
+            spreadsheetCommandGalleryItem434.CommandName = "InsertChartHorizontalCylinderStacked";
+            spreadsheetCommandGalleryItem434.Description = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem434.Hint = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem435.Caption = "100% Stacked Horizontal Cylinder";
+            spreadsheetCommandGalleryItem435.CommandName = "InsertChartHorizontalCylinderPercentStacked";
+            spreadsheetCommandGalleryItem435.Description = "Compare the percentange each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem435.Hint = "Compare the percentange each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItemGroup100.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem433,
+            spreadsheetCommandGalleryItem434,
+            spreadsheetCommandGalleryItem435});
+            spreadsheetCommandGalleryItemGroup101.Caption = "Cone";
+            spreadsheetCommandGalleryItemGroup101.CommandName = "InsertChartHorizontalConeCommandGroup";
+            spreadsheetCommandGalleryItem436.Caption = "Clustered Horizontal Cone";
+            spreadsheetCommandGalleryItem436.CommandName = "InsertChartHorizontalConeClustered";
+            spreadsheetCommandGalleryItem436.Description = "Compare values across categories.";
+            spreadsheetCommandGalleryItem436.Hint = "Compare values across categories.";
+            spreadsheetCommandGalleryItem437.Caption = "Stacked Horizontal Cone";
+            spreadsheetCommandGalleryItem437.CommandName = "InsertChartHorizontalConeStacked";
+            spreadsheetCommandGalleryItem437.Description = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem437.Hint = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem438.Caption = "100% Stacked Horizontal Cone";
+            spreadsheetCommandGalleryItem438.CommandName = "InsertChartHorizontalConePercentStacked";
+            spreadsheetCommandGalleryItem438.Description = "Compare the percentange each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem438.Hint = "Compare the percentange each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItemGroup101.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem436,
+            spreadsheetCommandGalleryItem437,
+            spreadsheetCommandGalleryItem438});
+            spreadsheetCommandGalleryItemGroup102.Caption = "Pyramid";
+            spreadsheetCommandGalleryItemGroup102.CommandName = "InsertChartHorizontalPyramidCommandGroup";
+            spreadsheetCommandGalleryItem439.Caption = "Clustered Horizontal Pyramid";
+            spreadsheetCommandGalleryItem439.CommandName = "InsertChartHorizontalPyramidClustered";
+            spreadsheetCommandGalleryItem439.Description = "Compare values across categories.";
+            spreadsheetCommandGalleryItem439.Hint = "Compare values across categories.";
+            spreadsheetCommandGalleryItem440.Caption = "Stacked Horizontal Pyramid";
+            spreadsheetCommandGalleryItem440.CommandName = "InsertChartHorizontalPyramidStacked";
+            spreadsheetCommandGalleryItem440.Description = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem440.Hint = "Compare the contribution of each value to a total across categories.";
+            spreadsheetCommandGalleryItem441.Caption = "100% Stacked Horizontal Pyramid";
+            spreadsheetCommandGalleryItem441.CommandName = "InsertChartHorizontalPyramidPercentStacked";
+            spreadsheetCommandGalleryItem441.Description = "Compare the percentange each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItem441.Hint = "Compare the percentange each value contributes to a total across categories.";
+            spreadsheetCommandGalleryItemGroup102.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem439,
+            spreadsheetCommandGalleryItem440,
+            spreadsheetCommandGalleryItem441});
             this.commandBarGalleryDropDown9.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup18,
-            spreadsheetCommandGalleryItemGroup19,
-            spreadsheetCommandGalleryItemGroup20,
-            spreadsheetCommandGalleryItemGroup21,
-            spreadsheetCommandGalleryItemGroup22});
+            spreadsheetCommandGalleryItemGroup98,
+            spreadsheetCommandGalleryItemGroup99,
+            spreadsheetCommandGalleryItemGroup100,
+            spreadsheetCommandGalleryItemGroup101,
+            spreadsheetCommandGalleryItemGroup102});
             this.commandBarGalleryDropDown9.Gallery.RowCount = 5;
             this.commandBarGalleryDropDown9.Manager = null;
             this.commandBarGalleryDropDown9.Name = "commandBarGalleryDropDown9";
@@ -1788,53 +1800,53 @@
             // 
             // 
             this.commandBarGalleryDropDown10.Gallery.ColumnCount = 3;
-            spreadsheetCommandGalleryItemGroup23.Caption = "2-D Area";
-            spreadsheetCommandGalleryItemGroup23.CommandName = "InsertChartArea2DCommandGroup";
-            spreadsheetCommandGalleryItem92.Caption = "Area";
-            spreadsheetCommandGalleryItem92.CommandName = "InsertChartArea";
-            spreadsheetCommandGalleryItem92.Description = "Display the trend of values over time or categories.";
-            spreadsheetCommandGalleryItem92.Hint = "Display the trend of values over time or categories.";
-            spreadsheetCommandGalleryItem93.Caption = "Stacked Area";
-            spreadsheetCommandGalleryItem93.CommandName = "InsertChartStackedArea";
-            spreadsheetCommandGalleryItem93.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            spreadsheetCommandGalleryItemGroup103.Caption = "2-D Area";
+            spreadsheetCommandGalleryItemGroup103.CommandName = "InsertChartArea2DCommandGroup";
+            spreadsheetCommandGalleryItem442.Caption = "Area";
+            spreadsheetCommandGalleryItem442.CommandName = "InsertChartArea";
+            spreadsheetCommandGalleryItem442.Description = "Display the trend of values over time or categories.";
+            spreadsheetCommandGalleryItem442.Hint = "Display the trend of values over time or categories.";
+            spreadsheetCommandGalleryItem443.Caption = "Stacked Area";
+            spreadsheetCommandGalleryItem443.CommandName = "InsertChartStackedArea";
+            spreadsheetCommandGalleryItem443.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.";
-            spreadsheetCommandGalleryItem93.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            spreadsheetCommandGalleryItem443.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.";
-            spreadsheetCommandGalleryItem94.Caption = "100% Stacked Area";
-            spreadsheetCommandGalleryItem94.CommandName = "InsertChartPercentStackedArea";
-            spreadsheetCommandGalleryItem94.Description = "Display the trend of the percentage each value contibutes over time or categories" +
+            spreadsheetCommandGalleryItem444.Caption = "100% Stacked Area";
+            spreadsheetCommandGalleryItem444.CommandName = "InsertChartPercentStackedArea";
+            spreadsheetCommandGalleryItem444.Description = "Display the trend of the percentage each value contibutes over time or categories" +
     ".\r\n\r\nUse it to emphasize the trend in the proportion of each series.";
-            spreadsheetCommandGalleryItem94.Hint = "Display the trend of the percentage each value contibutes over time or categories" +
+            spreadsheetCommandGalleryItem444.Hint = "Display the trend of the percentage each value contibutes over time or categories" +
     ".\r\n\r\nUse it to emphasize the trend in the proportion of each series.";
-            spreadsheetCommandGalleryItemGroup23.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem92,
-            spreadsheetCommandGalleryItem93,
-            spreadsheetCommandGalleryItem94});
-            spreadsheetCommandGalleryItemGroup24.Caption = "3-D Area";
-            spreadsheetCommandGalleryItemGroup24.CommandName = "InsertChartArea3DCommandGroup";
-            spreadsheetCommandGalleryItem95.Caption = "3-D Area";
-            spreadsheetCommandGalleryItem95.CommandName = "InsertChartArea3D";
-            spreadsheetCommandGalleryItem95.Description = "Display the trend of values over time or categories using areas on three axes.";
-            spreadsheetCommandGalleryItem95.Hint = "Display the trend of values over time or categories using areas on three axes.";
-            spreadsheetCommandGalleryItem96.Caption = "Stacked Area in 3-D";
-            spreadsheetCommandGalleryItem96.CommandName = "InsertChartStackedArea3D";
-            spreadsheetCommandGalleryItem96.Description = "Display the trend of the contribution of each value over time or categories by us" +
+            spreadsheetCommandGalleryItemGroup103.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem442,
+            spreadsheetCommandGalleryItem443,
+            spreadsheetCommandGalleryItem444});
+            spreadsheetCommandGalleryItemGroup104.Caption = "3-D Area";
+            spreadsheetCommandGalleryItemGroup104.CommandName = "InsertChartArea3DCommandGroup";
+            spreadsheetCommandGalleryItem445.Caption = "3-D Area";
+            spreadsheetCommandGalleryItem445.CommandName = "InsertChartArea3D";
+            spreadsheetCommandGalleryItem445.Description = "Display the trend of values over time or categories using areas on three axes.";
+            spreadsheetCommandGalleryItem445.Hint = "Display the trend of values over time or categories using areas on three axes.";
+            spreadsheetCommandGalleryItem446.Caption = "Stacked Area in 3-D";
+            spreadsheetCommandGalleryItem446.CommandName = "InsertChartStackedArea3D";
+            spreadsheetCommandGalleryItem446.Description = "Display the trend of the contribution of each value over time or categories by us" +
     "ing stacked areas in a 3-D format.";
-            spreadsheetCommandGalleryItem96.Hint = "Display the trend of the contribution of each value over time or categories by us" +
+            spreadsheetCommandGalleryItem446.Hint = "Display the trend of the contribution of each value over time or categories by us" +
     "ing stacked areas in a 3-D format.";
-            spreadsheetCommandGalleryItem97.Caption = "100% Stacked Area in 3-D";
-            spreadsheetCommandGalleryItem97.CommandName = "InsertChartPercentStackedArea3D";
-            spreadsheetCommandGalleryItem97.Description = "Display the trend of the percentage each value contributes over time or categorie" +
+            spreadsheetCommandGalleryItem447.Caption = "100% Stacked Area in 3-D";
+            spreadsheetCommandGalleryItem447.CommandName = "InsertChartPercentStackedArea3D";
+            spreadsheetCommandGalleryItem447.Description = "Display the trend of the percentage each value contributes over time or categorie" +
     "s by using 100% stacked areas in 3-D format.";
-            spreadsheetCommandGalleryItem97.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
+            spreadsheetCommandGalleryItem447.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
     "s by using 100% stacked areas in 3-D format.";
-            spreadsheetCommandGalleryItemGroup24.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem95,
-            spreadsheetCommandGalleryItem96,
-            spreadsheetCommandGalleryItem97});
+            spreadsheetCommandGalleryItemGroup104.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem445,
+            spreadsheetCommandGalleryItem446,
+            spreadsheetCommandGalleryItem447});
             this.commandBarGalleryDropDown10.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup23,
-            spreadsheetCommandGalleryItemGroup24});
+            spreadsheetCommandGalleryItemGroup103,
+            spreadsheetCommandGalleryItemGroup104});
             this.commandBarGalleryDropDown10.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown10.Manager = null;
             this.commandBarGalleryDropDown10.Name = "commandBarGalleryDropDown10";
@@ -1845,66 +1857,66 @@
             // 
             // 
             this.commandBarGalleryDropDown11.Gallery.ColumnCount = 2;
-            spreadsheetCommandGalleryItemGroup25.Caption = "Scatter";
-            spreadsheetCommandGalleryItemGroup25.CommandName = "InsertChartScatterCommandGroup";
-            spreadsheetCommandGalleryItem98.Caption = "Scatter with only Markers";
-            spreadsheetCommandGalleryItem98.CommandName = "InsertChartScatterMarkers";
-            spreadsheetCommandGalleryItem98.Description = "Compare pairs of values.\r\n\r\nUse is when the values are not in X-axis order or whe" +
+            spreadsheetCommandGalleryItemGroup105.Caption = "Scatter";
+            spreadsheetCommandGalleryItemGroup105.CommandName = "InsertChartScatterCommandGroup";
+            spreadsheetCommandGalleryItem448.Caption = "Scatter with only Markers";
+            spreadsheetCommandGalleryItem448.CommandName = "InsertChartScatterMarkers";
+            spreadsheetCommandGalleryItem448.Description = "Compare pairs of values.\r\n\r\nUse is when the values are not in X-axis order or whe" +
     "n they represent separate measurements.";
-            spreadsheetCommandGalleryItem98.Hint = "Compare pairs of values.\r\n\r\nUse is when the values are not in X-axis order or whe" +
+            spreadsheetCommandGalleryItem448.Hint = "Compare pairs of values.\r\n\r\nUse is when the values are not in X-axis order or whe" +
     "n they represent separate measurements.";
-            spreadsheetCommandGalleryItem99.Caption = "Scatter with Smooth Lines and Markers";
-            spreadsheetCommandGalleryItem99.CommandName = "InsertChartScatterSmoothLinesAndMarkers";
-            spreadsheetCommandGalleryItem99.Description = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
+            spreadsheetCommandGalleryItem449.Caption = "Scatter with Smooth Lines and Markers";
+            spreadsheetCommandGalleryItem449.CommandName = "InsertChartScatterSmoothLinesAndMarkers";
+            spreadsheetCommandGalleryItem449.Description = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
     "er and the data represents a function.";
-            spreadsheetCommandGalleryItem99.Hint = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
+            spreadsheetCommandGalleryItem449.Hint = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
     "er and the data represents a function.";
-            spreadsheetCommandGalleryItem100.Caption = "Scatter with Smooth Lines";
-            spreadsheetCommandGalleryItem100.CommandName = "InsertChartScatterSmoothLines";
-            spreadsheetCommandGalleryItem100.Description = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
+            spreadsheetCommandGalleryItem450.Caption = "Scatter with Smooth Lines";
+            spreadsheetCommandGalleryItem450.CommandName = "InsertChartScatterSmoothLines";
+            spreadsheetCommandGalleryItem450.Description = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
     "r and the data represents a function.";
-            spreadsheetCommandGalleryItem100.Hint = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
+            spreadsheetCommandGalleryItem450.Hint = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
     "r and the data represents a function.";
-            spreadsheetCommandGalleryItem101.Caption = "Scatter with Straight Lines and Markers";
-            spreadsheetCommandGalleryItem101.CommandName = "InsertChartScatterLinesAndMarkers";
-            spreadsheetCommandGalleryItem101.Description = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
+            spreadsheetCommandGalleryItem451.Caption = "Scatter with Straight Lines and Markers";
+            spreadsheetCommandGalleryItem451.CommandName = "InsertChartScatterLinesAndMarkers";
+            spreadsheetCommandGalleryItem451.Description = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
     "er and the data represents separate samples.";
-            spreadsheetCommandGalleryItem101.Hint = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
+            spreadsheetCommandGalleryItem451.Hint = "Compare pairs of values.\r\n\r\nUse is when there are a few data points in X-axis ord" +
     "er and the data represents separate samples.";
-            spreadsheetCommandGalleryItem102.Caption = "Scatter with Straight Lines";
-            spreadsheetCommandGalleryItem102.CommandName = "InsertChartScatterLines";
-            spreadsheetCommandGalleryItem102.Description = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
+            spreadsheetCommandGalleryItem452.Caption = "Scatter with Straight Lines";
+            spreadsheetCommandGalleryItem452.CommandName = "InsertChartScatterLines";
+            spreadsheetCommandGalleryItem452.Description = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
     "r and the data represents separate samples.";
-            spreadsheetCommandGalleryItem102.Hint = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
+            spreadsheetCommandGalleryItem452.Hint = "Compare pairs of values.\r\n\r\nUse is when there are many data points in X-axis orde" +
     "r and the data represents separate samples.";
-            spreadsheetCommandGalleryItemGroup25.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem98,
-            spreadsheetCommandGalleryItem99,
-            spreadsheetCommandGalleryItem100,
-            spreadsheetCommandGalleryItem101,
-            spreadsheetCommandGalleryItem102});
-            spreadsheetCommandGalleryItemGroup26.Caption = "Bubble";
-            spreadsheetCommandGalleryItemGroup26.CommandName = "InsertChartBubbleCommandGroup";
-            spreadsheetCommandGalleryItem103.Caption = "Bubble";
-            spreadsheetCommandGalleryItem103.CommandName = "InsertChartBubble";
-            spreadsheetCommandGalleryItem103.Description = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
+            spreadsheetCommandGalleryItemGroup105.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem448,
+            spreadsheetCommandGalleryItem449,
+            spreadsheetCommandGalleryItem450,
+            spreadsheetCommandGalleryItem451,
+            spreadsheetCommandGalleryItem452});
+            spreadsheetCommandGalleryItemGroup106.Caption = "Bubble";
+            spreadsheetCommandGalleryItemGroup106.CommandName = "InsertChartBubbleCommandGroup";
+            spreadsheetCommandGalleryItem453.Caption = "Bubble";
+            spreadsheetCommandGalleryItem453.CommandName = "InsertChartBubble";
+            spreadsheetCommandGalleryItem453.Description = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
     "third value determines the size of the bubble marker.";
-            spreadsheetCommandGalleryItem103.Hint = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
+            spreadsheetCommandGalleryItem453.Hint = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
     "third value determines the size of the bubble marker.";
-            spreadsheetCommandGalleryItem104.Caption = "Bubble with a 3-D effect";
-            spreadsheetCommandGalleryItem104.CommandName = "InsertChartBubble3D";
-            spreadsheetCommandGalleryItem104.Description = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
+            spreadsheetCommandGalleryItem454.Caption = "Bubble with a 3-D effect";
+            spreadsheetCommandGalleryItem454.CommandName = "InsertChartBubble3D";
+            spreadsheetCommandGalleryItem454.Description = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
     "third value determines the size of the bubble marker, which is displayed with a " +
     "3-D effect.";
-            spreadsheetCommandGalleryItem104.Hint = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
+            spreadsheetCommandGalleryItem454.Hint = "Resembles a scatter chart, but compares sets of three values instead of two. The " +
     "third value determines the size of the bubble marker, which is displayed with a " +
     "3-D effect.";
-            spreadsheetCommandGalleryItemGroup26.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem103,
-            spreadsheetCommandGalleryItem104});
+            spreadsheetCommandGalleryItemGroup106.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem453,
+            spreadsheetCommandGalleryItem454});
             this.commandBarGalleryDropDown11.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup25,
-            spreadsheetCommandGalleryItemGroup26});
+            spreadsheetCommandGalleryItemGroup105,
+            spreadsheetCommandGalleryItemGroup106});
             this.commandBarGalleryDropDown11.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown11.Manager = null;
             this.commandBarGalleryDropDown11.Name = "commandBarGalleryDropDown11";
@@ -1915,56 +1927,56 @@
             // 
             // 
             this.commandBarGalleryDropDown12.Gallery.ColumnCount = 4;
-            spreadsheetCommandGalleryItemGroup27.Caption = "Stock";
-            spreadsheetCommandGalleryItemGroup27.CommandName = "InsertChartStockCommandGroup";
-            spreadsheetCommandGalleryItem105.Caption = "High-Low-Close";
-            spreadsheetCommandGalleryItem105.CommandName = "InsertChartStockHighLowClose";
-            spreadsheetCommandGalleryItem105.Description = "Requires three series of values in order High, Low and Close.";
-            spreadsheetCommandGalleryItem105.Hint = "Requires three series of values in order High, Low and Close.";
-            spreadsheetCommandGalleryItem106.Caption = "Open-High-Low-Close";
-            spreadsheetCommandGalleryItem106.CommandName = "InsertChartStockOpenHighLowClose";
-            spreadsheetCommandGalleryItem106.Description = "Requires four series of values in order Open, High, Low and Close.";
-            spreadsheetCommandGalleryItem106.Hint = "Requires four series of values in order Open, High, Low and Close.";
-            spreadsheetCommandGalleryItem107.Caption = "Volume-High-Low-Close";
-            spreadsheetCommandGalleryItem107.CommandName = "InsertChartStockVolumeHighLowClose";
-            spreadsheetCommandGalleryItem107.Description = "Requires four series of values in order Volume, High, Low and Close.";
-            spreadsheetCommandGalleryItem107.Hint = "Requires four series of values in order Volume, High, Low and Close.";
-            spreadsheetCommandGalleryItem108.Caption = "Volume-Open-High-Low-Close";
-            spreadsheetCommandGalleryItem108.CommandName = "InsertChartStockVolumeOpenHighLowClose";
-            spreadsheetCommandGalleryItem108.Description = "Requires five series of values in order Volume, Open, High, Low and Close.";
-            spreadsheetCommandGalleryItem108.Hint = "Requires five series of values in order Volume, Open, High, Low and Close.";
-            spreadsheetCommandGalleryItemGroup27.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem105,
-            spreadsheetCommandGalleryItem106,
-            spreadsheetCommandGalleryItem107,
-            spreadsheetCommandGalleryItem108});
-            spreadsheetCommandGalleryItemGroup28.Caption = "Radar";
-            spreadsheetCommandGalleryItemGroup28.CommandName = "InsertChartRadarCommandGroup";
-            spreadsheetCommandGalleryItem109.Caption = "Radar";
-            spreadsheetCommandGalleryItem109.CommandName = "InsertChartRadar";
-            spreadsheetCommandGalleryItem109.Description = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
+            spreadsheetCommandGalleryItemGroup107.Caption = "Stock";
+            spreadsheetCommandGalleryItemGroup107.CommandName = "InsertChartStockCommandGroup";
+            spreadsheetCommandGalleryItem455.Caption = "High-Low-Close";
+            spreadsheetCommandGalleryItem455.CommandName = "InsertChartStockHighLowClose";
+            spreadsheetCommandGalleryItem455.Description = "Requires three series of values in order High, Low and Close.";
+            spreadsheetCommandGalleryItem455.Hint = "Requires three series of values in order High, Low and Close.";
+            spreadsheetCommandGalleryItem456.Caption = "Open-High-Low-Close";
+            spreadsheetCommandGalleryItem456.CommandName = "InsertChartStockOpenHighLowClose";
+            spreadsheetCommandGalleryItem456.Description = "Requires four series of values in order Open, High, Low and Close.";
+            spreadsheetCommandGalleryItem456.Hint = "Requires four series of values in order Open, High, Low and Close.";
+            spreadsheetCommandGalleryItem457.Caption = "Volume-High-Low-Close";
+            spreadsheetCommandGalleryItem457.CommandName = "InsertChartStockVolumeHighLowClose";
+            spreadsheetCommandGalleryItem457.Description = "Requires four series of values in order Volume, High, Low and Close.";
+            spreadsheetCommandGalleryItem457.Hint = "Requires four series of values in order Volume, High, Low and Close.";
+            spreadsheetCommandGalleryItem458.Caption = "Volume-Open-High-Low-Close";
+            spreadsheetCommandGalleryItem458.CommandName = "InsertChartStockVolumeOpenHighLowClose";
+            spreadsheetCommandGalleryItem458.Description = "Requires five series of values in order Volume, Open, High, Low and Close.";
+            spreadsheetCommandGalleryItem458.Hint = "Requires five series of values in order Volume, Open, High, Low and Close.";
+            spreadsheetCommandGalleryItemGroup107.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem455,
+            spreadsheetCommandGalleryItem456,
+            spreadsheetCommandGalleryItem457,
+            spreadsheetCommandGalleryItem458});
+            spreadsheetCommandGalleryItemGroup108.Caption = "Radar";
+            spreadsheetCommandGalleryItemGroup108.CommandName = "InsertChartRadarCommandGroup";
+            spreadsheetCommandGalleryItem459.Caption = "Radar";
+            spreadsheetCommandGalleryItem459.CommandName = "InsertChartRadar";
+            spreadsheetCommandGalleryItem459.Description = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
     "directly comparable.";
-            spreadsheetCommandGalleryItem109.Hint = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
+            spreadsheetCommandGalleryItem459.Hint = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
     "directly comparable.";
-            spreadsheetCommandGalleryItem110.Caption = "Radar with Markers";
-            spreadsheetCommandGalleryItem110.CommandName = "InsertChartRadarWithMarkers";
-            spreadsheetCommandGalleryItem110.Description = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
+            spreadsheetCommandGalleryItem460.Caption = "Radar with Markers";
+            spreadsheetCommandGalleryItem460.CommandName = "InsertChartRadarWithMarkers";
+            spreadsheetCommandGalleryItem460.Description = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
     "directly comparable.";
-            spreadsheetCommandGalleryItem110.Hint = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
+            spreadsheetCommandGalleryItem460.Hint = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
     "directly comparable.";
-            spreadsheetCommandGalleryItem111.Caption = "Filled Radar";
-            spreadsheetCommandGalleryItem111.CommandName = "InsertChartRadarFilled";
-            spreadsheetCommandGalleryItem111.Description = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
+            spreadsheetCommandGalleryItem461.Caption = "Filled Radar";
+            spreadsheetCommandGalleryItem461.CommandName = "InsertChartRadarFilled";
+            spreadsheetCommandGalleryItem461.Description = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
     "directly comparable and there is only one series.";
-            spreadsheetCommandGalleryItem111.Hint = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
+            spreadsheetCommandGalleryItem461.Hint = "Display values relative to a center point.\r\n\r\nUse it when the categories are not " +
     "directly comparable and there is only one series.";
-            spreadsheetCommandGalleryItemGroup28.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem109,
-            spreadsheetCommandGalleryItem110,
-            spreadsheetCommandGalleryItem111});
+            spreadsheetCommandGalleryItemGroup108.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem459,
+            spreadsheetCommandGalleryItem460,
+            spreadsheetCommandGalleryItem461});
             this.commandBarGalleryDropDown12.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup27,
-            spreadsheetCommandGalleryItemGroup28});
+            spreadsheetCommandGalleryItemGroup107,
+            spreadsheetCommandGalleryItemGroup108});
             this.commandBarGalleryDropDown12.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown12.Manager = null;
             this.commandBarGalleryDropDown12.Name = "commandBarGalleryDropDown12";
@@ -1976,65 +1988,65 @@
             // 
             this.commandBarGalleryDropDown13.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown13.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup29.Caption = "Primary Horizontal Axis";
-            spreadsheetCommandGalleryItemGroup29.CommandName = "ChartPrimaryHorizontalAxisCommandGroup";
-            spreadsheetCommandGalleryItem112.Caption = "None";
-            spreadsheetCommandGalleryItem112.CommandName = "ChartHidePrimaryHorizontalAxis";
-            spreadsheetCommandGalleryItem112.Description = "Do not display axis.";
-            spreadsheetCommandGalleryItem112.Enabled = false;
-            spreadsheetCommandGalleryItem112.Hint = "Do not display axis.";
-            spreadsheetCommandGalleryItem113.Caption = "Show Left to Right Axis";
-            spreadsheetCommandGalleryItem113.CommandName = "ChartPrimaryHorizontalAxisLeftToRight";
-            spreadsheetCommandGalleryItem113.Description = "Display Axis Left to Right with Labels";
-            spreadsheetCommandGalleryItem113.Enabled = false;
-            spreadsheetCommandGalleryItem113.Hint = "Display Axis Left to Right with Labels";
-            spreadsheetCommandGalleryItem114.Caption = "Show Axis without Labeling";
-            spreadsheetCommandGalleryItem114.CommandName = "ChartPrimaryHorizontalAxisHideLabels";
-            spreadsheetCommandGalleryItem114.Description = "Display Axis without labels or tick marks";
-            spreadsheetCommandGalleryItem114.Enabled = false;
-            spreadsheetCommandGalleryItem114.Hint = "Display Axis without labels or tick marks";
-            spreadsheetCommandGalleryItem115.Caption = "Show Right to Left Axis";
-            spreadsheetCommandGalleryItem115.CommandName = "ChartPrimaryHorizontalAxisRightToLeft";
-            spreadsheetCommandGalleryItem115.Description = "Display Axis Right to Left with Labels";
-            spreadsheetCommandGalleryItem115.Enabled = false;
-            spreadsheetCommandGalleryItem115.Hint = "Display Axis Right to Left with Labels";
-            spreadsheetCommandGalleryItem116.Caption = "Show Default Axis";
-            spreadsheetCommandGalleryItem116.CommandName = "ChartPrimaryHorizontalAxisDefault";
-            spreadsheetCommandGalleryItem116.Description = "Display Axis with default order and labels";
-            spreadsheetCommandGalleryItem116.Enabled = false;
-            spreadsheetCommandGalleryItem116.Hint = "Display Axis with default order and labels";
-            spreadsheetCommandGalleryItem117.Caption = "Show Axis in Thousands";
-            spreadsheetCommandGalleryItem117.CommandName = "ChartPrimaryHorizontalAxisScaleThousands";
-            spreadsheetCommandGalleryItem117.Description = "Display Axis with numbers represented in Thousands";
-            spreadsheetCommandGalleryItem117.Enabled = false;
-            spreadsheetCommandGalleryItem117.Hint = "Display Axis with numbers represented in Thousands";
-            spreadsheetCommandGalleryItem118.Caption = "Show Axis in Millions";
-            spreadsheetCommandGalleryItem118.CommandName = "ChartPrimaryHorizontalAxisScaleMillions";
-            spreadsheetCommandGalleryItem118.Description = "Display Axis with numbers represented in Millions";
-            spreadsheetCommandGalleryItem118.Enabled = false;
-            spreadsheetCommandGalleryItem118.Hint = "Display Axis with numbers represented in Millions";
-            spreadsheetCommandGalleryItem119.Caption = "Show Axis in Billions";
-            spreadsheetCommandGalleryItem119.CommandName = "ChartPrimaryHorizontalAxisScaleBillions";
-            spreadsheetCommandGalleryItem119.Description = "Display Axis with numbers represented in Billions";
-            spreadsheetCommandGalleryItem119.Enabled = false;
-            spreadsheetCommandGalleryItem119.Hint = "Display Axis with numbers represented in Billions";
-            spreadsheetCommandGalleryItem120.Caption = "Show Axis in Log Scale";
-            spreadsheetCommandGalleryItem120.CommandName = "ChartPrimaryHorizontalAxisScaleLogarithm";
-            spreadsheetCommandGalleryItem120.Description = "Display Axis using a log 10 base scale";
-            spreadsheetCommandGalleryItem120.Enabled = false;
-            spreadsheetCommandGalleryItem120.Hint = "Display Axis using a log 10 base scale";
-            spreadsheetCommandGalleryItemGroup29.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem112,
-            spreadsheetCommandGalleryItem113,
-            spreadsheetCommandGalleryItem114,
-            spreadsheetCommandGalleryItem115,
-            spreadsheetCommandGalleryItem116,
-            spreadsheetCommandGalleryItem117,
-            spreadsheetCommandGalleryItem118,
-            spreadsheetCommandGalleryItem119,
-            spreadsheetCommandGalleryItem120});
+            spreadsheetCommandGalleryItemGroup109.Caption = "Primary Horizontal Axis";
+            spreadsheetCommandGalleryItemGroup109.CommandName = "ChartPrimaryHorizontalAxisCommandGroup";
+            spreadsheetCommandGalleryItem462.Caption = "None";
+            spreadsheetCommandGalleryItem462.CommandName = "ChartHidePrimaryHorizontalAxis";
+            spreadsheetCommandGalleryItem462.Description = "Do not display axis.";
+            spreadsheetCommandGalleryItem462.Enabled = false;
+            spreadsheetCommandGalleryItem462.Hint = "Do not display axis.";
+            spreadsheetCommandGalleryItem463.Caption = "Show Left to Right Axis";
+            spreadsheetCommandGalleryItem463.CommandName = "ChartPrimaryHorizontalAxisLeftToRight";
+            spreadsheetCommandGalleryItem463.Description = "Display Axis Left to Right with Labels";
+            spreadsheetCommandGalleryItem463.Enabled = false;
+            spreadsheetCommandGalleryItem463.Hint = "Display Axis Left to Right with Labels";
+            spreadsheetCommandGalleryItem464.Caption = "Show Axis without Labeling";
+            spreadsheetCommandGalleryItem464.CommandName = "ChartPrimaryHorizontalAxisHideLabels";
+            spreadsheetCommandGalleryItem464.Description = "Display Axis without labels or tick marks";
+            spreadsheetCommandGalleryItem464.Enabled = false;
+            spreadsheetCommandGalleryItem464.Hint = "Display Axis without labels or tick marks";
+            spreadsheetCommandGalleryItem465.Caption = "Show Right to Left Axis";
+            spreadsheetCommandGalleryItem465.CommandName = "ChartPrimaryHorizontalAxisRightToLeft";
+            spreadsheetCommandGalleryItem465.Description = "Display Axis Right to Left with Labels";
+            spreadsheetCommandGalleryItem465.Enabled = false;
+            spreadsheetCommandGalleryItem465.Hint = "Display Axis Right to Left with Labels";
+            spreadsheetCommandGalleryItem466.Caption = "Show Default Axis";
+            spreadsheetCommandGalleryItem466.CommandName = "ChartPrimaryHorizontalAxisDefault";
+            spreadsheetCommandGalleryItem466.Description = "Display Axis with default order and labels";
+            spreadsheetCommandGalleryItem466.Enabled = false;
+            spreadsheetCommandGalleryItem466.Hint = "Display Axis with default order and labels";
+            spreadsheetCommandGalleryItem467.Caption = "Show Axis in Thousands";
+            spreadsheetCommandGalleryItem467.CommandName = "ChartPrimaryHorizontalAxisScaleThousands";
+            spreadsheetCommandGalleryItem467.Description = "Display Axis with numbers represented in Thousands";
+            spreadsheetCommandGalleryItem467.Enabled = false;
+            spreadsheetCommandGalleryItem467.Hint = "Display Axis with numbers represented in Thousands";
+            spreadsheetCommandGalleryItem468.Caption = "Show Axis in Millions";
+            spreadsheetCommandGalleryItem468.CommandName = "ChartPrimaryHorizontalAxisScaleMillions";
+            spreadsheetCommandGalleryItem468.Description = "Display Axis with numbers represented in Millions";
+            spreadsheetCommandGalleryItem468.Enabled = false;
+            spreadsheetCommandGalleryItem468.Hint = "Display Axis with numbers represented in Millions";
+            spreadsheetCommandGalleryItem469.Caption = "Show Axis in Billions";
+            spreadsheetCommandGalleryItem469.CommandName = "ChartPrimaryHorizontalAxisScaleBillions";
+            spreadsheetCommandGalleryItem469.Description = "Display Axis with numbers represented in Billions";
+            spreadsheetCommandGalleryItem469.Enabled = false;
+            spreadsheetCommandGalleryItem469.Hint = "Display Axis with numbers represented in Billions";
+            spreadsheetCommandGalleryItem470.Caption = "Show Axis in Log Scale";
+            spreadsheetCommandGalleryItem470.CommandName = "ChartPrimaryHorizontalAxisScaleLogarithm";
+            spreadsheetCommandGalleryItem470.Description = "Display Axis using a log 10 base scale";
+            spreadsheetCommandGalleryItem470.Enabled = false;
+            spreadsheetCommandGalleryItem470.Hint = "Display Axis using a log 10 base scale";
+            spreadsheetCommandGalleryItemGroup109.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem462,
+            spreadsheetCommandGalleryItem463,
+            spreadsheetCommandGalleryItem464,
+            spreadsheetCommandGalleryItem465,
+            spreadsheetCommandGalleryItem466,
+            spreadsheetCommandGalleryItem467,
+            spreadsheetCommandGalleryItem468,
+            spreadsheetCommandGalleryItem469,
+            spreadsheetCommandGalleryItem470});
             this.commandBarGalleryDropDown13.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup29});
+            spreadsheetCommandGalleryItemGroup109});
             this.commandBarGalleryDropDown13.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown13.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown13.Gallery.RowCount = 9;
@@ -2050,65 +2062,65 @@
             // 
             this.commandBarGalleryDropDown14.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown14.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup30.Caption = "Primary Vertical Axis";
-            spreadsheetCommandGalleryItemGroup30.CommandName = "ChartPrimaryVerticalAxisCommandGroup";
-            spreadsheetCommandGalleryItem121.Caption = "None";
-            spreadsheetCommandGalleryItem121.CommandName = "ChartHidePrimaryVerticalAxis";
-            spreadsheetCommandGalleryItem121.Description = "Do not display axis.";
-            spreadsheetCommandGalleryItem121.Enabled = false;
-            spreadsheetCommandGalleryItem121.Hint = "Do not display axis.";
-            spreadsheetCommandGalleryItem122.Caption = "Show Left to Right Axis";
-            spreadsheetCommandGalleryItem122.CommandName = "ChartPrimaryVerticalAxisLeftToRight";
-            spreadsheetCommandGalleryItem122.Description = "Display Axis Left to Right with Labels";
-            spreadsheetCommandGalleryItem122.Enabled = false;
-            spreadsheetCommandGalleryItem122.Hint = "Display Axis Left to Right with Labels";
-            spreadsheetCommandGalleryItem123.Caption = "Show Axis without Labeling";
-            spreadsheetCommandGalleryItem123.CommandName = "ChartPrimaryVerticalAxisHideLabels";
-            spreadsheetCommandGalleryItem123.Description = "Display Axis without labels or tick marks";
-            spreadsheetCommandGalleryItem123.Enabled = false;
-            spreadsheetCommandGalleryItem123.Hint = "Display Axis without labels or tick marks";
-            spreadsheetCommandGalleryItem124.Caption = "Show Right to Left Axis";
-            spreadsheetCommandGalleryItem124.CommandName = "ChartPrimaryVerticalAxisRightToLeft";
-            spreadsheetCommandGalleryItem124.Description = "Display Axis Right to Left with Labels";
-            spreadsheetCommandGalleryItem124.Enabled = false;
-            spreadsheetCommandGalleryItem124.Hint = "Display Axis Right to Left with Labels";
-            spreadsheetCommandGalleryItem125.Caption = "Show Default Axis";
-            spreadsheetCommandGalleryItem125.CommandName = "ChartPrimaryVerticalAxisDefault";
-            spreadsheetCommandGalleryItem125.Description = "Display Axis with default order and labels";
-            spreadsheetCommandGalleryItem125.Enabled = false;
-            spreadsheetCommandGalleryItem125.Hint = "Display Axis with default order and labels";
-            spreadsheetCommandGalleryItem126.Caption = "Show Axis in Thousands";
-            spreadsheetCommandGalleryItem126.CommandName = "ChartPrimaryVerticalAxisScaleThousands";
-            spreadsheetCommandGalleryItem126.Description = "Display Axis with numbers represented in Thousands";
-            spreadsheetCommandGalleryItem126.Enabled = false;
-            spreadsheetCommandGalleryItem126.Hint = "Display Axis with numbers represented in Thousands";
-            spreadsheetCommandGalleryItem127.Caption = "Show Axis in Millions";
-            spreadsheetCommandGalleryItem127.CommandName = "ChartPrimaryVerticalAxisScaleMillions";
-            spreadsheetCommandGalleryItem127.Description = "Display Axis with numbers represented in Millions";
-            spreadsheetCommandGalleryItem127.Enabled = false;
-            spreadsheetCommandGalleryItem127.Hint = "Display Axis with numbers represented in Millions";
-            spreadsheetCommandGalleryItem128.Caption = "Show Axis in Billions";
-            spreadsheetCommandGalleryItem128.CommandName = "ChartPrimaryVerticalAxisScaleBillions";
-            spreadsheetCommandGalleryItem128.Description = "Display Axis with numbers represented in Billions";
-            spreadsheetCommandGalleryItem128.Enabled = false;
-            spreadsheetCommandGalleryItem128.Hint = "Display Axis with numbers represented in Billions";
-            spreadsheetCommandGalleryItem129.Caption = "Show Axis in Log Scale";
-            spreadsheetCommandGalleryItem129.CommandName = "ChartPrimaryVerticalAxisScaleLogarithm";
-            spreadsheetCommandGalleryItem129.Description = "Display Axis using a log 10 base scale";
-            spreadsheetCommandGalleryItem129.Enabled = false;
-            spreadsheetCommandGalleryItem129.Hint = "Display Axis using a log 10 base scale";
-            spreadsheetCommandGalleryItemGroup30.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem121,
-            spreadsheetCommandGalleryItem122,
-            spreadsheetCommandGalleryItem123,
-            spreadsheetCommandGalleryItem124,
-            spreadsheetCommandGalleryItem125,
-            spreadsheetCommandGalleryItem126,
-            spreadsheetCommandGalleryItem127,
-            spreadsheetCommandGalleryItem128,
-            spreadsheetCommandGalleryItem129});
+            spreadsheetCommandGalleryItemGroup110.Caption = "Primary Vertical Axis";
+            spreadsheetCommandGalleryItemGroup110.CommandName = "ChartPrimaryVerticalAxisCommandGroup";
+            spreadsheetCommandGalleryItem471.Caption = "None";
+            spreadsheetCommandGalleryItem471.CommandName = "ChartHidePrimaryVerticalAxis";
+            spreadsheetCommandGalleryItem471.Description = "Do not display axis.";
+            spreadsheetCommandGalleryItem471.Enabled = false;
+            spreadsheetCommandGalleryItem471.Hint = "Do not display axis.";
+            spreadsheetCommandGalleryItem472.Caption = "Show Left to Right Axis";
+            spreadsheetCommandGalleryItem472.CommandName = "ChartPrimaryVerticalAxisLeftToRight";
+            spreadsheetCommandGalleryItem472.Description = "Display Axis Left to Right with Labels";
+            spreadsheetCommandGalleryItem472.Enabled = false;
+            spreadsheetCommandGalleryItem472.Hint = "Display Axis Left to Right with Labels";
+            spreadsheetCommandGalleryItem473.Caption = "Show Axis without Labeling";
+            spreadsheetCommandGalleryItem473.CommandName = "ChartPrimaryVerticalAxisHideLabels";
+            spreadsheetCommandGalleryItem473.Description = "Display Axis without labels or tick marks";
+            spreadsheetCommandGalleryItem473.Enabled = false;
+            spreadsheetCommandGalleryItem473.Hint = "Display Axis without labels or tick marks";
+            spreadsheetCommandGalleryItem474.Caption = "Show Right to Left Axis";
+            spreadsheetCommandGalleryItem474.CommandName = "ChartPrimaryVerticalAxisRightToLeft";
+            spreadsheetCommandGalleryItem474.Description = "Display Axis Right to Left with Labels";
+            spreadsheetCommandGalleryItem474.Enabled = false;
+            spreadsheetCommandGalleryItem474.Hint = "Display Axis Right to Left with Labels";
+            spreadsheetCommandGalleryItem475.Caption = "Show Default Axis";
+            spreadsheetCommandGalleryItem475.CommandName = "ChartPrimaryVerticalAxisDefault";
+            spreadsheetCommandGalleryItem475.Description = "Display Axis with default order and labels";
+            spreadsheetCommandGalleryItem475.Enabled = false;
+            spreadsheetCommandGalleryItem475.Hint = "Display Axis with default order and labels";
+            spreadsheetCommandGalleryItem476.Caption = "Show Axis in Thousands";
+            spreadsheetCommandGalleryItem476.CommandName = "ChartPrimaryVerticalAxisScaleThousands";
+            spreadsheetCommandGalleryItem476.Description = "Display Axis with numbers represented in Thousands";
+            spreadsheetCommandGalleryItem476.Enabled = false;
+            spreadsheetCommandGalleryItem476.Hint = "Display Axis with numbers represented in Thousands";
+            spreadsheetCommandGalleryItem477.Caption = "Show Axis in Millions";
+            spreadsheetCommandGalleryItem477.CommandName = "ChartPrimaryVerticalAxisScaleMillions";
+            spreadsheetCommandGalleryItem477.Description = "Display Axis with numbers represented in Millions";
+            spreadsheetCommandGalleryItem477.Enabled = false;
+            spreadsheetCommandGalleryItem477.Hint = "Display Axis with numbers represented in Millions";
+            spreadsheetCommandGalleryItem478.Caption = "Show Axis in Billions";
+            spreadsheetCommandGalleryItem478.CommandName = "ChartPrimaryVerticalAxisScaleBillions";
+            spreadsheetCommandGalleryItem478.Description = "Display Axis with numbers represented in Billions";
+            spreadsheetCommandGalleryItem478.Enabled = false;
+            spreadsheetCommandGalleryItem478.Hint = "Display Axis with numbers represented in Billions";
+            spreadsheetCommandGalleryItem479.Caption = "Show Axis in Log Scale";
+            spreadsheetCommandGalleryItem479.CommandName = "ChartPrimaryVerticalAxisScaleLogarithm";
+            spreadsheetCommandGalleryItem479.Description = "Display Axis using a log 10 base scale";
+            spreadsheetCommandGalleryItem479.Enabled = false;
+            spreadsheetCommandGalleryItem479.Hint = "Display Axis using a log 10 base scale";
+            spreadsheetCommandGalleryItemGroup110.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem471,
+            spreadsheetCommandGalleryItem472,
+            spreadsheetCommandGalleryItem473,
+            spreadsheetCommandGalleryItem474,
+            spreadsheetCommandGalleryItem475,
+            spreadsheetCommandGalleryItem476,
+            spreadsheetCommandGalleryItem477,
+            spreadsheetCommandGalleryItem478,
+            spreadsheetCommandGalleryItem479});
             this.commandBarGalleryDropDown14.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup30});
+            spreadsheetCommandGalleryItemGroup110});
             this.commandBarGalleryDropDown14.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown14.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown14.Gallery.RowCount = 9;
@@ -2124,35 +2136,35 @@
             // 
             this.commandBarGalleryDropDown15.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown15.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup31.Caption = "Primary Horizontal Gridlines";
-            spreadsheetCommandGalleryItemGroup31.CommandName = "ChartPrimaryHorizontalGridlinesCommandGroup";
-            spreadsheetCommandGalleryItem130.Caption = "None";
-            spreadsheetCommandGalleryItem130.CommandName = "ChartPrimaryHorizontalGridlinesNone";
-            spreadsheetCommandGalleryItem130.Description = "Do not display Horizontal Gridlines";
-            spreadsheetCommandGalleryItem130.Enabled = false;
-            spreadsheetCommandGalleryItem130.Hint = "Do not display Horizontal Gridlines";
-            spreadsheetCommandGalleryItem131.Caption = "Major Gridlines";
-            spreadsheetCommandGalleryItem131.CommandName = "ChartPrimaryHorizontalGridlinesMajor";
-            spreadsheetCommandGalleryItem131.Description = "Display Horizontal Gridlines for Major units";
-            spreadsheetCommandGalleryItem131.Enabled = false;
-            spreadsheetCommandGalleryItem131.Hint = "Display Horizontal Gridlines for Major units";
-            spreadsheetCommandGalleryItem132.Caption = "Minor Gridlines";
-            spreadsheetCommandGalleryItem132.CommandName = "ChartPrimaryHorizontalGridlinesMinor";
-            spreadsheetCommandGalleryItem132.Description = "Display Horizontal Gridlines for Minor units";
-            spreadsheetCommandGalleryItem132.Enabled = false;
-            spreadsheetCommandGalleryItem132.Hint = "Display Horizontal Gridlines for Minor units";
-            spreadsheetCommandGalleryItem133.Caption = "Major & Minor Gridlines";
-            spreadsheetCommandGalleryItem133.CommandName = "ChartPrimaryHorizontalGridlinesMajorAndMinor";
-            spreadsheetCommandGalleryItem133.Description = "Display Horizontal Gridlines for Major and Minor units";
-            spreadsheetCommandGalleryItem133.Enabled = false;
-            spreadsheetCommandGalleryItem133.Hint = "Display Horizontal Gridlines for Major and Minor units";
-            spreadsheetCommandGalleryItemGroup31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem130,
-            spreadsheetCommandGalleryItem131,
-            spreadsheetCommandGalleryItem132,
-            spreadsheetCommandGalleryItem133});
+            spreadsheetCommandGalleryItemGroup111.Caption = "Primary Horizontal Gridlines";
+            spreadsheetCommandGalleryItemGroup111.CommandName = "ChartPrimaryHorizontalGridlinesCommandGroup";
+            spreadsheetCommandGalleryItem480.Caption = "None";
+            spreadsheetCommandGalleryItem480.CommandName = "ChartPrimaryHorizontalGridlinesNone";
+            spreadsheetCommandGalleryItem480.Description = "Do not display Horizontal Gridlines";
+            spreadsheetCommandGalleryItem480.Enabled = false;
+            spreadsheetCommandGalleryItem480.Hint = "Do not display Horizontal Gridlines";
+            spreadsheetCommandGalleryItem481.Caption = "Major Gridlines";
+            spreadsheetCommandGalleryItem481.CommandName = "ChartPrimaryHorizontalGridlinesMajor";
+            spreadsheetCommandGalleryItem481.Description = "Display Horizontal Gridlines for Major units";
+            spreadsheetCommandGalleryItem481.Enabled = false;
+            spreadsheetCommandGalleryItem481.Hint = "Display Horizontal Gridlines for Major units";
+            spreadsheetCommandGalleryItem482.Caption = "Minor Gridlines";
+            spreadsheetCommandGalleryItem482.CommandName = "ChartPrimaryHorizontalGridlinesMinor";
+            spreadsheetCommandGalleryItem482.Description = "Display Horizontal Gridlines for Minor units";
+            spreadsheetCommandGalleryItem482.Enabled = false;
+            spreadsheetCommandGalleryItem482.Hint = "Display Horizontal Gridlines for Minor units";
+            spreadsheetCommandGalleryItem483.Caption = "Major & Minor Gridlines";
+            spreadsheetCommandGalleryItem483.CommandName = "ChartPrimaryHorizontalGridlinesMajorAndMinor";
+            spreadsheetCommandGalleryItem483.Description = "Display Horizontal Gridlines for Major and Minor units";
+            spreadsheetCommandGalleryItem483.Enabled = false;
+            spreadsheetCommandGalleryItem483.Hint = "Display Horizontal Gridlines for Major and Minor units";
+            spreadsheetCommandGalleryItemGroup111.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem480,
+            spreadsheetCommandGalleryItem481,
+            spreadsheetCommandGalleryItem482,
+            spreadsheetCommandGalleryItem483});
             this.commandBarGalleryDropDown15.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup31});
+            spreadsheetCommandGalleryItemGroup111});
             this.commandBarGalleryDropDown15.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown15.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown15.Gallery.RowCount = 4;
@@ -2168,35 +2180,35 @@
             // 
             this.commandBarGalleryDropDown16.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown16.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup32.Caption = "Primary Vertical Gridlines";
-            spreadsheetCommandGalleryItemGroup32.CommandName = "ChartPrimaryVerticalGridlinesCommandGroup";
-            spreadsheetCommandGalleryItem134.Caption = "None";
-            spreadsheetCommandGalleryItem134.CommandName = "ChartPrimaryVerticalGridlinesNone";
-            spreadsheetCommandGalleryItem134.Description = "Do not display Vertical Gridlines";
-            spreadsheetCommandGalleryItem134.Enabled = false;
-            spreadsheetCommandGalleryItem134.Hint = "Do not display Vertical Gridlines";
-            spreadsheetCommandGalleryItem135.Caption = "Major Gridlines";
-            spreadsheetCommandGalleryItem135.CommandName = "ChartPrimaryVerticalGridlinesMajor";
-            spreadsheetCommandGalleryItem135.Description = "Display Vertical Gridlines for Major units";
-            spreadsheetCommandGalleryItem135.Enabled = false;
-            spreadsheetCommandGalleryItem135.Hint = "Display Vertical Gridlines for Major units";
-            spreadsheetCommandGalleryItem136.Caption = "Minor Gridlines";
-            spreadsheetCommandGalleryItem136.CommandName = "ChartPrimaryVerticalGridlinesMinor";
-            spreadsheetCommandGalleryItem136.Description = "Display Vertical Gridlines for Minor units";
-            spreadsheetCommandGalleryItem136.Enabled = false;
-            spreadsheetCommandGalleryItem136.Hint = "Display Vertical Gridlines for Minor units";
-            spreadsheetCommandGalleryItem137.Caption = "Major & Minor Gridlines";
-            spreadsheetCommandGalleryItem137.CommandName = "ChartPrimaryVerticalGridlinesMajorAndMinor";
-            spreadsheetCommandGalleryItem137.Description = "Display Vertical Gridlines for Major and Minor units";
-            spreadsheetCommandGalleryItem137.Enabled = false;
-            spreadsheetCommandGalleryItem137.Hint = "Display Vertical Gridlines for Major and Minor units";
-            spreadsheetCommandGalleryItemGroup32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem134,
-            spreadsheetCommandGalleryItem135,
-            spreadsheetCommandGalleryItem136,
-            spreadsheetCommandGalleryItem137});
+            spreadsheetCommandGalleryItemGroup112.Caption = "Primary Vertical Gridlines";
+            spreadsheetCommandGalleryItemGroup112.CommandName = "ChartPrimaryVerticalGridlinesCommandGroup";
+            spreadsheetCommandGalleryItem484.Caption = "None";
+            spreadsheetCommandGalleryItem484.CommandName = "ChartPrimaryVerticalGridlinesNone";
+            spreadsheetCommandGalleryItem484.Description = "Do not display Vertical Gridlines";
+            spreadsheetCommandGalleryItem484.Enabled = false;
+            spreadsheetCommandGalleryItem484.Hint = "Do not display Vertical Gridlines";
+            spreadsheetCommandGalleryItem485.Caption = "Major Gridlines";
+            spreadsheetCommandGalleryItem485.CommandName = "ChartPrimaryVerticalGridlinesMajor";
+            spreadsheetCommandGalleryItem485.Description = "Display Vertical Gridlines for Major units";
+            spreadsheetCommandGalleryItem485.Enabled = false;
+            spreadsheetCommandGalleryItem485.Hint = "Display Vertical Gridlines for Major units";
+            spreadsheetCommandGalleryItem486.Caption = "Minor Gridlines";
+            spreadsheetCommandGalleryItem486.CommandName = "ChartPrimaryVerticalGridlinesMinor";
+            spreadsheetCommandGalleryItem486.Description = "Display Vertical Gridlines for Minor units";
+            spreadsheetCommandGalleryItem486.Enabled = false;
+            spreadsheetCommandGalleryItem486.Hint = "Display Vertical Gridlines for Minor units";
+            spreadsheetCommandGalleryItem487.Caption = "Major & Minor Gridlines";
+            spreadsheetCommandGalleryItem487.CommandName = "ChartPrimaryVerticalGridlinesMajorAndMinor";
+            spreadsheetCommandGalleryItem487.Description = "Display Vertical Gridlines for Major and Minor units";
+            spreadsheetCommandGalleryItem487.Enabled = false;
+            spreadsheetCommandGalleryItem487.Hint = "Display Vertical Gridlines for Major and Minor units";
+            spreadsheetCommandGalleryItemGroup112.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem484,
+            spreadsheetCommandGalleryItem485,
+            spreadsheetCommandGalleryItem486,
+            spreadsheetCommandGalleryItem487});
             this.commandBarGalleryDropDown16.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup32});
+            spreadsheetCommandGalleryItemGroup112});
             this.commandBarGalleryDropDown16.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown16.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown16.Gallery.RowCount = 4;
@@ -2212,29 +2224,29 @@
             // 
             this.commandBarGalleryDropDown17.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown17.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup33.Caption = "Chart Title";
-            spreadsheetCommandGalleryItemGroup33.CommandName = "ChartTitleCommandGroup";
-            spreadsheetCommandGalleryItem138.Caption = "None";
-            spreadsheetCommandGalleryItem138.CommandName = "ChartTitleNone";
-            spreadsheetCommandGalleryItem138.Description = "Do not display a chart Title";
-            spreadsheetCommandGalleryItem138.Enabled = false;
-            spreadsheetCommandGalleryItem138.Hint = "Do not display a chart Title";
-            spreadsheetCommandGalleryItem139.Caption = "Centered Overlay Title";
-            spreadsheetCommandGalleryItem139.CommandName = "ChartTitleCenteredOverlay";
-            spreadsheetCommandGalleryItem139.Description = "Overlay centered Title on chart without resizing chart";
-            spreadsheetCommandGalleryItem139.Enabled = false;
-            spreadsheetCommandGalleryItem139.Hint = "Overlay centered Title on chart without resizing chart";
-            spreadsheetCommandGalleryItem140.Caption = "Above Chart";
-            spreadsheetCommandGalleryItem140.CommandName = "ChartTitleAbove";
-            spreadsheetCommandGalleryItem140.Description = "Display Title at top of chart area and resize chart";
-            spreadsheetCommandGalleryItem140.Enabled = false;
-            spreadsheetCommandGalleryItem140.Hint = "Display Title at top of chart area and resize chart";
-            spreadsheetCommandGalleryItemGroup33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem138,
-            spreadsheetCommandGalleryItem139,
-            spreadsheetCommandGalleryItem140});
+            spreadsheetCommandGalleryItemGroup113.Caption = "Chart Title";
+            spreadsheetCommandGalleryItemGroup113.CommandName = "ChartTitleCommandGroup";
+            spreadsheetCommandGalleryItem488.Caption = "None";
+            spreadsheetCommandGalleryItem488.CommandName = "ChartTitleNone";
+            spreadsheetCommandGalleryItem488.Description = "Do not display a chart Title";
+            spreadsheetCommandGalleryItem488.Enabled = false;
+            spreadsheetCommandGalleryItem488.Hint = "Do not display a chart Title";
+            spreadsheetCommandGalleryItem489.Caption = "Centered Overlay Title";
+            spreadsheetCommandGalleryItem489.CommandName = "ChartTitleCenteredOverlay";
+            spreadsheetCommandGalleryItem489.Description = "Overlay centered Title on chart without resizing chart";
+            spreadsheetCommandGalleryItem489.Enabled = false;
+            spreadsheetCommandGalleryItem489.Hint = "Overlay centered Title on chart without resizing chart";
+            spreadsheetCommandGalleryItem490.Caption = "Above Chart";
+            spreadsheetCommandGalleryItem490.CommandName = "ChartTitleAbove";
+            spreadsheetCommandGalleryItem490.Description = "Display Title at top of chart area and resize chart";
+            spreadsheetCommandGalleryItem490.Enabled = false;
+            spreadsheetCommandGalleryItem490.Hint = "Display Title at top of chart area and resize chart";
+            spreadsheetCommandGalleryItemGroup113.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem488,
+            spreadsheetCommandGalleryItem489,
+            spreadsheetCommandGalleryItem490});
             this.commandBarGalleryDropDown17.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup33});
+            spreadsheetCommandGalleryItemGroup113});
             this.commandBarGalleryDropDown17.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown17.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown17.Gallery.ShowGroupCaption = false;
@@ -2249,23 +2261,23 @@
             // 
             this.commandBarGalleryDropDown18.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown18.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup34.Caption = "Primary Horizontal Axis Title";
-            spreadsheetCommandGalleryItemGroup34.CommandName = "ChartPrimaryHorizontalAxisTitleCommandGroup";
-            spreadsheetCommandGalleryItem141.Caption = "None";
-            spreadsheetCommandGalleryItem141.CommandName = "ChartPrimaryHorizontalAxisTitleNone";
-            spreadsheetCommandGalleryItem141.Description = "Do not display an Axis Title";
-            spreadsheetCommandGalleryItem141.Enabled = false;
-            spreadsheetCommandGalleryItem141.Hint = "Do not display an Axis Title";
-            spreadsheetCommandGalleryItem142.Caption = "Title Below Axis";
-            spreadsheetCommandGalleryItem142.CommandName = "ChartPrimaryHorizontalAxisTitleBelow";
-            spreadsheetCommandGalleryItem142.Description = "Display Title below Horizontal Axis and resize chart";
-            spreadsheetCommandGalleryItem142.Enabled = false;
-            spreadsheetCommandGalleryItem142.Hint = "Display Title below Horizontal Axis and resize chart";
-            spreadsheetCommandGalleryItemGroup34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem141,
-            spreadsheetCommandGalleryItem142});
+            spreadsheetCommandGalleryItemGroup114.Caption = "Primary Horizontal Axis Title";
+            spreadsheetCommandGalleryItemGroup114.CommandName = "ChartPrimaryHorizontalAxisTitleCommandGroup";
+            spreadsheetCommandGalleryItem491.Caption = "None";
+            spreadsheetCommandGalleryItem491.CommandName = "ChartPrimaryHorizontalAxisTitleNone";
+            spreadsheetCommandGalleryItem491.Description = "Do not display an Axis Title";
+            spreadsheetCommandGalleryItem491.Enabled = false;
+            spreadsheetCommandGalleryItem491.Hint = "Do not display an Axis Title";
+            spreadsheetCommandGalleryItem492.Caption = "Title Below Axis";
+            spreadsheetCommandGalleryItem492.CommandName = "ChartPrimaryHorizontalAxisTitleBelow";
+            spreadsheetCommandGalleryItem492.Description = "Display Title below Horizontal Axis and resize chart";
+            spreadsheetCommandGalleryItem492.Enabled = false;
+            spreadsheetCommandGalleryItem492.Hint = "Display Title below Horizontal Axis and resize chart";
+            spreadsheetCommandGalleryItemGroup114.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem491,
+            spreadsheetCommandGalleryItem492});
             this.commandBarGalleryDropDown18.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup34});
+            spreadsheetCommandGalleryItemGroup114});
             this.commandBarGalleryDropDown18.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown18.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown18.Gallery.RowCount = 2;
@@ -2281,35 +2293,35 @@
             // 
             this.commandBarGalleryDropDown19.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown19.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup35.Caption = "Primary Vertical Axis Title";
-            spreadsheetCommandGalleryItemGroup35.CommandName = "ChartPrimaryVerticalAxisTitleCommandGroup";
-            spreadsheetCommandGalleryItem143.Caption = "None";
-            spreadsheetCommandGalleryItem143.CommandName = "ChartPrimaryVerticalAxisTitleNone";
-            spreadsheetCommandGalleryItem143.Description = "Do not display an Axis Title";
-            spreadsheetCommandGalleryItem143.Enabled = false;
-            spreadsheetCommandGalleryItem143.Hint = "Do not display an Axis Title";
-            spreadsheetCommandGalleryItem144.Caption = "Rotated Title";
-            spreadsheetCommandGalleryItem144.CommandName = "ChartPrimaryVerticalAxisTitleRotated";
-            spreadsheetCommandGalleryItem144.Description = "Display Rotated Axis Title and resize chart";
-            spreadsheetCommandGalleryItem144.Enabled = false;
-            spreadsheetCommandGalleryItem144.Hint = "Display Rotated Axis Title and resize chart";
-            spreadsheetCommandGalleryItem145.Caption = "Vertical Title";
-            spreadsheetCommandGalleryItem145.CommandName = "ChartPrimaryVerticalAxisTitleVertical";
-            spreadsheetCommandGalleryItem145.Description = "Display Axis Title with vertical text and resize chart";
-            spreadsheetCommandGalleryItem145.Enabled = false;
-            spreadsheetCommandGalleryItem145.Hint = "Display Axis Title with vertical text and resize chart";
-            spreadsheetCommandGalleryItem146.Caption = "Horizontal Title";
-            spreadsheetCommandGalleryItem146.CommandName = "ChartPrimaryVerticalAxisTitleHorizontal";
-            spreadsheetCommandGalleryItem146.Description = "Display Axis Title horizontally and resize chart";
-            spreadsheetCommandGalleryItem146.Enabled = false;
-            spreadsheetCommandGalleryItem146.Hint = "Display Axis Title horizontally and resize chart";
-            spreadsheetCommandGalleryItemGroup35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem143,
-            spreadsheetCommandGalleryItem144,
-            spreadsheetCommandGalleryItem145,
-            spreadsheetCommandGalleryItem146});
+            spreadsheetCommandGalleryItemGroup115.Caption = "Primary Vertical Axis Title";
+            spreadsheetCommandGalleryItemGroup115.CommandName = "ChartPrimaryVerticalAxisTitleCommandGroup";
+            spreadsheetCommandGalleryItem493.Caption = "None";
+            spreadsheetCommandGalleryItem493.CommandName = "ChartPrimaryVerticalAxisTitleNone";
+            spreadsheetCommandGalleryItem493.Description = "Do not display an Axis Title";
+            spreadsheetCommandGalleryItem493.Enabled = false;
+            spreadsheetCommandGalleryItem493.Hint = "Do not display an Axis Title";
+            spreadsheetCommandGalleryItem494.Caption = "Rotated Title";
+            spreadsheetCommandGalleryItem494.CommandName = "ChartPrimaryVerticalAxisTitleRotated";
+            spreadsheetCommandGalleryItem494.Description = "Display Rotated Axis Title and resize chart";
+            spreadsheetCommandGalleryItem494.Enabled = false;
+            spreadsheetCommandGalleryItem494.Hint = "Display Rotated Axis Title and resize chart";
+            spreadsheetCommandGalleryItem495.Caption = "Vertical Title";
+            spreadsheetCommandGalleryItem495.CommandName = "ChartPrimaryVerticalAxisTitleVertical";
+            spreadsheetCommandGalleryItem495.Description = "Display Axis Title with vertical text and resize chart";
+            spreadsheetCommandGalleryItem495.Enabled = false;
+            spreadsheetCommandGalleryItem495.Hint = "Display Axis Title with vertical text and resize chart";
+            spreadsheetCommandGalleryItem496.Caption = "Horizontal Title";
+            spreadsheetCommandGalleryItem496.CommandName = "ChartPrimaryVerticalAxisTitleHorizontal";
+            spreadsheetCommandGalleryItem496.Description = "Display Axis Title horizontally and resize chart";
+            spreadsheetCommandGalleryItem496.Enabled = false;
+            spreadsheetCommandGalleryItem496.Hint = "Display Axis Title horizontally and resize chart";
+            spreadsheetCommandGalleryItemGroup115.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem493,
+            spreadsheetCommandGalleryItem494,
+            spreadsheetCommandGalleryItem495,
+            spreadsheetCommandGalleryItem496});
             this.commandBarGalleryDropDown19.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup35});
+            spreadsheetCommandGalleryItemGroup115});
             this.commandBarGalleryDropDown19.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown19.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown19.Gallery.RowCount = 4;
@@ -2325,53 +2337,53 @@
             // 
             this.commandBarGalleryDropDown20.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown20.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup36.Caption = "Legend";
-            spreadsheetCommandGalleryItemGroup36.CommandName = "ChartLegendCommandGroup";
-            spreadsheetCommandGalleryItem147.Caption = "None";
-            spreadsheetCommandGalleryItem147.CommandName = "ChartLegendNone";
-            spreadsheetCommandGalleryItem147.Description = "Turn off Legend";
-            spreadsheetCommandGalleryItem147.Enabled = false;
-            spreadsheetCommandGalleryItem147.Hint = "Turn off Legend";
-            spreadsheetCommandGalleryItem148.Caption = "Show Legend at Right";
-            spreadsheetCommandGalleryItem148.CommandName = "ChartLegendAtRight";
-            spreadsheetCommandGalleryItem148.Description = "Show Legend and align right";
-            spreadsheetCommandGalleryItem148.Enabled = false;
-            spreadsheetCommandGalleryItem148.Hint = "Show Legend and align right";
-            spreadsheetCommandGalleryItem149.Caption = "Show Legend at Top";
-            spreadsheetCommandGalleryItem149.CommandName = "ChartLegendAtTop";
-            spreadsheetCommandGalleryItem149.Description = "Show Legend and align top";
-            spreadsheetCommandGalleryItem149.Enabled = false;
-            spreadsheetCommandGalleryItem149.Hint = "Show Legend and align top";
-            spreadsheetCommandGalleryItem150.Caption = "Show Legend at Left";
-            spreadsheetCommandGalleryItem150.CommandName = "ChartLegendAtLeft";
-            spreadsheetCommandGalleryItem150.Description = "Show Legend and align left";
-            spreadsheetCommandGalleryItem150.Enabled = false;
-            spreadsheetCommandGalleryItem150.Hint = "Show Legend and align left";
-            spreadsheetCommandGalleryItem151.Caption = "Show Legend at Bottom";
-            spreadsheetCommandGalleryItem151.CommandName = "ChartLegendAtBottom";
-            spreadsheetCommandGalleryItem151.Description = "Show Legend and align bottom";
-            spreadsheetCommandGalleryItem151.Enabled = false;
-            spreadsheetCommandGalleryItem151.Hint = "Show Legend and align bottom";
-            spreadsheetCommandGalleryItem152.Caption = "Overlay Legend at Right";
-            spreadsheetCommandGalleryItem152.CommandName = "ChartLegendOverlayAtRight";
-            spreadsheetCommandGalleryItem152.Description = "Show Legend at right of the chart without resizing";
-            spreadsheetCommandGalleryItem152.Enabled = false;
-            spreadsheetCommandGalleryItem152.Hint = "Show Legend at right of the chart without resizing";
-            spreadsheetCommandGalleryItem153.Caption = "Overlay Legend at Left";
-            spreadsheetCommandGalleryItem153.CommandName = "ChartLegendOverlayAtLeft";
-            spreadsheetCommandGalleryItem153.Description = "Show Legend at left of the chart without resizing";
-            spreadsheetCommandGalleryItem153.Enabled = false;
-            spreadsheetCommandGalleryItem153.Hint = "Show Legend at left of the chart without resizing";
-            spreadsheetCommandGalleryItemGroup36.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem147,
-            spreadsheetCommandGalleryItem148,
-            spreadsheetCommandGalleryItem149,
-            spreadsheetCommandGalleryItem150,
-            spreadsheetCommandGalleryItem151,
-            spreadsheetCommandGalleryItem152,
-            spreadsheetCommandGalleryItem153});
+            spreadsheetCommandGalleryItemGroup116.Caption = "Legend";
+            spreadsheetCommandGalleryItemGroup116.CommandName = "ChartLegendCommandGroup";
+            spreadsheetCommandGalleryItem497.Caption = "None";
+            spreadsheetCommandGalleryItem497.CommandName = "ChartLegendNone";
+            spreadsheetCommandGalleryItem497.Description = "Turn off Legend";
+            spreadsheetCommandGalleryItem497.Enabled = false;
+            spreadsheetCommandGalleryItem497.Hint = "Turn off Legend";
+            spreadsheetCommandGalleryItem498.Caption = "Show Legend at Right";
+            spreadsheetCommandGalleryItem498.CommandName = "ChartLegendAtRight";
+            spreadsheetCommandGalleryItem498.Description = "Show Legend and align right";
+            spreadsheetCommandGalleryItem498.Enabled = false;
+            spreadsheetCommandGalleryItem498.Hint = "Show Legend and align right";
+            spreadsheetCommandGalleryItem499.Caption = "Show Legend at Top";
+            spreadsheetCommandGalleryItem499.CommandName = "ChartLegendAtTop";
+            spreadsheetCommandGalleryItem499.Description = "Show Legend and align top";
+            spreadsheetCommandGalleryItem499.Enabled = false;
+            spreadsheetCommandGalleryItem499.Hint = "Show Legend and align top";
+            spreadsheetCommandGalleryItem500.Caption = "Show Legend at Left";
+            spreadsheetCommandGalleryItem500.CommandName = "ChartLegendAtLeft";
+            spreadsheetCommandGalleryItem500.Description = "Show Legend and align left";
+            spreadsheetCommandGalleryItem500.Enabled = false;
+            spreadsheetCommandGalleryItem500.Hint = "Show Legend and align left";
+            spreadsheetCommandGalleryItem501.Caption = "Show Legend at Bottom";
+            spreadsheetCommandGalleryItem501.CommandName = "ChartLegendAtBottom";
+            spreadsheetCommandGalleryItem501.Description = "Show Legend and align bottom";
+            spreadsheetCommandGalleryItem501.Enabled = false;
+            spreadsheetCommandGalleryItem501.Hint = "Show Legend and align bottom";
+            spreadsheetCommandGalleryItem502.Caption = "Overlay Legend at Right";
+            spreadsheetCommandGalleryItem502.CommandName = "ChartLegendOverlayAtRight";
+            spreadsheetCommandGalleryItem502.Description = "Show Legend at right of the chart without resizing";
+            spreadsheetCommandGalleryItem502.Enabled = false;
+            spreadsheetCommandGalleryItem502.Hint = "Show Legend at right of the chart without resizing";
+            spreadsheetCommandGalleryItem503.Caption = "Overlay Legend at Left";
+            spreadsheetCommandGalleryItem503.CommandName = "ChartLegendOverlayAtLeft";
+            spreadsheetCommandGalleryItem503.Description = "Show Legend at left of the chart without resizing";
+            spreadsheetCommandGalleryItem503.Enabled = false;
+            spreadsheetCommandGalleryItem503.Hint = "Show Legend at left of the chart without resizing";
+            spreadsheetCommandGalleryItemGroup116.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem497,
+            spreadsheetCommandGalleryItem498,
+            spreadsheetCommandGalleryItem499,
+            spreadsheetCommandGalleryItem500,
+            spreadsheetCommandGalleryItem501,
+            spreadsheetCommandGalleryItem502,
+            spreadsheetCommandGalleryItem503});
             this.commandBarGalleryDropDown20.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup36});
+            spreadsheetCommandGalleryItemGroup116});
             this.commandBarGalleryDropDown20.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown20.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown20.Gallery.RowCount = 7;
@@ -2387,77 +2399,77 @@
             // 
             this.commandBarGalleryDropDown21.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown21.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup37.Caption = "Data Labels";
-            spreadsheetCommandGalleryItemGroup37.CommandName = "ChartDataLabelsCommandGroup";
-            spreadsheetCommandGalleryItem154.Caption = "None";
-            spreadsheetCommandGalleryItem154.CommandName = "ChartDataLabelsNone";
-            spreadsheetCommandGalleryItem154.Description = "Turn off Data Labels for selection";
-            spreadsheetCommandGalleryItem154.Enabled = false;
-            spreadsheetCommandGalleryItem154.Hint = "Turn off Data Labels for selection";
-            spreadsheetCommandGalleryItem155.Caption = "Show";
-            spreadsheetCommandGalleryItem155.CommandName = "ChartDataLabelsDefault";
-            spreadsheetCommandGalleryItem155.Description = "Turn on Data Labels for selection";
-            spreadsheetCommandGalleryItem155.Enabled = false;
-            spreadsheetCommandGalleryItem155.Hint = "Turn on Data Labels for selection";
-            spreadsheetCommandGalleryItem156.Caption = "Center";
-            spreadsheetCommandGalleryItem156.CommandName = "ChartDataLabelsCenter";
-            spreadsheetCommandGalleryItem156.Description = "Display Data Labels and position centered on the data point(s)";
-            spreadsheetCommandGalleryItem156.Enabled = false;
-            spreadsheetCommandGalleryItem156.Hint = "Display Data Labels and position centered on the data point(s)";
-            spreadsheetCommandGalleryItem157.Caption = "Inside End";
-            spreadsheetCommandGalleryItem157.CommandName = "ChartDataLabelsInsideEnd";
-            spreadsheetCommandGalleryItem157.Description = "Display Data Labels and position inside the end of data point(s)";
-            spreadsheetCommandGalleryItem157.Enabled = false;
-            spreadsheetCommandGalleryItem157.Hint = "Display Data Labels and position inside the end of data point(s)";
-            spreadsheetCommandGalleryItem158.Caption = "Inside Base";
-            spreadsheetCommandGalleryItem158.CommandName = "ChartDataLabelsInsideBase";
-            spreadsheetCommandGalleryItem158.Description = "Display Data Labels and position inside the base of data point(s)";
-            spreadsheetCommandGalleryItem158.Enabled = false;
-            spreadsheetCommandGalleryItem158.Hint = "Display Data Labels and position inside the base of data point(s)";
-            spreadsheetCommandGalleryItem159.Caption = "Outside End";
-            spreadsheetCommandGalleryItem159.CommandName = "ChartDataLabelsOutsideEnd";
-            spreadsheetCommandGalleryItem159.Description = "Display Data Labels and position outside the end of data point(s)";
-            spreadsheetCommandGalleryItem159.Enabled = false;
-            spreadsheetCommandGalleryItem159.Hint = "Display Data Labels and position outside the end of data point(s)";
-            spreadsheetCommandGalleryItem160.Caption = "Best Fit";
-            spreadsheetCommandGalleryItem160.CommandName = "ChartDataLabelsBestFit";
-            spreadsheetCommandGalleryItem160.Description = "Display Data Labels and position with Best Fit";
-            spreadsheetCommandGalleryItem160.Enabled = false;
-            spreadsheetCommandGalleryItem160.Hint = "Display Data Labels and position with Best Fit";
-            spreadsheetCommandGalleryItem161.Caption = "Left";
-            spreadsheetCommandGalleryItem161.CommandName = "ChartDataLabelsLeft";
-            spreadsheetCommandGalleryItem161.Description = "Display Data Labels and position left of the data point(s)";
-            spreadsheetCommandGalleryItem161.Enabled = false;
-            spreadsheetCommandGalleryItem161.Hint = "Display Data Labels and position left of the data point(s)";
-            spreadsheetCommandGalleryItem162.Caption = "Right";
-            spreadsheetCommandGalleryItem162.CommandName = "ChartDataLabelsRight";
-            spreadsheetCommandGalleryItem162.Description = "Display Data Labels and position right of the data point(s)";
-            spreadsheetCommandGalleryItem162.Enabled = false;
-            spreadsheetCommandGalleryItem162.Hint = "Display Data Labels and position right of the data point(s)";
-            spreadsheetCommandGalleryItem163.Caption = "Above";
-            spreadsheetCommandGalleryItem163.CommandName = "ChartDataLabelsAbove";
-            spreadsheetCommandGalleryItem163.Description = "Display Data Labels and position above data point(s)";
-            spreadsheetCommandGalleryItem163.Enabled = false;
-            spreadsheetCommandGalleryItem163.Hint = "Display Data Labels and position above data point(s)";
-            spreadsheetCommandGalleryItem164.Caption = "Below";
-            spreadsheetCommandGalleryItem164.CommandName = "ChartDataLabelsBelow";
-            spreadsheetCommandGalleryItem164.Description = "Display Data Labels and position below data point(s)";
-            spreadsheetCommandGalleryItem164.Enabled = false;
-            spreadsheetCommandGalleryItem164.Hint = "Display Data Labels and position below data point(s)";
-            spreadsheetCommandGalleryItemGroup37.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem154,
-            spreadsheetCommandGalleryItem155,
-            spreadsheetCommandGalleryItem156,
-            spreadsheetCommandGalleryItem157,
-            spreadsheetCommandGalleryItem158,
-            spreadsheetCommandGalleryItem159,
-            spreadsheetCommandGalleryItem160,
-            spreadsheetCommandGalleryItem161,
-            spreadsheetCommandGalleryItem162,
-            spreadsheetCommandGalleryItem163,
-            spreadsheetCommandGalleryItem164});
+            spreadsheetCommandGalleryItemGroup117.Caption = "Data Labels";
+            spreadsheetCommandGalleryItemGroup117.CommandName = "ChartDataLabelsCommandGroup";
+            spreadsheetCommandGalleryItem504.Caption = "None";
+            spreadsheetCommandGalleryItem504.CommandName = "ChartDataLabelsNone";
+            spreadsheetCommandGalleryItem504.Description = "Turn off Data Labels for selection";
+            spreadsheetCommandGalleryItem504.Enabled = false;
+            spreadsheetCommandGalleryItem504.Hint = "Turn off Data Labels for selection";
+            spreadsheetCommandGalleryItem505.Caption = "Show";
+            spreadsheetCommandGalleryItem505.CommandName = "ChartDataLabelsDefault";
+            spreadsheetCommandGalleryItem505.Description = "Turn on Data Labels for selection";
+            spreadsheetCommandGalleryItem505.Enabled = false;
+            spreadsheetCommandGalleryItem505.Hint = "Turn on Data Labels for selection";
+            spreadsheetCommandGalleryItem506.Caption = "Center";
+            spreadsheetCommandGalleryItem506.CommandName = "ChartDataLabelsCenter";
+            spreadsheetCommandGalleryItem506.Description = "Display Data Labels and position centered on the data point(s)";
+            spreadsheetCommandGalleryItem506.Enabled = false;
+            spreadsheetCommandGalleryItem506.Hint = "Display Data Labels and position centered on the data point(s)";
+            spreadsheetCommandGalleryItem507.Caption = "Inside End";
+            spreadsheetCommandGalleryItem507.CommandName = "ChartDataLabelsInsideEnd";
+            spreadsheetCommandGalleryItem507.Description = "Display Data Labels and position inside the end of data point(s)";
+            spreadsheetCommandGalleryItem507.Enabled = false;
+            spreadsheetCommandGalleryItem507.Hint = "Display Data Labels and position inside the end of data point(s)";
+            spreadsheetCommandGalleryItem508.Caption = "Inside Base";
+            spreadsheetCommandGalleryItem508.CommandName = "ChartDataLabelsInsideBase";
+            spreadsheetCommandGalleryItem508.Description = "Display Data Labels and position inside the base of data point(s)";
+            spreadsheetCommandGalleryItem508.Enabled = false;
+            spreadsheetCommandGalleryItem508.Hint = "Display Data Labels and position inside the base of data point(s)";
+            spreadsheetCommandGalleryItem509.Caption = "Outside End";
+            spreadsheetCommandGalleryItem509.CommandName = "ChartDataLabelsOutsideEnd";
+            spreadsheetCommandGalleryItem509.Description = "Display Data Labels and position outside the end of data point(s)";
+            spreadsheetCommandGalleryItem509.Enabled = false;
+            spreadsheetCommandGalleryItem509.Hint = "Display Data Labels and position outside the end of data point(s)";
+            spreadsheetCommandGalleryItem510.Caption = "Best Fit";
+            spreadsheetCommandGalleryItem510.CommandName = "ChartDataLabelsBestFit";
+            spreadsheetCommandGalleryItem510.Description = "Display Data Labels and position with Best Fit";
+            spreadsheetCommandGalleryItem510.Enabled = false;
+            spreadsheetCommandGalleryItem510.Hint = "Display Data Labels and position with Best Fit";
+            spreadsheetCommandGalleryItem511.Caption = "Left";
+            spreadsheetCommandGalleryItem511.CommandName = "ChartDataLabelsLeft";
+            spreadsheetCommandGalleryItem511.Description = "Display Data Labels and position left of the data point(s)";
+            spreadsheetCommandGalleryItem511.Enabled = false;
+            spreadsheetCommandGalleryItem511.Hint = "Display Data Labels and position left of the data point(s)";
+            spreadsheetCommandGalleryItem512.Caption = "Right";
+            spreadsheetCommandGalleryItem512.CommandName = "ChartDataLabelsRight";
+            spreadsheetCommandGalleryItem512.Description = "Display Data Labels and position right of the data point(s)";
+            spreadsheetCommandGalleryItem512.Enabled = false;
+            spreadsheetCommandGalleryItem512.Hint = "Display Data Labels and position right of the data point(s)";
+            spreadsheetCommandGalleryItem513.Caption = "Above";
+            spreadsheetCommandGalleryItem513.CommandName = "ChartDataLabelsAbove";
+            spreadsheetCommandGalleryItem513.Description = "Display Data Labels and position above data point(s)";
+            spreadsheetCommandGalleryItem513.Enabled = false;
+            spreadsheetCommandGalleryItem513.Hint = "Display Data Labels and position above data point(s)";
+            spreadsheetCommandGalleryItem514.Caption = "Below";
+            spreadsheetCommandGalleryItem514.CommandName = "ChartDataLabelsBelow";
+            spreadsheetCommandGalleryItem514.Description = "Display Data Labels and position below data point(s)";
+            spreadsheetCommandGalleryItem514.Enabled = false;
+            spreadsheetCommandGalleryItem514.Hint = "Display Data Labels and position below data point(s)";
+            spreadsheetCommandGalleryItemGroup117.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem504,
+            spreadsheetCommandGalleryItem505,
+            spreadsheetCommandGalleryItem506,
+            spreadsheetCommandGalleryItem507,
+            spreadsheetCommandGalleryItem508,
+            spreadsheetCommandGalleryItem509,
+            spreadsheetCommandGalleryItem510,
+            spreadsheetCommandGalleryItem511,
+            spreadsheetCommandGalleryItem512,
+            spreadsheetCommandGalleryItem513,
+            spreadsheetCommandGalleryItem514});
             this.commandBarGalleryDropDown21.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup37});
+            spreadsheetCommandGalleryItemGroup117});
             this.commandBarGalleryDropDown21.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown21.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown21.Gallery.RowCount = 11;
@@ -2473,41 +2485,41 @@
             // 
             this.commandBarGalleryDropDown22.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown22.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup38.Caption = "Lines";
-            spreadsheetCommandGalleryItemGroup38.CommandName = "ChartLinesCommandGroup";
-            spreadsheetCommandGalleryItem165.Caption = "None";
-            spreadsheetCommandGalleryItem165.CommandName = "ChartLinesNone";
-            spreadsheetCommandGalleryItem165.Description = "Do not show Drop Lines, High-Low Lines or Series Lines";
-            spreadsheetCommandGalleryItem165.Enabled = false;
-            spreadsheetCommandGalleryItem165.Hint = "Do not show Drop Lines, High-Low Lines or Series Lines";
-            spreadsheetCommandGalleryItem166.Caption = "Drop Lines";
-            spreadsheetCommandGalleryItem166.CommandName = "ChartShowDropLines";
-            spreadsheetCommandGalleryItem166.Description = "Show Drop Lines on an Area or Line Chart";
-            spreadsheetCommandGalleryItem166.Enabled = false;
-            spreadsheetCommandGalleryItem166.Hint = "Show Drop Lines on an Area or Line Chart";
-            spreadsheetCommandGalleryItem167.Caption = "High-Low Lines";
-            spreadsheetCommandGalleryItem167.CommandName = "ChartShowHighLowLines";
-            spreadsheetCommandGalleryItem167.Description = "Show High-Low Lines on a 2D Line Chart";
-            spreadsheetCommandGalleryItem167.Enabled = false;
-            spreadsheetCommandGalleryItem167.Hint = "Show High-Low Lines on a 2D Line Chart";
-            spreadsheetCommandGalleryItem168.Caption = "Drop and High-Low Lines";
-            spreadsheetCommandGalleryItem168.CommandName = "ChartShowDropLinesAndHighLowLines";
-            spreadsheetCommandGalleryItem168.Description = "Show Drop Lines and High-Low Lines on a 2D Line Chart";
-            spreadsheetCommandGalleryItem168.Enabled = false;
-            spreadsheetCommandGalleryItem168.Hint = "Show Drop Lines and High-Low Lines on a 2D Line Chart";
-            spreadsheetCommandGalleryItem169.Caption = "Series Lines";
-            spreadsheetCommandGalleryItem169.CommandName = "ChartShowSeriesLines";
-            spreadsheetCommandGalleryItem169.Description = "Show Series Lines on a 2D stacked Bar/Column Pie or Pie or Bar of Pie Chart";
-            spreadsheetCommandGalleryItem169.Enabled = false;
-            spreadsheetCommandGalleryItem169.Hint = "Show Series Lines on a 2D stacked Bar/Column Pie or Pie or Bar of Pie Chart";
-            spreadsheetCommandGalleryItemGroup38.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem165,
-            spreadsheetCommandGalleryItem166,
-            spreadsheetCommandGalleryItem167,
-            spreadsheetCommandGalleryItem168,
-            spreadsheetCommandGalleryItem169});
+            spreadsheetCommandGalleryItemGroup118.Caption = "Lines";
+            spreadsheetCommandGalleryItemGroup118.CommandName = "ChartLinesCommandGroup";
+            spreadsheetCommandGalleryItem515.Caption = "None";
+            spreadsheetCommandGalleryItem515.CommandName = "ChartLinesNone";
+            spreadsheetCommandGalleryItem515.Description = "Do not show Drop Lines, High-Low Lines or Series Lines";
+            spreadsheetCommandGalleryItem515.Enabled = false;
+            spreadsheetCommandGalleryItem515.Hint = "Do not show Drop Lines, High-Low Lines or Series Lines";
+            spreadsheetCommandGalleryItem516.Caption = "Drop Lines";
+            spreadsheetCommandGalleryItem516.CommandName = "ChartShowDropLines";
+            spreadsheetCommandGalleryItem516.Description = "Show Drop Lines on an Area or Line Chart";
+            spreadsheetCommandGalleryItem516.Enabled = false;
+            spreadsheetCommandGalleryItem516.Hint = "Show Drop Lines on an Area or Line Chart";
+            spreadsheetCommandGalleryItem517.Caption = "High-Low Lines";
+            spreadsheetCommandGalleryItem517.CommandName = "ChartShowHighLowLines";
+            spreadsheetCommandGalleryItem517.Description = "Show High-Low Lines on a 2D Line Chart";
+            spreadsheetCommandGalleryItem517.Enabled = false;
+            spreadsheetCommandGalleryItem517.Hint = "Show High-Low Lines on a 2D Line Chart";
+            spreadsheetCommandGalleryItem518.Caption = "Drop and High-Low Lines";
+            spreadsheetCommandGalleryItem518.CommandName = "ChartShowDropLinesAndHighLowLines";
+            spreadsheetCommandGalleryItem518.Description = "Show Drop Lines and High-Low Lines on a 2D Line Chart";
+            spreadsheetCommandGalleryItem518.Enabled = false;
+            spreadsheetCommandGalleryItem518.Hint = "Show Drop Lines and High-Low Lines on a 2D Line Chart";
+            spreadsheetCommandGalleryItem519.Caption = "Series Lines";
+            spreadsheetCommandGalleryItem519.CommandName = "ChartShowSeriesLines";
+            spreadsheetCommandGalleryItem519.Description = "Show Series Lines on a 2D stacked Bar/Column Pie or Pie or Bar of Pie Chart";
+            spreadsheetCommandGalleryItem519.Enabled = false;
+            spreadsheetCommandGalleryItem519.Hint = "Show Series Lines on a 2D stacked Bar/Column Pie or Pie or Bar of Pie Chart";
+            spreadsheetCommandGalleryItemGroup118.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem515,
+            spreadsheetCommandGalleryItem516,
+            spreadsheetCommandGalleryItem517,
+            spreadsheetCommandGalleryItem518,
+            spreadsheetCommandGalleryItem519});
             this.commandBarGalleryDropDown22.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup38});
+            spreadsheetCommandGalleryItemGroup118});
             this.commandBarGalleryDropDown22.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown22.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown22.Gallery.RowCount = 5;
@@ -2523,23 +2535,23 @@
             // 
             this.commandBarGalleryDropDown23.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown23.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup39.Caption = "Up/Down Bars";
-            spreadsheetCommandGalleryItemGroup39.CommandName = "ChartUpDownBarsCommandGroup";
-            spreadsheetCommandGalleryItem170.Caption = "None";
-            spreadsheetCommandGalleryItem170.CommandName = "ChartHideUpDownBars";
-            spreadsheetCommandGalleryItem170.Description = "Do not show Up/Down Bars";
-            spreadsheetCommandGalleryItem170.Enabled = false;
-            spreadsheetCommandGalleryItem170.Hint = "Do not show Up/Down Bars";
-            spreadsheetCommandGalleryItem171.Caption = "Up/Down Bars";
-            spreadsheetCommandGalleryItem171.CommandName = "ChartShowUpDownBars";
-            spreadsheetCommandGalleryItem171.Description = "Show Up/Down Bars on a Line Chart";
-            spreadsheetCommandGalleryItem171.Enabled = false;
-            spreadsheetCommandGalleryItem171.Hint = "Show Up/Down Bars on a Line Chart";
-            spreadsheetCommandGalleryItemGroup39.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem170,
-            spreadsheetCommandGalleryItem171});
+            spreadsheetCommandGalleryItemGroup119.Caption = "Up/Down Bars";
+            spreadsheetCommandGalleryItemGroup119.CommandName = "ChartUpDownBarsCommandGroup";
+            spreadsheetCommandGalleryItem520.Caption = "None";
+            spreadsheetCommandGalleryItem520.CommandName = "ChartHideUpDownBars";
+            spreadsheetCommandGalleryItem520.Description = "Do not show Up/Down Bars";
+            spreadsheetCommandGalleryItem520.Enabled = false;
+            spreadsheetCommandGalleryItem520.Hint = "Do not show Up/Down Bars";
+            spreadsheetCommandGalleryItem521.Caption = "Up/Down Bars";
+            spreadsheetCommandGalleryItem521.CommandName = "ChartShowUpDownBars";
+            spreadsheetCommandGalleryItem521.Description = "Show Up/Down Bars on a Line Chart";
+            spreadsheetCommandGalleryItem521.Enabled = false;
+            spreadsheetCommandGalleryItem521.Hint = "Show Up/Down Bars on a Line Chart";
+            spreadsheetCommandGalleryItemGroup119.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem520,
+            spreadsheetCommandGalleryItem521});
             this.commandBarGalleryDropDown23.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup39});
+            spreadsheetCommandGalleryItemGroup119});
             this.commandBarGalleryDropDown23.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown23.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown23.Gallery.RowCount = 2;
@@ -2555,37 +2567,37 @@
             // 
             this.commandBarGalleryDropDown24.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Vertical;
             this.commandBarGalleryDropDown24.Gallery.ColumnCount = 1;
-            spreadsheetCommandGalleryItemGroup40.Caption = "Error Bars";
-            spreadsheetCommandGalleryItemGroup40.CommandName = "ChartErrorBarsCommandGroup";
-            spreadsheetCommandGalleryItem172.Caption = "None";
-            spreadsheetCommandGalleryItem172.CommandName = "ChartErrorBarsNone";
-            spreadsheetCommandGalleryItem172.Description = "Removes the Error Bars for the selected series or all Error Bars if none are sele" +
+            spreadsheetCommandGalleryItemGroup120.Caption = "Error Bars";
+            spreadsheetCommandGalleryItemGroup120.CommandName = "ChartErrorBarsCommandGroup";
+            spreadsheetCommandGalleryItem522.Caption = "None";
+            spreadsheetCommandGalleryItem522.CommandName = "ChartErrorBarsNone";
+            spreadsheetCommandGalleryItem522.Description = "Removes the Error Bars for the selected series or all Error Bars if none are sele" +
     "cted";
-            spreadsheetCommandGalleryItem172.Enabled = false;
-            spreadsheetCommandGalleryItem172.Hint = "Removes the Error Bars for the selected series or all Error Bars if none are sele" +
+            spreadsheetCommandGalleryItem522.Enabled = false;
+            spreadsheetCommandGalleryItem522.Hint = "Removes the Error Bars for the selected series or all Error Bars if none are sele" +
     "cted";
-            spreadsheetCommandGalleryItem173.Caption = "Error Bars with Standard Error";
-            spreadsheetCommandGalleryItem173.CommandName = "ChartErrorBarsStandardError";
-            spreadsheetCommandGalleryItem173.Description = "Displays Error Bars for the selected chart series using Standard Error";
-            spreadsheetCommandGalleryItem173.Enabled = false;
-            spreadsheetCommandGalleryItem173.Hint = "Displays Error Bars for the selected chart series using Standard Error";
-            spreadsheetCommandGalleryItem174.Caption = "Error Bars with Percentage";
-            spreadsheetCommandGalleryItem174.CommandName = "ChartErrorBarsPercentage";
-            spreadsheetCommandGalleryItem174.Description = "Displays Error Bars for the selected chart series with 5% value";
-            spreadsheetCommandGalleryItem174.Enabled = false;
-            spreadsheetCommandGalleryItem174.Hint = "Displays Error Bars for the selected chart series with 5% value";
-            spreadsheetCommandGalleryItem175.Caption = "Error Bars with Standard Deviation";
-            spreadsheetCommandGalleryItem175.CommandName = "ChartErrorBarsStandardDeviation";
-            spreadsheetCommandGalleryItem175.Description = "Displays Error Bars for the selected chart series with 1 standard deviation";
-            spreadsheetCommandGalleryItem175.Enabled = false;
-            spreadsheetCommandGalleryItem175.Hint = "Displays Error Bars for the selected chart series with 1 standard deviation";
-            spreadsheetCommandGalleryItemGroup40.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem172,
-            spreadsheetCommandGalleryItem173,
-            spreadsheetCommandGalleryItem174,
-            spreadsheetCommandGalleryItem175});
+            spreadsheetCommandGalleryItem523.Caption = "Error Bars with Standard Error";
+            spreadsheetCommandGalleryItem523.CommandName = "ChartErrorBarsStandardError";
+            spreadsheetCommandGalleryItem523.Description = "Displays Error Bars for the selected chart series using Standard Error";
+            spreadsheetCommandGalleryItem523.Enabled = false;
+            spreadsheetCommandGalleryItem523.Hint = "Displays Error Bars for the selected chart series using Standard Error";
+            spreadsheetCommandGalleryItem524.Caption = "Error Bars with Percentage";
+            spreadsheetCommandGalleryItem524.CommandName = "ChartErrorBarsPercentage";
+            spreadsheetCommandGalleryItem524.Description = "Displays Error Bars for the selected chart series with 5% value";
+            spreadsheetCommandGalleryItem524.Enabled = false;
+            spreadsheetCommandGalleryItem524.Hint = "Displays Error Bars for the selected chart series with 5% value";
+            spreadsheetCommandGalleryItem525.Caption = "Error Bars with Standard Deviation";
+            spreadsheetCommandGalleryItem525.CommandName = "ChartErrorBarsStandardDeviation";
+            spreadsheetCommandGalleryItem525.Description = "Displays Error Bars for the selected chart series with 1 standard deviation";
+            spreadsheetCommandGalleryItem525.Enabled = false;
+            spreadsheetCommandGalleryItem525.Hint = "Displays Error Bars for the selected chart series with 1 standard deviation";
+            spreadsheetCommandGalleryItemGroup120.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem522,
+            spreadsheetCommandGalleryItem523,
+            spreadsheetCommandGalleryItem524,
+            spreadsheetCommandGalleryItem525});
             this.commandBarGalleryDropDown24.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup40});
+            spreadsheetCommandGalleryItemGroup120});
             this.commandBarGalleryDropDown24.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown24.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown24.Gallery.RowCount = 4;
@@ -2596,12 +2608,12 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.groupControl2);
             this.panelControl1.Controls.Add(this.groupControl1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 227);
+            this.panelControl1.Controls.Add(this.groupControl2);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1032, 439);
+            this.panelControl1.Size = new System.Drawing.Size(965, 439);
             this.panelControl1.TabIndex = 9;
             // 
             // groupControl2
@@ -2642,9 +2654,34 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl2.Location = new System.Drawing.Point(2, 262);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1028, 175);
+            this.groupControl2.Size = new System.Drawing.Size(961, 175);
             this.groupControl2.TabIndex = 9;
             this.groupControl2.Text = "지출결의서";
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl21.Appearance.Options.UseFont = true;
+            this.labelControl21.Location = new System.Drawing.Point(557, 136);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(48, 15);
+            this.labelControl21.TabIndex = 58;
+            this.labelControl21.Text = "잔      액";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(619, 133);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.DisplayFormat.FormatString = "#,##0";
+            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.EditFormat.FormatString = "#,##0";
+            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.NullValuePrompt = "잔액";
+            this.textEdit1.Properties.ReadOnly = true;
+            this.textEdit1.Size = new System.Drawing.Size(120, 20);
+            this.textEdit1.TabIndex = 57;
             // 
             // labelControl17
             // 
@@ -2701,10 +2738,10 @@
             // 
             this.bedt_USER.Location = new System.Drawing.Point(619, 80);
             this.bedt_USER.Name = "bedt_USER";
-            editorButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions6.SvgImage")));
-            editorButtonImageOptions6.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
             this.bedt_USER.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.bedt_USER.Size = new System.Drawing.Size(120, 24);
             this.bedt_USER.TabIndex = 52;
             this.bedt_USER.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_USER_ButtonClick);
@@ -2884,10 +2921,10 @@
             this.dt_PAY.Properties.Appearance.Options.UseFont = true;
             this.dt_PAY.Properties.Appearance.Options.UseTextOptions = true;
             this.dt_PAY.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            editorButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions7.SvgImage")));
-            editorButtonImageOptions7.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions5.SvgImage")));
+            editorButtonImageOptions5.SvgImageSize = new System.Drawing.Size(16, 16);
             this.dt_PAY.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dt_PAY.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dt_PAY.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
@@ -3019,10 +3056,10 @@
             // 
             this.bedt_DEPT.Location = new System.Drawing.Point(289, 25);
             this.bedt_DEPT.Name = "bedt_DEPT";
-            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
-            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions6.SvgImage")));
+            editorButtonImageOptions6.SvgImageSize = new System.Drawing.Size(16, 16);
             this.bedt_DEPT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.bedt_DEPT.Size = new System.Drawing.Size(120, 24);
             this.bedt_DEPT.TabIndex = 45;
             this.bedt_DEPT.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_DEPT_ButtonClick);
@@ -3040,38 +3077,18 @@
             this.bedt_PLAN_USER.TabIndex = 53;
             this.bedt_PLAN_USER.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bedt_PLAN_USER_ButtonClick);
             // 
-            // labelControl21
+            // splitContainerControl1
             // 
-            this.labelControl21.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Location = new System.Drawing.Point(557, 136);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(48, 15);
-            this.labelControl21.TabIndex = 58;
-            this.labelControl21.Text = "잔      액";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(619, 133);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.DisplayFormat.FormatString = "#,##0";
-            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.EditFormat.FormatString = "#,##0";
-            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.NullValuePrompt = "잔액";
-            this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(120, 20);
-            this.textEdit1.TabIndex = 57;
-            // 
-            // gridColumn17
-            // 
-            this.gridColumn17.Caption = "공급업체명";
-            this.gridColumn17.FieldName = "COMP_NAME";
-            this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 4;
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 227);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.panelControl1);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.spreadsheetControl1);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(1715, 439);
+            this.splitContainerControl1.SplitterPosition = 965;
+            this.splitContainerControl1.TabIndex = 54;
             // 
             // EXEC01
             // 
@@ -3079,15 +3096,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1715, 666);
-            this.Controls.Add(this.spreadsheetControl1);
-            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.splitContainerControl1);
             this.Name = "EXEC01";
             this.Text = "지출결의서 등록";
             this.Load += new System.EventHandler(this.Form_Load);
             this.Controls.SetChildIndex(this.pnl_Top01, 0);
             this.Controls.SetChildIndex(this.grp_Search_Condition, 0);
-            this.Controls.SetChildIndex(this.panelControl1, 0);
-            this.Controls.SetChildIndex(this.spreadsheetControl1, 0);
+            this.Controls.SetChildIndex(this.splitContainerControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).EndInit();
             this.grp_Search_Condition.ResumeLayout(false);
             this.grp_Search_Condition.PerformLayout();
@@ -3151,6 +3166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_USE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DROWUP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_USER.Properties)).EndInit();
@@ -3173,7 +3189,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.medt_PLAN_CONTENT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_DEPT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_PLAN_USER.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3284,5 +3301,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
     }
 }

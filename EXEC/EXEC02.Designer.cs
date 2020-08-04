@@ -106,6 +106,7 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rtedt_ACT = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -124,7 +125,6 @@
             this.bedt_PJT2 = new DevExpress.XtraEditors.ButtonEdit();
             this.ledt_BUSSINESS_GBN2 = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_PLAN_CONTENT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.txt_PLAN_TITLE = new DevExpress.XtraEditors.TextEdit();
@@ -154,7 +154,7 @@
             this.txt_COMP_ACCT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_COMP_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txt_PLAN_CONTENT = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grp_Search_Condition)).BeginInit();
             this.grp_Search_Condition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_Close)).BeginInit();
@@ -202,7 +202,6 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_PJT2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledt_BUSSINESS_GBN2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_CONTENT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_TITLE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_GW_NO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_BILL.Properties.CalendarTimeProperties)).BeginInit();
@@ -219,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt_PAY.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_ACCT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_CONTENT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_Search_Condition
@@ -625,6 +625,8 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "환율";
+            this.gridColumn2.DisplayFormat.FormatString = "#,##0";
+            this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn2.FieldName = "EXCH_RATE";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -634,6 +636,8 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "단가";
+            this.gridColumn4.DisplayFormat.FormatString = "#,##0";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "PRICE";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -643,6 +647,8 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "수량";
+            this.gridColumn6.DisplayFormat.FormatString = "#,##0";
+            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "AMOUNT";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -661,6 +667,8 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "소계(원화)";
+            this.gridColumn8.DisplayFormat.FormatString = "#,##0";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "TOTAL";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
@@ -691,6 +699,14 @@
             this.rtedt_ACT.AutoHeight = false;
             this.rtedt_ACT.Name = "rtedt_ACT";
             this.rtedt_ACT.NullValuePrompt = "선택하세요.";
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "공급업체명";
+            this.gridColumn9.FieldName = "COMP_NAME";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 3;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -837,7 +853,6 @@
             this.groupControl3.Controls.Add(this.bedt_PJT2);
             this.groupControl3.Controls.Add(this.ledt_BUSSINESS_GBN2);
             this.groupControl3.Controls.Add(this.labelControl23);
-            this.groupControl3.Controls.Add(this.txt_PLAN_CONTENT);
             this.groupControl3.Controls.Add(this.labelControl18);
             this.groupControl3.Controls.Add(this.labelControl21);
             this.groupControl3.Controls.Add(this.txt_PLAN_TITLE);
@@ -867,6 +882,7 @@
             this.groupControl3.Controls.Add(this.txt_COMP_ACCT);
             this.groupControl3.Controls.Add(this.labelControl2);
             this.groupControl3.Controls.Add(this.txt_COMP_NAME);
+            this.groupControl3.Controls.Add(this.txt_PLAN_CONTENT);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(492, 141);
             this.groupControl3.Name = "groupControl3";
@@ -888,7 +904,7 @@
             // 
             this.labelControl22.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl22.Appearance.Options.UseFont = true;
-            this.labelControl22.Location = new System.Drawing.Point(237, 111);
+            this.labelControl22.Location = new System.Drawing.Point(237, 137);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(48, 15);
             this.labelControl22.TabIndex = 90;
@@ -896,7 +912,7 @@
             // 
             // bedt_PJT2
             // 
-            this.bedt_PJT2.Location = new System.Drawing.Point(291, 110);
+            this.bedt_PJT2.Location = new System.Drawing.Point(291, 136);
             this.bedt_PJT2.Name = "bedt_PJT2";
             this.bedt_PJT2.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.bedt_PJT2.Properties.Appearance.Options.UseBackColor = true;
@@ -910,7 +926,7 @@
             // 
             // ledt_BUSSINESS_GBN2
             // 
-            this.ledt_BUSSINESS_GBN2.Location = new System.Drawing.Point(94, 110);
+            this.ledt_BUSSINESS_GBN2.Location = new System.Drawing.Point(94, 136);
             this.ledt_BUSSINESS_GBN2.Name = "ledt_BUSSINESS_GBN2";
             this.ledt_BUSSINESS_GBN2.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.ledt_BUSSINESS_GBN2.Properties.Appearance.Options.UseBackColor = true;
@@ -925,21 +941,11 @@
             // 
             this.labelControl23.Appearance.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl23.Appearance.Options.UseFont = true;
-            this.labelControl23.Location = new System.Drawing.Point(40, 111);
+            this.labelControl23.Location = new System.Drawing.Point(40, 137);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(48, 15);
             this.labelControl23.TabIndex = 87;
             this.labelControl23.Text = "사업구분";
-            // 
-            // txt_PLAN_CONTENT
-            // 
-            this.txt_PLAN_CONTENT.Location = new System.Drawing.Point(94, 84);
-            this.txt_PLAN_CONTENT.Name = "txt_PLAN_CONTENT";
-            this.txt_PLAN_CONTENT.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txt_PLAN_CONTENT.Properties.Appearance.Options.UseBackColor = true;
-            this.txt_PLAN_CONTENT.Properties.ReadOnly = true;
-            this.txt_PLAN_CONTENT.Size = new System.Drawing.Size(496, 20);
-            this.txt_PLAN_CONTENT.TabIndex = 86;
             // 
             // labelControl18
             // 
@@ -1274,13 +1280,15 @@
             this.txt_COMP_NAME.TabIndex = 53;
             this.txt_COMP_NAME.Visible = false;
             // 
-            // gridColumn9
+            // txt_PLAN_CONTENT
             // 
-            this.gridColumn9.Caption = "공급업체명";
-            this.gridColumn9.FieldName = "COMP_NAME";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 3;
+            this.txt_PLAN_CONTENT.Location = new System.Drawing.Point(94, 84);
+            this.txt_PLAN_CONTENT.Name = "txt_PLAN_CONTENT";
+            this.txt_PLAN_CONTENT.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txt_PLAN_CONTENT.Properties.Appearance.Options.UseBackColor = true;
+            this.txt_PLAN_CONTENT.Properties.ReadOnly = true;
+            this.txt_PLAN_CONTENT.Size = new System.Drawing.Size(496, 47);
+            this.txt_PLAN_CONTENT.TabIndex = 86;
             // 
             // EXEC02
             // 
@@ -1348,7 +1356,6 @@
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bedt_PJT2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledt_BUSSINESS_GBN2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_CONTENT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_TITLE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_GW_NO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_BILL.Properties.CalendarTimeProperties)).EndInit();
@@ -1365,6 +1372,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt_PAY.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_ACCT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_COMP_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PLAN_CONTENT.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1470,7 +1478,6 @@
         private DevExpress.XtraEditors.DateEdit dt_BILL;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.TextEdit txt_GW_NO;
-        private DevExpress.XtraEditors.TextEdit txt_PLAN_CONTENT;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.TextEdit txt_PLAN_TITLE;
@@ -1480,5 +1487,6 @@
         private DevExpress.XtraEditors.LookUpEdit ledt_BUSSINESS_GBN2;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraEditors.MemoEdit txt_PLAN_CONTENT;
     }
 }
