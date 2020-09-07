@@ -156,6 +156,11 @@ namespace STAT
 
                         break;
                     case 2:
+                        if (bedt_DEPT.Text.Equals(""))
+                        {
+                            MsgBox.MsgErr("본부를 선택하세요", "오류");
+                            return;
+                        }
                         spreadsheetControl1.LoadDocument("예산대비집행양식.xlsx", DocumentFormat.Xlsx);
                         title = "예산 대비 집행/실적(" + bedt_DEPT.Text + ")";
 
@@ -163,6 +168,7 @@ namespace STAT
 
                         break;
                     case 3:
+
                         spreadsheetControl1.LoadDocument("예산대비집행양식.xlsx", DocumentFormat.Xlsx);
                         title = "예산 대비 집행/실적(프로젝트 - " + bedt_DEPT.Text + ")";
 
